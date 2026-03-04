@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Awesome Native Multimodal Models — Timeline</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
+    --today: #9b59b6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
+         display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+  header {
+    padding: 14px 28px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 700; }
+  header h1 span { color: var(--accent); }
+  .stat-row { display: flex; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+  .stat-row b { color: var(--text); }
+
+  .toolbar {
+    padding: 8px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
+  }
+  .toolbar input {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 5px 10px; font-size: 0.82rem; outline: none; min-width: 180px;
+  }
+  .toolbar input:focus { border-color: var(--accent); }
+  .sep { width: 1px; height: 22px; background: var(--border); margin: 0 4px; }
+  .btn {
+    padding: 4px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    transition: all 0.15s;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .cat-btn { border-radius: 20px; }
+  .cat-btn.active { color: #0d1117 !important; font-weight: 700; }
+
+  #main-area { flex: 1; overflow: hidden; position: relative; }
+  #main-svg { width: 100%; height: 100%; }
+
+  /* minimap */
+  #minimap-wrap {
+    position: absolute; bottom: 56px; right: 16px;
+    background: #1c2128; border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px; z-index: 100;
+  }
+  #minimap-title { font-size: 0.65rem; color: var(--muted); text-align: center; margin-bottom: 4px; }
+  #mini-svg { display: block; }
+
+  /* zoom controls */
+  #zoom-controls {
+    position: absolute; bottom: 16px; right: 16px;
+    display: flex; gap: 4px; z-index: 100;
+  }
+
+  #tooltip {
+    position: fixed; background: #1c2128; border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; pointer-events: none; max-width: 300px; font-size: 0.82rem; line-height: 1.6;
+    z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.6); display: none;
+  }
+  #tooltip h4 { color: var(--accent); margin-bottom: 4px; font-size: 0.9rem; }
+  #tooltip a { color: var(--link); text-decoration: none; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 12px;
+           font-size: 0.7rem; margin: 2px 2px 0 0; font-weight: 600; }
+
+  footer {
+    text-align: center; padding: 8px; font-size: 0.72rem; color: var(--muted);
+    border-top: 1px solid var(--border); flex-shrink: 0;
+  }
+  footer a { color: var(--link); }
+</style>
+</head>
+<body>
+<header>
+  <h1>📅 <span>Awesome Native Multimodal Models</span> — Model Timeline</h1>
+  <div class="stat-row">
+    <span>Total <b id="total-count">—</b></span>
+    <span>Landmarks <b id="lm-count">—</b></span>
+    <span>Categories <b>5</b></span>
+    <span>Span <b>2017 – 2026</b></span>
+    <a href="taxonomy.html" style="color:var(--link)">🌐 Taxonomy →</a>
+    <a href="https://github.com/your-username/Awesome-Native-Multimodal-Models" target="_blank" style="color:var(--link)">⭐ GitHub</a>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input id="search" type="text" placeholder="🔍  Search…" />
+  <div class="sep"></div>
+  <button class="btn" onclick="jumpYear(2021)">2021</button>
+  <button class="btn" onclick="jumpYear(2022)">2022</button>
+  <button class="btn" onclick="jumpYear(2023)">2023</button>
+  <button class="btn" onclick="jumpYear(2024)">2024</button>
+  <button class="btn" onclick="jumpYear(2025)">2025</button>
+  <button class="btn" onclick="jumpYear(2026)">2026</button>
+  <div class="sep"></div>
+  <div id="cat-filters"></div>
+  <div class="sep"></div>
+  <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂ Reset</button>
+  <span id="vis-count" style="font-size:0.75rem;color:var(--muted);margin-left:4px;"></span>
+</div>
+
+<div id="main-area">
+  <svg id="main-svg"></svg>
+  <div id="minimap-wrap">
+    <div id="minimap-title">Overview</div>
+    <svg id="mini-svg" width="220" height="70"></svg>
+  </div>
+  <div id="zoom-controls">
+    <button class="btn" onclick="zoomBy(1.3)">＋</button>
+    <button class="btn" onclick="zoomBy(0.77)">－</button>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<footer>
+  Auto-generated by <code>generate_timeline.py</code> ·
+  Data: <a href="https://github.com/your-username/Awesome-Native-Multimodal-Models" target="_blank">Awesome-Native-Multimodal-Models</a> ·
+  Visualized with <a href="https://d3js.org" target="_blank">D3.js v7</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+// ── Data ─────────────────────────────────────────────────────────────────
+const DATA = [
+  {
+    "name": "CLIP",
+    "year": 2021,
+    "month": 1,
+    "category": "Pretraining",
+    "arxiv": "2103.00020",
+    "landmark": true,
+    "desc": "Contrastive Language-Image Pretraining (OpenAI)"
+  },
+  {
+    "name": "ALIGN",
+    "year": 2021,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2102.05918",
+    "landmark": false,
+    "desc": "Large-scale alignment using noisy data (Google)"
+  },
+  {
+    "name": "OFA",
+    "year": 2022,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2202.03052",
+    "landmark": false,
+    "desc": "Unified sequence-to-sequence pretraining"
+  },
+  {
+    "name": "Flamingo",
+    "year": 2022,
+    "month": 4,
+    "category": "Pretraining",
+    "arxiv": "2204.14198",
+    "landmark": true,
+    "desc": "Few-shot visual language model (DeepMind)"
+  },
+  {
+    "name": "CoCa",
+    "year": 2022,
+    "month": 5,
+    "category": "Pretraining",
+    "arxiv": "2205.01068",
+    "landmark": false,
+    "desc": "Contrastive captioners"
+  },
+  {
+    "name": "BEiT-3",
+    "year": 2022,
+    "month": 8,
+    "category": "Pretraining",
+    "arxiv": "2208.10442",
+    "landmark": false,
+    "desc": "Multimodal foundation model via masked data modeling"
+  },
+  {
+    "name": "BLIP-2",
+    "year": 2023,
+    "month": 1,
+    "category": "Pretraining",
+    "arxiv": "2301.12597",
+    "landmark": true,
+    "desc": "Bootstrapping vision-language pretraining"
+  },
+  {
+    "name": "LLaVA",
+    "year": 2023,
+    "month": 4,
+    "category": "Pretraining",
+    "arxiv": "2304.08485",
+    "landmark": true,
+    "desc": "Large Language and Vision Assistant"
+  },
+  {
+    "name": "SigLIP",
+    "year": 2023,
+    "month": 3,
+    "category": "Pretraining",
+    "arxiv": "2303.15343",
+    "landmark": false,
+    "desc": "Sigmoid loss for language-image pretraining"
+  },
+  {
+    "name": "EVA-CLIP",
+    "year": 2024,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2402.04252",
+    "landmark": false,
+    "desc": "Improved EVA-based CLIP (18B params)"
+  },
+  {
+    "name": "InternVL",
+    "year": 2024,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2312.14238",
+    "landmark": false,
+    "desc": "Scaling vision foundation model"
+  },
+  {
+    "name": "SigLIP 2",
+    "year": 2025,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2502.14786",
+    "landmark": false,
+    "desc": "Improved SigLIP with multi-resolution"
+  },
+  {
+    "name": "Qwen2.5-VL",
+    "year": 2025,
+    "month": 2,
+    "category": "Pretraining",
+    "arxiv": "2502.13923",
+    "landmark": true,
+    "desc": "Qwen2.5 Vision-Language model"
+  },
+  {
+    "name": "InternVL3",
+    "year": 2025,
+    "month": 4,
+    "category": "Pretraining",
+    "arxiv": "2504.10479",
+    "landmark": false,
+    "desc": "InternVL3 with enhanced capabilities"
+  },
+  {
+    "name": "Seed1.5-VL",
+    "year": 2025,
+    "month": 5,
+    "category": "Pretraining",
+    "arxiv": "2505.07062",
+    "landmark": false,
+    "desc": "Seed1.5 Vision-Language foundation model"
+  },
+  {
+    "name": "MiMo-VL",
+    "year": 2025,
+    "month": 5,
+    "category": "Pretraining",
+    "arxiv": "2505.18411",
+    "landmark": false,
+    "desc": "MiMo Vision-Language model"
+  },
+  {
+    "name": "VQ-VAE",
+    "year": 2017,
+    "month": 11,
+    "category": "Tokenizer",
+    "arxiv": "1711.00937",
+    "landmark": true,
+    "desc": "Neural discrete representation learning"
+  },
+  {
+    "name": "VQ-VAE-2",
+    "year": 2019,
+    "month": 6,
+    "category": "Tokenizer",
+    "arxiv": "1906.00446",
+    "landmark": false,
+    "desc": "Hierarchical VQ-VAE"
+  },
+  {
+    "name": "VQGAN",
+    "year": 2021,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2012.09841",
+    "landmark": true,
+    "desc": "Taming Transformers for image synthesis",
+    "github": "https://github.com/CompVis/taming-transformers"
+  },
+  {
+    "name": "RQ-VAE",
+    "year": 2022,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2203.01941",
+    "landmark": false,
+    "desc": "Residual quantization VAE"
+  },
+  {
+    "name": "MAGVIT",
+    "year": 2023,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2212.05199",
+    "landmark": true,
+    "desc": "Masked generative video transformer"
+  },
+  {
+    "name": "FSQ",
+    "year": 2023,
+    "month": 9,
+    "category": "Tokenizer",
+    "arxiv": "2309.15505",
+    "landmark": false,
+    "desc": "Finite scalar quantization"
+  },
+  {
+    "name": "VAR",
+    "year": 2024,
+    "month": 4,
+    "category": "Tokenizer",
+    "arxiv": "2404.02905",
+    "landmark": true,
+    "desc": "Visual autoregressive modeling",
+    "github": "https://github.com/FoundationVision/VAR"
+  },
+  {
+    "name": "TiTok",
+    "year": 2024,
+    "month": 6,
+    "category": "Tokenizer",
+    "arxiv": "2406.07550",
+    "landmark": true,
+    "desc": "1D tokenizer for images",
+    "github": "https://github.com/bytedance/1d-tokenizer"
+  },
+  {
+    "name": "MAGVIT-v2",
+    "year": 2024,
+    "month": 10,
+    "category": "Tokenizer",
+    "arxiv": "2310.05737",
+    "landmark": false,
+    "desc": "LFQ-based video tokenizer"
+  },
+  {
+    "name": "ElasticTok",
+    "year": 2024,
+    "month": 10,
+    "category": "Tokenizer",
+    "arxiv": "2410.08368",
+    "landmark": false,
+    "desc": "Adaptive token length tokenizer"
+  },
+  {
+    "name": "TokenFlow",
+    "year": 2024,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2412.03069",
+    "landmark": false,
+    "desc": "Unified image tokenizer",
+    "github": "https://github.com/ByteFlow-AI/TokenFlow"
+  },
+  {
+    "name": "VidTok",
+    "year": 2024,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2412.13061",
+    "landmark": false,
+    "desc": "Video tokenizer (Microsoft)",
+    "github": "https://github.com/microsoft/VidTok"
+  },
+  {
+    "name": "QLIP",
+    "year": 2025,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2502.05178",
+    "landmark": false,
+    "desc": "Quantized language-image pretraining"
+  },
+  {
+    "name": "FlexTok",
+    "year": 2025,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2502.13967",
+    "landmark": false,
+    "desc": "Flexible image tokenization"
+  },
+  {
+    "name": "FlowMo",
+    "year": 2025,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2503.11056",
+    "landmark": false,
+    "desc": "Flow-based tokenizer"
+  },
+  {
+    "name": "NFIG",
+    "year": 2025,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2503.07076",
+    "landmark": false,
+    "desc": "Non-uniform flow image generation tokenizer"
+  },
+  {
+    "name": "EQ-VAE",
+    "year": 2025,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2502.09509",
+    "landmark": false,
+    "desc": "Equivariant tokenizer",
+    "github": "https://github.com/zelaki/eqvae"
+  },
+  {
+    "name": "SEED",
+    "year": 2023,
+    "month": 10,
+    "category": "Unified",
+    "arxiv": "2310.01218",
+    "landmark": false,
+    "desc": "Multimodal seed tokenization",
+    "github": "https://github.com/AILab-CVC/SEED"
+  },
+  {
+    "name": "LaVIT",
+    "year": 2023,
+    "month": 9,
+    "category": "Unified",
+    "arxiv": "2309.04596",
+    "landmark": false,
+    "desc": "Language-vision tokenizer"
+  },
+  {
+    "name": "Emu",
+    "year": 2023,
+    "month": 7,
+    "category": "Unified",
+    "arxiv": "2307.05222",
+    "landmark": false,
+    "desc": "Emu: Generalist multimodal model"
+  },
+  {
+    "name": "LWM",
+    "year": 2024,
+    "month": 2,
+    "category": "Unified",
+    "arxiv": "2402.08268",
+    "landmark": false,
+    "desc": "Large world model",
+    "github": "https://github.com/LargeWorldModel/LWM"
+  },
+  {
+    "name": "Chameleon",
+    "year": 2024,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2405.09818",
+    "landmark": true,
+    "desc": "Early-fusion token-based mixed-modal model (Meta)",
+    "github": "https://github.com/facebookresearch/chameleon"
+  },
+  {
+    "name": "Transfusion",
+    "year": 2024,
+    "month": 8,
+    "category": "Unified",
+    "arxiv": "2408.11039",
+    "landmark": true,
+    "desc": "Predict next token and diffuse"
+  },
+  {
+    "name": "Show-o",
+    "year": 2024,
+    "month": 8,
+    "category": "Unified",
+    "arxiv": "2408.12528",
+    "landmark": true,
+    "desc": "One single model for multimodal understanding and generation",
+    "github": "https://github.com/showlab/Show-o"
+  },
+  {
+    "name": "ANOLE",
+    "year": 2024,
+    "month": 7,
+    "category": "Unified",
+    "arxiv": "2407.06135",
+    "landmark": false,
+    "desc": "Autoregressive native omni language model"
+  },
+  {
+    "name": "Emu3",
+    "year": 2024,
+    "month": 9,
+    "category": "Unified",
+    "arxiv": "2409.18858",
+    "landmark": true,
+    "desc": "Next-token prediction for vision, language, and action",
+    "github": "https://github.com/baaivision/Emu3"
+  },
+  {
+    "name": "Liquid",
+    "year": 2024,
+    "month": 12,
+    "category": "Unified",
+    "arxiv": "2412.04332",
+    "landmark": false,
+    "desc": "Language models are scalable multi-modal generators"
+  },
+  {
+    "name": "LlamaFusion",
+    "year": 2024,
+    "month": 12,
+    "category": "Unified",
+    "arxiv": "2412.15188",
+    "landmark": false,
+    "desc": "Llama for text and image fusion"
+  },
+  {
+    "name": "Janus",
+    "year": 2024,
+    "month": 10,
+    "category": "Unified",
+    "arxiv": "2410.13848",
+    "landmark": false,
+    "desc": "Decoupling visual encoding for unified multimodal understanding and generation"
+  },
+  {
+    "name": "Janus-Pro",
+    "year": 2025,
+    "month": 1,
+    "category": "Unified",
+    "arxiv": "2501.17811",
+    "landmark": true,
+    "desc": "Unified multimodal understanding and generation (DeepSeek)"
+  },
+  {
+    "name": "MUSE-VL",
+    "year": 2025,
+    "month": 1,
+    "category": "Unified",
+    "arxiv": "2501.06599",
+    "landmark": false,
+    "desc": "Multimodal understanding & synthesis"
+  },
+  {
+    "name": "Harmon",
+    "year": 2025,
+    "month": 3,
+    "category": "Unified",
+    "arxiv": "2503.07897",
+    "landmark": false,
+    "desc": "Harmonizing visual generation and perception"
+  },
+  {
+    "name": "MetaQuery-XL",
+    "year": 2025,
+    "month": 4,
+    "category": "Unified",
+    "arxiv": "2504.13979",
+    "landmark": false,
+    "desc": "Meta-query based unified model"
+  },
+  {
+    "name": "VARGPT-v1.1",
+    "year": 2025,
+    "month": 3,
+    "category": "Unified",
+    "arxiv": "2503.16278",
+    "landmark": false,
+    "desc": "Visual autoregressive GPT"
+  },
+  {
+    "name": "BAGEL",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.14683",
+    "landmark": true,
+    "desc": "Bootstrapped reasoning with AR+Diffusion (ByteDance)",
+    "github": "https://github.com/ByteDance-Seed/Bagel"
+  },
+  {
+    "name": "TokLIP",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.05422",
+    "landmark": false,
+    "desc": "Tokenized CLIP features for generation"
+  },
+  {
+    "name": "MMaDA",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.15809",
+    "landmark": false,
+    "desc": "Multimodal masked diffusion model",
+    "github": "https://github.com/Gen-Verse/MMaDA"
+  },
+  {
+    "name": "BLIP3-o",
+    "year": 2025,
+    "month": 6,
+    "category": "Unified",
+    "arxiv": "2506.12831",
+    "landmark": false,
+    "desc": "BLIP3 for omni generation"
+  },
+  {
+    "name": "Show-o2",
+    "year": 2025,
+    "month": 6,
+    "category": "Unified",
+    "arxiv": "2506.15564",
+    "landmark": true,
+    "desc": "Improved Show-o with enhanced generation"
+  },
+  {
+    "name": "OmniGen2",
+    "year": 2025,
+    "month": 6,
+    "category": "Unified",
+    "arxiv": "2506.18871",
+    "landmark": true,
+    "desc": "Unified image generation (OmniGen2)"
+  },
+  {
+    "name": "Selftok",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.19065",
+    "landmark": false,
+    "desc": "Self-supervised tokenization for generation"
+  },
+  {
+    "name": "UniDisc",
+    "year": 2025,
+    "month": 3,
+    "category": "Unified",
+    "arxiv": "2503.20853",
+    "landmark": false,
+    "desc": "Unified discrete diffusion"
+  },
+  {
+    "name": "Muddit",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.16965",
+    "landmark": false,
+    "desc": "Multimodal unified discrete diffusion transformer"
+  },
+  {
+    "name": "HermesFlow",
+    "year": 2025,
+    "month": 3,
+    "category": "Unified",
+    "arxiv": "2503.12580",
+    "landmark": false,
+    "desc": "Hermes flow-based unified generation"
+  },
+  {
+    "name": "CoDi",
+    "year": 2023,
+    "month": 5,
+    "category": "Any2Any",
+    "arxiv": "2305.11846",
+    "landmark": true,
+    "desc": "Any-to-any generation via composable diffusion"
+  },
+  {
+    "name": "NExT-GPT",
+    "year": 2023,
+    "month": 9,
+    "category": "Any2Any",
+    "arxiv": "2309.05519",
+    "landmark": true,
+    "desc": "Any-to-any multimodal LLM"
+  },
+  {
+    "name": "AnyGPT",
+    "year": 2024,
+    "month": 2,
+    "category": "Any2Any",
+    "arxiv": "2402.12226",
+    "landmark": false,
+    "desc": "Unified multimodal LLM with discrete sequence modeling"
+  },
+  {
+    "name": "Unified-IO 2",
+    "year": 2024,
+    "month": 3,
+    "category": "Any2Any",
+    "arxiv": "2312.17172",
+    "landmark": false,
+    "desc": "Unified I/O for diverse tasks"
+  },
+  {
+    "name": "CoDi-2",
+    "year": 2024,
+    "month": 1,
+    "category": "Any2Any",
+    "arxiv": "2311.18775",
+    "landmark": false,
+    "desc": "Improved CoDi with in-context generation"
+  },
+  {
+    "name": "MIO",
+    "year": 2024,
+    "month": 9,
+    "category": "Any2Any",
+    "arxiv": "2409.17692",
+    "landmark": false,
+    "desc": "Multimodal interleaved output model"
+  },
+  {
+    "name": "OmniFlow",
+    "year": 2025,
+    "month": 12,
+    "category": "Any2Any",
+    "arxiv": "2412.01169",
+    "landmark": false,
+    "desc": "Omni flow for any-to-any generation"
+  },
+  {
+    "name": "Spider",
+    "year": 2025,
+    "month": 1,
+    "category": "Any2Any",
+    "arxiv": "2501.03461",
+    "landmark": false,
+    "desc": "Spider any-to-any model"
+  },
+  {
+    "name": "Ming-Omni",
+    "year": 2025,
+    "month": 5,
+    "category": "Any2Any",
+    "arxiv": "2505.02471",
+    "landmark": true,
+    "desc": "Ming all-modal omni model"
+  },
+  {
+    "name": "Qwen3-Omni",
+    "year": 2025,
+    "month": 6,
+    "category": "Any2Any",
+    "arxiv": "2506.00513",
+    "landmark": false,
+    "desc": "Qwen3 omni model"
+  },
+  {
+    "name": "M2-omni",
+    "year": 2025,
+    "month": 2,
+    "category": "Any2Any",
+    "arxiv": "2502.18778",
+    "landmark": false,
+    "desc": "M2 omni multimodal model"
+  },
+  {
+    "name": "GPT-4o",
+    "year": 2024,
+    "month": 5,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": true,
+    "desc": "GPT-4 Omni (OpenAI) - audio, vision, text"
+  },
+  {
+    "name": "VITA",
+    "year": 2024,
+    "month": 8,
+    "category": "Omni",
+    "arxiv": "2408.05505",
+    "landmark": false,
+    "desc": "Open-source interactive omni model"
+  },
+  {
+    "name": "LLaMA-Omni",
+    "year": 2024,
+    "month": 9,
+    "category": "Omni",
+    "arxiv": "2409.06666",
+    "landmark": false,
+    "desc": "Seamless speech interaction with LLaMA"
+  },
+  {
+    "name": "Gemini 1.5 Pro",
+    "year": 2024,
+    "month": 2,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": true,
+    "desc": "Gemini 1.5 Pro (Google) - long context multimodal"
+  },
+  {
+    "name": "Qwen2.5-Omni",
+    "year": 2025,
+    "month": 3,
+    "category": "Omni",
+    "arxiv": "2503.20215",
+    "landmark": true,
+    "desc": "Qwen2.5 omnivore multimodal model"
+  },
+  {
+    "name": "VITA-1.5",
+    "year": 2025,
+    "month": 1,
+    "category": "Omni",
+    "arxiv": "2501.12599",
+    "landmark": false,
+    "desc": "VITA 1.5 with improved capabilities"
+  },
+  {
+    "name": "MiniCPM-o 2.6",
+    "year": 2025,
+    "month": 1,
+    "category": "Omni",
+    "arxiv": "2501.15481",
+    "landmark": false,
+    "desc": "MiniCPM omni model 2.6"
+  },
+  {
+    "name": "Gemini 2.0 Flash",
+    "year": 2025,
+    "month": 2,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": false,
+    "desc": "Gemini 2.0 Flash (Google)"
+  },
+  {
+    "name": "SALMONN-Omni",
+    "year": 2025,
+    "month": 1,
+    "category": "Omni",
+    "arxiv": "2501.10801",
+    "landmark": false,
+    "desc": "Speech audio language music omni model"
+  },
+  {
+    "name": "Gemini 2.5 Pro",
+    "year": 2025,
+    "month": 3,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": true,
+    "desc": "Gemini 2.5 Pro (Google) - state-of-the-art"
+  },
+  {
+    "name": "InternVL3",
+    "year": 2025,
+    "month": 4,
+    "category": "Omni",
+    "arxiv": "2504.10479",
+    "landmark": false,
+    "desc": "InternVL3 omni-capable model"
+  },
+  {
+    "name": "MiniCPM-o 4.5",
+    "year": 2025,
+    "month": 11,
+    "category": "Omni",
+    "arxiv": "2511.07905",
+    "landmark": false,
+    "desc": "MiniCPM omni 4.5 - enhanced"
+  },
+  {
+    "name": "NExT-OMNI",
+    "year": 2025,
+    "month": 6,
+    "category": "Omni",
+    "arxiv": "2506.08838",
+    "landmark": false,
+    "desc": "NExT-OMNI all-modal model"
+  },
+  {
+    "name": "Gemini 3.1 Pro",
+    "year": 2026,
+    "month": 2,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": true,
+    "desc": "Gemini 3.1 Pro (Google) - latest flagship"
+  },
+  {
+    "name": "InteractiveOmni",
+    "year": 2025,
+    "month": 3,
+    "category": "Omni",
+    "arxiv": "2503.17366",
+    "landmark": false,
+    "desc": "Interactive omni model"
+  },
+  {
+    "name": "Step3",
+    "year": 2025,
+    "month": 6,
+    "category": "Omni",
+    "arxiv": "",
+    "landmark": false,
+    "desc": "Step3 omni model"
+  }
+];
+const META = {"title": "Awesome Native Multimodal Models", "subtitle": "Interactive Visualizations — Architecture Taxonomy & Model Timeline", "paper_count": "400+", "last_updated": "2026-03", "github_url": "https://github.com/your-username/Awesome-Native-Multimodal-Models", "categories": {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}}};
+const CAT_META = {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}};
+
+// ── State ─────────────────────────────────────────────────────────────────
+let activeCategories = new Set(Object.keys(CAT_META));
+let searchQuery = "";
+let currentTransform = d3.zoomIdentity;
+
+// ── Stats ─────────────────────────────────────────────────────────────────
+document.getElementById("total-count").textContent = DATA.length;
+document.getElementById("lm-count").textContent = DATA.filter(d => d.landmark).length;
+
+// ── Category filter buttons ───────────────────────────────────────────────
+const filterDiv = document.getElementById("cat-filters");
+Object.entries(CAT_META).forEach(([key, meta]) => {
+  const btn = document.createElement("button");
+  btn.className = "btn cat-btn active";
+  btn.textContent = meta.label;
+  btn.style.borderColor = meta.color;
+  btn.style.background = meta.color + "33";
+  btn.style.color = meta.color;
+  btn.dataset.cat = key;
+  btn.onclick = () => {
+    if (activeCategories.has(key)) {
+      activeCategories.delete(key);
+      btn.classList.remove("active");
+      btn.style.background = "transparent";
+    } else {
+      activeCategories.add(key);
+      btn.classList.add("active");
+      btn.style.background = meta.color + "33";
+    }
+    renderTimeline();
+  };
+  filterDiv.appendChild(btn);
+});
+
+// ── Layout ────────────────────────────────────────────────────────────────
+const CATEGORIES = Object.keys(CAT_META);
+const LANE_HEIGHT = 100;
+const LANE_PADDING = 24;
+const LABEL_H = 22;
+const TOP_PAD = 50;
+const LEFT_PAD = 100;
+const RIGHT_PAD = 60;
+
+const mainSvg = d3.select("#main-svg");
+const miniSvg = d3.select("#mini-svg");
+let mainW = 0, mainH = 0;
+
+function resize() {
+  const el = document.getElementById("main-area");
+  mainW = el.clientWidth;
+  mainH = el.clientHeight;
+  mainSvg.attr("width", mainW).attr("height", mainH);
+  renderTimeline();
+}
+window.addEventListener("resize", resize);
+
+// ── Time scale (2017–2026.3) ──────────────────────────────────────────────
+const T_MIN = new Date(2017, 0, 1);
+const T_MAX = new Date(2026, 5, 1);
+let xScale = d3.scaleTime().domain([T_MIN, T_MAX]);
+
+// ── Zoom ──────────────────────────────────────────────────────────────────
+const zoom = d3.zoom()
+  .scaleExtent([0.4, 12])
+  .translateExtent([[-LEFT_PAD * 4, -100], [99999, 99999]])
+  .on("zoom", (event) => {
+    currentTransform = event.transform;
+    renderTimeline(false);
+  });
+mainSvg.call(zoom);
+
+function zoomBy(k) {
+  mainSvg.transition().duration(300).call(zoom.scaleBy, k);
+}
+
+function jumpYear(y) {
+  const x0 = LEFT_PAD + currentTransform.k *
+    (xScale(new Date(y, 0, 1)) - xScale.range()[0]);
+  const tx = mainW / 2 - x0;
+  mainSvg.transition().duration(500).call(
+    zoom.transform,
+    d3.zoomIdentity.translate(tx, 0).scale(currentTransform.k)
+  );
+}
+
+function resetView() {
+  mainSvg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  searchQuery = "";
+  document.getElementById("search").value = "";
+  activeCategories = new Set(Object.keys(CAT_META));
+  document.querySelectorAll(".cat-btn").forEach(btn => {
+    btn.classList.add("active");
+    const c = CAT_META[btn.dataset.cat].color;
+    btn.style.background = c + "33";
+  });
+  renderTimeline();
+}
+
+// ── Lane assignment ───────────────────────────────────────────────────────
+function assignLanes(models, xScaleLocal) {
+  // greedy: place in first lane where no label overlap
+  const laneEnds = {};
+  CATEGORIES.forEach(c => laneEnds[c] = []);
+  const assigned = models.map(m => {
+    const px = xScaleLocal(new Date(m.year, (m.month || 1) - 1, 1));
+    const laneList = laneEnds[m.category] || [];
+    let lane = 0;
+    while (lane < 8) {
+      const end = laneList[lane];
+      if (end === undefined || px - end > (m.landmark ? 70 : 55)) break;
+      lane++;
+    }
+    if (!laneList[lane] || px > laneList[lane]) laneList[lane] = px + (m.name.length * 6 + 30);
+    laneEnds[m.category] = laneList;
+    return { ...m, lane };
+  });
+  return assigned;
+}
+
+// ── Main render ───────────────────────────────────────────────────────────
+function renderTimeline(recomputeZoom = true) {
+  if (!mainW) return;
+  const innerW = mainW - LEFT_PAD - RIGHT_PAD;
+  xScale = d3.scaleTime()
+    .domain([T_MIN, T_MAX])
+    .range([0, innerW]);
+
+  const tx = currentTransform;
+  const xScaleZ = tx.rescaleX(xScale);
+
+  mainSvg.selectAll("*").remove();
+
+  // defs clip
+  const defs = mainSvg.append("defs");
+  defs.append("clipPath").attr("id", "clip-main")
+    .append("rect").attr("x", 0).attr("y", 0)
+    .attr("width", innerW).attr("height", mainH);
+
+  const root = mainSvg.append("g").attr("transform", `translate(${LEFT_PAD},0)`);
+  const clip = root.append("g").attr("clip-path", "url(#clip-main)");
+
+  // lane backgrounds
+  CATEGORIES.forEach((cat, ci) => {
+    const y = TOP_PAD + ci * LANE_HEIGHT;
+    const isActive = activeCategories.has(cat);
+    clip.append("rect")
+      .attr("x", 0).attr("y", y)
+      .attr("width", innerW).attr("height", LANE_HEIGHT - 4)
+      .attr("rx", 6)
+      .attr("fill", isActive ? CAT_META[cat].color + "0d" : "#ffffff05")
+      .attr("stroke", isActive ? CAT_META[cat].color + "22" : "#ffffff08")
+      .attr("stroke-width", 1);
+  });
+
+  // lane labels (fixed, outside clip)
+  CATEGORIES.forEach((cat, ci) => {
+    const y = TOP_PAD + ci * LANE_HEIGHT + LANE_HEIGHT / 2;
+    root.append("text")
+      .attr("x", -12).attr("y", y)
+      .attr("text-anchor", "end").attr("dominant-baseline", "middle")
+      .attr("font-size", 11).attr("font-weight", "600")
+      .attr("fill", activeCategories.has(cat) ? CAT_META[cat].color : "#444d56")
+      .text(CAT_META[cat].label);
+  });
+
+  // year grid lines
+  const years = d3.timeYear.range(T_MIN, T_MAX);
+  years.forEach(yr => {
+    const x = xScaleZ(yr);
+    if (x < -20 || x > innerW + 20) return;
+    clip.append("line")
+      .attr("x1", x).attr("x2", x)
+      .attr("y1", TOP_PAD - 10)
+      .attr("y2", TOP_PAD + CATEGORIES.length * LANE_HEIGHT)
+      .attr("stroke", "#ffffff10").attr("stroke-width", 1)
+      .attr("stroke-dasharray", "4,4");
+
+    root.append("text")
+      .attr("x", x).attr("y", TOP_PAD - 14)
+      .attr("text-anchor", "middle").attr("font-size", 11)
+      .attr("fill", "#8b949e")
+      .text(yr.getFullYear());
+  });
+
+  // today line
+  const todayX = xScaleZ(new Date(2026, 2, 1));
+  clip.append("line")
+    .attr("x1", todayX).attr("x2", todayX)
+    .attr("y1", TOP_PAD - 10)
+    .attr("y2", TOP_PAD + CATEGORIES.length * LANE_HEIGHT)
+    .attr("stroke", "#9b59b6").attr("stroke-width", 1.5)
+    .attr("stroke-dasharray", "5,4");
+
+  clip.append("text")
+    .attr("x", todayX + 4).attr("y", TOP_PAD - 14)
+    .attr("font-size", 9).attr("fill", "#9b59b6").text("Mar 2026");
+
+  // filter + assign lanes
+  const visible = DATA.filter(m => {
+    const catOk = activeCategories.has(m.category);
+    const qOk = !searchQuery || m.name.toLowerCase().includes(searchQuery) ||
+                 (m.desc || "").toLowerCase().includes(searchQuery);
+    return catOk && qOk;
+  });
+  document.getElementById("vis-count").textContent =
+    visible.length < DATA.length ? `${visible.length} / ${DATA.length} shown` : "";
+
+  const assigned = assignLanes(visible, xScaleZ);
+
+  // draw models
+  assigned.forEach(m => {
+    const catIdx = CATEGORIES.indexOf(m.category);
+    const cx = xScaleZ(new Date(m.year, (m.month || 1) - 1, 1));
+    if (cx < -60 || cx > innerW + 60) return;
+    const laneBaseY = TOP_PAD + catIdx * LANE_HEIGHT + LANE_HEIGHT / 2;
+    const cy = laneBaseY + (m.lane - 1) * LABEL_H;
+    const r = m.landmark ? 7 : 4.5;
+    const col = CAT_META[m.category].color;
+    const alpha = searchQuery && !m.name.toLowerCase().includes(searchQuery) ? "33" : "ff";
+
+    const grp = clip.append("g")
+      .style("cursor", "pointer")
+      .on("mouseenter", (ev) => showTip(ev, m))
+      .on("mousemove", moveTip)
+      .on("mouseleave", hideTip)
+      .on("click", () => {
+        const url = m.arxiv ? `https://arxiv.org/abs/${m.arxiv}` : (m.github || null);
+        if (url) window.open(url, "_blank");
+      });
+
+    grp.append("circle")
+      .attr("cx", cx).attr("cy", cy).attr("r", r)
+      .attr("fill", col + alpha)
+      .attr("stroke", col + alpha)
+      .attr("stroke-width", m.landmark ? 2 : 1.5)
+      .attr("filter", m.landmark ? "drop-shadow(0 0 6px " + col + "88)" : "none");
+
+    const fontSize = m.landmark ? 11 : 9.5;
+    const fw = m.landmark ? "700" : "400";
+    grp.append("text")
+      .attr("x", cx + r + 5).attr("y", cy + 1)
+      .attr("dominant-baseline", "middle")
+      .attr("font-size", fontSize).attr("font-weight", fw)
+      .attr("fill", col + alpha)
+      .text(m.name);
+  });
+
+  // ── Minimap ──────────────────────────────────────────────────────────────
+  const mm = miniSvg;
+  mm.selectAll("*").remove();
+  const mmW = 220, mmH = 70;
+  const mmX = d3.scaleTime().domain([T_MIN, T_MAX]).range([4, mmW - 4]);
+  const mmYstep = (mmH - 8) / CATEGORIES.length;
+
+  DATA.forEach(m => {
+    const ci = CATEGORIES.indexOf(m.category);
+    mm.append("circle")
+      .attr("cx", mmX(new Date(m.year, (m.month || 1) - 1, 1)))
+      .attr("cy", 4 + ci * mmYstep + mmYstep / 2)
+      .attr("r", m.landmark ? 2.5 : 1.2)
+      .attr("fill", CAT_META[m.category].color + "cc");
+  });
+
+  // viewport rect on minimap
+  const vx0 = xScaleZ.invert(0), vx1 = xScaleZ.invert(innerW);
+  const mmVx0 = Math.max(0, mmX(vx0)), mmVx1 = Math.min(mmW, mmX(vx1));
+  mm.append("rect")
+    .attr("x", mmVx0).attr("y", 0)
+    .attr("width", Math.max(2, mmVx1 - mmVx0)).attr("height", mmH)
+    .attr("fill", "none").attr("stroke", "#58a6ff").attr("stroke-width", 1.5)
+    .attr("rx", 2).attr("opacity", 0.6);
+}
+
+// ── Tooltip ───────────────────────────────────────────────────────────────
+const tip = document.getElementById("tooltip");
+function showTip(ev, m) {
+  const col = CAT_META[m.category]?.color || "#58a6ff";
+  let html = `<h4>${m.name}</h4>`;
+  html += `<div style="color:var(--muted);margin-bottom:6px">${m.desc || ""}</div>`;
+  html += `<span class="pill" style="background:${col}22;color:${col}">
+           ${CAT_META[m.category]?.label}</span> `;
+  html += `<span class="pill" style="background:#21262d;color:#58a6ff">📅 ${m.year}/${String(m.month).padStart(2,"0")}</span>`;
+  if (m.landmark) html += ` <span class="pill" style="background:#f0c04022;color:#f0c040">⭐ Landmark</span>`;
+  if (m.arxiv) html += `<br/><a href="https://arxiv.org/abs/${m.arxiv}" target="_blank">📄 arXiv:${m.arxiv}</a>`;
+  if (m.github) html += ` · <a href="${m.github}" target="_blank">💻 GitHub</a>`;
+  html += `<div style="font-size:0.7rem;color:var(--muted);margin-top:6px">Click to open paper/project</div>`;
+  tip.innerHTML = html;
+  tip.style.display = "block";
+  moveTip(ev);
+}
+function moveTip(ev) {
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  let x = ev.clientX + 16, y = ev.clientY + 16;
+  if (x + tw > window.innerWidth - 10) x = ev.clientX - tw - 16;
+  if (y + th > window.innerHeight - 10) y = ev.clientY - th - 16;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+
+// ── Search ────────────────────────────────────────────────────────────────
+document.getElementById("search").addEventListener("input", function() {
+  searchQuery = this.value.trim().toLowerCase();
+  renderTimeline(false);
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────
+resize();
+</script>
+</body>
+</html>
