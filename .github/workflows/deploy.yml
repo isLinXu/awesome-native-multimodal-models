@@ -1,0 +1,152 @@
+name: 🚀 Build & Deploy Visualizations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/deploy.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+  schedule:
+    # Re-build weekly on Mondays at 08:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual trigger'
+        required: false
+        default: 'Manual rebuild'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 1: Lint & validate data
+  # ─────────────────────────────────────────────────────────────────────────
+  validate:
+    name: ✅ Validate Data & Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate data.py structure
+        run: python tests/test_data.py
+
+      - name: Validate scripts are importable
+        run: |
+          python -c "import scripts.data; print('data.py OK')"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 2: Build HTML files
+  # ─────────────────────────────────────────────────────────────────────────
+  build:
+    name: 🔨 Build HTML Visualizations
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate taxonomy.html
+        run: python scripts/generate_taxonomy.py
+
+      - name: Generate timeline.html
+        run: python scripts/generate_timeline.py
+
+      - name: Generate index.html
+        run: python scripts/generate_index.py
+
+      - name: List generated files
+        run: |
+          echo "Generated docs/ contents:"
+          ls -lh docs/
+          echo "---"
+          wc -c docs/*.html
+
+      - name: Validate generated HTML
+        run: python tests/test_html_output.py
+
+      - name: Upload docs/ as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages-docs
+          path: docs/
+          retention-days: 7
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 3: Deploy to GitHub Pages (only on push to main)
+  # ─────────────────────────────────────────────────────────────────────────
+  deploy:
+    name: 🌐 Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages-docs
+          path: docs/
+
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          commit_message: |
+            🤖 Auto-deploy: ${{ github.event.head_commit.message || inputs.reason || 'Scheduled rebuild' }}
+            Built from ${{ github.sha }}
+          force_orphan: false
+
+      - name: Output deployment URL
+        id: deploy
+        run: |
+          REPO="${{ github.repository }}"
+          OWNER=$(echo $REPO | cut -d'/' -f1)
+          REPONAME=$(echo $REPO | cut -d'/' -f2)
+          URL="https://${OWNER}.github.io/${REPONAME}/"
+          echo "page_url=$URL" >> $GITHUB_OUTPUT
+          echo "✅ Deployed to: $URL"
+          echo "  - Index:    ${URL}index.html"
+          echo "  - Taxonomy: ${URL}taxonomy.html"
+          echo "  - Timeline: ${URL}timeline.html"

@@ -1,0 +1,9 @@
+# No heavy dependencies required — stdlib only for generation scripts
+# Add optional tools below as needed
+
+# Testing utilities (optional, stdlib unittest is sufficient)
+# pytest>=7.4
+
+# Linting (optional, for development)
+# flake8>=6.0
+# black>=23.0
