@@ -39,12 +39,13 @@
 
 | 📊 Page | 🔗 Link | Description |
 |---------|---------|-------------|
-| 🌲 Architecture Taxonomy | [taxonomy.html](https://your-username.github.io/Awesome-Native-Multimodal-Models/taxonomy.html) | Collapsible D3.js tree · 5 branches · 111 leaf models · hover for paper links |
-| 📅 Model Timeline | [timeline.html](https://your-username.github.io/Awesome-Native-Multimodal-Models/timeline.html) | Swim-lane timeline 2017–2026 · zoom & pan · category filters · minimap |
-| 🔍 Validation Report | [validation_report.html](https://your-username.github.io/Awesome-Native-Multimodal-Models/validation_report.html) | Data quality dashboard · Chart.js · JSON export |
-| 🏠 Index | [index.html](https://your-username.github.io/Awesome-Native-Multimodal-Models/index.html) | Landing page with live stats |
+| 🌲 Architecture Taxonomy | [taxonomy.html](https://islinxu.github.io/awesome-native-multimodal-models/taxonomy.html) | Collapsible D3.js tree · 5 branches · 111 leaf models · hover for paper links |
+| 📅 Model Timeline | [timeline.html](https://islinxu.github.io/awesome-native-multimodal-models/timeline.html) | Swim-lane timeline 2017–2026 · zoom & pan · category filters · minimap |
+| 🔍 Validation Report | [validation_report.html](https://islinxu.github.io/awesome-native-multimodal-models/validation_report.html) | Data quality dashboard · Chart.js · JSON export |
+| 🏠 Index | [index.html](https://islinxu.github.io/awesome-native-multimodal-models/index.html) | Landing page with live stats |
 
 ### 🌲 Architecture Taxonomy (Static)
+
 ![Taxonomy Tree](assets/taxonomy_tree.png)
 
 ### 📅 Model Timeline (Static)
@@ -1430,9 +1431,9 @@ If you find this list useful in your research, please consider starring ⭐ the 
 ```bibtex
 @misc{awesome-native-multimodal-models,
   title  = {Awesome Native Multimodal Models},
-  author = {Your Name},
+  author = {Xu Lin},
   year   = {2026},
-  url    = {https://github.com/your-username/Awesome-Native-Multimodal-Models}
+  url    = {https://github.com/isLinXu/awesome-native-multimodal-models}
 }
 ```
 
