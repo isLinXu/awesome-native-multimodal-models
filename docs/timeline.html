@@ -254,7 +254,7 @@ const DATA = [
     "category": "Pretraining",
     "arxiv": "2504.10479",
     "landmark": false,
-    "desc": "InternVL3 with enhanced capabilities"
+    "desc": "InternVL3 with enhanced capabilities (VL backbone)"
   },
   {
     "name": "Seed1.5-VL",
@@ -788,6 +788,7 @@ const DATA = [
     "month": 5,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://openai.com/index/hello-gpt-4o/",
     "landmark": true,
     "desc": "GPT-4 Omni (OpenAI) - audio, vision, text"
   },
@@ -815,6 +816,7 @@ const DATA = [
     "month": 2,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
     "landmark": true,
     "desc": "Gemini 1.5 Pro (Google) - long context multimodal"
   },
@@ -851,6 +853,7 @@ const DATA = [
     "month": 2,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
     "landmark": false,
     "desc": "Gemini 2.0 Flash (Google)"
   },
@@ -869,17 +872,19 @@ const DATA = [
     "month": 3,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
     "landmark": true,
     "desc": "Gemini 2.5 Pro (Google) - state-of-the-art"
   },
   {
-    "name": "InternVL3",
+    "name": "InternVL3-Omni",
     "year": 2025,
     "month": 4,
     "category": "Omni",
-    "arxiv": "2504.10479",
+    "arxiv": "",
+    "github": "https://github.com/OpenGVLab/InternVL",
     "landmark": false,
-    "desc": "InternVL3 omni-capable model"
+    "desc": "InternVL3 omni-capable model (audio+video+image)"
   },
   {
     "name": "MiniCPM-o 4.5",
@@ -905,6 +910,7 @@ const DATA = [
     "month": 2,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
     "landmark": true,
     "desc": "Gemini 3.1 Pro (Google) - latest flagship"
   },
@@ -923,8 +929,249 @@ const DATA = [
     "month": 6,
     "category": "Omni",
     "arxiv": "",
+    "github": "https://stepfun.ai/research/en/step3",
     "landmark": false,
     "desc": "Step3 omni model"
+  },
+  {
+    "name": "ViT-VQGAN",
+    "year": 2021,
+    "month": 10,
+    "category": "Tokenizer",
+    "arxiv": "2110.04627",
+    "github": "",
+    "landmark": false,
+    "desc": "Vector-quantized image modeling with improved VQGAN training"
+  },
+  {
+    "name": "MaskGIT",
+    "year": 2022,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2202.04200",
+    "github": "",
+    "landmark": false,
+    "desc": "Masked generative image transformer using bidirectional masked token prediction"
+  },
+  {
+    "name": "UniCode",
+    "year": 2024,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2403.09072",
+    "github": "",
+    "landmark": false,
+    "desc": "Unified codebook for multimodal LLMs enabling joint image-text tokenization"
+  },
+  {
+    "name": "LlamaGen",
+    "year": 2024,
+    "month": 6,
+    "category": "Tokenizer",
+    "arxiv": "2406.06525",
+    "github": "https://github.com/FoundationVision/LlamaGen",
+    "landmark": false,
+    "desc": "Demonstrates autoregressive LLMs beat diffusion for scalable image generation"
+  },
+  {
+    "name": "SimVQ",
+    "year": 2024,
+    "month": 11,
+    "category": "Tokenizer",
+    "arxiv": "2411.02038",
+    "github": "https://github.com/youngsheen/SimVQ",
+    "landmark": false,
+    "desc": "Addresses representation collapse in VQ models with a single linear layer"
+  },
+  {
+    "name": "SoftVQ-VAE",
+    "year": 2024,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2412.10958",
+    "github": "https://github.com/Hhhhhhao/continuous_tokenizer",
+    "landmark": false,
+    "desc": "Efficient 1D continuous tokenizer combining VQ and VAE advantages"
+  },
+  {
+    "name": "Open-MAGVIT2",
+    "year": 2024,
+    "month": 9,
+    "category": "Tokenizer",
+    "arxiv": "2409.04410",
+    "github": "https://github.com/TencentARC/SEED-Voken",
+    "landmark": false,
+    "desc": "Open-source reproduction of MAGVIT-v2 LFQ tokenizer for democratizing visual generation"
+  },
+  {
+    "name": "BSQ-ViT",
+    "year": 2024,
+    "month": 6,
+    "category": "Tokenizer",
+    "arxiv": "2406.07548",
+    "github": "https://github.com/zhaoyue-zephyrus/bsq-vit",
+    "landmark": false,
+    "desc": "Binary spherical quantization for image/video tokenization with simple binary codes"
+  },
+  {
+    "name": "ImageFolder",
+    "year": 2024,
+    "month": 10,
+    "category": "Tokenizer",
+    "arxiv": "2410.01756",
+    "github": "https://github.com/lxa9867/ImageFolder",
+    "landmark": false,
+    "desc": "Autoregressive image generation with product-quantized folded tokens"
+  },
+  {
+    "name": "VA-VAE",
+    "year": 2025,
+    "month": 1,
+    "category": "Tokenizer",
+    "arxiv": "2501.01423",
+    "github": "https://github.com/hustvl/LightningDiT",
+    "landmark": false,
+    "desc": "Resolves reconstruction-generation tradeoff in latent diffusion via improved VAE training"
+  },
+  {
+    "name": "MAETok",
+    "year": 2025,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2502.03444",
+    "github": "https://github.com/Hhhhhhao/continuous_tokenizer",
+    "landmark": false,
+    "desc": "Masked autoencoders as effective continuous tokenizers for diffusion models"
+  },
+  {
+    "name": "FAR",
+    "year": 2025,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2503.05305",
+    "github": "https://github.com/yuhuUSTC/FAR",
+    "landmark": false,
+    "desc": "Frequency autoregressive generation with continuous tokens in frequency domain"
+  },
+  {
+    "name": "USP",
+    "year": 2025,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2503.06132",
+    "github": "https://github.com/cxxgtxy/USP",
+    "landmark": false,
+    "desc": "Unified self-supervised pretraining shared by image generation and understanding"
+  },
+  {
+    "name": "LQAE",
+    "year": 2023,
+    "month": 2,
+    "category": "Tokenizer",
+    "arxiv": "2302.00902",
+    "github": "",
+    "landmark": false,
+    "desc": "Language-quantized autoencoders for unsupervised text-image alignment"
+  },
+  {
+    "name": "SPAE",
+    "year": 2023,
+    "month": 6,
+    "category": "Tokenizer",
+    "arxiv": "2306.17842",
+    "github": "",
+    "landmark": false,
+    "desc": "Semantic pyramid autoencoder enabling multimodal generation with frozen LLMs"
+  },
+  {
+    "name": "V2L-Tokenizer",
+    "year": 2024,
+    "month": 3,
+    "category": "Tokenizer",
+    "arxiv": "2403.07874",
+    "github": "https://github.com/zh460045050/V2L-Tokenizer",
+    "landmark": false,
+    "desc": "Frozen LLM-based visual tokenizer mapping images to text token space"
+  },
+  {
+    "name": "ViLex",
+    "year": 2024,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2412.06774",
+    "github": "",
+    "landmark": false,
+    "desc": "Visual lexicon encoding rich image features in the language token space"
+  },
+  {
+    "name": "FUDOKI",
+    "year": 2025,
+    "month": 5,
+    "category": "Unified",
+    "arxiv": "2505.05667",
+    "github": "",
+    "landmark": false,
+    "desc": "Discrete flow-based unified understanding and generation via discrete denoising"
+  },
+  {
+    "name": "SynerGen-VL",
+    "year": 2024,
+    "month": 12,
+    "category": "Unified",
+    "arxiv": "2412.09604",
+    "github": "",
+    "landmark": false,
+    "desc": "Synergistic image understanding and generation with vision experts and token folding"
+  },
+  {
+    "name": "DreamLLM",
+    "year": 2023,
+    "month": 9,
+    "category": "Unified",
+    "arxiv": "2309.11499",
+    "github": "",
+    "landmark": false,
+    "desc": "Synergistic multimodal comprehension and creation via interleaved text-image generation"
+  },
+  {
+    "name": "X-VILA",
+    "year": 2024,
+    "month": 5,
+    "category": "Any2Any",
+    "arxiv": "2405.19335",
+    "github": "",
+    "landmark": false,
+    "desc": "Cross-modality alignment extending VILA to any-to-any multimodal generation"
+  },
+  {
+    "name": "InteractiveOmni-A2A",
+    "year": 2025,
+    "month": 10,
+    "category": "Any2Any",
+    "arxiv": "2510.13747",
+    "github": "",
+    "landmark": false,
+    "desc": "Unified omni-modal model for audio-visual multi-turn any-to-any dialogue"
+  },
+  {
+    "name": "XQ-GAN",
+    "year": 2024,
+    "month": 12,
+    "category": "Tokenizer",
+    "arxiv": "2412.01762",
+    "github": "https://github.com/lxa9867/ImageFolder",
+    "landmark": false,
+    "desc": "Open-source image tokenization framework with extended quantization for AR generation"
+  },
+  {
+    "name": "i-Code",
+    "year": 2022,
+    "month": 5,
+    "category": "Pretraining",
+    "arxiv": "2205.01818",
+    "github": "",
+    "landmark": false,
+    "desc": "Integrative and composable multimodal learning framework for text, speech, and image"
   }
 ];
 const META = {"title": "Awesome Native Multimodal Models", "subtitle": "Interactive Visualizations — Architecture Taxonomy & Model Timeline", "paper_count": "400+", "last_updated": "2026-03", "github_url": "https://github.com/your-username/Awesome-Native-Multimodal-Models", "categories": {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}}};

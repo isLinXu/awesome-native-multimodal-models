@@ -1,96 +1,85 @@
 """
 tests/test_data.py
-Validates the structure and integrity of data.py.
+Data integrity tests powered by the validate.py engine.
 Run: python tests/test_data.py
 """
 import sys
-import json
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
-from data import TAXONOMY_TREE, TIMELINE_MODELS, META  # noqa: E402
+from validate import run_validation  # noqa: E402
 
-ERRORS = []
+PASS, FAIL = [], []
 
-def err(msg):
-    ERRORS.append(msg)
-    print(f"  ✗ {msg}")
+def ok(msg):  PASS.append(msg); print(f"  ✓ {msg}")
+def err(msg): FAIL.append(msg); print(f"  ✗ {msg}")
 
-def ok(msg):
-    print(f"  ✓ {msg}")
+print("\n── Running validation engine ────────────────────────────────────────")
+report = run_validation()
 
+print(f"  Total timeline models   : {report.total_timeline}")
+print(f"  Total taxonomy leaves   : {report.total_taxonomy_leaves}")
+print(f"  🔴 Errors               : {len(report.errors)}")
+print(f"  🟡 Warnings             : {len(report.warnings)}")
+print(f"  🔵 Infos                : {len(report.infos)}")
+print(f"  🏆 Quality score        : {report.quality_score}/100  ({report.quality_label})")
 
-print("\n── Validating META ──────────────────────────────────────────────────")
-for key in ("title", "paper_count", "last_updated", "github_url", "categories"):
-    if key in META:
-        ok(f"META.{key} present")
-    else:
-        err(f"META.{key} missing!")
+print("\n── Assertions ───────────────────────────────────────────────────────")
 
-print("\n── Validating TAXONOMY_TREE ─────────────────────────────────────────")
-assert isinstance(TAXONOMY_TREE, dict), "TAXONOMY_TREE must be a dict"
-assert "name" in TAXONOMY_TREE, "TAXONOMY_TREE must have 'name'"
-assert "children" in TAXONOMY_TREE, "TAXONOMY_TREE must have 'children'"
-ok(f"Root node: '{TAXONOMY_TREE['name']}'")
-ok(f"Top-level branches: {len(TAXONOMY_TREE['children'])}")
+# Must have zero ERRORs
+if len(report.errors) == 0:
+    ok("Zero ERRORs — data is structurally valid")
+else:
+    for issue in report.errors:
+        err(f"[{issue.code}] {issue.model}: {issue.message}")
 
-# JSON serializable
-try:
-    json.dumps(TAXONOMY_TREE)
-    ok("TAXONOMY_TREE is JSON-serializable")
-except Exception as e:
-    err(f"TAXONOMY_TREE JSON error: {e}")
+# Minimum dataset size
+if report.total_timeline >= 60:
+    ok(f"Timeline size sufficient ({report.total_timeline} models)")
+else:
+    err(f"Timeline too small: {report.total_timeline} (expected ≥ 60)")
 
-# Leaf nodes
-def collect_leaves(node, depth=0):
-    leaves = []
-    for child in node.get("children", []):
-        if not child.get("children"):
-            leaves.append((child["name"], depth))
-        else:
-            leaves.extend(collect_leaves(child, depth + 1))
-    return leaves
+if report.total_taxonomy_leaves >= 50:
+    ok(f"Taxonomy leaves sufficient ({report.total_taxonomy_leaves} leaves)")
+else:
+    err(f"Taxonomy leaves too few: {report.total_taxonomy_leaves} (expected ≥ 50)")
 
-leaves = collect_leaves(TAXONOMY_TREE)
-ok(f"Leaf models in taxonomy: {len(leaves)}")
-if len(leaves) < 50:
-    err(f"Too few leaf models: {len(leaves)} (expected >= 50)")
+# Landmark models
+from data import TIMELINE_MODELS, META  # noqa: E402
+lm_count = sum(1 for m in TIMELINE_MODELS if m.get("landmark"))
+if lm_count >= 10:
+    ok(f"Landmark count OK ({lm_count})")
+else:
+    err(f"Too few landmarks: {lm_count} (expected ≥ 10)")
 
-print("\n── Validating TIMELINE_MODELS ───────────────────────────────────────")
-assert isinstance(TIMELINE_MODELS, list), "TIMELINE_MODELS must be a list"
-ok(f"Total timeline models: {len(TIMELINE_MODELS)}")
-if len(TIMELINE_MODELS) < 60:
-    err(f"Too few timeline models: {len(TIMELINE_MODELS)} (expected >= 60)")
-
-REQUIRED_FIELDS = ("name", "year", "category")
-valid_cats = set(META["categories"].keys())
-for m in TIMELINE_MODELS:
-    for f in REQUIRED_FIELDS:
-        if f not in m:
-            err(f"Model '{m.get('name', '?')}' missing field '{f}'")
-    if m.get("category") not in valid_cats:
-        err(f"Model '{m['name']}' has unknown category '{m.get('category')}'")
-    if not (2010 <= int(m.get("year", 0)) <= 2030):
-        err(f"Model '{m['name']}' has suspicious year {m.get('year')}")
+# All categories used
+used_cats = {m.get("category") for m in TIMELINE_MODELS}
+valid_cats = set(META.get("categories", {}).keys())
+missing_cats = valid_cats - used_cats
+if not missing_cats:
+    ok("All categories have at least one model")
+else:
+    err(f"Unused categories: {missing_cats}")
 
 # JSON serializable
+import json  # noqa: E402
 try:
-    json.dumps(TIMELINE_MODELS)
-    ok("TIMELINE_MODELS is JSON-serializable")
+    json.dumps(report.to_dict())
+    ok("Full report is JSON-serializable")
 except Exception as e:
-    err(f"TIMELINE_MODELS JSON error: {e}")
+    err(f"JSON serialization failed: {e}")
 
-# Check landmark count
-lm = [m for m in TIMELINE_MODELS if m.get("landmark")]
-ok(f"Landmark models: {len(lm)}")
-if len(lm) < 10:
-    err("Too few landmark models (expected >= 10)")
+# Quality score > 0
+if report.quality_score > 0:
+    ok(f"Quality score > 0 ({report.quality_score})")
+else:
+    err("Quality score is 0 — too many errors!")
 
-print("\n── Summary ─────────────────────────────────────────────────────────")
-if ERRORS:
-    print(f"❌ {len(ERRORS)} error(s) found:")
-    for e in ERRORS:
-        print(f"   • {e}")
+print("\n── Summary ──────────────────────────────────────────────────────────")
+if FAIL:
+    print(f"❌ {len(FAIL)} test(s) FAILED:")
+    for f in FAIL:
+        print(f"   • {f}")
     sys.exit(1)
 else:
-    print(f"✅ All checks passed! ({len(TIMELINE_MODELS)} timeline models, {len(leaves)} taxonomy leaves)")
+    print(f"✅ All {len(PASS)} test(s) passed!")
