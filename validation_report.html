@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Validation Report — Awesome Native Multimodal Models</title>
+<style>
+:root{
+  --bg:#0d1117;--surface:#161b22;--surface2:#1c2128;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--link:#79c0ff;
+  --green:#3fb950;--yellow:#ffc947;--red:#ff7b7b;--purple:#bc8cff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+
+/* ── Header ── */
+header{padding:20px 32px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+header h1{font-size:1.3rem;font-weight:700}header h1 span{color:var(--accent)}
+.hdr-right{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{padding:3px 12px;border-radius:20px;font-size:0.75rem;background:var(--surface2);
+  border:1px solid var(--border);color:var(--muted)}
+.badge b{color:var(--text)}
+.btn{padding:5px 16px;border-radius:6px;font-size:0.8rem;cursor:pointer;
+  border:1px solid var(--border);background:var(--surface);color:var(--text);
+  transition:all .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#0d1117;border-color:var(--accent);font-weight:700}
+
+/* ── Layout ── */
+.main{max-width:1320px;margin:0 auto;padding:28px 24px}
+
+/* ── Dashboard cards ── */
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px}
+.dash-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:20px 18px;text-align:center;transition:transform .2s}
+.dash-card:hover{transform:translateY(-2px)}
+.dash-num{font-size:2.2rem;font-weight:800;line-height:1}
+.dash-label{font-size:0.75rem;color:var(--muted);margin-top:6px}
+.dash-card.error  .dash-num{color:var(--red)}
+.dash-card.warn   .dash-num{color:var(--yellow)}
+.dash-card.info   .dash-num{color:var(--accent)}
+.dash-card.total  .dash-num{color:var(--text)}
+.dash-card.score  .dash-num{color:#3fb950}
+
+/* ── Score ring ── */
+.score-section{display:flex;align-items:center;gap:32px;
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:24px 28px;margin-bottom:28px;flex-wrap:wrap}
+.score-meta h2{font-size:1.2rem;margin-bottom:8px}
+.score-meta p{font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:420px}
+.breakdown-grid{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
+.bkd-item{background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:10px 18px;text-align:center}
+.bkd-item .num{font-size:1.4rem;font-weight:700}
+.bkd-item .lbl{font-size:0.7rem;color:var(--muted)}
+
+/* ── Section headings ── */
+.section-title{font-size:1.05rem;font-weight:700;margin:28px 0 14px;
+  display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';display:block;width:4px;height:18px;
+  background:var(--accent);border-radius:2px}
+
+/* ── Charts row ── */
+.charts-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:28px}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.chart-card h3{font-size:0.88rem;font-weight:600;margin-bottom:14px;color:var(--muted)}
+canvas{max-height:220px}
+
+/* ── Completeness ── */
+.comp-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.comp-label{width:80px;font-size:0.8rem;color:var(--muted);text-align:right}
+.comp-bar-bg{flex:1;background:var(--surface2);border-radius:20px;height:8px;overflow:hidden}
+.comp-bar-fill{height:100%;border-radius:20px;transition:width .4s}
+.comp-pct{width:38px;font-size:0.78rem;font-weight:700;text-align:right}
+
+/* ── Tabs ── */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:0;overflow-x:auto}
+.tab-btn{padding:9px 20px;font-size:0.83rem;cursor:pointer;background:none;
+  border:none;border-bottom:2px solid transparent;color:var(--muted);
+  white-space:nowrap;transition:all .15s}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab-panel{display:none;padding-top:16px}
+.tab-panel.active{display:block}
+
+/* ── Filter toolbar ── */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  padding:10px 0 14px}
+.filter-bar input{background:var(--bg);border:1px solid var(--border);border-radius:6px;
+  color:var(--text);padding:5px 10px;font-size:0.82rem;outline:none;min-width:200px}
+.filter-bar input:focus{border-color:var(--accent)}
+.filter-btn{padding:4px 14px;border-radius:20px;font-size:0.75rem;cursor:pointer;
+  border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .15s}
+.filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent)}
+.filter-btn[data-sev="ERROR"].active{border-color:var(--red);color:var(--red);background:#3d1a1a}
+.filter-btn[data-sev="WARNING"].active{border-color:var(--yellow);color:var(--yellow);background:#3d2e00}
+.filter-btn[data-sev="INFO"].active{border-color:var(--accent);color:var(--accent);background:#0d2d45}
+
+/* ── Issue table ── */
+.issue-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:0.82rem}
+th{background:var(--surface2);padding:9px 12px;text-align:left;
+  font-size:0.75rem;font-weight:600;color:var(--muted);
+  border-bottom:1px solid var(--border)}
+td{padding:9px 12px;border-bottom:1px solid #21262d;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr.issue-row{transition:background .1s}
+tr.issue-row:hover{background:var(--surface2)}
+tr.issue-row.hidden{display:none}
+.empty-row{color:var(--muted);font-style:italic;text-align:center;padding:20px}
+.sev-badge{display:inline-block;padding:2px 9px;border-radius:20px;
+  font-size:0.7rem;font-weight:700;white-space:nowrap}
+code.code-tag{background:var(--surface2);border:1px solid var(--border);
+  border-radius:4px;padding:1px 7px;font-size:0.78rem;color:var(--purple)}
+.loc-cell{color:var(--muted);font-size:0.75rem;max-width:180px;word-break:break-all}
+.model-cell{color:var(--text);min-width:120px}
+.msg-cell{color:var(--text);line-height:1.6}
+.suggestion{font-size:0.75rem;color:var(--muted)}
+
+/* ── Coverage list ── */
+.coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.cov-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.cov-card h4{font-size:0.85rem;font-weight:600;margin-bottom:10px;color:var(--yellow)}
+.cov-card.ok h4{color:var(--green)}
+.cov-tags{display:flex;flex-wrap:wrap;gap:6px}
+.cov-tag{background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+  padding:2px 9px;font-size:0.75rem;color:var(--muted)}
+
+/* ── JSON modal ── */
+#json-modal{display:none;position:fixed;inset:0;background:#000a;z-index:9999;
+  align-items:center;justify-content:center}
+#json-modal.open{display:flex}
+.modal-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  width:min(860px,92vw);max-height:80vh;overflow:hidden;
+  display:flex;flex-direction:column}
+.modal-header{padding:14px 18px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center}
+.modal-header h3{font-size:0.95rem;font-weight:700}
+.modal-body{overflow-y:auto;padding:16px}
+pre.json-pre{font-size:0.75rem;color:var(--green);white-space:pre-wrap;word-break:break-all}
+
+footer{text-align:center;padding:24px;font-size:0.73rem;color:var(--muted);
+  border-top:1px solid var(--border);margin-top:32px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔍 <span>Validation Report</span> — Awesome Native Multimodal Models</h1>
+  <div class="hdr-right">
+    <span class="badge">Generated <b>2026-03-04T17:26:40Z</b></span>
+    <a href="taxonomy.html"  class="badge">🌐 Taxonomy</a>
+    <a href="timeline.html"  class="badge">📅 Timeline</a>
+    <a href="index.html"     class="badge">🏠 Index</a>
+    <button class="btn" onclick="showJson()">📋 Export JSON</button>
+    <button class="btn primary" onclick="window.print()">🖨 Print</button>
+  </div>
+</header>
+
+<div class="main">
+
+  <!-- ── Dashboard cards ─────────────────────────────────────────────── -->
+  <div class="dash-grid">
+    <div class="dash-card total">
+      <div class="dash-num">111</div>
+      <div class="dash-label">Timeline Models</div>
+    </div>
+    <div class="dash-card total">
+      <div class="dash-num">111</div>
+      <div class="dash-label">Taxonomy Leaves</div>
+    </div>
+    <div class="dash-card total">
+      <div class="dash-num">79</div>
+      <div class="dash-label">Total Issues</div>
+    </div>
+    <div class="dash-card error">
+      <div class="dash-num">0</div>
+      <div class="dash-label">🔴 Errors</div>
+    </div>
+    <div class="dash-card warn">
+      <div class="dash-num">0</div>
+      <div class="dash-label">🟡 Warnings</div>
+    </div>
+    <div class="dash-card info">
+      <div class="dash-num">79</div>
+      <div class="dash-label">🔵 Infos</div>
+    </div>
+    <div class="dash-card score">
+      <div class="dash-num" style="color:#3fb950">100</div>
+      <div class="dash-label">Quality Score / 100</div>
+    </div>
+  </div>
+
+  <!-- ── Score ring + breakdown ──────────────────────────────────────── -->
+  <div class="score-section">
+    
+<svg width="136" height="136" viewBox="0 0 136 136">
+  <circle cx="68" cy="68" r="54" fill="none" stroke="#21262d" stroke-width="12"/>
+  <circle cx="68" cy="68" r="54" fill="none" stroke="#3fb950" stroke-width="12"
+          stroke-dasharray="339.3" stroke-dashoffset="0.0"
+          stroke-linecap="round" transform="rotate(-90 68 68)"/>
+  <text x="68" y="62" text-anchor="middle" fill="#3fb950"
+        font-size="26" font-weight="800" font-family="Segoe UI,system-ui,sans-serif">100</text>
+  <text x="68" y="84" text-anchor="middle" fill="#8b949e"
+        font-size="12" font-family="Segoe UI,system-ui,sans-serif">Excellent</text>
+</svg>
+    <div class="score-meta">
+      <h2>Data Quality: <span style="color:#3fb950">Excellent</span></h2>
+      <p>Score is computed as <code>100 − 5×errors − 2×warnings</code>.
+         Fix all ERRORs first, then address WARNINGs for a clean dataset.</p>
+      <div class="breakdown-grid">
+        <div class="bkd-item">
+          <div class="num" style="color:#ffc947">79</div>
+          <div class="lbl">Timeline Issues</div>
+        </div>
+        <div class="bkd-item">
+          <div class="num" style="color:#74c0fc">0</div>
+          <div class="lbl">Taxonomy Issues</div>
+        </div>
+        <div class="bkd-item">
+          <div class="num" style="color:#bc8cff">0</div>
+          <div class="lbl">Cross-Val Issues</div>
+        </div>
+        <div class="bkd-item">
+          <div class="num" style="color:#ff7b7b">0</div>
+          <div class="lbl">Meta Issues</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Charts ──────────────────────────────────────────────────────── -->
+  <div class="section-title">📊 Dataset Overview</div>
+  <div class="charts-row">
+    <div class="chart-card">
+      <h3>Models by Category</h3>
+      <canvas id="catChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Models by Year</h3>
+      <canvas id="yearChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Issues by Code</h3>
+      <canvas id="codeChart"></canvas>
+    </div>
+  </div>
+
+  <!-- ── Field Completeness ──────────────────────────────────────────── -->
+  <div class="section-title">✅ Field Completeness (Timeline Models)</div>
+  <div style="background:var(--surface);border:1px solid var(--border);
+              border-radius:12px;padding:20px 24px;margin-bottom:28px;max-width:520px">
+    
+        <div class="comp-row">
+          <span class="comp-label">arxiv</span>
+          <div class="comp-bar-bg">
+            <div class="comp-bar-fill" style="width:94%;background:#3fb950"></div>
+          </div>
+          <span class="comp-pct" style="color:#3fb950">94%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">github</span>
+          <div class="comp-bar-bg">
+            <div class="comp-bar-fill" style="width:29%;background:#ff7b7b"></div>
+          </div>
+          <span class="comp-pct" style="color:#ff7b7b">29%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">desc</span>
+          <div class="comp-bar-bg">
+            <div class="comp-bar-fill" style="width:100%;background:#3fb950"></div>
+          </div>
+          <span class="comp-pct" style="color:#3fb950">100%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">month</span>
+          <div class="comp-bar-bg">
+            <div class="comp-bar-fill" style="width:100%;background:#3fb950"></div>
+          </div>
+          <span class="comp-pct" style="color:#3fb950">100%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-label">landmark</span>
+          <div class="comp-bar-bg">
+            <div class="comp-bar-fill" style="width:100%;background:#3fb950"></div>
+          </div>
+          <span class="comp-pct" style="color:#3fb950">100%</span>
+        </div>
+  </div>
+
+  <!-- ── Cross-Coverage ─────────────────────────────────────────────── -->
+  <div class="section-title">🔗 Timeline ↔ Taxonomy Coverage</div>
+  <div class="coverage-grid">
+    <div class="cov-card ok">
+      <h4>✅ All timeline models in taxonomy</h4>
+      <div class="cov-tags">
+        <span class="cov-tag" style="color:var(--green)">— none —</span>
+      </div>
+    </div>
+    <div class="cov-card ok">
+      <h4>✅ All taxonomy leaves in timeline</h4>
+      <div class="cov-tags">
+        <span class="cov-tag" style="color:var(--green)">— none —</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Issue Table ─────────────────────────────────────────────────── -->
+  <div class="section-title">📋 Issue Details</div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('all',this)">All (79)</button>
+    <button class="tab-btn" onclick="switchTab('error',this)">🔴 Errors (0)</button>
+    <button class="tab-btn" onclick="switchTab('warning',this)">🟡 Warnings (0)</button>
+    <button class="tab-btn" onclick="switchTab('info',this)">🔵 Infos (79)</button>
+  </div>
+
+  <div id="panel-all" class="tab-panel active">
+    <div class="filter-bar">
+      <input type="text" id="search-all" placeholder="🔍 Filter by model, message, code…"
+             oninput="filterTable('all', this.value)"/>
+      <button class="filter-btn active" data-sev="ALL"
+              onclick="toggleSev('all','ALL',this)">All</button>
+      <button class="filter-btn" data-sev="ERROR"
+              onclick="toggleSev('all','ERROR',this)">ERROR</button>
+      <button class="filter-btn" data-sev="WARNING"
+              onclick="toggleSev('all','WARNING',this)">WARNING</button>
+      <button class="filter-btn" data-sev="INFO"
+              onclick="toggleSev('all','INFO',this)">INFO</button>
+    </div>
+    <div class="issue-table-wrap">
+      <table id="table-all"><thead>
+        <tr><th>Severity</th><th>Code</th><th>Location</th><th>Model</th><th>Message / Suggestion</th></tr>
+      </thead><tbody><tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[1]</td><td class="model-cell"><b>ALIGN</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[40]</td><td class="model-cell"><b>ANOLE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[62]</td><td class="model-cell"><b>AnyGPT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[5]</td><td class="model-cell"><b>BEiT-3</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[6]</td><td class="model-cell"><b>BLIP-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[53]</td><td class="model-cell"><b>BLIP3-o</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[0]</td><td class="model-cell"><b>CLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[4]</td><td class="model-cell"><b>CoCa</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[60]</td><td class="model-cell"><b>CoDi</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[64]</td><td class="model-cell"><b>CoDi-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[106]</td><td class="model-cell"><b>DreamLLM</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[9]</td><td class="model-cell"><b>EVA-CLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[25]</td><td class="model-cell"><b>ElasticTok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[35]</td><td class="model-cell"><b>Emu</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[21]</td><td class="model-cell"><b>FSQ</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[104]</td><td class="model-cell"><b>FUDOKI</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[3]</td><td class="model-cell"><b>Flamingo</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[29]</td><td class="model-cell"><b>FlexTok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[30]</td><td class="model-cell"><b>FlowMo</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[47]</td><td class="model-cell"><b>Harmon</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[59]</td><td class="model-cell"><b>HermesFlow</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[85]</td><td class="model-cell"><b>InteractiveOmni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[108]</td><td class="model-cell"><b>InteractiveOmni-A2A</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[10]</td><td class="model-cell"><b>InternVL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[13]</td><td class="model-cell"><b>InternVL3</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[44]</td><td class="model-cell"><b>Janus</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[45]</td><td class="model-cell"><b>Janus-Pro</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[73]</td><td class="model-cell"><b>LLaMA-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[7]</td><td class="model-cell"><b>LLaVA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[100]</td><td class="model-cell"><b>LQAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[34]</td><td class="model-cell"><b>LaVIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[42]</td><td class="model-cell"><b>Liquid</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[43]</td><td class="model-cell"><b>LlamaFusion</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[70]</td><td class="model-cell"><b>M2-omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[20]</td><td class="model-cell"><b>MAGVIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[24]</td><td class="model-cell"><b>MAGVIT-v2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[65]</td><td class="model-cell"><b>MIO</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[46]</td><td class="model-cell"><b>MUSE-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[88]</td><td class="model-cell"><b>MaskGIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[48]</td><td class="model-cell"><b>MetaQuery-XL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[15]</td><td class="model-cell"><b>MiMo-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[68]</td><td class="model-cell"><b>Ming-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[77]</td><td class="model-cell"><b>MiniCPM-o 2.6</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[82]</td><td class="model-cell"><b>MiniCPM-o 4.5</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[58]</td><td class="model-cell"><b>Muddit</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[61]</td><td class="model-cell"><b>NExT-GPT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[83]</td><td class="model-cell"><b>NExT-OMNI</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[31]</td><td class="model-cell"><b>NFIG</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[2]</td><td class="model-cell"><b>OFA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[66]</td><td class="model-cell"><b>OmniFlow</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[55]</td><td class="model-cell"><b>OmniGen2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[28]</td><td class="model-cell"><b>QLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[75]</td><td class="model-cell"><b>Qwen2.5-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[12]</td><td class="model-cell"><b>Qwen2.5-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[69]</td><td class="model-cell"><b>Qwen3-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[19]</td><td class="model-cell"><b>RQ-VAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[79]</td><td class="model-cell"><b>SALMONN-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[101]</td><td class="model-cell"><b>SPAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[14]</td><td class="model-cell"><b>Seed1.5-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[56]</td><td class="model-cell"><b>Selftok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[54]</td><td class="model-cell"><b>Show-o2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[8]</td><td class="model-cell"><b>SigLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[11]</td><td class="model-cell"><b>SigLIP 2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[67]</td><td class="model-cell"><b>Spider</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[105]</td><td class="model-cell"><b>SynerGen-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[51]</td><td class="model-cell"><b>TokLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[38]</td><td class="model-cell"><b>Transfusion</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[89]</td><td class="model-cell"><b>UniCode</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[57]</td><td class="model-cell"><b>UniDisc</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[63]</td><td class="model-cell"><b>Unified-IO 2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[49]</td><td class="model-cell"><b>VARGPT-v1.1</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[72]</td><td class="model-cell"><b>VITA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[76]</td><td class="model-cell"><b>VITA-1.5</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[16]</td><td class="model-cell"><b>VQ-VAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[17]</td><td class="model-cell"><b>VQ-VAE-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[103]</td><td class="model-cell"><b>ViLex</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[87]</td><td class="model-cell"><b>ViT-VQGAN</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[107]</td><td class="model-cell"><b>X-VILA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[110]</td><td class="model-cell"><b>i-Code</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr></tbody></table>
+    </div>
+  </div>
+
+  <div id="panel-error" class="tab-panel">
+    <div class="issue-table-wrap">
+      <table><thead>
+        <tr><th>Severity</th><th>Code</th><th>Location</th><th>Model</th><th>Message / Suggestion</th></tr>
+      </thead><tbody><tr><td colspan="5" class="empty-row">No issues in this category ✅</td></tr></tbody></table>
+    </div>
+  </div>
+
+  <div id="panel-warning" class="tab-panel">
+    <div class="issue-table-wrap">
+      <table><thead>
+        <tr><th>Severity</th><th>Code</th><th>Location</th><th>Model</th><th>Message / Suggestion</th></tr>
+      </thead><tbody><tr><td colspan="5" class="empty-row">No issues in this category ✅</td></tr></tbody></table>
+    </div>
+  </div>
+
+  <div id="panel-info" class="tab-panel">
+    <div class="issue-table-wrap">
+      <table><thead>
+        <tr><th>Severity</th><th>Code</th><th>Location</th><th>Model</th><th>Message / Suggestion</th></tr>
+      </thead><tbody><tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[1]</td><td class="model-cell"><b>ALIGN</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[40]</td><td class="model-cell"><b>ANOLE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[62]</td><td class="model-cell"><b>AnyGPT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[5]</td><td class="model-cell"><b>BEiT-3</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[6]</td><td class="model-cell"><b>BLIP-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[53]</td><td class="model-cell"><b>BLIP3-o</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[0]</td><td class="model-cell"><b>CLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[4]</td><td class="model-cell"><b>CoCa</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[60]</td><td class="model-cell"><b>CoDi</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[64]</td><td class="model-cell"><b>CoDi-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[106]</td><td class="model-cell"><b>DreamLLM</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[9]</td><td class="model-cell"><b>EVA-CLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[25]</td><td class="model-cell"><b>ElasticTok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[35]</td><td class="model-cell"><b>Emu</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[21]</td><td class="model-cell"><b>FSQ</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[104]</td><td class="model-cell"><b>FUDOKI</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[3]</td><td class="model-cell"><b>Flamingo</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[29]</td><td class="model-cell"><b>FlexTok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[30]</td><td class="model-cell"><b>FlowMo</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[47]</td><td class="model-cell"><b>Harmon</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[59]</td><td class="model-cell"><b>HermesFlow</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[85]</td><td class="model-cell"><b>InteractiveOmni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[108]</td><td class="model-cell"><b>InteractiveOmni-A2A</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[10]</td><td class="model-cell"><b>InternVL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[13]</td><td class="model-cell"><b>InternVL3</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[44]</td><td class="model-cell"><b>Janus</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[45]</td><td class="model-cell"><b>Janus-Pro</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[73]</td><td class="model-cell"><b>LLaMA-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[7]</td><td class="model-cell"><b>LLaVA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[100]</td><td class="model-cell"><b>LQAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[34]</td><td class="model-cell"><b>LaVIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[42]</td><td class="model-cell"><b>Liquid</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[43]</td><td class="model-cell"><b>LlamaFusion</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[70]</td><td class="model-cell"><b>M2-omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[20]</td><td class="model-cell"><b>MAGVIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[24]</td><td class="model-cell"><b>MAGVIT-v2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[65]</td><td class="model-cell"><b>MIO</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[46]</td><td class="model-cell"><b>MUSE-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[88]</td><td class="model-cell"><b>MaskGIT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[48]</td><td class="model-cell"><b>MetaQuery-XL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[15]</td><td class="model-cell"><b>MiMo-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[68]</td><td class="model-cell"><b>Ming-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[77]</td><td class="model-cell"><b>MiniCPM-o 2.6</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[82]</td><td class="model-cell"><b>MiniCPM-o 4.5</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[58]</td><td class="model-cell"><b>Muddit</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[61]</td><td class="model-cell"><b>NExT-GPT</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[83]</td><td class="model-cell"><b>NExT-OMNI</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[31]</td><td class="model-cell"><b>NFIG</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[2]</td><td class="model-cell"><b>OFA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[66]</td><td class="model-cell"><b>OmniFlow</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[55]</td><td class="model-cell"><b>OmniGen2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[28]</td><td class="model-cell"><b>QLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[75]</td><td class="model-cell"><b>Qwen2.5-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[12]</td><td class="model-cell"><b>Qwen2.5-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[69]</td><td class="model-cell"><b>Qwen3-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[19]</td><td class="model-cell"><b>RQ-VAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[79]</td><td class="model-cell"><b>SALMONN-Omni</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[101]</td><td class="model-cell"><b>SPAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[14]</td><td class="model-cell"><b>Seed1.5-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[56]</td><td class="model-cell"><b>Selftok</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[54]</td><td class="model-cell"><b>Show-o2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[8]</td><td class="model-cell"><b>SigLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[11]</td><td class="model-cell"><b>SigLIP 2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[67]</td><td class="model-cell"><b>Spider</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[105]</td><td class="model-cell"><b>SynerGen-VL</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[51]</td><td class="model-cell"><b>TokLIP</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[38]</td><td class="model-cell"><b>Transfusion</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[89]</td><td class="model-cell"><b>UniCode</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[57]</td><td class="model-cell"><b>UniDisc</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[63]</td><td class="model-cell"><b>Unified-IO 2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[49]</td><td class="model-cell"><b>VARGPT-v1.1</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[72]</td><td class="model-cell"><b>VITA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[76]</td><td class="model-cell"><b>VITA-1.5</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[16]</td><td class="model-cell"><b>VQ-VAE</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[17]</td><td class="model-cell"><b>VQ-VAE-2</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[103]</td><td class="model-cell"><b>ViLex</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[87]</td><td class="model-cell"><b>ViT-VQGAN</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[107]</td><td class="model-cell"><b>X-VILA</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr>
+<tr class="issue-row" data-sev="INFO" data-code="TL-012"><td><span class="sev-badge" style="background:#0d2d45;color:#74c0fc">🔵 INFO</span></td><td><code class="code-tag">TL-012</code></td><td class="loc-cell">TIMELINE[110]</td><td class="model-cell"><b>i-Code</b></td><td class="msg-cell">arXiv present but no GitHub URL<br/><span class="suggestion">↳ Consider adding a GitHub link if available</span></td></tr></tbody></table>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- JSON Modal -->
+<div id="json-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>📋 Validation Report JSON</h3>
+      <div style="display:flex;gap:8px">
+        <button class="btn" onclick="copyJson()">📋 Copy</button>
+        <button class="btn" onclick="downloadJson()">⬇️ Download</button>
+        <button class="btn" onclick="closeJson()">✕ Close</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <pre class="json-pre" id="json-pre"></pre>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Auto-generated by <code>generate_report.py</code> ·
+  <a href="https://github.com/your-username/Awesome-Native-Multimodal-Models">GitHub</a> ·
+  Visualized with <a href="https://cdn.jsdelivr.net/npm/chart.js">Chart.js</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script>
+// ── Embedded data ─────────────────────────────────────────────────────────
+const STATS = {"cat_labels": ["Any-to-Any", "Omni Models", "Pretraining Foundations", "Image & Video Tokenizers", "Unified U+G"], "cat_values": [13, 16, 17, 35, 30], "cat_colors": ["#A8E6CF", "#DDA0DD", "#FAD7A0", "#4ECDC4", "#FF6B6B"], "year_labels": [2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026], "year_values": [1, 1, 4, 7, 13, 37, 47, 1], "code_labels": ["TL-012"], "code_values": [79], "code_sevs": ["INFO"], "tl_count": 79, "tx_count": 0, "cv_count": 0, "mt_count": 0, "cv001_models": [], "cv002_models": [], "completeness": {"arxiv": 94, "github": 29, "desc": 100, "month": 100, "landmark": 100}};
+const REPORT = {"generated_at": "2026-03-04T17:26:40Z", "summary": {"total_timeline": 111, "total_taxonomy_leaves": 111, "errors": 0, "warnings": 0, "infos": 79, "quality_score": 100, "quality_label": "Excellent"}, "issues": [{"code": "TL-012", "severity": "INFO", "location": "TIMELINE[1]", "model": "ALIGN", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[40]", "model": "ANOLE", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[62]", "model": "AnyGPT", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[5]", "model": "BEiT-3", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[6]", "model": "BLIP-2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[53]", "model": "BLIP3-o", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[0]", "model": "CLIP", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[4]", "model": "CoCa", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[60]", "model": "CoDi", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[64]", "model": "CoDi-2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[106]", "model": "DreamLLM", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[9]", "model": "EVA-CLIP", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[25]", "model": "ElasticTok", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[35]", "model": "Emu", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[21]", "model": "FSQ", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[104]", "model": "FUDOKI", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[3]", "model": "Flamingo", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[29]", "model": "FlexTok", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[30]", "model": "FlowMo", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[47]", "model": "Harmon", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[59]", "model": "HermesFlow", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[85]", "model": "InteractiveOmni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[108]", "model": "InteractiveOmni-A2A", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[10]", "model": "InternVL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[13]", "model": "InternVL3", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[44]", "model": "Janus", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[45]", "model": "Janus-Pro", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[73]", "model": "LLaMA-Omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[7]", "model": "LLaVA", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[100]", "model": "LQAE", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[34]", "model": "LaVIT", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[42]", "model": "Liquid", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[43]", "model": "LlamaFusion", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[70]", "model": "M2-omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[20]", "model": "MAGVIT", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[24]", "model": "MAGVIT-v2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[65]", "model": "MIO", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[46]", "model": "MUSE-VL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[88]", "model": "MaskGIT", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[48]", "model": "MetaQuery-XL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[15]", "model": "MiMo-VL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[68]", "model": "Ming-Omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[77]", "model": "MiniCPM-o 2.6", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[82]", "model": "MiniCPM-o 4.5", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[58]", "model": "Muddit", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[61]", "model": "NExT-GPT", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[83]", "model": "NExT-OMNI", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[31]", "model": "NFIG", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[2]", "model": "OFA", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[66]", "model": "OmniFlow", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[55]", "model": "OmniGen2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[28]", "model": "QLIP", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[75]", "model": "Qwen2.5-Omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[12]", "model": "Qwen2.5-VL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[69]", "model": "Qwen3-Omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[19]", "model": "RQ-VAE", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[79]", "model": "SALMONN-Omni", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[101]", "model": "SPAE", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[14]", "model": "Seed1.5-VL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[56]", "model": "Selftok", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[54]", "model": "Show-o2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[8]", "model": "SigLIP", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[11]", "model": "SigLIP 2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[67]", "model": "Spider", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[105]", "model": "SynerGen-VL", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[51]", "model": "TokLIP", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[38]", "model": "Transfusion", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[89]", "model": "UniCode", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[57]", "model": "UniDisc", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[63]", "model": "Unified-IO 2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[49]", "model": "VARGPT-v1.1", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[72]", "model": "VITA", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[76]", "model": "VITA-1.5", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[16]", "model": "VQ-VAE", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[17]", "model": "VQ-VAE-2", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[103]", "model": "ViLex", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[87]", "model": "ViT-VQGAN", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[107]", "model": "X-VILA", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}, {"code": "TL-012", "severity": "INFO", "location": "TIMELINE[110]", "model": "i-Code", "message": "arXiv present but no GitHub URL", "suggestion": "Consider adding a GitHub link if available"}]};
+
+// ── Charts ────────────────────────────────────────────────────────────────
+const CHART_OPTS = {
+  responsive: true,
+  plugins: { legend: { labels: { color: '#e6edf3', font: { size: 11 } } } },
+  scales: {
+    x: { ticks: { color: '#8b949e', font: { size: 10 } }, grid: { color: '#21262d' } },
+    y: { ticks: { color: '#8b949e', font: { size: 10 } }, grid: { color: '#21262d' } }
+  }
+};
+
+// Category chart
+new Chart(document.getElementById('catChart'), {
+  type: 'doughnut',
+  data: {
+    labels: STATS.cat_labels,
+    datasets: [{ data: STATS.cat_values, backgroundColor: STATS.cat_colors,
+                  borderColor: '#0d1117', borderWidth: 2 }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom', labels: { color: '#e6edf3', font: { size: 10 },
+                                               boxWidth: 12, padding: 10 } }
+    }
+  }
+});
+
+// Year chart
+new Chart(document.getElementById('yearChart'), {
+  type: 'bar',
+  data: {
+    labels: STATS.year_labels,
+    datasets: [{ label: 'Models', data: STATS.year_values,
+                  backgroundColor: '#58a6ff88', borderColor: '#58a6ff', borderWidth: 1 }]
+  },
+  options: { ...CHART_OPTS, plugins: { legend: { display: false } } }
+});
+
+// Code chart
+const SEV_COLORS = { ERROR: '#ff7b7b', WARNING: '#ffc947', INFO: '#74c0fc' };
+new Chart(document.getElementById('codeChart'), {
+  type: 'bar',
+  data: {
+    labels: STATS.code_labels,
+    datasets: [{
+      label: 'Issues',
+      data: STATS.code_values,
+      backgroundColor: STATS.code_sevs.map(s => SEV_COLORS[s] + '88'),
+      borderColor:     STATS.code_sevs.map(s => SEV_COLORS[s]),
+      borderWidth: 1
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: '#8b949e', font: { size: 10 } }, grid: { color: '#21262d' } },
+      y: { ticks: { color: '#e6edf3', font: { size: 9 } }, grid: { color: '#21262d' } }
+    }
+  }
+});
+
+// ── Tabs ──────────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Filter ────────────────────────────────────────────────────────────────
+let activeSev = 'ALL';
+function filterTable(panel, q) {
+  const rows = document.querySelectorAll('#table-' + panel + ' tbody tr.issue-row');
+  const lq = q.toLowerCase();
+  rows.forEach(row => {
+    const sev = row.dataset.sev;
+    const text = row.textContent.toLowerCase();
+    const sevOk = activeSev === 'ALL' || sev === activeSev;
+    const qOk   = !lq || text.includes(lq);
+    row.classList.toggle('hidden', !(sevOk && qOk));
+  });
+}
+function toggleSev(panel, sev, btn) {
+  activeSev = sev;
+  document.querySelectorAll('.filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterTable(panel, document.getElementById('search-all')?.value || '');
+}
+
+// ── JSON Modal ────────────────────────────────────────────────────────────
+function showJson() {
+  document.getElementById('json-pre').textContent = JSON.stringify(REPORT, null, 2);
+  document.getElementById('json-modal').classList.add('open');
+}
+function closeJson() { document.getElementById('json-modal').classList.remove('open'); }
+function copyJson() {
+  navigator.clipboard.writeText(JSON.stringify(REPORT, null, 2))
+    .then(() => alert('Copied to clipboard!'));
+}
+function downloadJson() {
+  const blob = new Blob([JSON.stringify(REPORT, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'validation_report.json'; a.click();
+}
+document.getElementById('json-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeJson();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,646 @@
+{
+  "generated_at": "2026-03-04T17:26:40Z",
+  "summary": {
+    "total_timeline": 111,
+    "total_taxonomy_leaves": 111,
+    "errors": 0,
+    "warnings": 0,
+    "infos": 79,
+    "quality_score": 100,
+    "quality_label": "Excellent"
+  },
+  "issues": [
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[1]",
+      "model": "ALIGN",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[40]",
+      "model": "ANOLE",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[62]",
+      "model": "AnyGPT",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[5]",
+      "model": "BEiT-3",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[6]",
+      "model": "BLIP-2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[53]",
+      "model": "BLIP3-o",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[0]",
+      "model": "CLIP",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[4]",
+      "model": "CoCa",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[60]",
+      "model": "CoDi",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[64]",
+      "model": "CoDi-2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[106]",
+      "model": "DreamLLM",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[9]",
+      "model": "EVA-CLIP",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[25]",
+      "model": "ElasticTok",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[35]",
+      "model": "Emu",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[21]",
+      "model": "FSQ",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[104]",
+      "model": "FUDOKI",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[3]",
+      "model": "Flamingo",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[29]",
+      "model": "FlexTok",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[30]",
+      "model": "FlowMo",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[47]",
+      "model": "Harmon",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[59]",
+      "model": "HermesFlow",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[85]",
+      "model": "InteractiveOmni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[108]",
+      "model": "InteractiveOmni-A2A",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[10]",
+      "model": "InternVL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[13]",
+      "model": "InternVL3",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[44]",
+      "model": "Janus",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[45]",
+      "model": "Janus-Pro",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[73]",
+      "model": "LLaMA-Omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[7]",
+      "model": "LLaVA",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[100]",
+      "model": "LQAE",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[34]",
+      "model": "LaVIT",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[42]",
+      "model": "Liquid",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[43]",
+      "model": "LlamaFusion",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[70]",
+      "model": "M2-omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[20]",
+      "model": "MAGVIT",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[24]",
+      "model": "MAGVIT-v2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[65]",
+      "model": "MIO",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[46]",
+      "model": "MUSE-VL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[88]",
+      "model": "MaskGIT",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[48]",
+      "model": "MetaQuery-XL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[15]",
+      "model": "MiMo-VL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[68]",
+      "model": "Ming-Omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[77]",
+      "model": "MiniCPM-o 2.6",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[82]",
+      "model": "MiniCPM-o 4.5",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[58]",
+      "model": "Muddit",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[61]",
+      "model": "NExT-GPT",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[83]",
+      "model": "NExT-OMNI",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[31]",
+      "model": "NFIG",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[2]",
+      "model": "OFA",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[66]",
+      "model": "OmniFlow",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[55]",
+      "model": "OmniGen2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[28]",
+      "model": "QLIP",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[75]",
+      "model": "Qwen2.5-Omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[12]",
+      "model": "Qwen2.5-VL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[69]",
+      "model": "Qwen3-Omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[19]",
+      "model": "RQ-VAE",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[79]",
+      "model": "SALMONN-Omni",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[101]",
+      "model": "SPAE",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[14]",
+      "model": "Seed1.5-VL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[56]",
+      "model": "Selftok",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[54]",
+      "model": "Show-o2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[8]",
+      "model": "SigLIP",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[11]",
+      "model": "SigLIP 2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[67]",
+      "model": "Spider",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[105]",
+      "model": "SynerGen-VL",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[51]",
+      "model": "TokLIP",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[38]",
+      "model": "Transfusion",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[89]",
+      "model": "UniCode",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[57]",
+      "model": "UniDisc",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[63]",
+      "model": "Unified-IO 2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[49]",
+      "model": "VARGPT-v1.1",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[72]",
+      "model": "VITA",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[76]",
+      "model": "VITA-1.5",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[16]",
+      "model": "VQ-VAE",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[17]",
+      "model": "VQ-VAE-2",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[103]",
+      "model": "ViLex",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[87]",
+      "model": "ViT-VQGAN",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[107]",
+      "model": "X-VILA",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    },
+    {
+      "code": "TL-012",
+      "severity": "INFO",
+      "location": "TIMELINE[110]",
+      "model": "i-Code",
+      "message": "arXiv present but no GitHub URL",
+      "suggestion": "Consider adding a GitHub link if available"
+    }
+  ]
+}
