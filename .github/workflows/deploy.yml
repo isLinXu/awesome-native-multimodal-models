@@ -4,12 +4,18 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/**'
+      - 'scripts/data.py'
+      - 'scripts/validate.py'
+      - 'scripts/generate_*.py'
+      - 'tests/**'
       - '.github/workflows/deploy.yml'
   pull_request:
     branches: [main]
     paths:
-      - 'scripts/**'
+      - 'scripts/data.py'
+      - 'scripts/validate.py'
+      - 'scripts/generate_*.py'
+      - 'tests/**'
   schedule:
     # Re-build weekly on Mondays at 08:00 UTC
     - cron: '0 8 * * 1'

@@ -1,0 +1,324 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Awesome Native Multimodal Models — 抓取与跟踪配置
+#
+# 所有自动化行为都由这个文件驱动，改这里不需要改代码。
+# · 新增赛道 = 复制一个 category 块（记得在 docs/ 下建同名文档）
+# · 调宽/收窄 = 改 arxiv_queries 与 keywords
+# · 屏蔽噪声 = 加到 negative
+# ─────────────────────────────────────────────────────────────────────────────
+
+meta:
+  repo: "isLinXu/awesome-native-multimodal-models"
+  title: "Awesome Native Multimodal Models"
+  lookback_days: 45
+  arxiv_max_per_query: 80
+  min_score: 3.0
+  max_rows_per_doc: 200
+  filters:
+    require_strong: true
+    modality_anchors:
+      - image
+      - images
+      - visual
+      - vision
+      - video
+      - multimodal
+      - multi-modal
+      - mllm
+      - vlm
+      - omni
+      - tokenizer
+      - tokenization
+      - "vision-language"
+      - "any-to-any"
+  github_min_stars: 80
+  github_max_per_query: 30
+  github_history_keep: 90
+  github_blocklist:
+    - "haotian-liu/LLaVA"          # 模块化 adapter MLLM，不是 native unified
+    - "salesforce/LAVIS"           # 通用 VL 工具库，覆盖面过宽
+
+# 打分权重：命中 strong / medium / weak 关键词时累加
+weights:
+  strong: {title: 6.0, abstract: 3.0}
+  medium: {title: 3.0, abstract: 1.5}
+  weak:   {title: 1.0, abstract: 0.5}
+
+# 命中即丢弃。目标是剔掉「沾了 multimodal 但其实是别的领域」的工作，
+# 只保留 native / unified / tokenizer / omni 这条主线。
+# 注意：不要把 text-to-image generation 放进来——统一理解+生成模型本来就会做 T2I。
+negative:
+  - "medical image segmentation"
+  - "remote sensing classification"
+  - "emotion recognition"
+  - "speech recognition only"
+  - "click-through rate"
+  - "recommender system"
+  - "image super-resolution"
+  - "image restoration"
+  - "music generation"
+  - "dance generation"
+  - "choreography generation"
+  - "visual instruction tuning for frozen llm"
+
+categories:
+  # ── 1. 图像/视频分词器 ─────────────────────────────────────────────────────
+  - id: tokenizers
+    name: "Image & Video Tokenizers"
+    zh: "图像与视频分词器"
+    emoji: "🔢"
+    doc: "docs/tokenizers.md"
+    intro: >-
+      把像素压成离散或连续 token，是 native multimodal 的第一块地基。
+      主战场从 VQ 码本崩溃，走到 FSQ/LFQ/BSQ，再走到 1D 压缩与文本对齐。
+    arxiv_queries:
+      - 'all:"visual tokenizer" OR all:"image tokenizer" OR all:"video tokenizer"'
+      - 'all:"vector quantized" AND (all:image OR all:visual) AND (all:tokenizer OR all:codebook)'
+      - 'all:"lookup-free quantization" OR all:"finite scalar quantization" OR all:"binary spherical quantization"'
+      - 'all:"residual quantization" AND (all:image OR all:visual)'
+      - 'all:"1d tokenizer" OR all:"one-dimensional tokenizer" OR all:"token folding"'
+      - 'all:"text-aligned" AND all:tokenizer AND (all:visual OR all:image)'
+    github_queries:
+      - '"visual tokenizer" in:name,description,topics'
+      - '"image tokenizer" in:name,description,topics'
+      - '"video tokenizer" in:name,description,topics'
+      - 'VQGAN tokenizer in:name,description,topics'
+    classics:
+      - {id: "1711.00937", expect: "neural discrete representation", note: "VQ-VAE：离散视觉表征的起点，几乎所有 VQ tokenizer 都从这里分叉"}
+      - {id: "2012.09841", expect: "taming transformers", note: "VQGAN：把感知损失接到 VQ 上，AR 图像生成真正能看"}
+      - {id: "2212.05199", expect: "masked generative video", note: "MAGVIT：把 tokenizer 从图像推进到视频"}
+      - {id: "2404.02905", expect: "visual autoregressive", note: "VAR：next-scale prediction，把空间层级写进 AR 建模"}
+      - {id: "2406.07550", expect: "32 tokens", note: "TiTok：1D tokenizer，把二维码本压到几十个 token"}
+    keywords:
+      strong:
+        - "visual tokenizer"
+        - "image tokenizer"
+        - "video tokenizer"
+        - "lookup-free quantization"
+        - "finite scalar quantization"
+        - "binary spherical quantization"
+        - "1d tokenizer"
+      medium:
+        - "vector quantization"
+        - "residual quantization"
+        - "codebook"
+        - "vqgan"
+        - "vq-vae"
+        - "token folding"
+        - "text-aligned tokenizer"
+      weak:
+        - "discrete tokens"
+        - "latent tokens"
+        - "visual tokens"
+
+  # ── 2. 统一理解 + 生成 ─────────────────────────────────────────────────────
+  - id: unified-ug
+    name: "Unified Understanding + Generation"
+    zh: "统一理解与生成"
+    emoji: "🖼️"
+    doc: "docs/unified-ug.md"
+    intro: >-
+      同一个 Transformer 既要看懂图，也要画出图。路线从 early-fusion 离散 AR，
+      走到 Janus 式解耦编码器，再走到 AR+Diffusion 混合。这是 native 定义最硬的一条赛道。
+    arxiv_queries:
+      - 'all:"unified multimodal" AND (all:understanding AND all:generation)'
+      - 'all:"unified understanding and generation" OR all:"understanding and generation"'
+      - 'all:"early-fusion" AND (all:multimodal OR all:"mixed-modal")'
+      - 'all:"autoregressive" AND all:"image generation" AND (all:multimodal OR all:unified)'
+      - 'all:"transfusion" OR all:"show-o" OR all:janus OR all:bagel OR all:chameleon'
+      - 'all:"hybrid" AND all:diffusion AND all:autoregressive AND all:multimodal'
+    github_queries:
+      - '"unified multimodal" in:name,description,topics'
+      - '"understanding and generation" in:name,description,topics'
+      - 'janus multimodal in:name,description,topics'
+      - '"show-o" in:name,description,topics'
+    classics:
+      - {id: "2405.09818", expect: "chameleon", note: "Early-fusion 离散 AR 的里程碑：图文进同一个 next-token 空间"}
+      - {id: "2408.11039", expect: "transfusion", note: "同一模型里 next-token + diffuse，AR+Diffusion 混合的代表"}
+      - {id: "2408.12528", expect: "show-o", note: "一个 Transformer 统一理解与生成，离散+连续两条通路"}
+      - {id: "2409.18869", expect: "emu3", note: "Next-token prediction is all you need：纯 AR 覆盖图/文/视频"}
+      - {id: "2501.17811", expect: "janus-pro", note: "解耦视觉编码：理解与生成不再抢同一个 encoder"}
+      - {id: "2505.14683", expect: "bagel", note: "大规模统一预训练出现涌现能力，2025 统一模型的标杆"}
+    keywords:
+      strong:
+        - "unified understanding and generation"
+        - "unified multimodal"
+        - "early-fusion"
+        - "mixed-modal"
+        - "janus"
+        - "show-o"
+        - "transfusion"
+        - "bagel"
+      medium:
+        - "autoregressive image generation"
+        - "decoupled visual encoding"
+        - "native multimodal"
+        - "unified generation"
+        - "interleaved image-text"
+      weak:
+        - "text-to-image"
+        - "image generation"
+        - "multimodal llm"
+
+  # ── 3. Any-to-Any ──────────────────────────────────────────────────────────
+  - id: any-to-any
+    name: "Any-to-Any Multimodal"
+    zh: "任意到任意"
+    emoji: "🌐"
+    doc: "docs/any-to-any.md"
+    intro: >-
+      输入任意模态、输出任意模态：文本/图像/音频/视频/动作走同一套生成接口。
+      和 Omni 的差别：Any-to-Any 强调生成覆盖面，Omni 强调实时交互。
+    arxiv_queries:
+      - 'all:"any-to-any" OR all:"any to any"'
+      - 'all:"composable diffusion" AND all:multimodal'
+      - 'all:"unified-io" OR all:"next-gpt" OR all:anygpt'
+      - 'all:"cross-modal generation" AND (all:audio OR all:video) AND all:image'
+      - 'all:"omni-modal generation" OR all:"full-modal"'
+    github_queries:
+      - '"any-to-any" in:name,description,topics'
+      - 'NExT-GPT in:name,description,topics'
+      - 'AnyGPT in:name,description,topics'
+      - '"unified io" multimodal in:name,description,topics'
+    classics:
+      - {id: "2305.11846", expect: "composable diffusion", note: "CoDi：用可组合扩散第一次把 any-to-any 做成统一接口"}
+      - {id: "2309.05519", expect: "next-gpt", note: "NExT-GPT：把 LLM 接到任意模态编解码器上的开源范式"}
+      - {id: "2402.12226", expect: "anygpt", note: "AnyGPT：离散序列建模把多模态压进同一套 token"}
+      - {id: "2505.02471", expect: "ming-lite-uni", note: "Ming-Lite-Uni：统一视觉生成器 + native 多模态 AR，Any-to-Any 的 2025 开源代表"}
+    keywords:
+      strong:
+        - "any-to-any"
+        - "any to any"
+        - "composable diffusion"
+        - "next-gpt"
+        - "anygpt"
+        - "unified-io"
+      medium:
+        - "cross-modal generation"
+        - "full-modal"
+        - "omni-modal generation"
+        - "interleaved multimodal generation"
+      weak:
+        - "audio"
+        - "video generation"
+        - "multimodal llm"
+
+  # ── 4. Omni 实时交互 ───────────────────────────────────────────────────────
+  - id: omni
+    name: "Omni Models"
+    zh: "Omni 实时交互"
+    emoji: "🎙️"
+    doc: "docs/omni.md"
+    intro: >-
+      文本+图像+音频+视频的实时全双工交互，目标是 GPT-4o 这一档体验。
+      重点不是「会不会生成图」，而是流式、低延迟、能听会说还能看。
+    arxiv_queries:
+      - 'all:"omni" AND (all:multimodal OR all:"large language") AND (all:audio OR all:speech)'
+      - 'all:"gpt-4o" OR all:"qwen2.5-omni" OR all:"qwen3-omni" OR all:"minicpm-o"'
+      - 'all:"real-time" AND all:multimodal AND (all:speech OR all:audio OR all:vision)'
+      - 'all:"omni-modal" OR all:"omnimodal" OR all:"omni model"'
+      - 'all:"full-duplex" AND (all:speech OR all:multimodal)'
+      - 'all:"interactive omni" OR all:"end-to-end omni"'
+    github_queries:
+      - 'omni multimodal in:name,description,topics'
+      - '"qwen-omni" in:name,description,topics'
+      - 'MiniCPM-o in:name,description,topics'
+      - '"omni model" in:name,description,topics'
+    classics:
+      - {id: "2408.05211", expect: "vita", note: "VITA：开源交互式 Omni 的早期代表，把语音+视觉拉进同一对话循环"}
+      - {id: "2503.20215", expect: "qwen2.5-omni", note: "Qwen2.5-Omni：开源 Omni 的标杆技术报告"}
+      - {id: "2509.17765", expect: "qwen3-omni", note: "Qwen3-Omni：Thinker-Talker MoE，把 Omni 从交互推进到更强的统一建模"}
+    keywords:
+      strong:
+        - "omni-modal"
+        - "omni model"
+        - "qwen2.5-omni"
+        - "qwen3-omni"
+        - "minicpm-o"
+        - "gpt-4o"
+        - "full-duplex"
+      medium:
+        - "real-time multimodal"
+        - "speech interaction"
+        - "omni llm"
+        - "interactive omni"
+        - "end-to-end speech"
+      weak:
+        - "audio"
+        - "streaming"
+        - "voice"
+
+  # ── 5. 多模态预训练底座 ────────────────────────────────────────────────────
+  - id: pretraining
+    name: "Pretraining Foundations"
+    zh: "预训练底座"
+    emoji: "🧠"
+    doc: "docs/pretraining.md"
+    intro: >-
+      Native 模型不是从零长出来的：对比学习、生成式预训练、视觉指令微调
+      是后面统一架构的配方来源。这条赛道收「为什么这样训」的地基工作。
+    arxiv_queries:
+      - 'all:"vision-language" AND (all:pretraining OR all:"pre-training") AND (all:contrastive OR all:generative)'
+      - 'all:"contrastive language-image" OR all:clip OR all:siglip OR all:align'
+      - 'all:"bootstrapping language-image" OR all:"flamingo" OR all:"blip-2"'
+      - 'all:"visual instruction tuning" OR all:llava'
+      - 'all:"native multimodal pre-training" OR all:"native multimodal pretraining"'
+      - 'all:"vision-language foundation" AND (all:model OR all:pretraining)'
+    github_queries:
+      - '"vision language model" in:name,description,topics'
+      - 'Qwen2.5-VL in:name,description,topics'
+      - 'InternVL in:name,description,topics'
+      - '"visual instruction tuning" in:name,description,topics'
+    classics:
+      - {id: "2103.00020", expect: "clip", note: "CLIP：对比图文预训练，几乎所有后续 VLM 的视觉塔都从这里长出来"}
+      - {id: "2204.14198", expect: "flamingo", note: "Flamingo：把冻结视觉编码器接到 LLM 上的 few-shot 范式"}
+      - {id: "2301.12597", expect: "blip-2", note: "BLIP-2：Q-Former 桥接冻结视觉塔与冻结 LLM，生成式预训练的关键一步"}
+      - {id: "2304.08485", expect: "visual instruction tuning", note: "LLaVA：视觉指令微调把 VLM 变成能对话的助手"}
+      - {id: "2502.13923", expect: "qwen2.5-vl", note: "Qwen2.5-VL：动态分辨率 + 时序定位，开源 VL 底座的 2025 标杆"}
+    keywords:
+      strong:
+        - "vision-language pretraining"
+        - "visual instruction tuning"
+        - "contrastive language-image"
+        - "native multimodal pre-training"
+        - "native multimodal pretraining"
+        - "siglip"
+        - "blip-2"
+      medium:
+        - "vision-language model"
+        - "contrastive pretraining"
+        - "flamingo"
+        - "internvl"
+        - "qwen2.5-vl"
+      weak:
+        - "pretraining"
+        - "instruction tuning"
+        - "foundation model"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GitHub 种子仓库：长期跟踪，不受搜索排名影响。
+# 脚本会用 /repos/{full_name} 校验，失效的自动跳过并在日志里提示。
+# ─────────────────────────────────────────────────────────────────────────────
+github_seed:
+  - {full_name: "facebookresearch/chameleon", category: unified-ug}
+  - {full_name: "baaivision/Emu3", category: unified-ug}
+  - {full_name: "deepseek-ai/Janus", category: unified-ug}
+  - {full_name: "showlab/Show-o", category: unified-ug}
+  - {full_name: "ByteDance-Seed/Bagel", category: unified-ug}
+  - {full_name: "FoundationVision/Liquid", category: unified-ug}
+  - {full_name: "Gen-Verse/MMaDA", category: unified-ug}
+  - {full_name: "VectorSpaceLab/OmniGen2", category: unified-ug}
+  - {full_name: "bytedance/1d-tokenizer", category: tokenizers}
+  - {full_name: "FoundationVision/VAR", category: tokenizers}
+  - {full_name: "FoundationVision/LlamaGen", category: tokenizers}
+  - {full_name: "CompVis/taming-transformers", category: tokenizers}
+  - {full_name: "NVlabs/QLIP", category: tokenizers}
+  - {full_name: "NExT-GPT/NExT-GPT", category: any-to-any}
+  - {full_name: "OpenMOSS/AnyGPT", category: any-to-any}
+  - {full_name: "QwenLM/Qwen3-Omni", category: any-to-any}
+  - {full_name: "QwenLM/Qwen2.5-Omni", category: omni}
+  - {full_name: "OpenBMB/MiniCPM-V", category: omni}
+  - {full_name: "VITA-MLLM/VITA", category: omni}
+  - {full_name: "OpenGVLab/InternVL", category: pretraining}
+  - {full_name: "QwenLM/Qwen3-VL", category: pretraining}
+  - {full_name: "openai/CLIP", category: pretraining}

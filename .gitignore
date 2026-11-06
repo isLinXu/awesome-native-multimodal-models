@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# 本地调试产物（data/ 里的 json 是仓库状态，需要提交，不要忽略）
+*.log
+dry-run-*.md

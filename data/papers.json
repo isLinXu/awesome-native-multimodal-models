@@ -1,0 +1,1766 @@
+{
+  "updated": "2026-11-06T04:20:49Z",
+  "papers": {
+    "2103.00020": {
+      "title": "CLIP",
+      "published": "2021-01-01",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2021-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Contrastive Language-Image Pretraining (OpenAI)"
+    },
+    "2102.05918": {
+      "title": "ALIGN",
+      "published": "2021-02-01",
+      "url": "https://arxiv.org/abs/2102.05918",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2021-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Large-scale alignment using noisy data (Google)"
+    },
+    "2202.03052": {
+      "title": "OFA",
+      "published": "2022-02-01",
+      "url": "https://arxiv.org/abs/2202.03052",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified sequence-to-sequence pretraining"
+    },
+    "2204.14198": {
+      "title": "Flamingo",
+      "published": "2022-04-01",
+      "url": "https://arxiv.org/abs/2204.14198",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2022-04-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Few-shot visual language model (DeepMind)"
+    },
+    "2205.01068": {
+      "title": "CoCa",
+      "published": "2022-05-01",
+      "url": "https://arxiv.org/abs/2205.01068",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Contrastive captioners"
+    },
+    "2208.10442": {
+      "title": "BEiT-3",
+      "published": "2022-08-01",
+      "url": "https://arxiv.org/abs/2208.10442",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-08-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Multimodal foundation model via masked data modeling"
+    },
+    "2301.12597": {
+      "title": "BLIP-2",
+      "published": "2023-01-01",
+      "url": "https://arxiv.org/abs/2301.12597",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2023-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Bootstrapping vision-language pretraining"
+    },
+    "2304.08485": {
+      "title": "LLaVA",
+      "published": "2023-04-01",
+      "url": "https://arxiv.org/abs/2304.08485",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2023-04-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Large Language and Vision Assistant"
+    },
+    "2303.15343": {
+      "title": "SigLIP",
+      "published": "2023-03-01",
+      "url": "https://arxiv.org/abs/2303.15343",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Sigmoid loss for language-image pretraining"
+    },
+    "2402.04252": {
+      "title": "EVA-CLIP",
+      "published": "2024-02-01",
+      "url": "https://arxiv.org/abs/2402.04252",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Improved EVA-based CLIP (18B params)"
+    },
+    "2312.14238": {
+      "title": "InternVL",
+      "published": "2024-02-01",
+      "url": "https://arxiv.org/abs/2312.14238",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Scaling vision foundation model"
+    },
+    "2502.14786": {
+      "title": "SigLIP 2",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.14786",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Improved SigLIP with multi-resolution"
+    },
+    "2502.13923": {
+      "title": "Qwen2.5-VL",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.13923",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Qwen2.5 Vision-Language model"
+    },
+    "2504.10479": {
+      "title": "InternVL3",
+      "published": "2025-04-01",
+      "url": "https://arxiv.org/abs/2504.10479",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-04-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "InternVL3 with enhanced capabilities (VL backbone)"
+    },
+    "2505.07062": {
+      "title": "Seed1.5-VL",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.07062",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Seed1.5 Vision-Language foundation model"
+    },
+    "2505.18411": {
+      "title": "MiMo-VL",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.18411",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "MiMo Vision-Language model"
+    },
+    "1711.00937": {
+      "title": "VQ-VAE",
+      "published": "2017-11-01",
+      "url": "https://arxiv.org/abs/1711.00937",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2017-11-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Neural discrete representation learning"
+    },
+    "1906.00446": {
+      "title": "VQ-VAE-2",
+      "published": "2019-06-01",
+      "url": "https://arxiv.org/abs/1906.00446",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2019-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Hierarchical VQ-VAE"
+    },
+    "2012.09841": {
+      "title": "VQGAN",
+      "published": "2021-12-01",
+      "url": "https://arxiv.org/abs/2012.09841",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2021-12-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/CompVis/taming-transformers",
+      "desc": "Taming Transformers for image synthesis"
+    },
+    "2203.01941": {
+      "title": "RQ-VAE",
+      "published": "2022-03-01",
+      "url": "https://arxiv.org/abs/2203.01941",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Residual quantization VAE"
+    },
+    "2212.05199": {
+      "title": "MAGVIT",
+      "published": "2023-12-01",
+      "url": "https://arxiv.org/abs/2212.05199",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2023-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Masked generative video transformer"
+    },
+    "2309.15505": {
+      "title": "FSQ",
+      "published": "2023-09-01",
+      "url": "https://arxiv.org/abs/2309.15505",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Finite scalar quantization"
+    },
+    "2404.02905": {
+      "title": "VAR",
+      "published": "2024-04-01",
+      "url": "https://arxiv.org/abs/2404.02905",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-04-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/FoundationVision/VAR",
+      "desc": "Visual autoregressive modeling"
+    },
+    "2406.07550": {
+      "title": "TiTok",
+      "published": "2024-06-01",
+      "url": "https://arxiv.org/abs/2406.07550",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-06-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/bytedance/1d-tokenizer",
+      "desc": "1D tokenizer for images"
+    },
+    "2310.05737": {
+      "title": "MAGVIT-v2",
+      "published": "2024-10-01",
+      "url": "https://arxiv.org/abs/2310.05737",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-10-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "LFQ-based video tokenizer"
+    },
+    "2410.08368": {
+      "title": "ElasticTok",
+      "published": "2024-10-01",
+      "url": "https://arxiv.org/abs/2410.08368",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-10-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Adaptive token length tokenizer"
+    },
+    "2412.03069": {
+      "title": "TokenFlow",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.03069",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/ByteFlow-AI/TokenFlow",
+      "desc": "Unified image tokenizer"
+    },
+    "2412.13061": {
+      "title": "VidTok",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.13061",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/microsoft/VidTok",
+      "desc": "Video tokenizer (Microsoft)"
+    },
+    "2502.05178": {
+      "title": "QLIP",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.05178",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Quantized language-image pretraining"
+    },
+    "2502.13967": {
+      "title": "FlexTok",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.13967",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Flexible image tokenization"
+    },
+    "2503.11056": {
+      "title": "FlowMo",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.11056",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Flow-based tokenizer"
+    },
+    "2503.07076": {
+      "title": "NFIG",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.07076",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Non-uniform flow image generation tokenizer"
+    },
+    "2502.09509": {
+      "title": "EQ-VAE",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.09509",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/zelaki/eqvae",
+      "desc": "Equivariant tokenizer"
+    },
+    "2310.01218": {
+      "title": "SEED",
+      "published": "2023-10-01",
+      "url": "https://arxiv.org/abs/2310.01218",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-10-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/AILab-CVC/SEED",
+      "desc": "Multimodal seed tokenization"
+    },
+    "2309.04596": {
+      "title": "LaVIT",
+      "published": "2023-09-01",
+      "url": "https://arxiv.org/abs/2309.04596",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Language-vision tokenizer"
+    },
+    "2307.05222": {
+      "title": "Emu",
+      "published": "2023-07-01",
+      "url": "https://arxiv.org/abs/2307.05222",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-07-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Emu: Generalist multimodal model"
+    },
+    "2402.08268": {
+      "title": "LWM",
+      "published": "2024-02-01",
+      "url": "https://arxiv.org/abs/2402.08268",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-02-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/LargeWorldModel/LWM",
+      "desc": "Large world model"
+    },
+    "2405.09818": {
+      "title": "Chameleon",
+      "published": "2024-05-01",
+      "url": "https://arxiv.org/abs/2405.09818",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-05-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/facebookresearch/chameleon",
+      "desc": "Early-fusion token-based mixed-modal model (Meta)"
+    },
+    "2408.11039": {
+      "title": "Transfusion",
+      "published": "2024-08-01",
+      "url": "https://arxiv.org/abs/2408.11039",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-08-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Predict next token and diffuse"
+    },
+    "2408.12528": {
+      "title": "Show-o",
+      "published": "2024-08-01",
+      "url": "https://arxiv.org/abs/2408.12528",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-08-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/showlab/Show-o",
+      "desc": "One single model for multimodal understanding and generation"
+    },
+    "2407.06135": {
+      "title": "ANOLE",
+      "published": "2024-07-01",
+      "url": "https://arxiv.org/abs/2407.06135",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-07-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Autoregressive native omni language model"
+    },
+    "2409.18869": {
+      "title": "Emu3",
+      "published": "2024-09-01",
+      "url": "https://arxiv.org/abs/2409.18869",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2024-09-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/baaivision/Emu3",
+      "desc": "Next-token prediction for vision, language, and action"
+    },
+    "2412.04332": {
+      "title": "Liquid",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.04332",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Language models are scalable multi-modal generators"
+    },
+    "2412.15188": {
+      "title": "LlamaFusion",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.15188",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Llama for text and image fusion"
+    },
+    "2410.13848": {
+      "title": "Janus",
+      "published": "2024-10-01",
+      "url": "https://arxiv.org/abs/2410.13848",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-10-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Decoupling visual encoding for unified multimodal understanding and generation"
+    },
+    "2501.17811": {
+      "title": "Janus-Pro",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.17811",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified multimodal understanding and generation (DeepSeek)"
+    },
+    "2501.06599": {
+      "title": "MUSE-VL",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.06599",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Multimodal understanding & synthesis"
+    },
+    "2503.07897": {
+      "title": "Harmon",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.07897",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Harmonizing visual generation and perception"
+    },
+    "2504.13979": {
+      "title": "MetaQuery-XL",
+      "published": "2025-04-01",
+      "url": "https://arxiv.org/abs/2504.13979",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-04-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Meta-query based unified model"
+    },
+    "2503.16278": {
+      "title": "VARGPT-v1.1",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.16278",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Visual autoregressive GPT"
+    },
+    "2505.14683": {
+      "title": "BAGEL",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.14683",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/ByteDance-Seed/Bagel",
+      "desc": "Bootstrapped reasoning with AR+Diffusion (ByteDance)"
+    },
+    "2505.05422": {
+      "title": "TokLIP",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.05422",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Tokenized CLIP features for generation"
+    },
+    "2505.15809": {
+      "title": "MMaDA",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.15809",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/Gen-Verse/MMaDA",
+      "desc": "Multimodal masked diffusion model"
+    },
+    "2506.12831": {
+      "title": "BLIP3-o",
+      "published": "2025-06-01",
+      "url": "https://arxiv.org/abs/2506.12831",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "BLIP3 for omni generation"
+    },
+    "2506.15564": {
+      "title": "Show-o2",
+      "published": "2025-06-01",
+      "url": "https://arxiv.org/abs/2506.15564",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Improved Show-o with enhanced generation"
+    },
+    "2506.18871": {
+      "title": "OmniGen2",
+      "published": "2025-06-01",
+      "url": "https://arxiv.org/abs/2506.18871",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified image generation (OmniGen2)"
+    },
+    "2505.19065": {
+      "title": "Selftok",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.19065",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Self-supervised tokenization for generation"
+    },
+    "2503.20853": {
+      "title": "UniDisc",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.20853",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified discrete diffusion"
+    },
+    "2505.16965": {
+      "title": "Muddit",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.16965",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Multimodal unified discrete diffusion transformer"
+    },
+    "2503.12580": {
+      "title": "HermesFlow",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.12580",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Hermes flow-based unified generation"
+    },
+    "2305.11846": {
+      "title": "CoDi",
+      "published": "2023-05-01",
+      "url": "https://arxiv.org/abs/2305.11846",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2023-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Any-to-any generation via composable diffusion"
+    },
+    "2309.05519": {
+      "title": "NExT-GPT",
+      "published": "2023-09-01",
+      "url": "https://arxiv.org/abs/2309.05519",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2023-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Any-to-any multimodal LLM"
+    },
+    "2402.12226": {
+      "title": "AnyGPT",
+      "published": "2024-02-01",
+      "url": "https://arxiv.org/abs/2402.12226",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified multimodal LLM with discrete sequence modeling"
+    },
+    "2312.17172": {
+      "title": "Unified-IO 2",
+      "published": "2024-03-01",
+      "url": "https://arxiv.org/abs/2312.17172",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified I/O for diverse tasks"
+    },
+    "2311.18775": {
+      "title": "CoDi-2",
+      "published": "2024-01-01",
+      "url": "https://arxiv.org/abs/2311.18775",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Improved CoDi with in-context generation"
+    },
+    "2409.17692": {
+      "title": "MIO",
+      "published": "2024-09-01",
+      "url": "https://arxiv.org/abs/2409.17692",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Multimodal interleaved output model"
+    },
+    "2412.01169": {
+      "title": "OmniFlow",
+      "published": "2025-12-01",
+      "url": "https://arxiv.org/abs/2412.01169",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Omni flow for any-to-any generation"
+    },
+    "2501.03461": {
+      "title": "Spider",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.03461",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Spider any-to-any model"
+    },
+    "2505.02471": {
+      "title": "Ming-Omni",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.02471",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Ming all-modal omni model"
+    },
+    "2509.17765": {
+      "title": "Qwen3-Omni",
+      "published": "2025-09-01",
+      "url": "https://arxiv.org/abs/2509.17765",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Qwen3 omni model"
+    },
+    "2502.18778": {
+      "title": "M2-omni",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.18778",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "M2 omni multimodal model"
+    },
+    "2408.05211": {
+      "title": "VITA",
+      "published": "2024-08-01",
+      "url": "https://arxiv.org/abs/2408.05211",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-08-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Open-source interactive omni model"
+    },
+    "2409.06666": {
+      "title": "LLaMA-Omni",
+      "published": "2024-09-01",
+      "url": "https://arxiv.org/abs/2409.06666",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Seamless speech interaction with LLaMA"
+    },
+    "2503.20215": {
+      "title": "Qwen2.5-Omni",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.20215",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Qwen2.5 omnivore multimodal model"
+    },
+    "2501.12599": {
+      "title": "VITA-1.5",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.12599",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "VITA 1.5 with improved capabilities"
+    },
+    "2501.10801": {
+      "title": "SALMONN-Omni",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.10801",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Speech audio language music omni model"
+    },
+    "2511.07905": {
+      "title": "MiniCPM-o 4.5",
+      "published": "2025-11-01",
+      "url": "https://arxiv.org/abs/2511.07905",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-11-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "MiniCPM omni 4.5 - enhanced"
+    },
+    "2506.08838": {
+      "title": "NExT-OMNI",
+      "published": "2025-06-01",
+      "url": "https://arxiv.org/abs/2506.08838",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "NExT-OMNI all-modal model"
+    },
+    "2503.17366": {
+      "title": "InteractiveOmni",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.17366",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Interactive omni model"
+    },
+    "2110.04627": {
+      "title": "ViT-VQGAN",
+      "published": "2021-10-01",
+      "url": "https://arxiv.org/abs/2110.04627",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2021-10-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Vector-quantized image modeling with improved VQGAN training"
+    },
+    "2202.04200": {
+      "title": "MaskGIT",
+      "published": "2022-02-01",
+      "url": "https://arxiv.org/abs/2202.04200",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Masked generative image transformer using bidirectional masked token prediction"
+    },
+    "2403.09072": {
+      "title": "UniCode",
+      "published": "2024-03-01",
+      "url": "https://arxiv.org/abs/2403.09072",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-03-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified codebook for multimodal LLMs enabling joint image-text tokenization"
+    },
+    "2406.06525": {
+      "title": "LlamaGen",
+      "published": "2024-06-01",
+      "url": "https://arxiv.org/abs/2406.06525",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-06-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/FoundationVision/LlamaGen",
+      "desc": "Demonstrates autoregressive LLMs beat diffusion for scalable image generation"
+    },
+    "2411.02038": {
+      "title": "SimVQ",
+      "published": "2024-11-01",
+      "url": "https://arxiv.org/abs/2411.02038",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-11-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/youngsheen/SimVQ",
+      "desc": "Addresses representation collapse in VQ models with a single linear layer"
+    },
+    "2412.10958": {
+      "title": "SoftVQ-VAE",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.10958",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/Hhhhhhao/continuous_tokenizer",
+      "desc": "Efficient 1D continuous tokenizer combining VQ and VAE advantages"
+    },
+    "2409.04410": {
+      "title": "Open-MAGVIT2",
+      "published": "2024-09-01",
+      "url": "https://arxiv.org/abs/2409.04410",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-09-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/TencentARC/SEED-Voken",
+      "desc": "Open-source reproduction of MAGVIT-v2 LFQ tokenizer for democratizing visual generation"
+    },
+    "2406.07548": {
+      "title": "BSQ-ViT",
+      "published": "2024-06-01",
+      "url": "https://arxiv.org/abs/2406.07548",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-06-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/zhaoyue-zephyrus/bsq-vit",
+      "desc": "Binary spherical quantization for image/video tokenization with simple binary codes"
+    },
+    "2410.01756": {
+      "title": "ImageFolder",
+      "published": "2024-10-01",
+      "url": "https://arxiv.org/abs/2410.01756",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-10-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/lxa9867/ImageFolder",
+      "desc": "Autoregressive image generation with product-quantized folded tokens"
+    },
+    "2501.01423": {
+      "title": "VA-VAE",
+      "published": "2025-01-01",
+      "url": "https://arxiv.org/abs/2501.01423",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-01-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/hustvl/LightningDiT",
+      "desc": "Resolves reconstruction-generation tradeoff in latent diffusion via improved VAE training"
+    },
+    "2502.03444": {
+      "title": "MAETok",
+      "published": "2025-02-01",
+      "url": "https://arxiv.org/abs/2502.03444",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-02-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/Hhhhhhao/continuous_tokenizer",
+      "desc": "Masked autoencoders as effective continuous tokenizers for diffusion models"
+    },
+    "2503.05305": {
+      "title": "FAR",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.05305",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/yuhuUSTC/FAR",
+      "desc": "Frequency autoregressive generation with continuous tokens in frequency domain"
+    },
+    "2503.06132": {
+      "title": "USP",
+      "published": "2025-03-01",
+      "url": "https://arxiv.org/abs/2503.06132",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-03-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/cxxgtxy/USP",
+      "desc": "Unified self-supervised pretraining shared by image generation and understanding"
+    },
+    "2302.00902": {
+      "title": "LQAE",
+      "published": "2023-02-01",
+      "url": "https://arxiv.org/abs/2302.00902",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-02-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Language-quantized autoencoders for unsupervised text-image alignment"
+    },
+    "2306.17842": {
+      "title": "SPAE",
+      "published": "2023-06-01",
+      "url": "https://arxiv.org/abs/2306.17842",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-06-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Semantic pyramid autoencoder enabling multimodal generation with frozen LLMs"
+    },
+    "2403.07874": {
+      "title": "V2L-Tokenizer",
+      "published": "2024-03-01",
+      "url": "https://arxiv.org/abs/2403.07874",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-03-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/zh460045050/V2L-Tokenizer",
+      "desc": "Frozen LLM-based visual tokenizer mapping images to text token space"
+    },
+    "2412.06774": {
+      "title": "ViLex",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.06774",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Visual lexicon encoding rich image features in the language token space"
+    },
+    "2505.05667": {
+      "title": "FUDOKI",
+      "published": "2025-05-01",
+      "url": "https://arxiv.org/abs/2505.05667",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Discrete flow-based unified understanding and generation via discrete denoising"
+    },
+    "2412.09604": {
+      "title": "SynerGen-VL",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.09604",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Synergistic image understanding and generation with vision experts and token folding"
+    },
+    "2309.11499": {
+      "title": "DreamLLM",
+      "published": "2023-09-01",
+      "url": "https://arxiv.org/abs/2309.11499",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2023-09-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Synergistic multimodal comprehension and creation via interleaved text-image generation"
+    },
+    "2405.19335": {
+      "title": "X-VILA",
+      "published": "2024-05-01",
+      "url": "https://arxiv.org/abs/2405.19335",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Cross-modality alignment extending VILA to any-to-any multimodal generation"
+    },
+    "2510.13747": {
+      "title": "InteractiveOmni-A2A",
+      "published": "2025-10-01",
+      "url": "https://arxiv.org/abs/2510.13747",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2025-10-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Unified omni-modal model for audio-visual multi-turn any-to-any dialogue"
+    },
+    "2412.01762": {
+      "title": "XQ-GAN",
+      "published": "2024-12-01",
+      "url": "https://arxiv.org/abs/2412.01762",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2024-12-01",
+      "via": "catalog",
+      "github_repo": "https://github.com/lxa9867/ImageFolder",
+      "desc": "Open-source image tokenization framework with extended quantization for AR generation"
+    },
+    "2205.01818": {
+      "title": "i-Code",
+      "published": "2022-05-01",
+      "url": "https://arxiv.org/abs/2205.01818",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2022-05-01",
+      "via": "catalog",
+      "github_repo": "",
+      "desc": "Integrative and composable multimodal learning framework for text, speech, and image"
+    },
+    "2611.08099": {
+      "title": "Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling",
+      "published": "2026-11-05",
+      "url": "https://arxiv.org/abs/2611.08099",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-05"
+    },
+    "2611.04482": {
+      "title": "TEMPO: Time Series Understanding via Discrete Tokenization",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04482",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-03"
+    },
+    "2610.41992": {
+      "title": "MoETok: Sparse Expert Routing for 1D Visual Tokenizers",
+      "published": "2026-10-30",
+      "url": "https://arxiv.org/abs/2610.41992",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-30"
+    },
+    "2611.08185": {
+      "title": "Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling",
+      "published": "2026-11-05",
+      "url": "https://arxiv.org/abs/2611.08185",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-05"
+    },
+    "2611.06343": {
+      "title": "Prism: Bidirectional Self-Teaching for Unified Multimodal Models",
+      "published": "2026-11-04",
+      "url": "https://arxiv.org/abs/2611.06343",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-04"
+    },
+    "2611.04467": {
+      "title": "Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04467",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 12.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-03"
+    },
+    "2611.05451": {
+      "title": "From Tokens to Trajectories: Parameter-Efficient Continuous Adaptation of Unified Multimodal Models",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05451",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-03"
+    },
+    "2611.05280": {
+      "title": "YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05280",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-03"
+    },
+    "2611.02681": {
+      "title": "HistoTx: Early fusion of H&E images and spatial transcriptomics at varying spatial transcriptomics resolution with self-supervised learning",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02681",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-02"
+    },
+    "2611.02366": {
+      "title": "Do Visual RL Gains Scale at Test Time? A Quantile View of Post-Training",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02366",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-02"
+    },
+    "2610.42149": {
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "published": "2026-10-30",
+      "url": "https://arxiv.org/abs/2610.42149",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 10.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-30"
+    },
+    "2611.05377": {
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05377",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-03"
+    },
+    "2610.41399": {
+      "title": "scAnyOmics: Foundation-Model Distillation for Any-to-Any Completion of Multi-omics Virtual Cells",
+      "published": "2026-10-30",
+      "url": "https://arxiv.org/abs/2610.41399",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-30"
+    },
+    "2611.07836": {
+      "title": "THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning",
+      "published": "2026-11-05",
+      "url": "https://arxiv.org/abs/2611.07836",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-05"
+    },
+    "2611.06501": {
+      "title": "CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation",
+      "published": "2026-11-04",
+      "url": "https://arxiv.org/abs/2611.06501",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-04"
+    },
+    "2611.06083": {
+      "title": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
+      "published": "2026-11-04",
+      "url": "https://arxiv.org/abs/2611.06083",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-04"
+    },
+    "2611.06583": {
+      "title": "PatchCon: Patch-aware Weighted Supervised Contrastive Learning for Vulnerability Detection",
+      "published": "2026-11-04",
+      "url": "https://arxiv.org/abs/2611.06583",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.SE",
+      "first_seen": "2026-11-04"
+    },
+    "2611.04580": {
+      "title": "Confidence-Aware Aggregation for Multimodal Audio Reasoning",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04580",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-11-03"
+    },
+    "2611.05671": {
+      "title": "How Do Artificial Agents Make Decisions in Light of Visual Data?",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05671",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-11-03"
+    },
+    "2611.05515": {
+      "title": "TSFM Meets LLM: Context as Covariates",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05515",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-03"
+    },
+    "2611.05275": {
+      "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+      "published": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05275",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-03"
+    },
+    "2611.02430": {
+      "title": "InteractionBench: Measuring Timing, Task Accuracy, Whisper and Volume, and Grounding in Real-Time Voice Systems",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02430",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-11-02"
+    },
+    "2611.03247": {
+      "title": "R$^2$-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03247",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-02"
+    },
+    "2610.41368": {
+      "title": "RECITE: Revising Eligibility Criteria Incorporating Textual Evidence",
+      "published": "2026-10-30",
+      "url": "https://arxiv.org/abs/2610.41368",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-30"
+    },
+    "2611.08138": {
+      "title": "Describe Your Facial Expressions by Linking Image Encoders and Large Language Models",
+      "published": "2026-11-05",
+      "url": "https://arxiv.org/abs/2611.08138",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-05"
+    },
+    "2611.06149": {
+      "title": "Grounding in the Dark: Text-Only Training for Zero-Shot Video Temporal Localization",
+      "published": "2026-11-04",
+      "url": "https://arxiv.org/abs/2611.06149",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-04"
+    },
+    "2611.02327": {
+      "title": "Findings-aware Language-Image Pretraining for CT Volume Interpretation",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02327",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-02"
+    },
+    "2611.02540": {
+      "title": "PixelBench: Can LLMs Understand and Generate Images Pixel by Pixel?",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02540",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-02"
+    },
+    "2611.03438": {
+      "title": "Align Once to Explain: Feature Alignment for Scalable B-cosification of Foundational Vision Transformers",
+      "published": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03438",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-02"
+    }
+  }
+}

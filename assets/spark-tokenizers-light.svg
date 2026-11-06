@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="96" viewBox="0 0 900 96" role="img" aria-label="tokenizers 周度趋势">
+<title>tokenizers 周度趋势</title>
+<rect width="900" height="96" fill="#FFFFFF"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
+<path d="M 8.0,76.0 L 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,76.0 L 490.2,76.0 L 570.5,76.0 L 650.9,76.0 L 731.3,76.0 L 811.6,49.0 L 892.0,22.0 L 892.0,76.0 Z" fill="#4ECDC4" fill-opacity="0.14"/>
+<path d="M 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,76.0 L 490.2,76.0 L 570.5,76.0 L 650.9,76.0 L 731.3,76.0 L 811.6,49.0 L 892.0,22.0" fill="none" stroke="#4ECDC4" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="892.0" cy="22.0" r="3.4" fill="#4ECDC4"/>
+<text x="8" y="14" font-size="11" fill="#64748B">近 12 周本赛道论文发布 · 峰值 2 篇/周</text>
+<text x="892" y="14" font-size="11" text-anchor="end" fill="#64748B">08/17 → 11/02</text>
+</g>
+</svg>

@@ -1,0 +1,94 @@
+name: Track native multimodal models
+
+on:
+  schedule:
+    # 每天 01:30 UTC（北京时间 09:30）跑一次
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "论文回溯天数（首次建库可填 180）"
+        required: false
+        default: "45"
+      skip_github:
+        description: "跳过 GitHub 跟踪（只更新论文）"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: track-native-multimodal
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate config
+        run: python -c "import yaml; c=yaml.safe_load(open('config/taxonomy.yml')); print('categories:', len(c['categories']))"
+
+      - name: Seed catalog baseline
+        continue-on-error: true
+        run: python scripts/seed_from_catalog.py
+
+      - name: Seed classics
+        continue-on-error: true
+        run: python scripts/seed_classics.py
+
+      - name: Fetch papers (arXiv + HF)
+        continue-on-error: true
+        env:
+          DAYS: ${{ github.event.inputs.days || '45' }}
+        run: python scripts/fetch_arxiv.py --days "$DAYS" --sources arxiv,hf
+
+      - name: Track GitHub repos
+        if: ${{ github.event.inputs.skip_github != 'true' }}
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/track_github.py --top 60
+
+      - name: Refresh stats and digest
+        run: python scripts/update_metadata.py
+
+      - name: Render SVG charts
+        run: python scripts/render_charts.py
+
+      - name: Lint markdown
+        run: python scripts/check_md.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "没有变更，跳过提交"
+            exit 0
+          fi
+          PAPERS=$(git diff --cached --numstat -- 'docs/*.md' | wc -l | tr -d ' ')
+          git commit -m "chore: auto-update $(date -u +%Y-%m-%d) (docs touched: ${PAPERS})"
+          git push
+
+      - name: Job summary
+        if: always()
+        run: python scripts/update_metadata.py --summary >> "$GITHUB_STEP_SUMMARY"

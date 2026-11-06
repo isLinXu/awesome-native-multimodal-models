@@ -1,0 +1,665 @@
+{
+  "updated": "2026-11-06T04:21:14Z",
+  "repos": {
+    "baaivision/Emu3": {
+      "full_name": "baaivision/Emu3",
+      "url": "https://github.com/baaivision/Emu3",
+      "description": "Next-Token Prediction is All You Need",
+      "stars": 2454,
+      "forks": 99,
+      "language": "Python",
+      "topics": [],
+      "pushed_at": "2026-01-12",
+      "created_at": "2024-09-26",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 2454
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 3.18,
+      "is_new": false
+    },
+    "deepseek-ai/Janus": {
+      "full_name": "deepseek-ai/Janus",
+      "url": "https://github.com/deepseek-ai/Janus",
+      "description": "Janus-Series: Unified Multimodal Understanding and Generation Models",
+      "stars": 17764,
+      "forks": 2229,
+      "language": "Python",
+      "topics": [
+        "any-to-any",
+        "foundation-models",
+        "llm",
+        "multimodal",
+        "unified-model",
+        "vision-language-pretraining"
+      ],
+      "pushed_at": "2025-02-01",
+      "created_at": "2024-10-18",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 17764
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 23.72,
+      "is_new": false
+    },
+    "showlab/Show-o": {
+      "full_name": "showlab/Show-o",
+      "url": "https://github.com/showlab/Show-o",
+      "description": "[ICLR & NeurIPS 2025] Repository for Show-o series, One Single Transformer to Unify Multimodal Understanding and Generation.",
+      "stars": 1986,
+      "forks": 94,
+      "language": "Python",
+      "topics": [
+        "diffusion-models",
+        "large-language-models",
+        "multimodal"
+      ],
+      "pushed_at": "2026-01-08",
+      "created_at": "2024-08-09",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 1986
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 2.42,
+      "is_new": false
+    },
+    "ByteDance-Seed/Bagel": {
+      "full_name": "ByteDance-Seed/Bagel",
+      "url": "https://github.com/ByteDance-Seed/Bagel",
+      "description": "Open-source unified multimodal model",
+      "stars": 6209,
+      "forks": 544,
+      "language": "Python",
+      "topics": [],
+      "pushed_at": "2026-05-04",
+      "created_at": "2025-04-17",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 6209
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 10.93,
+      "is_new": false
+    },
+    "FoundationVision/Liquid": {
+      "full_name": "FoundationVision/Liquid",
+      "url": "https://github.com/FoundationVision/Liquid",
+      "description": "(Accepted by IJCV) Liquid: Language Models are Scalable and Unified Multi-modal Generators",
+      "stars": 640,
+      "forks": 36,
+      "language": "Python",
+      "topics": [
+        "autoregressive-models",
+        "generative",
+        "generative-ai",
+        "image-gen",
+        "large-language-models",
+        "llms",
+        "multimodal-large-language-models",
+        "text-to-image",
+        "text-to-image-generation"
+      ],
+      "pushed_at": "2026-06-01",
+      "created_at": "2024-12-12",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 640
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 0.92,
+      "is_new": false
+    },
+    "Gen-Verse/MMaDA": {
+      "full_name": "Gen-Verse/MMaDA",
+      "url": "https://github.com/Gen-Verse/MMaDA",
+      "description": "MMaDA - Open-Sourced Multimodal Large Diffusion Language Models (dLLMs with block diffusion, mixed-CoT, unified RL)",
+      "stars": 1676,
+      "forks": 88,
+      "language": "Python",
+      "topics": [
+        "diffusion-models",
+        "llm-reasoning",
+        "unified-multimodal-understanding-and-generation"
+      ],
+      "pushed_at": "2026-02-14",
+      "created_at": "2025-05-21",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 1676
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 3.14,
+      "is_new": false
+    },
+    "VectorSpaceLab/OmniGen2": {
+      "full_name": "VectorSpaceLab/OmniGen2",
+      "url": "https://github.com/VectorSpaceLab/OmniGen2",
+      "description": "OmniGen2: Exploration to Advanced Multimodal Generation. https://arxiv.org/abs/2506.18871",
+      "stars": 4118,
+      "forks": 37,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2026-03-20",
+      "created_at": "2025-06-06",
+      "archived": false,
+      "categories": [
+        "unified-ug"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 4118
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 7.95,
+      "is_new": false
+    },
+    "bytedance/1d-tokenizer": {
+      "full_name": "bytedance/1d-tokenizer",
+      "url": "https://github.com/bytedance/1d-tokenizer",
+      "description": "This repo contains the code for 1D tokenizer and generator",
+      "stars": 1177,
+      "forks": 69,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "research"
+      ],
+      "pushed_at": "2025-03-20",
+      "created_at": "2024-06-21",
+      "archived": false,
+      "categories": [
+        "tokenizers"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 1177
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 1.36,
+      "is_new": false
+    },
+    "FoundationVision/VAR": {
+      "full_name": "FoundationVision/VAR",
+      "url": "https://github.com/FoundationVision/VAR",
+      "description": "[NeurIPS 2024 Best Paper Award][GPT beats diffusion🔥] [scaling laws in visual generation📈] Official impl. of \"Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction\". An *ultra-simple, user-friendly yet state-of-the-art* codebase for autoregressive image generation!",
+      "stars": 8765,
+      "forks": 574,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "auto-regressive-model",
+        "autoregressive-models",
+        "diffusion-models",
+        "generative-ai",
+        "generative-model",
+        "gpt",
+        "gpt-2",
+        "image-generation",
+        "large-language-models",
+        "neurips",
+        "transformers",
+        "vision-transformer"
+      ],
+      "pushed_at": "2025-11-10",
+      "created_at": "2024-04-01",
+      "archived": false,
+      "categories": [
+        "tokenizers"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 8765
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 9.24,
+      "is_new": false
+    },
+    "FoundationVision/LlamaGen": {
+      "full_name": "FoundationVision/LlamaGen",
+      "url": "https://github.com/FoundationVision/LlamaGen",
+      "description": "Autoregressive Model Beats Diffusion: 🦙 Llama for Scalable Image Generation",
+      "stars": 1973,
+      "forks": 94,
+      "language": "Python",
+      "topics": [
+        "auto-regressive-model",
+        "diffusion",
+        "diffusion-models",
+        "image-generation",
+        "llama",
+        "llm",
+        "text2image"
+      ],
+      "pushed_at": "2024-08-15",
+      "created_at": "2024-06-03",
+      "archived": false,
+      "categories": [
+        "tokenizers"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 1973
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 2.23,
+      "is_new": false
+    },
+    "CompVis/taming-transformers": {
+      "full_name": "CompVis/taming-transformers",
+      "url": "https://github.com/CompVis/taming-transformers",
+      "description": "Taming Transformers for High-Resolution Image Synthesis",
+      "stars": 6536,
+      "forks": 1212,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2024-07-30",
+      "created_at": "2020-12-17",
+      "archived": false,
+      "categories": [
+        "tokenizers"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 6536
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 3.04,
+      "is_new": false
+    },
+    "NVlabs/QLIP": {
+      "full_name": "NVlabs/QLIP",
+      "url": "https://github.com/NVlabs/QLIP",
+      "description": "[arXiv: 2502.05178] QLIP: Text-Aligned Visual Tokenization Unifies Auto-Regressive Multimodal Understanding and Generation",
+      "stars": 97,
+      "forks": 6,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2025-03-01",
+      "created_at": "2025-02-06",
+      "archived": false,
+      "categories": [
+        "tokenizers"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 97
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 0.15,
+      "is_new": false
+    },
+    "NExT-GPT/NExT-GPT": {
+      "full_name": "NExT-GPT/NExT-GPT",
+      "url": "https://github.com/NExT-GPT/NExT-GPT",
+      "description": "Code and models for ICML 2024 paper, NExT-GPT: Any-to-Any Multimodal Large Language Model",
+      "stars": 3633,
+      "forks": 359,
+      "language": "Python",
+      "topics": [
+        "chatgpt",
+        "foundation-models",
+        "gpt-4",
+        "instruction-tuning",
+        "large-language-models",
+        "llm",
+        "mllm",
+        "multi-modal-chatgpt",
+        "multimodal",
+        "visual-language-learning"
+      ],
+      "pushed_at": "2025-05-13",
+      "created_at": "2023-08-30",
+      "archived": false,
+      "categories": [
+        "any-to-any"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 3633
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 3.12,
+      "is_new": false
+    },
+    "OpenMOSS/AnyGPT": {
+      "full_name": "OpenMOSS/AnyGPT",
+      "url": "https://github.com/OpenMOSS/AnyGPT",
+      "description": "A unified multimodal language model based on discrete sequence modeling",
+      "stars": 889,
+      "forks": 76,
+      "language": "Python",
+      "topics": [
+        "any-to-any",
+        "image-generation",
+        "large-language-models",
+        "multimodal",
+        "music-generation",
+        "speech"
+      ],
+      "pushed_at": "2026-09-06",
+      "created_at": "2024-02-18",
+      "archived": false,
+      "categories": [
+        "any-to-any"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 889
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 0.9,
+      "is_new": false
+    },
+    "QwenLM/Qwen3-Omni": {
+      "full_name": "QwenLM/Qwen3-Omni",
+      "url": "https://github.com/QwenLM/Qwen3-Omni",
+      "description": "Qwen3-omni is a natively end-to-end, omni-modal LLM developed by the Qwen team at Alibaba Cloud, capable of understanding text, audio, images, and video, as well as generating speech in real time.",
+      "stars": 4095,
+      "forks": 318,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2026-04-23",
+      "created_at": "2025-09-21",
+      "archived": false,
+      "categories": [
+        "any-to-any"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 4095
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 9.96,
+      "is_new": false
+    },
+    "QwenLM/Qwen2.5-Omni": {
+      "full_name": "QwenLM/Qwen2.5-Omni",
+      "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "description": "Qwen2.5-Omni is an end-to-end multimodal model by Qwen team at Alibaba Cloud, capable of understanding text, audio, vision, video, and performing real-time speech generation.",
+      "stars": 4096,
+      "forks": 330,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2025-06-12",
+      "created_at": "2025-03-22",
+      "archived": false,
+      "categories": [
+        "omni"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 4096
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 6.9,
+      "is_new": false
+    },
+    "OpenBMB/MiniCPM-V": {
+      "full_name": "OpenBMB/MiniCPM-V",
+      "url": "https://github.com/OpenBMB/MiniCPM-V",
+      "description": "See, hear, and interact on your local devices.",
+      "stars": 27076,
+      "forks": 2122,
+      "language": "Python",
+      "topics": [
+        "minicpm",
+        "minicpm-o",
+        "minicpm-v",
+        "multi-modal"
+      ],
+      "pushed_at": "2026-10-30",
+      "created_at": "2024-01-29",
+      "archived": false,
+      "categories": [
+        "omni"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 27076
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 26.75,
+      "is_new": false
+    },
+    "VITA-MLLM/VITA": {
+      "full_name": "VITA-MLLM/VITA",
+      "url": "https://github.com/VITA-MLLM/VITA",
+      "description": "✨✨[NeurIPS 2025] VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction",
+      "stars": 2540,
+      "forks": 183,
+      "language": "Python",
+      "topics": [
+        "large-multimodal-models",
+        "multimodal-large-language-models",
+        "omni-language-model",
+        "omni-modal-video-understanding",
+        "omni-model"
+      ],
+      "pushed_at": "2025-03-28",
+      "created_at": "2024-08-10",
+      "archived": false,
+      "categories": [
+        "omni"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 2540
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 3.11,
+      "is_new": false
+    },
+    "OpenGVLab/InternVL": {
+      "full_name": "OpenGVLab/InternVL",
+      "url": "https://github.com/OpenGVLab/InternVL",
+      "description": "[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o.  接近GPT-4o表现的开源多模态对话模型",
+      "stars": 10170,
+      "forks": 792,
+      "language": "Python",
+      "topics": [
+        "gpt",
+        "gpt-4o",
+        "gpt-4v",
+        "image-classification",
+        "image-text-retrieval",
+        "llm",
+        "multi-modal",
+        "semantic-segmentation",
+        "video-classification",
+        "vision-language-model",
+        "vit-22b",
+        "vit-6b"
+      ],
+      "pushed_at": "2025-09-22",
+      "created_at": "2023-11-22",
+      "archived": false,
+      "categories": [
+        "pretraining"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 10170
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 9.42,
+      "is_new": false
+    },
+    "QwenLM/Qwen3-VL": {
+      "full_name": "QwenLM/Qwen3-VL",
+      "url": "https://github.com/QwenLM/Qwen3-VL",
+      "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
+      "stars": 20169,
+      "forks": 1884,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "pushed_at": "2026-01-30",
+      "created_at": "2024-08-29",
+      "archived": false,
+      "categories": [
+        "pretraining"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 20169
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 25.24,
+      "is_new": false
+    },
+    "openai/CLIP": {
+      "full_name": "openai/CLIP",
+      "url": "https://github.com/openai/CLIP",
+      "description": "CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image",
+      "stars": 34574,
+      "forks": 4062,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "deep-learning",
+        "machine-learning"
+      ],
+      "pushed_at": "2026-03-25",
+      "created_at": "2020-12-16",
+      "archived": false,
+      "categories": [
+        "pretraining"
+      ],
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "history": [
+        {
+          "date": "2026-11-06",
+          "stars": 34574
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 16.07,
+      "is_new": false
+    }
+  }
+}
