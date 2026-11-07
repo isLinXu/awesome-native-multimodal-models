@@ -2,10 +2,10 @@
 <title>omni 周度趋势</title>
 <rect width="900" height="96" fill="#0D1117"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
-<path d="M 8.0,76.0 L 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,76.0 L 490.2,76.0 L 570.5,76.0 L 650.9,76.0 L 731.3,76.0 L 811.6,70.6 L 892.0,22.0 L 892.0,76.0 Z" fill="#DDA0DD" fill-opacity="0.14"/>
-<path d="M 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,76.0 L 490.2,76.0 L 570.5,76.0 L 650.9,76.0 L 731.3,76.0 L 811.6,70.6 L 892.0,22.0" fill="none" stroke="#DDA0DD" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="892.0" cy="22.0" r="3.4" fill="#DDA0DD"/>
-<text x="8" y="14" font-size="11" fill="#8B949E">近 12 周本赛道论文发布 · 峰值 10 篇/周</text>
+<path d="M 8.0,76.0 L 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,61.3 L 490.2,31.8 L 570.5,61.3 L 650.9,26.9 L 731.3,22.0 L 811.6,56.4 L 892.0,51.5 L 892.0,76.0 Z" fill="#DDA0DD" fill-opacity="0.14"/>
+<path d="M 8.0,76.0 L 88.4,76.0 L 168.7,76.0 L 249.1,76.0 L 329.5,76.0 L 409.8,61.3 L 490.2,31.8 L 570.5,61.3 L 650.9,26.9 L 731.3,22.0 L 811.6,56.4 L 892.0,51.5" fill="none" stroke="#DDA0DD" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="892.0" cy="51.5" r="3.4" fill="#DDA0DD"/>
+<text x="8" y="14" font-size="11" fill="#8B949E">近 12 周本赛道论文发布 · 峰值 22 篇/周</text>
 <text x="892" y="14" font-size="11" text-anchor="end" fill="#8B949E">08/17 → 11/02</text>
 </g>
 </svg>

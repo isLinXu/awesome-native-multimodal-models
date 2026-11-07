@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T04:20:49Z",
+  "updated": "2026-11-07T07:29:18Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -1761,6 +1761,1722 @@
       "score": 3.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-02"
+    },
+    "2610.36452": {
+      "title": "Whole-Body Humanoid Control via Stochastic Motion Tokenization",
+      "published": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36452",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-27"
+    },
+    "2610.35842": {
+      "title": "MedVTok: A General-Purpose Medical Visual Tokenizer",
+      "published": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.35842",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "eess.IV",
+      "first_seen": "2026-10-26"
+    },
+    "2610.33540": {
+      "title": "Patch-Derived or Register Tokens? Comparing Variable-Length Image Tokenizers",
+      "published": "2026-10-24",
+      "url": "https://arxiv.org/abs/2610.33540",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-24"
+    },
+    "2610.29881": {
+      "title": "Expandable Modality Experts for Medical Vision-Language Learning",
+      "published": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29881",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-21"
+    },
+    "2610.26216": {
+      "title": "RoAR-VAE: Improving Latent Diffusability through Robust Prediction",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26216",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-19"
+    },
+    "2610.23653": {
+      "title": "A Language-Informed Loss for Visual Generation",
+      "published": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.23653",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-16"
+    },
+    "2610.20818": {
+      "title": "Intern Lumina U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding and Image Generation",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.20818",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-14"
+    },
+    "2610.13181": {
+      "title": "MixTok: Adaptive Visual Tokenization with Global 1D Tokens and Sparse 2D Refinement",
+      "published": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13181",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-09"
+    },
+    "2610.10497": {
+      "title": "QuadTok: Quadtree Visual Tokenizer for Autoregressive Image Generation",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10497",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-07"
+    },
+    "2609.36756": {
+      "title": "NesTok: Nested Self-Aligned 1D Tokenizer for Autoregressive Image Generation",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36756",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-29"
+    },
+    "2610.39609": {
+      "title": "DiFuse: Fusing Native Diffusion Representations for Spatial Reasoning in Unified Multimodal Models",
+      "published": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39609",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-29"
+    },
+    "2610.40115": {
+      "title": "SelfThinker: Self-Evolving Reasoning via Reliability-Verified Intrinsic Visual Thoughts",
+      "published": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40115",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-29"
+    },
+    "2610.39467": {
+      "title": "Calibrating Attention-Based Token Pruning for Efficient Multi-Image Synthesis in UMMs",
+      "published": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39467",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-29"
+    },
+    "2610.40094": {
+      "title": "RepConTUR: A Report-Conditioned Volumetric Multimodal Model for Abdominal Tumor Segmentation",
+      "published": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40094",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-29"
+    },
+    "2610.38436": {
+      "title": "Continual Adaptation Across Modalities: Learning and Forgetting in Unified Multimodal Models",
+      "published": "2026-10-28",
+      "url": "https://arxiv.org/abs/2610.38436",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-28"
+    },
+    "2610.38425": {
+      "title": "IntReal: A Real-World Dataset and Benchmark for Multimodal Interleaved Generation",
+      "published": "2026-10-28",
+      "url": "https://arxiv.org/abs/2610.38425",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2026-10-28"
+    },
+    "2610.37364": {
+      "title": "EmbeddingGemma 2: Unified and Efficient Multimodal Representations",
+      "published": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37364",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2026-10-27"
+    },
+    "2610.36269": {
+      "title": "Cross-modal Steering Vectors Exist Across Both Image and Text Generation",
+      "published": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.36269",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 4.0,
+      "primary_category": "",
+      "first_seen": "2026-10-26"
+    },
+    "2610.34415": {
+      "title": "Spatial Audio Generation and Editing with Executable Plans and Self-Distilling Transfusion",
+      "published": "2026-10-25",
+      "url": "https://arxiv.org/abs/2610.34415",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-25"
+    },
+    "2610.32965": {
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "published": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32965",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "",
+      "first_seen": "2026-10-23"
+    },
+    "2610.28622": {
+      "title": "MindView: Benchmarking Generative Multi-View Spatial Intelligence",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28622",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-20"
+    },
+    "2610.33062": {
+      "title": "Oddin: Latent Visual Reasoning in Unified Multimodal Models via Self-Distillation from Image Generation",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.33062",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-19"
+    },
+    "2610.26863": {
+      "title": "Text-to-Image Generative Modeling Without Language Pretraining",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26863",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-19"
+    },
+    "2610.26855": {
+      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26855",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-19"
+    },
+    "2610.22682": {
+      "title": "FlexUMM: Flexible Representation Learning for Unified Multimodal Models",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22682",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-15"
+    },
+    "2610.21222": {
+      "title": "Vision-Guided Closed-Loop Autonomous Navigation of Light-Driven Janus Microbots",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.21222",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-15"
+    },
+    "2610.20781": {
+      "title": "ReasonUni: Reasoning-Augmented Reconstruction Advances Unified Multimodal Models",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.20781",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-14"
+    },
+    "2610.23987": {
+      "title": "What Generation Knows: Unlocking Fine-Grained Understanding in Unified Multimodal Models",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.23987",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-14"
+    },
+    "2610.20610": {
+      "title": "Can Learning to Answer Spatial Questions Improve Novel-View Generation?",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.20610",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-14"
+    },
+    "2610.18688": {
+      "title": "RSIgen: Reciprocal Self-Improvement for Agentic Visual Generation",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18688",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-13"
+    },
+    "2610.17080": {
+      "title": "Scaling Unified Multimodal Models to Long-Horizon Interleaved Generation",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.17080",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-12"
+    },
+    "2610.16491": {
+      "title": "Drafting Agents, Not Just Tokens: Speculative Recursive Self-Improvement for Agentic Systems",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.16491",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-12"
+    },
+    "2611.00053": {
+      "title": "SIMIT: Self-Improving Vision-Language Models via Imagination at Test-Time",
+      "published": "2026-10-11",
+      "url": "https://arxiv.org/abs/2611.00053",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-11"
+    },
+    "2610.14560": {
+      "title": "Optoelectronically Enabled Simultaneous and Decoupled Navigation and Selective Pairing of Electrically Driven Janus Particles for Multi-Agent Microrobotics",
+      "published": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.14560",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cond-mat.soft",
+      "first_seen": "2026-10-10"
+    },
+    "2610.14852": {
+      "title": "Getting Space Right: Agentic Rewards for Image Generation",
+      "published": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.14852",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-10"
+    },
+    "2610.15227": {
+      "title": "Understanding Unified VLMs: From Attention Probing to Guidance Tuning for Multimodal Generation",
+      "published": "2026-10-10",
+      "url": "https://arxiv.org/abs/2610.15227",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-10"
+    },
+    "2610.12256": {
+      "title": "Syn-Omni: Structured Specialization and Progressive Collaboration for Omnimodal Embeddings",
+      "published": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.12256",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-08"
+    },
+    "2610.10990": {
+      "title": "Omni-Diffusion-Distill: Few-Step Distillation of Unified Multimodal Diffusion Large Language Models",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10990",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-07"
+    },
+    "2610.10066": {
+      "title": "From Pixel to Coding: Evaluating the Figure Reproduction Capabilities of MLLMs",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10066",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-07"
+    },
+    "2610.07887": {
+      "title": "Visual Abstention in Unified Multimodal Models",
+      "published": "2026-10-06",
+      "url": "https://arxiv.org/abs/2610.07887",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-06"
+    },
+    "2610.23918": {
+      "title": "Cross-Modal Forgetting and Transfer in Unified Multimodal Post-Training",
+      "published": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.23918",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 9.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-05"
+    },
+    "2610.05453": {
+      "title": "The Poisoned Conversation: Privacy-Leaking Watermarks in Unified Multimodal Models",
+      "published": "2026-10-04",
+      "url": "https://arxiv.org/abs/2610.05453",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CR",
+      "first_seen": "2026-10-04"
+    },
+    "2610.03002": {
+      "title": "Recursive Self-Improvement in Unified Multimodal Models",
+      "published": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.03002",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-02"
+    },
+    "2610.02388": {
+      "title": "Octrees as an Explicit 3D Language",
+      "published": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.02388",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-01"
+    },
+    "2610.35906": {
+      "title": "Beyond Structural Unification: A Perspective and Roadmap on Unified Multimodal Models",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2610.35906",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.MM",
+      "first_seen": "2026-09-30"
+    },
+    "2610.00576": {
+      "title": "Gestalt: Large Multimodal Interplay Model",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2610.00576",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-30"
+    },
+    "2609.38485": {
+      "title": "Beyond Layers: Position-Resolved Gradient Conflict and Position-Aware Modulation for Unified Multimodal Models",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38485",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 14.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-29"
+    },
+    "2609.38465": {
+      "title": "Does Gradient Conflict Predict the Understanding--Generation Trade-off? A Controlled Audit of Conflict-Metric Validity in Unified Multimodal Models",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38465",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-09-29"
+    },
+    "2609.36224": {
+      "title": "Mutually Adversarial Self-Training with Evolving Data for Unified Multimodal Models",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.36224",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 9.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-28"
+    },
+    "2609.35767": {
+      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35767",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-28"
+    },
+    "2609.32831": {
+      "title": "UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models",
+      "published": "2026-09-26",
+      "url": "https://arxiv.org/abs/2609.32831",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-09-26"
+    },
+    "2610.25533": {
+      "title": "Modaliff: A Unified Token Diffusion Model for Any-to-Any Generation",
+      "published": "2026-10-18",
+      "url": "https://arxiv.org/abs/2610.25533",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-18"
+    },
+    "2610.22340": {
+      "title": "PlayPolicy: Dexterity from Supervised Play",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22340",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-15"
+    },
+    "2610.22184": {
+      "title": "Whole-Body Dexterity",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22184",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-15"
+    },
+    "2610.14324": {
+      "title": "EV-JEPA: Elastic V-JEPA for Any Device and Cross-Device Inference",
+      "published": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.14324",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-09"
+    },
+    "2610.13205": {
+      "title": "Rethinking Relative Policy Differences Transfer of On-Policy Distillation",
+      "published": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13205",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-09"
+    },
+    "2610.11363": {
+      "title": "UniData: Universal Multimodal Instruction Generation Pipeline",
+      "published": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.11363",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-08"
+    },
+    "2610.09866": {
+      "title": "MUNITE: Unified Multimodal Latent Inference for Any-to-Any Multimodal Generation",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09866",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-07"
+    },
+    "2610.01742": {
+      "title": "World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories",
+      "published": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01742",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-01"
+    },
+    "2609.38523": {
+      "title": "MM-FinEval: A Multi-Task Multimodal Benchmark for Real-World Financial Forecasting",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38523",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-09-29"
+    },
+    "2609.37317": {
+      "title": "What Comes Next? Omni-StoryBench for Evaluating Story-Grounded Omnimodal Generation",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.37317",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-29"
+    },
+    "2610.39301": {
+      "title": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities",
+      "published": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39301",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-29"
+    },
+    "2610.40695": {
+      "title": "JYVA at BeTraC: Audio-Based Medical Note Generation with SOAP Section-Specific Queries",
+      "published": "2026-10-28",
+      "url": "https://arxiv.org/abs/2610.40695",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-28"
+    },
+    "2610.38960": {
+      "title": "Efficient Agentic Audio-Visual Question Answering through Toolset Pruning and Modality Consolidation",
+      "published": "2026-10-28",
+      "url": "https://arxiv.org/abs/2610.38960",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-28"
+    },
+    "2610.36959": {
+      "title": "Live-OPSD: On-Policy Self-Distillation for Proactive Streaming Large Video Models",
+      "published": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36959",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-27"
+    },
+    "2610.36824": {
+      "title": "Who Knows What - and What Does It Support? Perspective-Bounded Evidence Calibration for Multimodal Theory of Mind",
+      "published": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36824",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-27"
+    },
+    "2610.34653": {
+      "title": "Heard Enough to Act: Early Tool Calling in Spoken Dialogue Systems",
+      "published": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.34653",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-26"
+    },
+    "2610.35685": {
+      "title": "Adapting LLM-SC to Living Sacred Heritage: Domain-Specific Extraction, Semantic Networks and Human Evaluation on Pashupatinath Temple Reviews",
+      "published": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.35685",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-26"
+    },
+    "2610.34591": {
+      "title": "Does the Outfit Change the Price? Context Halo in Vision-Language Model Valuation of an Identical Low-Cost Necklace",
+      "published": "2026-10-25",
+      "url": "https://arxiv.org/abs/2610.34591",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-25"
+    },
+    "2610.32411": {
+      "title": "A Broader Look into MLLM's Retrieval Heads",
+      "published": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32411",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-23"
+    },
+    "2610.32382": {
+      "title": "Acoustic and Lexical Signals for Native Language Identification of Language Learners",
+      "published": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32382",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-23"
+    },
+    "2610.32022": {
+      "title": "CEMIR vs. FISER: a comparative study of reasoning-based and enrichment-based approaches to pragmatic intent recognition",
+      "published": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32022",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-23"
+    },
+    "2610.31768": {
+      "title": "Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection",
+      "published": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31768",
+      "categories": [
+        "omni"
+      ],
+      "score": 12.5,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-22"
+    },
+    "2610.30841": {
+      "title": "TRIAD: Benchmarking Omni-Modal Ambiguity in Multimodal Large Language Models",
+      "published": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30841",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-22"
+    },
+    "2610.31713": {
+      "title": "Omni-UBench: Benchmarking Omni-Modal LLM-based Guardrails Across Safety, Utility, and Reliability",
+      "published": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31713",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CR",
+      "first_seen": "2026-10-22"
+    },
+    "2610.31734": {
+      "title": "DirCast: Live Esports Directing and Commentary with a Single Streaming Video-Language Model",
+      "published": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31734",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-22"
+    },
+    "2610.31252": {
+      "title": "Query-Conditioned Liquid Temporal Grounding for Long-Form Audio",
+      "published": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31252",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-22"
+    },
+    "2610.29093": {
+      "title": "Agentic Music Post-Production",
+      "published": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29093",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-21"
+    },
+    "2610.29249": {
+      "title": "MOSAIC: An Omni-Modal Benchmark for Long-Term Memory and Cross-Modal Reasoning in Conversational Agents",
+      "published": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29249",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-21"
+    },
+    "2610.29455": {
+      "title": "Omnilingual-MsASR: Benchmarking Multimodal, Multilingual, Long-Form Multi-Speaker ASR of Omni Large Language Models",
+      "published": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29455",
+      "categories": [
+        "omni"
+      ],
+      "score": 5.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-21"
+    },
+    "2610.29495": {
+      "title": "Balancing Foundation Models and Trait-Specific Learning for Forehead-Crease Recognition",
+      "published": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29495",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-21"
+    },
+    "2610.27581": {
+      "title": "DuplexLedger: Benchmarking Transactional Memory in Full-Duplex Speech Agents",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27581",
+      "categories": [
+        "omni"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-20"
+    },
+    "2610.28405": {
+      "title": "DIVE: Benchmarking Full-Duplex Interaction with Visual Engagement in Continuous Streams",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28405",
+      "categories": [
+        "omni"
+      ],
+      "score": 8.5,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-20"
+    },
+    "2610.28146": {
+      "title": "SKAD: Sketch-Guided Audio-Contrastive Decoding for Reasoning in Large Audio-Language Models",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28146",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "eess.AS",
+      "first_seen": "2026-10-20"
+    },
+    "2610.26203": {
+      "title": "Focused Omni-Modal GUI Agents",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26203",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-19"
+    },
+    "2610.25929": {
+      "title": "OmniGround: Strengthening Omni-Modal Temporal Grounding via Attention-Consistency Training",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25929",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-19"
+    },
+    "2610.27103": {
+      "title": "Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.27103",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-19"
+    },
+    "2610.26802": {
+      "title": "Scaling Parameter-Efficient Fine-Tuning for Brain Encoding",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26802",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-19"
+    },
+    "2610.25777": {
+      "title": "Standing on the Shoulders of Giants: Enhancing LLM Agents for Automated Fact-Checking with Human Expert Skills",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25777",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-19"
+    },
+    "2610.26845": {
+      "title": "Train An Imaginative Agent",
+      "published": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26845",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-19"
+    },
+    "2610.24409": {
+      "title": "Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement",
+      "published": "2026-10-17",
+      "url": "https://arxiv.org/abs/2610.24409",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-17"
+    },
+    "2610.23804": {
+      "title": "Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models",
+      "published": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.23804",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-16"
+    },
+    "2610.23521": {
+      "title": "Perceive, Solve, Reason: Progressive Capability Formation in Time Series-LLMs",
+      "published": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.23521",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-16"
+    },
+    "2610.26891": {
+      "title": "PW-Pruning: Phase-Aware Expert Selection for Speech-Centric Omni-Modal Models",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.26891",
+      "categories": [
+        "omni"
+      ],
+      "score": 9.0,
+      "primary_category": "eess.AS",
+      "first_seen": "2026-10-15"
+    },
+    "2610.21452": {
+      "title": "Full-Duplex Interaction with Speech, Expressions and Gestures",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.21452",
+      "categories": [
+        "omni"
+      ],
+      "score": 8.0,
+      "primary_category": "eess.AS",
+      "first_seen": "2026-10-15"
+    },
+    "2610.22068": {
+      "title": "When Reasoning Is Not Enough: Proactive Inquiry for Cross-Modal Safety in Multimodal Large Language Models",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22068",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-15"
+    },
+    "2610.22018": {
+      "title": "When Models Misread Ink: Auditing VLMs for Arabic Calligraphy Recognition",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22018",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-15"
+    },
+    "2610.21760": {
+      "title": "Beyond Generation: Using Multimodal LLMs as Detectors of LLM-Generated Deepfake Facial Images",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.21760",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-15"
+    },
+    "2610.21573": {
+      "title": "MYOPIA: Understanding the Limits of Tree-Based Reasoning in Vision-Language Models",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.21573",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-15"
+    },
+    "2610.20085": {
+      "title": "Designing Textual Interfaces To Enhance Llm Reasoning On Audio-Visual Question Answering",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.20085",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-14"
+    },
+    "2610.19716": {
+      "title": "Soloist: A Generative Model for Blind Voice Separation in the Wild",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.19716",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-14"
+    },
+    "2610.19290": {
+      "title": "Kandinsky S2V 1.0: Audio-Driven Avatar Video Generation",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.19290",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-13"
+    },
+    "2610.18829": {
+      "title": "OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18829",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-13"
+    },
+    "2610.19084": {
+      "title": "Beyond Aggregate Accuracy: Item-Level Transitions in Prompt Optimization",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.19084",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-10-13"
+    },
+    "2610.17124": {
+      "title": "D2: High-Capability Full-Duplex Spoken Language Models from Half-Duplex Backbones",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.17124",
+      "categories": [
+        "omni"
+      ],
+      "score": 10.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-12"
+    },
+    "2610.16135": {
+      "title": "Omni-Modal LLMs Know More Than They Say",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.16135",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-12"
+    },
+    "2610.16338": {
+      "title": "SyncReward: Human-Aligned Synchronization Reward for Audio-Visual Generation",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.16338",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-12"
+    },
+    "2610.17036": {
+      "title": "PitchIn: Natural-Language Vocal Coaching from Unstructured Community Feedback",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.17036",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-12"
+    },
+    "2610.16260": {
+      "title": "ScreenASR-Bench: A Tiered Benchmark for Speech Recognition with Visual Context",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.16260",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-12"
+    },
+    "2610.16933": {
+      "title": "Estimating Uncertainty of Omnimodal Large Language Models via External Omnimodal Embeddings",
+      "published": "2026-10-12",
+      "url": "https://arxiv.org/abs/2610.16933",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-12"
+    },
+    "2610.15773": {
+      "title": "HMU-Bench: Hierarchical Music Understanding Benchmark for Omni Models",
+      "published": "2026-10-11",
+      "url": "https://arxiv.org/abs/2610.15773",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "eess.AS",
+      "first_seen": "2026-10-11"
+    },
+    "2610.12248": {
+      "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+      "published": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.12248",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-08"
+    },
+    "2610.11948": {
+      "title": "When History Helps and Hurts: Selective History Use across Multimodal Turns",
+      "published": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.11948",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-08"
+    },
+    "2610.11959": {
+      "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+      "published": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.11959",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-08"
+    },
+    "2610.09307": {
+      "title": "vLLM-Omni Technical Report: A Unified Serving Runtime for Omni-Modality Generation",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09307",
+      "categories": [
+        "omni"
+      ],
+      "score": 13.0,
+      "primary_category": "cs.DC",
+      "first_seen": "2026-10-07"
+    },
+    "2610.10264": {
+      "title": "CrossEdit: Cross-Modal Training Enables Rich Audio-Visual Editing",
+      "published": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10264",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-07"
+    },
+    "2610.04887": {
+      "title": "TS-SP: Learning Speaker-Preserving Representations in Audio Large Language Models",
+      "published": "2026-10-04",
+      "url": "https://arxiv.org/abs/2610.04887",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-10-04"
+    },
+    "2610.02819": {
+      "title": "Text-Centric Post-Training for Omni-Modal Reasoning",
+      "published": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.02819",
+      "categories": [
+        "omni"
+      ],
+      "score": 9.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-02"
+    },
+    "2610.02999": {
+      "title": "OmniConfess: Eliciting Token Confessions to Mitigate Omni-Modal Hallucination",
+      "published": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.02999",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-02"
+    },
+    "2610.02638": {
+      "title": "Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen LLM Hear Beyond the Transcript",
+      "published": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.02638",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-10-02"
+    },
+    "2610.02148": {
+      "title": "Omni-Embed-Mini: Binding Modalities Without Forgetting via Dense Distillation",
+      "published": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.02148",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-01"
+    },
+    "2609.39938": {
+      "title": "LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39938",
+      "categories": [
+        "omni"
+      ],
+      "score": 10.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-09-30"
+    },
+    "2609.39490": {
+      "title": "OmniReasoning: Pushing the Limits of Audio-Visual Joint Reasoning",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39490",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-30"
+    },
+    "2609.39953": {
+      "title": "Learning to Reason with Compressed Context: Ground-Truth-Free Adaptation of OmniLLMs via Self-Distillation",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39953",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-30"
+    },
+    "2609.40181": {
+      "title": "Index-Translate: A Multilingual Translation Model Family -- Text, Speech, Controlled Dubbing, and Long-Document Translation",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.40181",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-09-30"
+    },
+    "2609.39150": {
+      "title": "OP-CAD: On-Policy Clean-Audio Distillation for Robust Audio-Visual Reasoning",
+      "published": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39150",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-30"
+    },
+    "2609.36903": {
+      "title": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36903",
+      "categories": [
+        "omni"
+      ],
+      "score": 12.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-09-29"
+    },
+    "2609.36798": {
+      "title": "Seeing What Should Be Heard: Diagnosing and Repairing Cross-Modal Shortcuts in Omni-Modal LLMs",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36798",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-29"
+    },
+    "2609.36828": {
+      "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.36828",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-09-29"
+    },
+    "2609.34096": {
+      "title": "HiThink Turn: An Intent-Aware Turn-Taking Control Module for Full-Duplex Dialogue",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.34096",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.HC",
+      "first_seen": "2026-09-28"
+    },
+    "2609.34363": {
+      "title": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.34363",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-28"
+    },
+    "2609.34223": {
+      "title": "Uncovering Ordinal-Matching Bias in Audio-Visual LLMs",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.34223",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-28"
+    },
+    "2609.34653": {
+      "title": "OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.34653",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-09-28"
+    },
+    "2609.35115": {
+      "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35115",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-09-28"
+    },
+    "2609.33458": {
+      "title": "When Does the Concept of \"Dog\" Emerge in an Audio LLM?",
+      "published": "2026-09-27",
+      "url": "https://arxiv.org/abs/2609.33458",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-09-27"
+    },
+    "2609.33774": {
+      "title": "Tokens Change, Structure Endures: Spectral Watermarking for Generated Speech",
+      "published": "2026-09-27",
+      "url": "https://arxiv.org/abs/2609.33774",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-09-27"
+    },
+    "2609.31948": {
+      "title": "Duplex-MPE: Benchmarking Multi-Party Interaction in Full-Duplex Dialogue",
+      "published": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31948",
+      "categories": [
+        "omni"
+      ],
+      "score": 9.5,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-09-25"
+    },
+    "2609.29217": {
+      "title": "AdaptDuplex: From Static to Adaptive Full-Duplex Spoken Dialogue",
+      "published": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29217",
+      "categories": [
+        "omni"
+      ],
+      "score": 12.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-09-24"
+    },
+    "2609.30167": {
+      "title": "Do Audio Language Models Hear and Read Distinctive Features Alike?",
+      "published": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.30167",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-09-24"
+    },
+    "2609.28806": {
+      "title": "A Harness for Synthesizing Diverse Naturalistic Full-Duplex Conversations",
+      "published": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28806",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "eess.AS",
+      "first_seen": "2026-09-23"
+    },
+    "2610.33564": {
+      "title": "What Remains OOD? OODConceptBench for Open-World Concept Recognition in Vision-Language Models",
+      "published": "2026-10-24",
+      "url": "https://arxiv.org/abs/2610.33564",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-24"
+    },
+    "2610.33265": {
+      "title": "Image Clustering with Vision-Language Model Embeddings",
+      "published": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.33265",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-23"
+    },
+    "2611.05406": {
+      "title": "When Does Sharing Work? Scaling a Shared SigLIP2 Across Image, Video, Audio, and Audio-Visual Representations",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2611.05406",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 8.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-20"
+    },
+    "2610.27515": {
+      "title": "Progressive Subset Selection and Cascaded Consistency for Unsupervised Vision-Language Model Adaptation",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27515",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-20"
+    },
+    "2610.28255": {
+      "title": "Convergent Performance, Divergent Mechanisms in LoRA-Adapted Vision Foundation Models for Brain MRI",
+      "published": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28255",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-20"
+    },
+    "2610.24060": {
+      "title": "Generative Text Modelling and Language-Guided Visual Attention for Deciphering Palimpsests",
+      "published": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.24060",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-16"
+    },
+    "2610.22075": {
+      "title": "Retrofitting Recurrent Vision-Language Models from Pretrained Backbones",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22075",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-15"
+    },
+    "2610.21306": {
+      "title": "VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models",
+      "published": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.21306",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-15"
+    },
+    "2610.19443": {
+      "title": "More Than Seeing: Vision as Scalable Anchors in Native Multimodal Pre-Training",
+      "published": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.19443",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-10-14"
+    },
+    "2610.19224": {
+      "title": "End-to-End Vision-Language-Action Policies for Autonomous Lunar Rover Docking",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.19224",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-13"
+    },
+    "2610.18123": {
+      "title": "MARTS: A Modular Agricultural Robot for Targeted Spraying of Diseased Tomato Plants in Greenhouses",
+      "published": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18123",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-10-13"
+    },
+    "2610.13056": {
+      "title": "A4-MR: Abnormality Aware Anatomical Alignment for MR",
+      "published": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13056",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-09"
+    },
+    "2610.08414": {
+      "title": "Image Bitstream Fine-grained Understanding for Privacy-Friendly AIoT",
+      "published": "2026-10-06",
+      "url": "https://arxiv.org/abs/2610.08414",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 5.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-06"
+    },
+    "2609.38597": {
+      "title": "PixelUMM: Encoder-Free Unified Image and Video Understanding and Generation",
+      "published": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38597",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-29"
+    },
+    "2609.36368": {
+      "title": "AdaKerNet: Neural Kernel Decoding for Task-Adaptive Prediction with Multimodal Large Models",
+      "published": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.36368",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 5.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-09-28"
+    },
+    "2609.33288": {
+      "title": "Informative Viewpoint Selection for Episodic-Memory Embodied Question Answering using Omnidirectional Images",
+      "published": "2026-09-27",
+      "url": "https://arxiv.org/abs/2609.33288",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-09-27"
     }
   }
 }
