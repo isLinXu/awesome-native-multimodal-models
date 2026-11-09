@@ -1,26 +1,27 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-06**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-09**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
 
 | 指标 | 数值 |
 | :-- | --: |
-| 收录论文（全量库） | 132 |
-| 文档内可浏览条目 | 132 |
-| 近 7 天新发布 | 29 |
-| 跟踪仓库 | 21 |
-| 跟踪仓库总 star | 160,637 |
+| 收录论文（全量库） | 290 |
+| 文档内可浏览条目 | 290 |
+| 近 7 天新发布 | 27 |
+| 跟踪仓库 | 82 |
+| 跟踪仓库总 star | 231,558 |
 
-## 🔢 Image & Video Tokenizers · 近 7 天新发布 3 篇
+## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
 
 - [Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling](https://arxiv.org/abs/2611.08099) · `2026-11-05` · score 3.0
 - [TEMPO: Time Series Understanding via Discrete Tokenization](https://arxiv.org/abs/2611.04482) · `2026-11-03` · score 3.0
-- [MoETok: Sparse Expert Routing for 1D Visual Tokenizers](https://arxiv.org/abs/2610.41992) · `2026-10-30` · score 9.0
 
-## 🖼️ Unified Understanding + Generation · 近 7 天新发布 8 篇
+## 🖼️ Unified Understanding + Generation · 近 7 天新发布 9 篇
 
+- [UniMore: Fine-Grained Supervision for Unified Understanding and Generation](https://arxiv.org/abs/2611.08996) · `2026-11-06` · score 9.0
+- [Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing](https://arxiv.org/abs/2611.09047) · `2026-11-06` · score 3.0
 - [Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling](https://arxiv.org/abs/2611.08185) · `2026-11-05` · score 3.0
 - [Prism: Bidirectional Self-Teaching for Unified Multimodal Models](https://arxiv.org/abs/2611.06343) · `2026-11-04` · score 9.0
 - [Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models](https://arxiv.org/abs/2611.04467) · `2026-11-03` · score 12.5
@@ -28,14 +29,12 @@
 - [YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction](https://arxiv.org/abs/2611.05280) · `2026-11-03` · score 6.0
 - [HistoTx: Early fusion of H&E images and spatial transcriptomics at varying spatial transcriptomics resolution with self-supervised learning](https://arxiv.org/abs/2611.02681) · `2026-11-02` · score 3.0
 - [Do Visual RL Gains Scale at Test Time? A Quantile View of Post-Training](https://arxiv.org/abs/2611.02366) · `2026-11-02` · score 3.0
-- [Latent Reasoning in Continuous Space for Unified Multimodal Models](https://arxiv.org/abs/2610.42149) · `2026-10-30` · score 10.0
 
-## 🌐 Any-to-Any Multimodal · 近 7 天新发布 2 篇
+## 🌐 Any-to-Any Multimodal · 近 7 天新发布 1 篇
 
 - [DreamX: Video Diffusion Model is a Universal Latent Action Learner](https://arxiv.org/abs/2611.05377) · `2026-11-03` · score 3.0
-- [scAnyOmics: Foundation-Model Distillation for Any-to-Any Completion of Multi-omics Virtual Cells](https://arxiv.org/abs/2610.41399) · `2026-10-30` · score 6.0
 
-## 🎙️ Omni Models · 近 7 天新发布 11 篇
+## 🎙️ Omni Models · 近 7 天新发布 10 篇
 
 - [THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning](https://arxiv.org/abs/2611.07836) · `2026-11-05` · score 3.5
 - [CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation](https://arxiv.org/abs/2611.06501) · `2026-11-04` · score 4.0
@@ -47,7 +46,6 @@
 - [Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems](https://arxiv.org/abs/2611.05275) · `2026-11-03` · score 3.0
 - [InteractionBench: Measuring Timing, Task Accuracy, Whisper and Volume, and Grounding in Real-Time Voice Systems](https://arxiv.org/abs/2611.02430) · `2026-11-02` · score 4.5
 - [R$^2$-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation](https://arxiv.org/abs/2611.03247) · `2026-11-02` · score 3.5
-- [RECITE: Revising Eligibility Criteria Incorporating Textual Evidence](https://arxiv.org/abs/2610.41368) · `2026-10-30` · score 3.0
 
 ## 🧠 Pretraining Foundations · 近 7 天新发布 5 篇
 
