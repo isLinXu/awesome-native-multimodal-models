@@ -3,7 +3,7 @@
 <rect width="1200" height="348" fill="#FFFFFF"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
 <text x="24" y="32" font-size="16" font-weight="600" fill="#0F172A">五条赛道的论文占比</text>
-<text x="24" y="52" font-size="12" fill="#64748B">共 288 篇 · 一篇论文可同时属于多条赛道</text>
+<text x="24" y="52" font-size="12" fill="#64748B">共 290 篇 · 一篇论文可同时属于多条赛道</text>
 <text x="24" y="89" font-size="13" fill="#0F172A">🔢 Image &amp; Video Tokenizers</text>
 <rect x="274" y="74" width="764" height="20" rx="6" fill="#E2E8F0" fill-opacity="0.55"/>
 <rect x="274" y="74" width="374.2" height="20" rx="6" fill="#4ECDC4"/>
@@ -11,9 +11,9 @@
 <text x="1154" y="89" font-size="12" text-anchor="end" fill="#64748B">17%</text>
 <text x="24" y="143" font-size="13" fill="#0F172A">🖼️ Unified Understanding + Gen…</text>
 <rect x="274" y="128" width="764" height="20" rx="6" fill="#E2E8F0" fill-opacity="0.55"/>
-<rect x="274" y="128" width="615.9" height="20" rx="6" fill="#FF6B6B"/>
-<text x="1094" y="143" font-size="13" font-weight="600" text-anchor="end" fill="#0F172A">79</text>
-<text x="1154" y="143" font-size="12" text-anchor="end" fill="#64748B">27%</text>
+<rect x="274" y="128" width="631.5" height="20" rx="6" fill="#FF6B6B"/>
+<text x="1094" y="143" font-size="13" font-weight="600" text-anchor="end" fill="#0F172A">81</text>
+<text x="1154" y="143" font-size="12" text-anchor="end" fill="#64748B">28%</text>
 <text x="24" y="197" font-size="13" fill="#0F172A">🌐 Any-to-Any Multimodal</text>
 <rect x="274" y="182" width="764" height="20" rx="6" fill="#E2E8F0" fill-opacity="0.55"/>
 <rect x="274" y="182" width="194.9" height="20" rx="6" fill="#A8E6CF"/>

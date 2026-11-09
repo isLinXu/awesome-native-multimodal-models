@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T07:39:30Z",
+  "updated": "2026-11-09T08:17:12Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -3477,6 +3477,28 @@
       "score": 4.5,
       "primary_category": "cs.CV",
       "first_seen": "2026-09-27"
+    },
+    "2611.08996": {
+      "title": "UniMore: Fine-Grained Supervision for Unified Understanding and Generation",
+      "published": "2026-11-06",
+      "url": "https://arxiv.org/abs/2611.08996",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.MM",
+      "first_seen": "2026-11-06"
+    },
+    "2611.09047": {
+      "title": "Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing",
+      "published": "2026-11-06",
+      "url": "https://arxiv.org/abs/2611.09047",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-06"
     }
   }
 }

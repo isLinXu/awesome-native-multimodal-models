@@ -9,11 +9,11 @@
 <rect x="960.0" y="0" width="240.0" height="5" fill="#FAD7A0"/>
 <text x="48" y="62" font-size="27" font-weight="700" fill="#0F172A" letter-spacing="-0.4">原生多模态模型在怎么长出来</text>
 <text x="49" y="88" font-size="13" fill="#64748B">每天从 arXiv 与 GitHub 抓取 · 打分归类 · 去重排序 · 自动提交</text>
-<text x="1152" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">231k</text>
+<text x="1152" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">232k</text>
 <text x="1152" y="84" font-size="11" text-anchor="end" fill="#64748B">累计 star</text>
 <text x="1048" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">82</text>
 <text x="1048" y="84" font-size="11" text-anchor="end" fill="#64748B">个项目</text>
-<text x="944" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">288</text>
+<text x="944" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">290</text>
 <text x="944" y="84" font-size="11" text-anchor="end" fill="#64748B">篇论文</text>
 <rect x="48.0" y="110" width="186.3" height="24" rx="12" fill="#4ECDC4" fill-opacity="0.12"/>
 <circle cx="59.0" cy="122" r="3.2" fill="#4ECDC4"/>

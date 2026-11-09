@@ -57,6 +57,8 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-06 | **UniMore: Fine-Grained Supervision for Unified Understanding and Generation** | Haoyue Bai, Yinyi Luo et al. | Unified multimodal models combine image understanding and generation within one system… | [📄 2611.08996](https://arxiv.org/abs/2611.08996) `cs.MM` |
+| 2026-11-06 | **Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing** | Xiaoyong Yu, Xinge Yu | Face Anti-Spoofing (FAS) must distinguish genuine faces from presentation attacks… | [📄 2611.09047](https://arxiv.org/abs/2611.09047) `cs.CV` |
 | 2026-10-29 | **DiFuse: Fusing Native Diffusion Representations for Spatial Reasoning in Unified Multimodal Models** | Ruixin Fan, Weining Wang et al. | Unified multimodal models (UMMs) jointly support visual understanding and image generation… | [📄 2610.39609](https://arxiv.org/abs/2610.39609) `cs.CV` |
 | 2026-10-29 | **SelfThinker: Self-Evolving Reasoning via Reliability-Verified Intrinsic Visual Thoughts** | Zhangquan Chen, Ruqi Huang | Unified multimodal models can both generate and understand images within a single set of weight… | [📄 2610.40115](https://arxiv.org/abs/2610.40115) `cs.CV` |
 | 2026-10-29 | **Calibrating Attention-Based Token Pruning for Efficient Multi-Image Synthesis in UMMs** | Zimeng Wu, Qijian Tian et al. | Unified Multimodal Models (UMMs) enable powerful multi-image synthesis but incur substantial co… | [📄 2610.39467](https://arxiv.org/abs/2610.39467) `cs.CV` |

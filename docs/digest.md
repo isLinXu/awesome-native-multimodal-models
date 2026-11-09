@@ -1,25 +1,27 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-08**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-09**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
 
 | 指标 | 数值 |
 | :-- | --: |
-| 收录论文（全量库） | 288 |
-| 文档内可浏览条目 | 288 |
-| 近 7 天新发布 | 25 |
+| 收录论文（全量库） | 290 |
+| 文档内可浏览条目 | 290 |
+| 近 7 天新发布 | 27 |
 | 跟踪仓库 | 82 |
-| 跟踪仓库总 star | 231,450 |
+| 跟踪仓库总 star | 231,558 |
 
 ## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
 
 - [Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling](https://arxiv.org/abs/2611.08099) · `2026-11-05` · score 3.0
 - [TEMPO: Time Series Understanding via Discrete Tokenization](https://arxiv.org/abs/2611.04482) · `2026-11-03` · score 3.0
 
-## 🖼️ Unified Understanding + Generation · 近 7 天新发布 7 篇
+## 🖼️ Unified Understanding + Generation · 近 7 天新发布 9 篇
 
+- [UniMore: Fine-Grained Supervision for Unified Understanding and Generation](https://arxiv.org/abs/2611.08996) · `2026-11-06` · score 9.0
+- [Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing](https://arxiv.org/abs/2611.09047) · `2026-11-06` · score 3.0
 - [Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling](https://arxiv.org/abs/2611.08185) · `2026-11-05` · score 3.0
 - [Prism: Bidirectional Self-Teaching for Unified Multimodal Models](https://arxiv.org/abs/2611.06343) · `2026-11-04` · score 9.0
 - [Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models](https://arxiv.org/abs/2611.04467) · `2026-11-03` · score 12.5
