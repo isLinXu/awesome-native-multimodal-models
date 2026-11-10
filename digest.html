@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Awesome Native Multimodal Models — Digest</title>
+<style>
+
+.site-nav {
+  position: sticky; top: 0; z-index: 80;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+  padding: 10px 24px;
+  background: rgba(13,17,23,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border, #30363d);
+}
+.site-nav .brand {
+  font-weight: 800; color: var(--text, #e6edf3); text-decoration: none;
+  letter-spacing: -0.02em; font-size: 0.95rem;
+}
+.site-nav .brand span { color: var(--accent, #58a6ff); }
+.site-nav .links { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+.site-nav a.link {
+  color: var(--muted, #8b949e); text-decoration: none;
+  padding: 6px 11px; border-radius: 8px; font-size: 0.8rem;
+  display: inline-flex; flex-direction: row; align-items: baseline; gap: 5px;
+}
+.site-nav a.link small { font-size: 0.68rem; opacity: 0.7; font-weight: 400; }
+.site-nav a.link:hover { color: var(--text, #e6edf3); background: #21262d; }
+.site-nav a.link.active { color: var(--accent, #58a6ff); background: #21262d; }
+.site-nav a.ext { color: var(--muted, #8b949e); text-decoration: none; font-size: 0.8rem; padding: 6px 10px; }
+.site-nav a.ext:hover { color: var(--accent, #58a6ff); }
+
+
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  main { width: min(880px, 100%); margin: 0 auto; padding: 28px 20px 64px; flex: 1; }
+  h1 { font-size: 1.6rem; margin-bottom: 6px; }
+  h1 span { color: var(--accent); }
+  .lead { color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; line-height: 1.7; }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin-bottom: 28px;
+  }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; text-align: center; }
+  .stat b { display: block; font-size: 1.3rem; color: var(--accent); }
+  .stat span { font-size: 0.75rem; color: var(--muted); }
+  h2 { font-size: 1.05rem; margin: 22px 0 10px; }
+  .paper { padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 0.88rem; }
+  .paper:last-child { border-bottom: 0; }
+  .paper a { color: var(--text); text-decoration: none; font-weight: 600; }
+  .paper a:hover { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+  .empty { color: var(--muted); font-size: 0.88rem; }
+  .pill { display: inline-block; font-size: 0.68rem; padding: 1px 8px; border-radius: 999px; color: #0d1117; font-weight: 700; }
+  footer {
+    padding: 20px; font-size: 0.75rem; color: var(--muted); text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--link); }
+
+</style>
+</head>
+<body>
+<nav class="site-nav"><a class="brand" href="index.html">🤖 <span>Native MM</span></a><div class="links"><a class="link" href="index.html">观测台<small>Observatory</small></a><a class="link" href="papers.html">论文库<small>Papers</small></a><a class="link active" href="digest.html">周报<small>Digest</small></a><a class="link" href="repos.html">仓库<small>Repos</small></a><a class="link" href="taxonomy.html">谱系<small>Taxonomy</small></a><a class="link" href="timeline.html">时间线<small>Timeline</small></a><a class="ext" href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">GitHub ↗</a></div></nav>
+<main>
+  <h1>📬 周报 <span>Digest</span></h1>
+  <p class="lead">近 7 天按<strong>论文发布日</strong>统计，不是抓取日。
+     高分优先。数据随每日 Actions 更新，最后刷新 2026-11-10。</p>
+  <div class="stats">
+    <div class="stat"><b>2,151</b><span>库内论文</span></div>
+    <div class="stat"><b>26</b><span>本周新发布</span></div>
+    <div class="stat"><b>82</b><span>跟踪仓库</span></div>
+    <div class="stat"><b>26</b><span>7 日入库</span></div>
+  </div>
+  <h2>🔢 图像与视频分词器 · 4 篇</h2><div class="paper"><a href="https://arxiv.org/abs/2611.12426" target="_blank" rel="noopener">dNaViT: Discrete Codes are General-Purpose Visual Representations</a><div class="meta">2026-11-09 · score 3.0 · <span class="pill" style="background:#4ECDC4">图像与视频分词器</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.11913" target="_blank" rel="noopener">CHORD: Multi-resolution Compression for Multimodal Time Series</a><div class="meta">2026-11-09 · score 3.0 · <span class="pill" style="background:#4ECDC4">图像与视频分词器</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.08099" target="_blank" rel="noopener">Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling</a><div class="meta">2026-11-05 · score 3.0 · <span class="pill" style="background:#4ECDC4">图像与视频分词器</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.04482" target="_blank" rel="noopener">TEMPO: Time Series Understanding via Discrete Tokenization</a><div class="meta">2026-11-03 · score 3.0 · <span class="pill" style="background:#4ECDC4">图像与视频分词器</span></div></div><h2>🖼️ 统一理解与生成 · 7 篇</h2><div class="paper"><a href="https://arxiv.org/abs/2611.04467" target="_blank" rel="noopener">Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models</a><div class="meta">2026-11-03 · score 12.5 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.08996" target="_blank" rel="noopener">UniMore: Fine-Grained Supervision for Unified Understanding and Generation</a><div class="meta">2026-11-06 · score 9.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.06343" target="_blank" rel="noopener">Prism: Bidirectional Self-Teaching for Unified Multimodal Models</a><div class="meta">2026-11-04 · score 9.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.05451" target="_blank" rel="noopener">From Tokens to Trajectories: Parameter-Efficient Continuous Adaptation of Unified Multimodal Models</a><div class="meta">2026-11-03 · score 6.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.05280" target="_blank" rel="noopener">YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction</a><div class="meta">2026-11-03 · score 6.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.09047" target="_blank" rel="noopener">Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing</a><div class="meta">2026-11-06 · score 3.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.08185" target="_blank" rel="noopener">Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling</a><div class="meta">2026-11-05 · score 3.0 · <span class="pill" style="background:#FF6B6B">统一理解与生成</span></div></div><h2>🌐 任意到任意 · 1 篇</h2><div class="paper"><a href="https://arxiv.org/abs/2611.05377" target="_blank" rel="noopener">DreamX: Video Diffusion Model is a Universal Latent Action Learner</a><div class="meta">2026-11-03 · score 3.0 · <span class="pill" style="background:#A8E6CF">任意到任意</span></div></div><h2>🎙️ Omni 实时交互 · 12 篇</h2><div class="paper"><a href="https://arxiv.org/abs/2611.11573" target="_blank" rel="noopener">Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models</a><div class="meta">2026-11-08 · score 4.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.06501" target="_blank" rel="noopener">CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation</a><div class="meta">2026-11-04 · score 4.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.06083" target="_blank" rel="noopener">SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?</a><div class="meta">2026-11-04 · score 4.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.04580" target="_blank" rel="noopener">Confidence-Aware Aggregation for Multimodal Audio Reasoning</a><div class="meta">2026-11-03 · score 4.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.10245" target="_blank" rel="noopener">From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing</a><div class="meta">2026-11-06 · score 3.5 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.07836" target="_blank" rel="noopener">THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning</a><div class="meta">2026-11-05 · score 3.5 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.12524" target="_blank" rel="noopener">EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth</a><div class="meta">2026-11-09 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.10917" target="_blank" rel="noopener">Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery</a><div class="meta">2026-11-07 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.06583" target="_blank" rel="noopener">PatchCon: Patch-aware Weighted Supervised Contrastive Learning for Vulnerability Detection</a><div class="meta">2026-11-04 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.05671" target="_blank" rel="noopener">How Do Artificial Agents Make Decisions in Light of Visual Data?</a><div class="meta">2026-11-03 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.05515" target="_blank" rel="noopener">TSFM Meets LLM: Context as Covariates</a><div class="meta">2026-11-03 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.05275" target="_blank" rel="noopener">Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems</a><div class="meta">2026-11-03 · score 3.0 · <span class="pill" style="background:#DDA0DD">Omni 实时交互</span></div></div><h2>🧠 预训练底座 · 2 篇</h2><div class="paper"><a href="https://arxiv.org/abs/2611.06149" target="_blank" rel="noopener">Grounding in the Dark: Text-Only Training for Zero-Shot Video Temporal Localization</a><div class="meta">2026-11-04 · score 3.5 · <span class="pill" style="background:#FAD7A0">预训练底座</span></div></div><div class="paper"><a href="https://arxiv.org/abs/2611.08138" target="_blank" rel="noopener">Describe Your Facial Expressions by Linking Image Encoders and Large Language Models</a><div class="meta">2026-11-05 · score 3.0 · <span class="pill" style="background:#FAD7A0">预训练底座</span></div></div>
+</main>
+<footer>每日从 arXiv / GitHub 自动观测 · Data &amp; code: <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">isLinXu/awesome-native-multimodal-models</a></footer>
+</body>
+</html>
