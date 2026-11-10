@@ -211,7 +211,26 @@ def parse_arxiv_feed(xml_bytes: bytes) -> List[Dict[str, Any]]:
 def arxiv_date_range(days_back: int) -> str:
     end = today_utc()
     start = end - timedelta(days=days_back)
+    return arxiv_date_span(start, end)
+
+
+def arxiv_date_span(start: datetime, end: datetime) -> str:
     return f"submittedDate:[{start:%Y%m%d}0000 TO {end:%Y%m%d}2359]"
+
+
+def iter_date_windows(days: int, chunk_days: int) -> List[Tuple[datetime, datetime]]:
+    """把回溯区间切成若干窗口。chunk_days<=0 时整段一次查询。"""
+    end = today_utc()
+    origin = end - timedelta(days=max(days, 1))
+    if chunk_days <= 0 or chunk_days >= days:
+        return [(origin, end)]
+    windows: List[Tuple[datetime, datetime]] = []
+    cursor = origin
+    while cursor < end:
+        nxt = min(cursor + timedelta(days=chunk_days), end)
+        windows.append((cursor, nxt))
+        cursor = nxt
+    return windows
 
 
 # ─── markdown 表格（标记块写入） ────────────────────────────────────────────
@@ -318,6 +337,46 @@ def replace_table_body(
             content[: start + len(start_marker)] + new_block + content[end:], encoding="utf-8"
         )
     return len(rows)
+
+
+def sort_table_by_date(
+    doc_path: Path,
+    table_id: str,
+    *,
+    max_rows: int = 300,
+    dry_run: bool = False,
+) -> int:
+    """按第一列日期倒序重排标记表格，避免历史回填把旧论文插到表顶。"""
+    if not doc_path.exists():
+        return 0
+    content = doc_path.read_text(encoding="utf-8")
+    start_marker, end_marker = _START.format(table_id), _END.format(table_id)
+    start = content.find(start_marker)
+    end = content.find(end_marker, start) if start != -1 else -1
+    if start == -1 or end == -1:
+        return 0
+
+    block = content[start + len(start_marker) : end]
+    lines = [ln for ln in block.split("\n") if ln.strip().startswith("|")]
+    if len(lines) < 2:
+        return 0
+    header, separator, body = lines[0], lines[1], lines[2:]
+
+    def row_date(row: str) -> str:
+        cells = [c.strip() for c in row.strip().strip("|").split("|")]
+        return cells[0] if cells else ""
+
+    body.sort(key=row_date, reverse=True)
+    dropped = max(0, len(body) - max_rows)
+    body = body[:max_rows]
+    new_block = "\n" + "\n".join([header, separator] + body) + "\n"
+    if not dry_run:
+        doc_path.write_text(
+            content[: start + len(start_marker)] + new_block + content[end:], encoding="utf-8"
+        )
+    if dropped:
+        log(f"  {doc_path.name}: 表格超限，{dropped} 条较早条目移出文档（仍保留在 data/papers.json）")
+    return len(body)
 
 
 def replace_marked(content: str, marker: str, value: str) -> str:

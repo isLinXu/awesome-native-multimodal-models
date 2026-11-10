@@ -21,9 +21,9 @@
 
 | 收录论文 | 近 7 天新论文 | 跟踪仓库 | 累计 star |
 | --: | --: | --: | --: |
-| <!--STATS:papers-->290<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+27<!--/STATS:papers_new--> | <!--STATS:repos-->82<!--/STATS:repos--> 个 | <!--STATS:stars-->231,558<!--/STATS:stars--> |
+| <!--STATS:papers-->2,147<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+22<!--/STATS:papers_new--> | <!--STATS:repos-->82<!--/STATS:repos--> 个 | <!--STATS:stars-->231,558<!--/STATS:stars--> |
 
-> 最后自动更新：<!--STATS:updated-->2026-11-09<!--/STATS:updated-->
+> 最后自动更新：<!--STATS:updated-->2026-11-10<!--/STATS:updated-->
 
 🔗 **相关仓库：**
 [Awesome-Unified-Multimodal-Models](https://github.com/AIDC-AI/Awesome-Unified-Multimodal-Models) ·
@@ -85,11 +85,11 @@
 
 | 赛道 | 一句话 | 文档 | 必读 | 文档内条目 |
 | :-- | :-- | :-- | --: | --: |
-| 🔢 **Image & Video Tokenizers** | 先把像素变成能进 Transformer 的词 | [tokenizers.md](docs/tokenizers.md) | 5 | <!--STATS:cat_tokenizers-->48<!--/STATS:cat_tokenizers--> 篇 |
-| 🖼️ **Unified Understanding + Generation** | 同一个模型既要看懂，也要画出来 | [unified-ug.md](docs/unified-ug.md) | 6 | <!--STATS:cat_unified-ug-->81<!--/STATS:cat_unified-ug--> 篇 |
-| 🌐 **Any-to-Any Multimodal** | 任意模态进，任意模态出 | [any-to-any.md](docs/any-to-any.md) | 4 | <!--STATS:cat_any-to-any-->25<!--/STATS:cat_any-to-any--> 篇 |
-| 🎙️ **Omni Models** | 能看、能听、能说，而且要跟得上 | [omni.md](docs/omni.md) | 3 | <!--STATS:cat_omni-->98<!--/STATS:cat_omni--> 篇 |
-| 🧠 **Pretraining Foundations** | 统一架构不是从零长出来的 | [pretraining.md](docs/pretraining.md) | 5 | <!--STATS:cat_pretraining-->38<!--/STATS:cat_pretraining--> 篇 |
+| 🔢 **Image & Video Tokenizers** | 先把像素变成能进 Transformer 的词 | [tokenizers.md](docs/tokenizers.md) | 5 | <!--STATS:cat_tokenizers-->184<!--/STATS:cat_tokenizers--> 篇 |
+| 🖼️ **Unified Understanding + Generation** | 同一个模型既要看懂，也要画出来 | [unified-ug.md](docs/unified-ug.md) | 6 | <!--STATS:cat_unified-ug-->593<!--/STATS:cat_unified-ug--> 篇 |
+| 🌐 **Any-to-Any Multimodal** | 任意模态进，任意模态出 | [any-to-any.md](docs/any-to-any.md) | 4 | <!--STATS:cat_any-to-any-->140<!--/STATS:cat_any-to-any--> 篇 |
+| 🎙️ **Omni Models** | 能看、能听、能说，而且要跟得上 | [omni.md](docs/omni.md) | 3 | <!--STATS:cat_omni-->744<!--/STATS:cat_omni--> 篇 |
+| 🧠 **Pretraining Foundations** | 统一架构不是从零长出来的 | [pretraining.md](docs/pretraining.md) | 5 | <!--STATS:cat_pretraining-->494<!--/STATS:cat_pretraining--> 篇 |
 
 ## 怎么用
 
@@ -171,8 +171,8 @@ python scripts/seed_from_catalog.py
 # 1) 校验并填充各赛道的「奠基与必读」
 python scripts/seed_classics.py
 
-# 2) 抓论文（首次建库建议回填半年）
-python scripts/fetch_arxiv.py --days 180
+# 2) 抓论文（历史回填到原生多模态概念出现之前，约 2017 / VQ-VAE）
+python scripts/fetch_arxiv.py --since 2017-01-01 --sources arxiv
 #    日常增量：python scripts/fetch_arxiv.py
 
 # 3) 跟踪仓库（建议带 token，未认证搜索限流 10 次/分钟）

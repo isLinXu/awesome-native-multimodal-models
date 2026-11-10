@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       days:
-        description: "论文回溯天数（首次建库可填 180）"
+        description: "论文回溯天数（日常 45；历史回填到 2017 可填 3600）"
         required: false
         default: "45"
       skip_github:
@@ -26,7 +26,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
@@ -58,7 +58,13 @@ jobs:
         continue-on-error: true
         env:
           DAYS: ${{ github.event.inputs.days || '45' }}
-        run: python scripts/fetch_arxiv.py --days "$DAYS" --sources arxiv,hf
+        run: |
+          DAYS="${DAYS}"
+          EXTRA=""
+          if [ "$DAYS" -gt 120 ]; then
+            EXTRA="--chunk-days 365 --max-pages 4"
+          fi
+          python scripts/fetch_arxiv.py --days "$DAYS" --sources arxiv,hf $EXTRA
 
       - name: Track GitHub repos
         if: ${{ github.event.inputs.skip_github != 'true' }}

@@ -13,7 +13,7 @@ meta:
   lookback_days: 45
   arxiv_max_per_query: 80
   min_score: 3.0
-  max_rows_per_doc: 200
+  max_rows_per_doc: 1000
   filters:
     require_strong: true
     modality_anchors:
