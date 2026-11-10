@@ -96,7 +96,7 @@
 | 你想…… | 去哪 |
 | :-- | :-- |
 | 30 秒知道最近在发生什么 | [自动周报](docs/digest.md) |
-| 看架构怎么分叉 | [分类树](https://islinxu.github.io/awesome-native-multimodal-models/taxonomy.html) · [时间线](https://islinxu.github.io/awesome-native-multimodal-models/timeline.html) |
+| 看架构怎么分叉 | [观测台](https://islinxu.github.io/awesome-native-multimodal-models/) · [论文库](https://islinxu.github.io/awesome-native-multimodal-models/papers.html) · [分类树](https://islinxu.github.io/awesome-native-multimodal-models/taxonomy.html) · [时间线](https://islinxu.github.io/awesome-native-multimodal-models/timeline.html) |
 | 搞懂某条赛道 | 上面五个赛道文档，每篇都有按 arXiv ID 校验过的必读清单 |
 | 找能直接跑的项目 | [项目雷达](docs/projects.md)，按 7 日 star 增速排 |
 | 翻旧的精选表 | [人工精选目录](docs/catalog.md) |
@@ -192,6 +192,7 @@ python scripts/validate.py
 python scripts/generate_taxonomy.py
 python scripts/generate_timeline.py
 python scripts/generate_index.py
+python scripts/generate_papers.py
 ```
 
 常用参数：

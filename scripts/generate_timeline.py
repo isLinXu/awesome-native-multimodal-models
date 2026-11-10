@@ -10,7 +10,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from data import TIMELINE_MODELS, META  # noqa: E402
+from data import TIMELINE_MODELS, META as CURATED_META  # noqa: E402
+from pages_common import NAV_CSS, live_meta, prepare_pages, site_nav  # noqa: E402
+
+prepare_pages()
+META = live_meta()
+META["categories"] = CURATED_META.get("categories", {})
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 DOCS_DIR.mkdir(exist_ok=True)
@@ -27,6 +32,7 @@ HTML = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{META['title']} — Timeline</title>
 <style>
+{NAV_CSS}
   :root {{
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
@@ -100,6 +106,7 @@ HTML = f"""<!DOCTYPE html>
 </style>
 </head>
 <body>
+{site_nav('timeline', META['github_url'])}
 <header>
   <h1>📅 <span>{META['title']}</span> — Model Timeline</h1>
   <div class="stat-row">
@@ -108,6 +115,7 @@ HTML = f"""<!DOCTYPE html>
     <span>Categories <b>5</b></span>
     <span>Span <b>2017 – 2026</b></span>
     <a href="taxonomy.html" style="color:var(--link)">🌐 Taxonomy →</a>
+    <a href="papers.html" style="color:var(--link)">📚 Papers</a>
     <a href="{META['github_url']}" target="_blank" style="color:var(--link)">⭐ GitHub</a>
   </div>
 </header>
@@ -115,6 +123,7 @@ HTML = f"""<!DOCTYPE html>
 <div class="toolbar">
   <input id="search" type="text" placeholder="🔍  Search…" />
   <div class="sep"></div>
+  <button class="btn" onclick="jumpYear(2017)">2017</button>
   <button class="btn" onclick="jumpYear(2021)">2021</button>
   <button class="btn" onclick="jumpYear(2022)">2022</button>
   <button class="btn" onclick="jumpYear(2023)">2023</button>

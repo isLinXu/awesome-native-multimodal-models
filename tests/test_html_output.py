@@ -18,7 +18,13 @@ def ok(msg):
 
 # ─── Check file existence ──────────────────────────────────────────────────
 print("\n── Checking file existence ──────────────────────────────────────────")
-for fname in ("index.html", "taxonomy.html", "timeline.html"):
+live_json = DOCS / "data" / "live-papers.json"
+if live_json.exists():
+    ok(f"data/live-papers.json  ({live_json.stat().st_size // 1024} KB)")
+else:
+    err("data/live-papers.json NOT FOUND in docs/")
+
+for fname in ("index.html", "papers.html", "taxonomy.html", "timeline.html"):
     path = DOCS / fname
     if path.exists():
         size_kb = path.stat().st_size // 1024
@@ -32,11 +38,21 @@ for fname in ("index.html", "taxonomy.html", "timeline.html"):
 # ─── Content checks ────────────────────────────────────────────────────────
 checks = {
     "index.html": [
-        ("D3.js CDN", "d3js.org"),
         ("Title present", "Awesome Native Multimodal Models"),
+        ("Observatory nav", "观测台"),
+        ("Papers link", "papers.html"),
         ("Taxonomy link", "taxonomy.html"),
         ("Timeline link",  "timeline.html"),
-        ("GitHub link",    "github.com"),
+        ("Live GitHub URL", "github.com/isLinXu/awesome-native-multimodal-models"),
+        ("Trend chart", "assets/trend-dark.svg"),
+        ("D3 credit", "d3js.org"),
+    ],
+    "papers.html": [
+        ("Live JSON", "data/live-papers.json"),
+        ("Search box", 'id="q"'),
+        ("Track chips", "tokenizers"),
+        ("Pager", 'id="next"'),
+        ("GitHub URL", "github.com/isLinXu/awesome-native-multimodal-models"),
     ],
     "taxonomy.html": [
         ("D3 import",         'd3js.org'),

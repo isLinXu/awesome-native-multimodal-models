@@ -11,7 +11,12 @@ from pathlib import Path
 
 # ── allow sibling import when run from repo root ──────────────────────────────
 sys.path.insert(0, str(Path(__file__).parent))
-from data import TAXONOMY_TREE, META  # noqa: E402
+from data import TAXONOMY_TREE, META as CURATED_META  # noqa: E402
+from pages_common import NAV_CSS, live_meta, prepare_pages, site_nav  # noqa: E402
+
+prepare_pages()
+META = live_meta()
+META["categories"] = CURATED_META.get("categories", {})
 
 DOCS_DIR = Path(__file__).parent.parent / "docs"
 DOCS_DIR.mkdir(exist_ok=True)
@@ -31,6 +36,7 @@ HTML = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{META['title']} — Taxonomy Tree</title>
 <style>
+{NAV_CSS}
   :root {{
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
@@ -111,13 +117,14 @@ HTML = f"""<!DOCTYPE html>
 </style>
 </head>
 <body>
+{site_nav('taxonomy', META['github_url'])}
 <header>
   <h1>🌐 <span>{META['title']}</span> — Architecture Taxonomy</h1>
   <div class="badges">
-    <span class="badge">📄 <b>{META['paper_count']}</b> papers</span>
-    <span class="badge">🗓 Last updated <b>{META['last_updated']}</b></span>
-    <span class="badge">📜 MIT License</span>
+    <span class="badge">📄 <b>{META['paper_count']}</b> live papers</span>
+    <span class="badge">🗓 <b>{META['last_updated']}</b></span>
     <a href="{META['github_url']}" target="_blank" class="badge">⭐ GitHub</a>
+    <a href="papers.html" class="badge">📚 Papers</a>
     <a href="timeline.html" class="badge" style="color:var(--accent)">📅 Timeline →</a>
   </div>
 </header>
@@ -148,7 +155,7 @@ const RAW_TREE = {tree_json};
 
 // ── Layout constants ─────────────────────────────────────────────────────
 const W = window.innerWidth || 1400;
-const H = Math.max(window.innerHeight - 160, 700);
+const H = Math.max(window.innerHeight - 220, 640);
 const MARGIN = {{top: 40, right: 240, bottom: 40, left: 180}};
 
 // ── SVG setup ────────────────────────────────────────────────────────────

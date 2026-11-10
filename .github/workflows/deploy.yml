@@ -6,7 +6,12 @@ on:
     paths:
       - 'scripts/data.py'
       - 'scripts/validate.py'
+      - 'scripts/common.py'
+      - 'scripts/pages_common.py'
       - 'scripts/generate_*.py'
+      - 'data/**'
+      - 'assets/**'
+      - 'config/taxonomy.yml'
       - 'tests/**'
       - '.github/workflows/deploy.yml'
   pull_request:
@@ -14,7 +19,12 @@ on:
     paths:
       - 'scripts/data.py'
       - 'scripts/validate.py'
+      - 'scripts/common.py'
+      - 'scripts/pages_common.py'
       - 'scripts/generate_*.py'
+      - 'data/**'
+      - 'assets/**'
+      - 'config/taxonomy.yml'
       - 'tests/**'
   schedule:
     # Re-build weekly on Mondays at 08:00 UTC
@@ -95,6 +105,9 @@ jobs:
       - name: Generate index.html
         run: python scripts/generate_index.py
 
+      - name: Generate papers.html
+        run: python scripts/generate_papers.py
+
       - name: List generated files
         run: |
           echo "Generated docs/ contents:"
@@ -153,6 +166,7 @@ jobs:
           URL="https://${OWNER}.github.io/${REPONAME}/"
           echo "page_url=$URL" >> $GITHUB_OUTPUT
           echo "✅ Deployed to: $URL"
-          echo "  - Index:    ${URL}index.html"
+          echo "  - Index:    ${URL}"
+          echo "  - Papers:   ${URL}papers.html"
           echo "  - Taxonomy: ${URL}taxonomy.html"
           echo "  - Timeline: ${URL}timeline.html"

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="154" viewBox="0 0 1200 154" role="img" aria-label="Awesome Native Multimodal Models">
+<title>Awesome Native Multimodal Models</title>
+<rect width="1200" height="154" fill="#FFFFFF"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
+<rect x="0.0" y="0" width="240.0" height="5" fill="#4ECDC4"/>
+<rect x="240.0" y="0" width="240.0" height="5" fill="#FF6B6B"/>
+<rect x="480.0" y="0" width="240.0" height="5" fill="#A8E6CF"/>
+<rect x="720.0" y="0" width="240.0" height="5" fill="#DDA0DD"/>
+<rect x="960.0" y="0" width="240.0" height="5" fill="#FAD7A0"/>
+<text x="48" y="62" font-size="27" font-weight="700" fill="#0F172A" letter-spacing="-0.4">原生多模态模型在怎么长出来</text>
+<text x="49" y="88" font-size="13" fill="#64748B">每天从 arXiv 与 GitHub 抓取 · 打分归类 · 去重排序 · 自动提交</text>
+<text x="1152" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">232k</text>
+<text x="1152" y="84" font-size="11" text-anchor="end" fill="#64748B">累计 star</text>
+<text x="1048" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">82</text>
+<text x="1048" y="84" font-size="11" text-anchor="end" fill="#64748B">个项目</text>
+<text x="944" y="62" font-size="25" font-weight="700" text-anchor="end" fill="#0F172A">2,147</text>
+<text x="944" y="84" font-size="11" text-anchor="end" fill="#64748B">篇论文</text>
+<rect x="48.0" y="110" width="186.3" height="24" rx="12" fill="#4ECDC4" fill-opacity="0.12"/>
+<circle cx="59.0" cy="122" r="3.2" fill="#4ECDC4"/>
+<text x="67.0" y="126.5" font-size="11" fill="#4ECDC4">🔢 Image &amp; Video Tokenizers</text>
+<rect x="243.3" y="110" width="257.8" height="24" rx="12" fill="#FF6B6B" fill-opacity="0.12"/>
+<circle cx="254.3" cy="122" r="3.2" fill="#FF6B6B"/>
+<text x="262.2" y="126.5" font-size="11" fill="#FF6B6B">🖼️ Unified Understanding + Generation</text>
+<rect x="510.0" y="110" width="168.1" height="24" rx="12" fill="#A8E6CF" fill-opacity="0.12"/>
+<circle cx="521.0" cy="122" r="3.2" fill="#A8E6CF"/>
+<text x="529.0" y="126.5" font-size="11" fill="#A8E6CF">🌐 Any-to-Any Multimodal</text>
+<rect x="687.1" y="110" width="118.6" height="24" rx="12" fill="#DDA0DD" fill-opacity="0.12"/>
+<circle cx="698.1" cy="122" r="3.2" fill="#DDA0DD"/>
+<text x="706.1" y="126.5" font-size="11" fill="#DDA0DD">🎙️ Omni Models</text>
+<rect x="814.7" y="110" width="180.2" height="24" rx="12" fill="#FAD7A0" fill-opacity="0.12"/>
+<circle cx="825.7" cy="122" r="3.2" fill="#FAD7A0"/>
+<text x="833.7" y="126.5" font-size="11" fill="#FAD7A0">🧠 Pretraining Foundations</text>
+</g>
+</svg>

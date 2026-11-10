@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-11-10T03:59:55Z",
+  "papers_total": 2147,
+  "papers_in_docs": 2155,
+  "papers_new_7d": 22,
+  "papers_last_30d": 132,
+  "repos_total": 82,
+  "repos_stars_total": 231558,
+  "categories": {
+    "tokenizers": {
+      "name": "Image & Video Tokenizers",
+      "papers": 184,
+      "papers_last_30d": 14,
+      "papers_new_7d": 2,
+      "rows_in_doc": 184
+    },
+    "unified-ug": {
+      "name": "Unified Understanding + Generation",
+      "papers": 593,
+      "papers_last_30d": 33,
+      "papers_new_7d": 7,
+      "rows_in_doc": 593
+    },
+    "any-to-any": {
+      "name": "Any-to-Any Multimodal",
+      "papers": 140,
+      "papers_last_30d": 5,
+      "papers_new_7d": 1,
+      "rows_in_doc": 140
+    },
+    "omni": {
+      "name": "Omni Models",
+      "papers": 744,
+      "papers_last_30d": 64,
+      "papers_new_7d": 10,
+      "rows_in_doc": 744
+    },
+    "pretraining": {
+      "name": "Pretraining Foundations",
+      "papers": 494,
+      "papers_last_30d": 16,
+      "papers_new_7d": 2,
+      "rows_in_doc": 494
+    }
+  }
+}
