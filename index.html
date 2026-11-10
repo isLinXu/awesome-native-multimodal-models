@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Awesome Native Multimodal Models</title>
+<meta name="description" content="原生多模态模型观测台：自动跟踪 tokenizer、统一理解与生成、Any-to-Any、Omni 与预训练底座。" />
 <style>
+
+.site-nav {
+  position: sticky; top: 0; z-index: 80;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+  padding: 10px 24px;
+  background: rgba(13,17,23,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border, #30363d);
+}
+.site-nav .brand {
+  font-weight: 800; color: var(--text, #e6edf3); text-decoration: none;
+  letter-spacing: -0.02em; font-size: 0.95rem;
+}
+.site-nav .brand span { color: var(--accent, #58a6ff); }
+.site-nav .links { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+.site-nav a.link {
+  color: var(--muted, #8b949e); text-decoration: none;
+  padding: 6px 11px; border-radius: 8px; font-size: 0.8rem;
+  display: inline-flex; flex-direction: row; align-items: baseline; gap: 5px;
+}
+.site-nav a.link small { font-size: 0.68rem; opacity: 0.7; font-weight: 400; }
+.site-nav a.link:hover { color: var(--text, #e6edf3); background: #21262d; }
+.site-nav a.link.active { color: var(--accent, #58a6ff); background: #21262d; }
+.site-nav a.ext { color: var(--muted, #8b949e); text-decoration: none; font-size: 0.8rem; padding: 6px 10px; }
+.site-nav a.ext:hover { color: var(--accent, #58a6ff); }
+
+
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
@@ -12,127 +41,241 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     background: var(--bg); color: var(--text);
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
-    padding: 60px 20px;
+    font-family: 'Segoe UI', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
   }
-  .hero { text-align: center; max-width: 760px; }
-  .hero h1 { font-size: 2.4rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+  main { width: min(1120px, 100%); margin: 0 auto; padding: 36px 20px 64px; }
+  .hero { text-align: center; max-width: 820px; margin: 0 auto 36px; }
+  .kicker {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); background: #21262d;
+    border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
   .hero h1 span { color: var(--accent); }
-  .hero p { font-size: 1.05rem; color: var(--muted); line-height: 1.8; margin-bottom: 28px; }
-
-  .badge-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .hero .sub { font-size: 1.02rem; color: var(--muted); margin-bottom: 14px; }
+  .hero p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 22px; }
   .badge {
-    padding: 5px 16px; border-radius: 20px; font-size: 0.82rem;
+    padding: 5px 14px; border-radius: 20px; font-size: 0.8rem;
     background: #21262d; border: 1px solid var(--border); color: var(--muted);
     text-decoration: none;
   }
   .badge:hover { border-color: var(--accent); color: var(--accent); }
   .badge b { color: var(--text); }
 
-  .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 900px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    padding: 32px 28px; flex: 1; min-width: 260px; max-width: 400px;
-    text-decoration: none; color: var(--text);
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-    position: relative; overflow: hidden;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-    box-shadow: 0 12px 36px rgba(88,166,255,.15);
-  }
-  .card .icon { font-size: 2.8rem; margin-bottom: 14px; display: block; }
-  .card h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
-  .card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-  .card .tag {
-    position: absolute; top: 20px; right: 20px;
-    background: var(--accent); color: #0d1117;
-    font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 12px;
-  }
-
   .stats-row {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 16px; width: 100%; max-width: 900px; margin: 48px 0 32px;
+    gap: 12px; margin: 8px 0 36px;
   }
   .stat-box {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; padding: 20px; text-align: center;
+    border-radius: 14px; padding: 18px 14px; text-align: center;
   }
-  .stat-box .num { font-size: 2rem; font-weight: 800; color: var(--accent); }
-  .stat-box .lab { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+  .stat-box .num { font-size: 1.7rem; font-weight: 800; color: var(--accent); }
+  .stat-box .lab { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+
+  h2.sec { font-size: 1.15rem; margin: 8px 0 14px; }
+  h2.sec span { color: var(--muted); font-weight: 500; font-size: 0.85rem; margin-left: 8px; }
+
+  .charts { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; margin-bottom: 36px; }
+  .chart-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 8px; overflow: hidden;
+  }
+  .chart-card img { width: 100%; height: auto; display: block; border-radius: 10px; }
+
+  .years { display: flex; align-items: flex-end; gap: 8px; height: 120px; margin: 0 0 36px; }
+  .ybar { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; gap: 4px; }
+  .yfill { width: 100%; max-width: 42px; border-radius: 6px 6px 2px 2px; background: linear-gradient(#58a6ff, #1f6feb); min-height: 4px; }
+  .ylab { font-size: 0.68rem; color: var(--muted); }
+  .yn { font-size: 0.68rem; color: var(--text); font-weight: 600; }
+
+  .tracks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 36px; }
+  a.track {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 18px; text-decoration: none; color: var(--text);
+    transition: transform 0.15s, border-color 0.15s;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  a.track:hover { transform: translateY(-3px); border-color: var(--accent); }
+  a.track .row { display: flex; justify-content: space-between; align-items: center; }
+  a.track .emoji { font-size: 1.5rem; }
+  a.track h3 { font-size: 0.98rem; }
+  a.track .en { font-size: 0.75rem; color: var(--muted); }
+  a.track .nums b { font-size: 1.25rem; }
+  a.track .delta { font-size: 0.75rem; color: var(--accent); }
+
+  .split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; margin-bottom: 36px; }
+  .panel {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px;
+  }
+  .panel h2 { font-size: 1rem; margin-bottom: 12px; }
+  .paper {
+    display: grid; grid-template-columns: 88px 1fr auto; gap: 10px; align-items: baseline;
+    padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 0.84rem;
+  }
+  .paper:last-child { border-bottom: 0; }
+  .paper .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .paper a { color: var(--text); text-decoration: none; }
+  .paper a:hover { color: var(--accent); }
+  .pill { font-size: 0.68rem; color: #0d1117; padding: 1px 8px; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+
+  .repo { padding: 8px 0; border-bottom: 1px solid #21262d; }
+  .repo:last-child { border-bottom: 0; }
+  .repo a { color: var(--text); text-decoration: none; font-weight: 650; font-size: 0.86rem; }
+  .repo a:hover { color: var(--accent); }
+  .repo p { color: var(--muted); font-size: 0.75rem; margin-top: 2px; line-height: 1.45; }
+  .repo .meta { color: var(--muted); font-size: 0.75rem; margin-top: 2px; }
+
+  .maps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+  a.card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 24px; text-decoration: none; color: var(--text);
+    transition: transform 0.15s, border-color 0.15s; position: relative;
+  }
+  a.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  a.card .tag {
+    position: absolute; top: 16px; right: 16px;
+    background: var(--accent); color: #0d1117;
+    font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 12px;
+  }
+  a.card .icon { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+  a.card h2 { font-size: 1.15rem; margin-bottom: 6px; }
+  a.card p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
 
   .definition {
     background: var(--surface); border-left: 3px solid var(--accent);
-    border-radius: 8px; padding: 18px 22px; max-width: 760px; width: 100%;
-    margin: 40px 0; font-size: 0.88rem; color: var(--muted); line-height: 1.8;
+    border-radius: 8px; padding: 18px 22px;
+    font-size: 0.88rem; color: var(--muted); line-height: 1.8;
   }
   .definition strong { color: var(--text); }
 
   footer {
-    margin-top: auto; padding-top: 48px;
-    font-size: 0.75rem; color: var(--muted); text-align: center;
+    margin-top: auto; padding: 20px; font-size: 0.75rem; color: var(--muted); text-align: center;
+    border-top: 1px solid var(--border);
   }
   footer a { color: var(--link); }
+
+  @media (max-width: 800px) {
+    .charts, .split, .maps { grid-template-columns: 1fr; }
+    .paper { grid-template-columns: 72px 1fr; }
+    .paper .pill { display: none; }
+  }
+
 </style>
 </head>
 <body>
-
-<div class="hero">
-  <h1>🤖 <span>Awesome</span> Native<br/>Multimodal Models</h1>
-  <p>A curated collection of <strong>400+ papers</strong> on models that handle
-     text, image, audio, and video within a <em>unified architecture</em> —
-     shared computation paths, unified tokenization, and end-to-end cross-modal training.</p>
-  <div class="badge-row">
-    <span class="badge">📄 <b>400+</b> Papers</span>
-    <span class="badge">🗓 Updated <b>2026-11</b></span>
-    <span class="badge">📜 MIT License</span>
-    <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" class="badge">⭐ GitHub</a>
-    <span class="badge">🤝 PRs Welcome</span>
+<nav class="site-nav"><a class="brand" href="index.html">🤖 <span>Native MM</span></a><div class="links"><a class="link active" href="index.html">观测台<small>Observatory</small></a><a class="link" href="papers.html">论文库<small>Papers</small></a><a class="link" href="taxonomy.html">谱系<small>Taxonomy</small></a><a class="link" href="timeline.html">时间线<small>Timeline</small></a><a class="ext" href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">GitHub ↗</a></div></nav>
+<main>
+  <div class="hero">
+    <div class="kicker">Live Observatory</div>
+    <h1>🤖 <span>Awesome</span> Native<br/>Multimodal Models</h1>
+    <div class="sub">原生多模态模型观测台</div>
+    <p>每天从 arXiv 抓取、打分、归类。覆盖从 <strong>2017 VQ-VAE</strong> 到今天的
+       tokenizer / 统一理解+生成 / Any-to-Any / Omni / 预训练底座。
+       精选谱系与时间线仍由人工目录驱动，长尾新论文由自动跟踪补上。</p>
+    <div class="badge-row">
+      <span class="badge">📄 <b>2,147</b> Papers</span>
+      <span class="badge">🗓 Updated <b>2026-11-10</b></span>
+      <span class="badge">🔥 7d <b>+22</b></span>
+      <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener" class="badge">⭐ GitHub</a>
+      <a href="papers.html" class="badge">📚 论文库</a>
+    </div>
   </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="num">2,147</div><div class="lab">自动跟踪论文</div></div>
+    <div class="stat-box"><div class="num">+22</div><div class="lab">近 7 天新论文</div></div>
+    <div class="stat-box"><div class="num">82</div><div class="lab">跟踪仓库</div></div>
+    <div class="stat-box"><div class="num">231,558</div><div class="lab">累计 Stars</div></div>
+    <div class="stat-box"><div class="num">111</div><div class="lab">精选模型 / 谱系</div></div>
+    <div class="stat-box"><div class="num">26</div><div class="lab">Landmark</div></div>
+  </div>
+
+  <h2 class="sec">动态趋势 <span>近 12 周 · 来自 data/papers.json</span></h2>
+  <div class="charts">
+    <div class="chart-card"><img src="assets/trend-dark.svg" alt="近 12 周论文发布趋势" /></div>
+    <div class="chart-card"><img src="assets/distribution-dark.svg" alt="赛道论文分布" /></div>
+  </div>
+
+  <h2 class="sec">按年覆盖 <span>2017 地基 → 今天</span></h2>
+<div class="years">
+<div class="ybar"><div class="yn">8</div><div class="yfill" style="height:6%"></div><div class="ylab">2017</div></div>
+<div class="ybar"><div class="yn">5</div><div class="yfill" style="height:6%"></div><div class="ylab">2018</div></div>
+<div class="ybar"><div class="yn">11</div><div class="yfill" style="height:6%"></div><div class="ylab">2019</div></div>
+<div class="ybar"><div class="yn">10</div><div class="yfill" style="height:6%"></div><div class="ylab">2020</div></div>
+<div class="ybar"><div class="yn">35</div><div class="yfill" style="height:6%"></div><div class="ylab">2021</div></div>
+<div class="ybar"><div class="yn">61</div><div class="yfill" style="height:8%"></div><div class="ylab">2022</div></div>
+<div class="ybar"><div class="yn">174</div><div class="yfill" style="height:22%"></div><div class="ylab">2023</div></div>
+<div class="ybar"><div class="yn">415</div><div class="yfill" style="height:53%"></div><div class="ylab">2024</div></div>
+<div class="ybar"><div class="yn">652</div><div class="yfill" style="height:84%"></div><div class="ylab">2025</div></div>
+<div class="ybar"><div class="yn">776</div><div class="yfill" style="height:100%"></div><div class="ylab">2026</div></div>
+</div>
+  <h2 class="sec">五条赛道 <span>点进去按赛道浏览自动跟踪论文</span></h2>
+<div class="tracks">
+<a class="track" href="papers.html#tokenizers"><div class="row"><span class="emoji">🔢</span><span class="delta">+2 / 7d</span></div><h3>图像与视频分词器</h3><div class="en">Image &amp; Video Tokenizers</div><div class="nums"><b>184</b> 篇</div><div class="en">把像素压成离散或连续 token，是 native multimodal 的第一块地基。 主战场从 VQ 码本崩溃，走到 FSQ/LFQ/BSQ，再走到 1D 压缩与文本对齐。</div></a>
+<a class="track" href="papers.html#unified-ug"><div class="row"><span class="emoji">🖼️</span><span class="delta">+7 / 7d</span></div><h3>统一理解与生成</h3><div class="en">Unified Understanding + Generation</div><div class="nums"><b>593</b> 篇</div><div class="en">同一个 Transformer 既要看懂图，也要画出图。路线从 early-fusion 离散 AR， 走到 Janus 式解耦编码器，再走到 AR+Diffusion 混合。这是</div></a>
+<a class="track" href="papers.html#any-to-any"><div class="row"><span class="emoji">🌐</span><span class="delta">+1 / 7d</span></div><h3>任意到任意</h3><div class="en">Any-to-Any Multimodal</div><div class="nums"><b>140</b> 篇</div><div class="en">输入任意模态、输出任意模态：文本/图像/音频/视频/动作走同一套生成接口。 和 Omni 的差别：Any-to-Any 强调生成覆盖面，Omni 强调实时交互。</div></a>
+<a class="track" href="papers.html#omni"><div class="row"><span class="emoji">🎙️</span><span class="delta">+10 / 7d</span></div><h3>Omni 实时交互</h3><div class="en">Omni Models</div><div class="nums"><b>744</b> 篇</div><div class="en">文本+图像+音频+视频的实时全双工交互，目标是 GPT-4o 这一档体验。 重点不是「会不会生成图」，而是流式、低延迟、能听会说还能看。</div></a>
+<a class="track" href="papers.html#pretraining"><div class="row"><span class="emoji">🧠</span><span class="delta">+2 / 7d</span></div><h3>预训练底座</h3><div class="en">Pretraining Foundations</div><div class="nums"><b>494</b> 篇</div><div class="en">Native 模型不是从零长出来的：对比学习、生成式预训练、视觉指令微调 是后面统一架构的配方来源。这条赛道收「为什么这样训」的地基工作。</div></a>
 </div>
 
-<div class="stats-row">
-  <div class="stat-box"><div class="num">111</div><div class="lab">Models Tracked</div></div>
-  <div class="stat-box"><div class="num">26</div><div class="lab">Landmark Models</div></div>
-  <div class="stat-box"><div class="num">5</div><div class="lab">Categories</div></div>
-  <div class="stat-box"><div class="num">2017</div><div class="lab">Start Year (VQ-VAE)</div></div>
-  <div class="stat-box"><div class="num">2026</div><div class="lab">Through Year</div></div>
-</div>
+  <div class="split">
+    <div class="panel"><h2>最新入库</h2>
+<div class="paper"><span class="date">2026-11-07</span><a href="https://arxiv.org/abs/2611.10917" target="_blank" rel="noopener">Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.08996" target="_blank" rel="noopener">UniMore: Fine-Grained Supervision for Unified Understanding and Generation</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
+<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.10245" target="_blank" rel="noopener">From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.09047" target="_blank" rel="noopener">Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
+<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.07836" target="_blank" rel="noopener">THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08099" target="_blank" rel="noopener">Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling</a><span class="pill" style="background:#4ECDC4">tokenizers</span></div>
+<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08185" target="_blank" rel="noopener">Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
+<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08138" target="_blank" rel="noopener">Describe Your Facial Expressions by Linking Image Encoders and Large Language Models</a><span class="pill" style="background:#FAD7A0">pretraining</span></div>
+<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06343" target="_blank" rel="noopener">Prism: Bidirectional Self-Teaching for Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
+<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06501" target="_blank" rel="noopener">CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06083" target="_blank" rel="noopener">SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06149" target="_blank" rel="noopener">Grounding in the Dark: Text-Only Training for Zero-Shot Video Temporal Localization</a><span class="pill" style="background:#FAD7A0">pretraining</span></div>
+<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06583" target="_blank" rel="noopener">PatchCon: Patch-aware Weighted Supervised Contrastive Learning for Vulnerability Detection</a><span class="pill" style="background:#DDA0DD">omni</span></div>
+<div class="paper"><span class="date">2026-11-03</span><a href="https://arxiv.org/abs/2611.04467" target="_blank" rel="noopener">Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
+<p style="margin-top:12px;font-size:0.8rem"><a href="papers.html" style="color:var(--link)">浏览全部论文 →</a></p></div>
+    <div class="panel"><h2>仓库雷达</h2>
+<div class="repo"><a href="https://github.com/openai/CLIP" target="_blank" rel="noopener">openai/CLIP</a><div class="meta">⭐ 34,582</div><p>CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image</p></div>
+<div class="repo"><a href="https://github.com/OpenBMB/MiniCPM-V" target="_blank" rel="noopener">OpenBMB/MiniCPM-V</a><div class="meta">⭐ 27,105</div><p>See, hear, and interact on your local devices.</p></div>
+<div class="repo"><a href="https://github.com/QwenLM/Qwen3-VL" target="_blank" rel="noopener">QwenLM/Qwen3-VL</a><div class="meta">⭐ 20,182</div><p>Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.</p></div>
+<div class="repo"><a href="https://github.com/deepseek-ai/Janus" target="_blank" rel="noopener">deepseek-ai/Janus</a><div class="meta">⭐ 17,762</div><p>Janus-Series: Unified Multimodal Understanding and Generation Models</p></div>
+<div class="repo"><a href="https://github.com/modelscope/ms-swift" target="_blank" rel="noopener">modelscope/ms-swift</a><div class="meta">⭐ 16,064</div><p>Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ..</p></div>
+<div class="repo"><a href="https://github.com/OpenGVLab/InternVL" target="_blank" rel="noopener">OpenGVLab/InternVL</a><div class="meta">⭐ 10,169</div><p>[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o.  接近GPT-4o表现的开源多模态对话模型</p></div>
+<div class="repo"><a href="https://github.com/FoundationVision/VAR" target="_blank" rel="noopener">FoundationVision/VAR</a><div class="meta">⭐ 8,766</div><p>[NeurIPS 2024 Best Paper Award][GPT beats diffusion🔥] [scaling laws in visual generation📈] Official impl. of &quot;</p></div>
+<div class="repo"><a href="https://github.com/vllm-project/vllm-omni" target="_blank" rel="noopener">vllm-project/vllm-omni</a><div class="meta">⭐ 7,638</div><p>A framework for efficient model inference with omni-modality models</p></div></div>
+  </div>
 
-<div class="cards">
-  <a href="taxonomy.html" class="card">
-    <span class="tag">Interactive</span>
-    <span class="icon">🌐</span>
-    <h2>Architecture Taxonomy</h2>
-    <p>Hierarchical D3.js collapsible tree — explore 5 primary branches,
-       12+ sub-categories, and 100+ leaf models. Click nodes to expand/collapse,
-       hover for paper/GitHub links, search by name or keyword.</p>
-  </a>
-  <a href="timeline.html" class="card">
-    <span class="tag">Interactive</span>
-    <span class="icon">📅</span>
-    <h2>Model Timeline</h2>
-    <p>Swim-lane timeline from 2017 to 2026 across 5 technology lanes.
-       Greedy lane assignment, minimap overview, zoom & pan, category filters,
-       year jump buttons, and landmark highlighting.</p>
-  </a>
-</div>
+  <h2 class="sec">精选地图 <span>人工目录，不含自动跟踪长尾</span></h2>
+  <div class="maps">
+    <a href="taxonomy.html" class="card">
+      <span class="tag">Interactive</span>
+      <span class="icon">🌐</span>
+      <h2>Architecture Taxonomy</h2>
+      <p>Hierarchical D3.js collapsible tree — 5 primary branches,
+         12+ sub-categories, 100+ leaf models. Search, expand, hover for paper links.</p>
+    </a>
+    <a href="timeline.html" class="card">
+      <span class="tag">Interactive</span>
+      <span class="icon">📅</span>
+      <h2>Model Timeline</h2>
+      <p>Swim-lane timeline from 2017 to 2026. Zoom, pan, category filters,
+         year jump, landmark highlighting.</p>
+    </a>
+  </div>
 
-<div class="definition">
-  <strong>What is "Native Multimodal"?</strong><br/>
-  A native multimodal model processes multiple modalities through
-  <strong>shared computation paths</strong> (not separate encoders bridged by adapters),
-  <strong>unified tokenization</strong> (all modalities in a common token space),
-  and <strong>end-to-end cross-modal training</strong> — as opposed to modular
-  "adapter" architectures like LLaVA or InstructBLIP.
-</div>
-
-<footer>
-  Auto-generated · Data &amp; code: <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank">Awesome-Native-Multimodal-Models</a> ·
-  Visualized with <a href="https://d3js.org" target="_blank">D3.js v7</a>
-</footer>
-
+  <div class="definition">
+    <strong>What is "Native Multimodal"?</strong><br/>
+    A native multimodal model processes multiple modalities through
+    <strong>shared computation paths</strong> (not separate encoders bridged by adapters),
+    <strong>unified tokenization</strong> (all modalities in a common token space),
+    and <strong>end-to-end cross-modal training</strong> — as opposed to modular
+    "adapter" architectures like LLaVA or InstructBLIP.
+  </div>
+</main>
+<footer>每日从 arXiv / GitHub 自动观测 · Data &amp; code: <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">isLinXu/awesome-native-multimodal-models</a> · Visualized with <a href="https://d3js.org" target="_blank" rel="noopener">D3.js v7</a></footer>
 </body>
 </html>

@@ -5,6 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Awesome Native Multimodal Models — Timeline</title>
 <style>
+
+.site-nav {
+  position: sticky; top: 0; z-index: 80;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+  padding: 10px 24px;
+  background: rgba(13,17,23,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border, #30363d);
+}
+.site-nav .brand {
+  font-weight: 800; color: var(--text, #e6edf3); text-decoration: none;
+  letter-spacing: -0.02em; font-size: 0.95rem;
+}
+.site-nav .brand span { color: var(--accent, #58a6ff); }
+.site-nav .links { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+.site-nav a.link {
+  color: var(--muted, #8b949e); text-decoration: none;
+  padding: 6px 11px; border-radius: 8px; font-size: 0.8rem;
+  display: inline-flex; flex-direction: row; align-items: baseline; gap: 5px;
+}
+.site-nav a.link small { font-size: 0.68rem; opacity: 0.7; font-weight: 400; }
+.site-nav a.link:hover { color: var(--text, #e6edf3); background: #21262d; }
+.site-nav a.link.active { color: var(--accent, #58a6ff); background: #21262d; }
+.site-nav a.ext { color: var(--muted, #8b949e); text-decoration: none; font-size: 0.8rem; padding: 6px 10px; }
+.site-nav a.ext:hover { color: var(--accent, #58a6ff); }
+
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
@@ -78,6 +105,7 @@
 </style>
 </head>
 <body>
+<nav class="site-nav"><a class="brand" href="index.html">🤖 <span>Native MM</span></a><div class="links"><a class="link" href="index.html">观测台<small>Observatory</small></a><a class="link" href="papers.html">论文库<small>Papers</small></a><a class="link" href="taxonomy.html">谱系<small>Taxonomy</small></a><a class="link active" href="timeline.html">时间线<small>Timeline</small></a><a class="ext" href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">GitHub ↗</a></div></nav>
 <header>
   <h1>📅 <span>Awesome Native Multimodal Models</span> — Model Timeline</h1>
   <div class="stat-row">
@@ -86,6 +114,7 @@
     <span>Categories <b>5</b></span>
     <span>Span <b>2017 – 2026</b></span>
     <a href="taxonomy.html" style="color:var(--link)">🌐 Taxonomy →</a>
+    <a href="papers.html" style="color:var(--link)">📚 Papers</a>
     <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" style="color:var(--link)">⭐ GitHub</a>
   </div>
 </header>
@@ -93,6 +122,7 @@
 <div class="toolbar">
   <input id="search" type="text" placeholder="🔍  Search…" />
   <div class="sep"></div>
+  <button class="btn" onclick="jumpYear(2017)">2017</button>
   <button class="btn" onclick="jumpYear(2021)">2021</button>
   <button class="btn" onclick="jumpYear(2022)">2022</button>
   <button class="btn" onclick="jumpYear(2023)">2023</button>
@@ -1175,7 +1205,7 @@ const DATA = [
     "desc": "Integrative and composable multimodal learning framework for text, speech, and image"
   }
 ];
-const META = {"title": "Awesome Native Multimodal Models", "subtitle": "Interactive Visualizations — Architecture Taxonomy & Model Timeline", "paper_count": "400+", "last_updated": "2026-11", "github_url": "https://github.com/isLinXu/awesome-native-multimodal-models", "categories": {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}}};
+const META = {"title": "Awesome Native Multimodal Models", "subtitle": "Interactive Visualizations — Architecture Taxonomy & Model Timeline", "paper_count": "2,147", "last_updated": "2026-11-10", "github_url": "https://github.com/isLinXu/awesome-native-multimodal-models", "categories": {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}}, "papers_new_7d": 22, "papers_last_30d": 132, "repos_total": 82, "repos_stars_total": 231558, "curated_models": 111, "landmarks": 26};
 const CAT_META = {"Pretraining": {"color": "#FAD7A0", "label": "Pretraining Foundations"}, "Tokenizer": {"color": "#4ECDC4", "label": "Image & Video Tokenizers"}, "Unified": {"color": "#FF6B6B", "label": "Unified U+G"}, "Any2Any": {"color": "#A8E6CF", "label": "Any-to-Any"}, "Omni": {"color": "#DDA0DD", "label": "Omni Models"}};
 
 // ── State ─────────────────────────────────────────────────────────────────
