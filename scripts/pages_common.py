@@ -7,6 +7,7 @@ import json
 import shutil
 import sys
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from html import escape
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
@@ -112,6 +113,8 @@ def site_nav(active: str, github_url: str) -> str:
     items = [
         ("index.html", "index", "观测台", "Observatory"),
         ("papers.html", "papers", "论文库", "Papers"),
+        ("digest.html", "digest", "周报", "Digest"),
+        ("repos.html", "repos", "仓库", "Repos"),
         ("taxonomy.html", "taxonomy", "谱系", "Taxonomy"),
         ("timeline.html", "timeline", "时间线", "Timeline"),
     ]
@@ -167,9 +170,59 @@ def latest_papers(limit: int = 16) -> List[Tuple[str, Dict[str, Any]]]:
     return items[:limit]
 
 
+def featured_papers(limit: int = 12, days: int = 45, min_score: float = 6.0) -> List[Tuple[str, Dict[str, Any]]]:
+    """近 N 天里分数够高的论文；不够条数就按分数回退，避免首页被噪声标题占满。"""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    items = [
+        (pid, p)
+        for pid, p in load_papers().items()
+        if (p.get("published") or "") >= cutoff
+    ]
+    items.sort(
+        key=lambda kv: (float(kv[1].get("score") or 0), kv[1].get("published") or ""),
+        reverse=True,
+    )
+    strong = [x for x in items if float(x[1].get("score") or 0) >= min_score]
+    picked = strong[:limit] if len(strong) >= 6 else items[:limit]
+    return picked
+
+
+def papers_since(days: int = 7) -> List[Tuple[str, Dict[str, Any]]]:
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    items = [
+        (pid, p)
+        for pid, p in load_papers().items()
+        if (p.get("published") or "") >= cutoff
+    ]
+    items.sort(
+        key=lambda kv: (float(kv[1].get("score") or 0), kv[1].get("published") or ""),
+        reverse=True,
+    )
+    return items
+
+
+def landmark_models() -> List[Dict[str, Any]]:
+    rows = [m for m in TIMELINE_MODELS if m.get("landmark")]
+    rows.sort(key=lambda m: (int(m.get("year") or 0), int(m.get("month") or 0), m.get("name") or ""))
+    return rows
+
+
+def repo_speed(rec: Dict[str, Any]) -> float:
+    d7 = rec.get("delta_7d")
+    if d7 is not None:
+        try:
+            return float(d7)
+        except (TypeError, ValueError):
+            pass
+    try:
+        return float(rec.get("velocity") or 0) * 7
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def top_repos(limit: int = 8) -> List[Dict[str, Any]]:
     repos = list(load_repos().values())
-    repos.sort(key=lambda r: int(r.get("stars") or 0), reverse=True)
+    repos.sort(key=lambda r: (repo_speed(r), int(r.get("stars") or 0)), reverse=True)
     return repos[:limit]
 
 
@@ -213,6 +266,7 @@ def prepare_pages() -> None:
 
     slim_repos = []
     for rec in load_repos().values():
+        speed = repo_speed(rec)
         slim_repos.append(
             {
                 "n": rec.get("full_name") or "",
@@ -220,9 +274,12 @@ def prepare_pages() -> None:
                 "u": rec.get("url") or "",
                 "d": rec.get("description") or "",
                 "c": rec.get("categories") or [],
+                "v": round(speed, 1),
+                "est": rec.get("delta_7d") is None,
+                "lang": rec.get("language") or "",
             }
         )
-    slim_repos.sort(key=lambda r: r["s"], reverse=True)
+    slim_repos.sort(key=lambda r: (r["v"], r["s"]), reverse=True)
     (PAGES_DATA / "live-repos.json").write_text(
         json.dumps(slim_repos, ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",

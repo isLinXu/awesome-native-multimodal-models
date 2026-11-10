@@ -108,6 +108,12 @@ jobs:
       - name: Generate papers.html
         run: python scripts/generate_papers.py
 
+      - name: Generate digest.html
+        run: python scripts/generate_digest.py
+
+      - name: Generate repos.html
+        run: python scripts/generate_repos.py
+
       - name: List generated files
         run: |
           echo "Generated docs/ contents:"
@@ -168,5 +174,7 @@ jobs:
           echo "✅ Deployed to: $URL"
           echo "  - Index:    ${URL}"
           echo "  - Papers:   ${URL}papers.html"
+          echo "  - Digest:   ${URL}digest.html"
+          echo "  - Repos:    ${URL}repos.html"
           echo "  - Taxonomy: ${URL}taxonomy.html"
           echo "  - Timeline: ${URL}timeline.html"

@@ -16,9 +16,11 @@ from pages_common import (  # noqa: E402
     TRACK_COLOR,
     fmt_delta,
     fmt_int,
-    latest_papers,
+    featured_papers,
+    landmark_models,
     live_meta,
     prepare_pages,
+    repo_speed,
     site_footer,
     site_nav,
     top_repos,
@@ -141,6 +143,15 @@ INDEX_CSS = """
   a.card h2 { font-size: 1.15rem; margin-bottom: 6px; }
   a.card p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
 
+  .landmarks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+  a.lm {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 12px; text-decoration: none;
+    color: var(--text); font-size: 0.78rem;
+  }
+  a.lm:hover { border-color: var(--accent); color: var(--accent); }
+  a.lm b { color: var(--accent); margin-right: 4px; }
+
   .definition {
     background: var(--surface); border-left: 3px solid var(--accent);
     border-radius: 8px; padding: 18px 22px;
@@ -197,36 +208,73 @@ def _track_cards() -> str:
     return "\n".join(parts)
 
 
-def _latest() -> str:
-    parts = ["<h2>最新入库</h2>"]
-    for pid, p in latest_papers(14):
+def _landmarks() -> str:
+    rows = landmark_models()
+    if not rows:
+        return ""
+    parts = [
+        '<h2 class="sec">Landmark <span>人工精选，点进 arXiv</span></h2>',
+        '<div class="landmarks">',
+    ]
+    for m in rows:
+        arxiv = m.get("arxiv") or ""
+        href = f"https://arxiv.org/abs/{arxiv}" if arxiv else "timeline.html"
+        year = m.get("year") or ""
+        parts.append(
+            f'<a class="lm" href="{escape(str(href))}" target="_blank" rel="noopener">'
+            f'<b>{escape(str(year))}</b>{escape(m.get("name") or "")}</a>'
+        )
+    parts.append("</div>")
+    return "\n".join(parts)
+
+
+def _featured() -> str:
+    parts = ["<h2>高分新作</h2>", '<p class="en" style="margin-bottom:10px">近 45 天 · 按相关分排序，过滤掉只是沾边的标题</p>']
+    for pid, p in featured_papers(12):
         cats = p.get("categories") or ["—"]
         cid = cats[0]
         color = TRACK_COLOR.get(cid, "#58a6ff")
         title = escape(p.get("title") or pid)
         date = escape((p.get("published") or "—")[:10])
         url = escape(p.get("url") or f"https://arxiv.org/abs/{pid}")
+        score = p.get("score") or 0
         parts.append(
             f'<div class="paper"><span class="date">{date}</span>'
             f'<a href="{url}" target="_blank" rel="noopener">{title}</a>'
-            f'<span class="pill" style="background:{color}">{escape(cid)}</span></div>'
+            f'<span class="pill" style="background:{color}">{escape(str(cid))} · {score}</span></div>'
         )
-    parts.append('<p style="margin-top:12px;font-size:0.8rem"><a href="papers.html" style="color:var(--link)">浏览全部论文 →</a></p>')
+    parts.append(
+        '<p style="margin-top:12px;font-size:0.8rem">'
+        '<a href="papers.html" style="color:var(--link)">论文库 →</a> · '
+        '<a href="digest.html" style="color:var(--link)">本周周报 →</a></p>'
+    )
     return "\n".join(parts)
 
 
 def _repos() -> str:
-    parts = ["<h2>仓库雷达</h2>"]
+    parts = [
+        "<h2>仓库雷达</h2>",
+        '<p class="en" style="margin-bottom:10px">按 7 日增速（不足 7 天快照则用日均折算）</p>',
+        '<div class="chart-card" style="margin-bottom:12px;padding:4px">'
+        '<img src="assets/ranking-dark.svg" alt="项目 star 增速 Top 12" /></div>',
+    ]
     for r in top_repos(8):
         name = escape(r.get("full_name") or "")
         url = escape(r.get("url") or "#")
         desc = escape((r.get("description") or "")[:110])
         stars = fmt_int(r.get("stars"))
+        speed = repo_speed(r)
+        est = r.get("delta_7d") is None
+        delta = f"{'≈' if est else ''}+{speed:.0f}"
         parts.append(
             f'<div class="repo"><a href="{url}" target="_blank" rel="noopener">{name}</a>'
-            f'<div class="meta">⭐ {stars}</div>'
+            f'<div class="meta">⭐ {stars} · 7d {delta}</div>'
             f'<p>{desc}</p></div>'
         )
+    parts.append(
+        '<p style="margin-top:12px;font-size:0.8rem">'
+        '<a href="repos.html" style="color:var(--link)">全部仓库 →</a></p>'
+    )
     return "\n".join(parts)
 
 
@@ -263,6 +311,8 @@ def main() -> None:
       <span class="badge">🔥 7d <b>{fmt_delta(meta['papers_new_7d'])}</b></span>
       <a href="{escape(github)}" target="_blank" rel="noopener" class="badge">⭐ GitHub</a>
       <a href="papers.html" class="badge">📚 论文库</a>
+      <a href="digest.html" class="badge">📬 周报</a>
+      <a href="repos.html" class="badge">🚀 仓库</a>
     </div>
   </div>
 
@@ -283,9 +333,10 @@ def main() -> None:
 
   {_year_bars()}
   {_track_cards()}
+  {_landmarks()}
 
   <div class="split">
-    <div class="panel">{_latest()}</div>
+    <div class="panel">{_featured()}</div>
     <div class="panel">{_repos()}</div>
   </div>
 

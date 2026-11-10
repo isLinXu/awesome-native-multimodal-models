@@ -144,6 +144,15 @@
   a.card h2 { font-size: 1.15rem; margin-bottom: 6px; }
   a.card p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
 
+  .landmarks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+  a.lm {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 12px; text-decoration: none;
+    color: var(--text); font-size: 0.78rem;
+  }
+  a.lm:hover { border-color: var(--accent); color: var(--accent); }
+  a.lm b { color: var(--accent); margin-right: 4px; }
+
   .definition {
     background: var(--surface); border-left: 3px solid var(--accent);
     border-radius: 8px; padding: 18px 22px;
@@ -166,7 +175,7 @@
 </style>
 </head>
 <body>
-<nav class="site-nav"><a class="brand" href="index.html">🤖 <span>Native MM</span></a><div class="links"><a class="link active" href="index.html">观测台<small>Observatory</small></a><a class="link" href="papers.html">论文库<small>Papers</small></a><a class="link" href="taxonomy.html">谱系<small>Taxonomy</small></a><a class="link" href="timeline.html">时间线<small>Timeline</small></a><a class="ext" href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">GitHub ↗</a></div></nav>
+<nav class="site-nav"><a class="brand" href="index.html">🤖 <span>Native MM</span></a><div class="links"><a class="link active" href="index.html">观测台<small>Observatory</small></a><a class="link" href="papers.html">论文库<small>Papers</small></a><a class="link" href="digest.html">周报<small>Digest</small></a><a class="link" href="repos.html">仓库<small>Repos</small></a><a class="link" href="taxonomy.html">谱系<small>Taxonomy</small></a><a class="link" href="timeline.html">时间线<small>Timeline</small></a><a class="ext" href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener">GitHub ↗</a></div></nav>
 <main>
   <div class="hero">
     <div class="kicker">Live Observatory</div>
@@ -181,6 +190,8 @@
       <span class="badge">🔥 7d <b>+22</b></span>
       <a href="https://github.com/isLinXu/awesome-native-multimodal-models" target="_blank" rel="noopener" class="badge">⭐ GitHub</a>
       <a href="papers.html" class="badge">📚 论文库</a>
+      <a href="digest.html" class="badge">📬 周报</a>
+      <a href="repos.html" class="badge">🚀 仓库</a>
     </div>
   </div>
 
@@ -220,33 +231,64 @@
 <a class="track" href="papers.html#omni"><div class="row"><span class="emoji">🎙️</span><span class="delta">+10 / 7d</span></div><h3>Omni 实时交互</h3><div class="en">Omni Models</div><div class="nums"><b>744</b> 篇</div><div class="en">文本+图像+音频+视频的实时全双工交互，目标是 GPT-4o 这一档体验。 重点不是「会不会生成图」，而是流式、低延迟、能听会说还能看。</div></a>
 <a class="track" href="papers.html#pretraining"><div class="row"><span class="emoji">🧠</span><span class="delta">+2 / 7d</span></div><h3>预训练底座</h3><div class="en">Pretraining Foundations</div><div class="nums"><b>494</b> 篇</div><div class="en">Native 模型不是从零长出来的：对比学习、生成式预训练、视觉指令微调 是后面统一架构的配方来源。这条赛道收「为什么这样训」的地基工作。</div></a>
 </div>
+  <h2 class="sec">Landmark <span>人工精选，点进 arXiv</span></h2>
+<div class="landmarks">
+<a class="lm" href="https://arxiv.org/abs/1711.00937" target="_blank" rel="noopener"><b>2017</b>VQ-VAE</a>
+<a class="lm" href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener"><b>2021</b>CLIP</a>
+<a class="lm" href="https://arxiv.org/abs/2012.09841" target="_blank" rel="noopener"><b>2021</b>VQGAN</a>
+<a class="lm" href="https://arxiv.org/abs/2204.14198" target="_blank" rel="noopener"><b>2022</b>Flamingo</a>
+<a class="lm" href="https://arxiv.org/abs/2301.12597" target="_blank" rel="noopener"><b>2023</b>BLIP-2</a>
+<a class="lm" href="https://arxiv.org/abs/2304.08485" target="_blank" rel="noopener"><b>2023</b>LLaVA</a>
+<a class="lm" href="https://arxiv.org/abs/2305.11846" target="_blank" rel="noopener"><b>2023</b>CoDi</a>
+<a class="lm" href="https://arxiv.org/abs/2309.05519" target="_blank" rel="noopener"><b>2023</b>NExT-GPT</a>
+<a class="lm" href="https://arxiv.org/abs/2212.05199" target="_blank" rel="noopener"><b>2023</b>MAGVIT</a>
+<a class="lm" href="timeline.html" target="_blank" rel="noopener"><b>2024</b>Gemini 1.5 Pro</a>
+<a class="lm" href="https://arxiv.org/abs/2404.02905" target="_blank" rel="noopener"><b>2024</b>VAR</a>
+<a class="lm" href="https://arxiv.org/abs/2405.09818" target="_blank" rel="noopener"><b>2024</b>Chameleon</a>
+<a class="lm" href="timeline.html" target="_blank" rel="noopener"><b>2024</b>GPT-4o</a>
+<a class="lm" href="https://arxiv.org/abs/2406.07550" target="_blank" rel="noopener"><b>2024</b>TiTok</a>
+<a class="lm" href="https://arxiv.org/abs/2408.12528" target="_blank" rel="noopener"><b>2024</b>Show-o</a>
+<a class="lm" href="https://arxiv.org/abs/2408.11039" target="_blank" rel="noopener"><b>2024</b>Transfusion</a>
+<a class="lm" href="https://arxiv.org/abs/2409.18869" target="_blank" rel="noopener"><b>2024</b>Emu3</a>
+<a class="lm" href="https://arxiv.org/abs/2501.17811" target="_blank" rel="noopener"><b>2025</b>Janus-Pro</a>
+<a class="lm" href="https://arxiv.org/abs/2502.13923" target="_blank" rel="noopener"><b>2025</b>Qwen2.5-VL</a>
+<a class="lm" href="timeline.html" target="_blank" rel="noopener"><b>2025</b>Gemini 2.5 Pro</a>
+<a class="lm" href="https://arxiv.org/abs/2503.20215" target="_blank" rel="noopener"><b>2025</b>Qwen2.5-Omni</a>
+<a class="lm" href="https://arxiv.org/abs/2505.14683" target="_blank" rel="noopener"><b>2025</b>BAGEL</a>
+<a class="lm" href="https://arxiv.org/abs/2505.02471" target="_blank" rel="noopener"><b>2025</b>Ming-Omni</a>
+<a class="lm" href="https://arxiv.org/abs/2506.18871" target="_blank" rel="noopener"><b>2025</b>OmniGen2</a>
+<a class="lm" href="https://arxiv.org/abs/2506.15564" target="_blank" rel="noopener"><b>2025</b>Show-o2</a>
+<a class="lm" href="timeline.html" target="_blank" rel="noopener"><b>2026</b>Gemini 3.1 Pro</a>
+</div>
 
   <div class="split">
-    <div class="panel"><h2>最新入库</h2>
-<div class="paper"><span class="date">2026-11-07</span><a href="https://arxiv.org/abs/2611.10917" target="_blank" rel="noopener">Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.08996" target="_blank" rel="noopener">UniMore: Fine-Grained Supervision for Unified Understanding and Generation</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
-<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.10245" target="_blank" rel="noopener">From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.09047" target="_blank" rel="noopener">Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
-<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.07836" target="_blank" rel="noopener">THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08099" target="_blank" rel="noopener">Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling</a><span class="pill" style="background:#4ECDC4">tokenizers</span></div>
-<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08185" target="_blank" rel="noopener">Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
-<div class="paper"><span class="date">2026-11-05</span><a href="https://arxiv.org/abs/2611.08138" target="_blank" rel="noopener">Describe Your Facial Expressions by Linking Image Encoders and Large Language Models</a><span class="pill" style="background:#FAD7A0">pretraining</span></div>
-<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06343" target="_blank" rel="noopener">Prism: Bidirectional Self-Teaching for Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
-<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06501" target="_blank" rel="noopener">CRESiST: Self-Enhancing Explorative Policy Learning for Simultaneous Speech Translation</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06083" target="_blank" rel="noopener">SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06149" target="_blank" rel="noopener">Grounding in the Dark: Text-Only Training for Zero-Shot Video Temporal Localization</a><span class="pill" style="background:#FAD7A0">pretraining</span></div>
-<div class="paper"><span class="date">2026-11-04</span><a href="https://arxiv.org/abs/2611.06583" target="_blank" rel="noopener">PatchCon: Patch-aware Weighted Supervised Contrastive Learning for Vulnerability Detection</a><span class="pill" style="background:#DDA0DD">omni</span></div>
-<div class="paper"><span class="date">2026-11-03</span><a href="https://arxiv.org/abs/2611.04467" target="_blank" rel="noopener">Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug</span></div>
-<p style="margin-top:12px;font-size:0.8rem"><a href="papers.html" style="color:var(--link)">浏览全部论文 →</a></p></div>
+    <div class="panel"><h2>高分新作</h2>
+<p class="en" style="margin-bottom:10px">近 45 天 · 按相关分排序，过滤掉只是沾边的标题</p>
+<div class="paper"><span class="date">2026-09-29</span><a href="https://arxiv.org/abs/2609.38485" target="_blank" rel="noopener">Beyond Layers: Position-Resolved Gradient Conflict and Position-Aware Modulation for Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug · 14.0</span></div>
+<div class="paper"><span class="date">2026-10-07</span><a href="https://arxiv.org/abs/2610.09307" target="_blank" rel="noopener">vLLM-Omni Technical Report: A Unified Serving Runtime for Omni-Modality Generation</a><span class="pill" style="background:#DDA0DD">omni · 13.0</span></div>
+<div class="paper"><span class="date">2026-11-03</span><a href="https://arxiv.org/abs/2611.04467" target="_blank" rel="noopener">Is Forgetting Unified? Exploring Concept Unlearning in Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug · 12.5</span></div>
+<div class="paper"><span class="date">2026-10-22</span><a href="https://arxiv.org/abs/2610.31768" target="_blank" rel="noopener">Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection</a><span class="pill" style="background:#DDA0DD">omni · 12.5</span></div>
+<div class="paper"><span class="date">2026-09-29</span><a href="https://arxiv.org/abs/2609.36903" target="_blank" rel="noopener">MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation</a><span class="pill" style="background:#DDA0DD">omni · 12.5</span></div>
+<div class="paper"><span class="date">2026-10-12</span><a href="https://arxiv.org/abs/2610.17124" target="_blank" rel="noopener">D2: High-Capability Full-Duplex Spoken Language Models from Half-Duplex Backbones</a><span class="pill" style="background:#DDA0DD">omni · 10.5</span></div>
+<div class="paper"><span class="date">2026-09-30</span><a href="https://arxiv.org/abs/2609.39938" target="_blank" rel="noopener">LEAP: Learned Block-wise Evidence Retrieval for Long Audio-Video Perception</a><span class="pill" style="background:#DDA0DD">omni · 10.5</span></div>
+<div class="paper"><span class="date">2026-10-30</span><a href="https://arxiv.org/abs/2610.42149" target="_blank" rel="noopener">Latent Reasoning in Continuous Space for Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug · 10.0</span></div>
+<div class="paper"><span class="date">2026-10-05</span><a href="https://arxiv.org/abs/2610.23918" target="_blank" rel="noopener">Cross-Modal Forgetting and Transfer in Unified Multimodal Post-Training</a><span class="pill" style="background:#FF6B6B">unified-ug · 9.5</span></div>
+<div class="paper"><span class="date">2026-10-02</span><a href="https://arxiv.org/abs/2610.02819" target="_blank" rel="noopener">Text-Centric Post-Training for Omni-Modal Reasoning</a><span class="pill" style="background:#DDA0DD">omni · 9.5</span></div>
+<div class="paper"><span class="date">2026-09-28</span><a href="https://arxiv.org/abs/2609.36224" target="_blank" rel="noopener">Mutually Adversarial Self-Training with Evolving Data for Unified Multimodal Models</a><span class="pill" style="background:#FF6B6B">unified-ug · 9.5</span></div>
+<div class="paper"><span class="date">2026-11-06</span><a href="https://arxiv.org/abs/2611.08996" target="_blank" rel="noopener">UniMore: Fine-Grained Supervision for Unified Understanding and Generation</a><span class="pill" style="background:#FF6B6B">unified-ug · 9.0</span></div>
+<p style="margin-top:12px;font-size:0.8rem"><a href="papers.html" style="color:var(--link)">论文库 →</a> · <a href="digest.html" style="color:var(--link)">本周周报 →</a></p></div>
     <div class="panel"><h2>仓库雷达</h2>
-<div class="repo"><a href="https://github.com/openai/CLIP" target="_blank" rel="noopener">openai/CLIP</a><div class="meta">⭐ 34,582</div><p>CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image</p></div>
-<div class="repo"><a href="https://github.com/OpenBMB/MiniCPM-V" target="_blank" rel="noopener">OpenBMB/MiniCPM-V</a><div class="meta">⭐ 27,105</div><p>See, hear, and interact on your local devices.</p></div>
-<div class="repo"><a href="https://github.com/QwenLM/Qwen3-VL" target="_blank" rel="noopener">QwenLM/Qwen3-VL</a><div class="meta">⭐ 20,182</div><p>Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.</p></div>
-<div class="repo"><a href="https://github.com/deepseek-ai/Janus" target="_blank" rel="noopener">deepseek-ai/Janus</a><div class="meta">⭐ 17,762</div><p>Janus-Series: Unified Multimodal Understanding and Generation Models</p></div>
-<div class="repo"><a href="https://github.com/modelscope/ms-swift" target="_blank" rel="noopener">modelscope/ms-swift</a><div class="meta">⭐ 16,064</div><p>Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ..</p></div>
-<div class="repo"><a href="https://github.com/OpenGVLab/InternVL" target="_blank" rel="noopener">OpenGVLab/InternVL</a><div class="meta">⭐ 10,169</div><p>[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o.  接近GPT-4o表现的开源多模态对话模型</p></div>
-<div class="repo"><a href="https://github.com/FoundationVision/VAR" target="_blank" rel="noopener">FoundationVision/VAR</a><div class="meta">⭐ 8,766</div><p>[NeurIPS 2024 Best Paper Award][GPT beats diffusion🔥] [scaling laws in visual generation📈] Official impl. of &quot;</p></div>
-<div class="repo"><a href="https://github.com/vllm-project/vllm-omni" target="_blank" rel="noopener">vllm-project/vllm-omni</a><div class="meta">⭐ 7,638</div><p>A framework for efficient model inference with omni-modality models</p></div></div>
+<p class="en" style="margin-bottom:10px">按 7 日增速（不足 7 天快照则用日均折算）</p>
+<div class="chart-card" style="margin-bottom:12px;padding:4px"><img src="assets/ranking-dark.svg" alt="项目 star 增速 Top 12" /></div>
+<div class="repo"><a href="https://github.com/OpenBMB/MiniCPM-OCR" target="_blank" rel="noopener">OpenBMB/MiniCPM-OCR</a><div class="meta">⭐ 855 · 7d ≈+460</div><p>Fast, accurate OCR with correctness assessment.</p></div>
+<div class="repo"><a href="https://github.com/OpenBMB/MiniCPM-V" target="_blank" rel="noopener">OpenBMB/MiniCPM-V</a><div class="meta">⭐ 27,105 · 7d ≈+187</div><p>See, hear, and interact on your local devices.</p></div>
+<div class="repo"><a href="https://github.com/QwenLM/Qwen3-VL" target="_blank" rel="noopener">QwenLM/Qwen3-VL</a><div class="meta">⭐ 20,182 · 7d ≈+176</div><p>Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.</p></div>
+<div class="repo"><a href="https://github.com/deepseek-ai/Janus" target="_blank" rel="noopener">deepseek-ai/Janus</a><div class="meta">⭐ 17,762 · 7d ≈+165</div><p>Janus-Series: Unified Multimodal Understanding and Generation Models</p></div>
+<div class="repo"><a href="https://github.com/vllm-project/vllm-omni" target="_blank" rel="noopener">vllm-project/vllm-omni</a><div class="meta">⭐ 7,638 · 7d ≈+126</div><p>A framework for efficient model inference with omni-modality models</p></div>
+<div class="repo"><a href="https://github.com/openai/CLIP" target="_blank" rel="noopener">openai/CLIP</a><div class="meta">⭐ 34,582 · 7d ≈+112</div><p>CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image</p></div>
+<div class="repo"><a href="https://github.com/jingyaogong/minimind-o" target="_blank" rel="noopener">jingyaogong/minimind-o</a><div class="meta">⭐ 2,711 · 7d ≈+99</div><p>🎙️ A 0.1B Omni model trained from scratch, capable of listening, speaking, and seeing!</p></div>
+<div class="repo"><a href="https://github.com/modelscope/ms-swift" target="_blank" rel="noopener">modelscope/ms-swift</a><div class="meta">⭐ 16,064 · 7d ≈+94</div><p>Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ..</p></div>
+<p style="margin-top:12px;font-size:0.8rem"><a href="repos.html" style="color:var(--link)">全部仓库 →</a></p></div>
   </div>
 
   <h2 class="sec">精选地图 <span>人工目录，不含自动跟踪长尾</span></h2>

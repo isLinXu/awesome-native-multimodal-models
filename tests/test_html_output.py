@@ -24,12 +24,12 @@ if live_json.exists():
 else:
     err("data/live-papers.json NOT FOUND in docs/")
 
-for fname in ("index.html", "papers.html", "taxonomy.html", "timeline.html"):
+for fname in ("index.html", "papers.html", "digest.html", "repos.html", "taxonomy.html", "timeline.html"):
     path = DOCS / fname
     if path.exists():
         size_kb = path.stat().st_size // 1024
         ok(f"{fname}  ({size_kb} KB)")
-        min_size = 3 if fname == "index.html" else 10
+        min_size = 3 if fname in ("index.html", "digest.html", "repos.html", "papers.html") else 10
         if size_kb < min_size:
             err(f"{fname} seems too small ({size_kb} KB)!")
     else:
@@ -45,7 +45,22 @@ checks = {
         ("Timeline link",  "timeline.html"),
         ("Live GitHub URL", "github.com/isLinXu/awesome-native-multimodal-models"),
         ("Trend chart", "assets/trend-dark.svg"),
+        ("Ranking chart", "assets/ranking-dark.svg"),
+        ("Landmarks", "Chameleon"),
+        ("Digest link", "digest.html"),
+        ("Repos link", "repos.html"),
         ("D3 credit", "d3js.org"),
+    ],
+    "digest.html": [
+        ("Weekly heading", "周报"),
+        ("Track section", "统一理解"),
+        ("GitHub URL", "github.com/isLinXu/awesome-native-multimodal-models"),
+    ],
+    "repos.html": [
+        ("Live JSON", "data/live-repos.json"),
+        ("Search box", 'id="q"'),
+        ("Speed sort", "按 7 日增速"),
+        ("GitHub URL", "github.com/isLinXu/awesome-native-multimodal-models"),
     ],
     "papers.html": [
         ("Live JSON", "data/live-papers.json"),
