@@ -41,6 +41,8 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-09 | **EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth** | Jens Parslov, Marco Schouten et al. | Vision-language models (VLMs) are increasingly used as automated judges for image-editing bench… | [📄 2611.12524](https://arxiv.org/abs/2611.12524) `cs.CV` |
+| 2026-11-08 | **Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models** | Linkai Peng, Baorian Nuchged et al. | Audio language model benchmarks provide comprehensive evaluation across diverse tasks… | [📄 2611.11573](https://arxiv.org/abs/2611.11573) `cs.CL` |
 | 2026-11-07 | **Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery** | Zhiran Zhang, Hu Wang et al. | Surgical video understanding is an important foundation for intelligent assistance in robot-ass… | [📄 2611.10917](https://arxiv.org/abs/2611.10917) `cs.CV` |
 | 2026-11-06 | **From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing** | Armin Mustafa, Syed Sameed Husain | Computer vision (CV) for policing has centred on recognising objects such as seized weapons… | [📄 2611.10245](https://arxiv.org/abs/2611.10245) `cs.CV` |
 | 2026-11-05 | **THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning** | Jisheng Dang, Kai Wei et al. | Omni-modal models can answer questions about video… | [📄 2611.07836](https://arxiv.org/abs/2611.07836) `cs.CV` |

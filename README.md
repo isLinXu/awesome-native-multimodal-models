@@ -21,7 +21,7 @@
 
 | 收录论文 | 近 7 天新论文 | 跟踪仓库 | 累计 star |
 | --: | --: | --: | --: |
-| <!--STATS:papers-->2,147<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+22<!--/STATS:papers_new--> | <!--STATS:repos-->82<!--/STATS:repos--> 个 | <!--STATS:stars-->231,558<!--/STATS:stars--> |
+| <!--STATS:papers-->2,151<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+26<!--/STATS:papers_new--> | <!--STATS:repos-->82<!--/STATS:repos--> 个 | <!--STATS:stars-->231,661<!--/STATS:stars--> |
 
 > 最后自动更新：<!--STATS:updated-->2026-11-10<!--/STATS:updated-->
 
@@ -85,10 +85,10 @@
 
 | 赛道 | 一句话 | 文档 | 必读 | 文档内条目 |
 | :-- | :-- | :-- | --: | --: |
-| 🔢 **Image & Video Tokenizers** | 先把像素变成能进 Transformer 的词 | [tokenizers.md](docs/tokenizers.md) | 5 | <!--STATS:cat_tokenizers-->184<!--/STATS:cat_tokenizers--> 篇 |
+| 🔢 **Image & Video Tokenizers** | 先把像素变成能进 Transformer 的词 | [tokenizers.md](docs/tokenizers.md) | 5 | <!--STATS:cat_tokenizers-->186<!--/STATS:cat_tokenizers--> 篇 |
 | 🖼️ **Unified Understanding + Generation** | 同一个模型既要看懂，也要画出来 | [unified-ug.md](docs/unified-ug.md) | 6 | <!--STATS:cat_unified-ug-->593<!--/STATS:cat_unified-ug--> 篇 |
 | 🌐 **Any-to-Any Multimodal** | 任意模态进，任意模态出 | [any-to-any.md](docs/any-to-any.md) | 4 | <!--STATS:cat_any-to-any-->140<!--/STATS:cat_any-to-any--> 篇 |
-| 🎙️ **Omni Models** | 能看、能听、能说，而且要跟得上 | [omni.md](docs/omni.md) | 3 | <!--STATS:cat_omni-->744<!--/STATS:cat_omni--> 篇 |
+| 🎙️ **Omni Models** | 能看、能听、能说，而且要跟得上 | [omni.md](docs/omni.md) | 3 | <!--STATS:cat_omni-->746<!--/STATS:cat_omni--> 篇 |
 | 🧠 **Pretraining Foundations** | 统一架构不是从零长出来的 | [pretraining.md](docs/pretraining.md) | 5 | <!--STATS:cat_pretraining-->494<!--/STATS:cat_pretraining--> 篇 |
 
 ## 怎么用

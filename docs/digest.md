@@ -7,14 +7,16 @@
 
 | 指标 | 数值 |
 | :-- | --: |
-| 收录论文（全量库） | 2,147 |
-| 文档内可浏览条目 | 2,155 |
-| 近 7 天新发布 | 22 |
+| 收录论文（全量库） | 2,151 |
+| 文档内可浏览条目 | 2,159 |
+| 近 7 天新发布 | 26 |
 | 跟踪仓库 | 82 |
-| 跟踪仓库总 star | 231,558 |
+| 跟踪仓库总 star | 231,661 |
 
-## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
+## 🔢 Image & Video Tokenizers · 近 7 天新发布 4 篇
 
+- [dNaViT: Discrete Codes are General-Purpose Visual Representations](https://arxiv.org/abs/2611.12426) · `2026-11-09` · score 3.0
+- [CHORD: Multi-resolution Compression for Multimodal Time Series](https://arxiv.org/abs/2611.11913) · `2026-11-09` · score 3.0
 - [Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling](https://arxiv.org/abs/2611.08099) · `2026-11-05` · score 3.0
 - [TEMPO: Time Series Understanding via Discrete Tokenization](https://arxiv.org/abs/2611.04482) · `2026-11-03` · score 3.0
 
@@ -32,8 +34,10 @@
 
 - [DreamX: Video Diffusion Model is a Universal Latent Action Learner](https://arxiv.org/abs/2611.05377) · `2026-11-03` · score 3.0
 
-## 🎙️ Omni Models · 近 7 天新发布 10 篇
+## 🎙️ Omni Models · 近 7 天新发布 12 篇
 
+- [EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth](https://arxiv.org/abs/2611.12524) · `2026-11-09` · score 3.0
+- [Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models](https://arxiv.org/abs/2611.11573) · `2026-11-08` · score 4.0
 - [Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery](https://arxiv.org/abs/2611.10917) · `2026-11-07` · score 3.0
 - [From Weapons to Events: Evaluating Evidential Support in Multimodal AI for Policing](https://arxiv.org/abs/2611.10245) · `2026-11-06` · score 3.5
 - [THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning](https://arxiv.org/abs/2611.07836) · `2026-11-05` · score 3.5

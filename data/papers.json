@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T03:55:43Z",
+  "updated": "2026-11-10T08:37:16Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -86,7 +86,7 @@
       "desc": "Multimodal foundation model via masked data modeling"
     },
     "2301.12597": {
-      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+      "title": "BLIP-2",
       "published": "2023-01-30",
       "url": "https://arxiv.org/abs/2301.12597",
       "categories": [
@@ -100,7 +100,7 @@
       "desc": "Bootstrapping vision-language pretraining"
     },
     "2304.08485": {
-      "title": "Visual Instruction Tuning",
+      "title": "LLaVA",
       "published": "2023-04-17",
       "url": "https://arxiv.org/abs/2304.08485",
       "categories": [
@@ -184,7 +184,7 @@
       "desc": "Qwen2.5 Vision-Language model"
     },
     "2504.10479": {
-      "title": "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models",
+      "title": "InternVL3",
       "published": "2025-04-14",
       "url": "https://arxiv.org/abs/2504.10479",
       "categories": [
@@ -296,7 +296,7 @@
       "desc": "Masked generative video transformer"
     },
     "2309.15505": {
-      "title": "Finite Scalar Quantization: VQ-VAE Made Simple",
+      "title": "FSQ",
       "published": "2023-09-27",
       "url": "https://arxiv.org/abs/2309.15505",
       "categories": [
@@ -338,7 +338,7 @@
       "desc": "1D tokenizer for images"
     },
     "2310.05737": {
-      "title": "Language Model Beats Diffusion -- Tokenizer is Key to Visual Generation",
+      "title": "MAGVIT-v2",
       "published": "2023-10-09",
       "url": "https://arxiv.org/abs/2310.05737",
       "categories": [
@@ -366,7 +366,7 @@
       "desc": "Adaptive token length tokenizer"
     },
     "2412.03069": {
-      "title": "TokenFlow: Unified Image Tokenizer for Multimodal Understanding and Generation",
+      "title": "TokenFlow",
       "published": "2024-12-04",
       "url": "https://arxiv.org/abs/2412.03069",
       "categories": [
@@ -380,7 +380,7 @@
       "desc": "Unified image tokenizer"
     },
     "2412.13061": {
-      "title": "VidTok: A Versatile and Open-Source Video Tokenizer",
+      "title": "VidTok",
       "published": "2024-12-17",
       "url": "https://arxiv.org/abs/2412.13061",
       "categories": [
@@ -394,7 +394,7 @@
       "desc": "Video tokenizer (Microsoft)"
     },
     "2502.05178": {
-      "title": "QLIP: Text-Aligned Visual Tokenization Unifies Auto-Regressive Multimodal Understanding and Generation",
+      "title": "QLIP",
       "published": "2025-02-07",
       "url": "https://arxiv.org/abs/2502.05178",
       "categories": [
@@ -465,7 +465,7 @@
       "desc": "Equivariant tokenizer"
     },
     "2310.01218": {
-      "title": "Making LLaMA SEE and Draw with SEED Tokenizer",
+      "title": "SEED",
       "published": "2023-10-02",
       "url": "https://arxiv.org/abs/2310.01218",
       "categories": [
@@ -522,7 +522,7 @@
       "desc": "Large world model"
     },
     "2405.09818": {
-      "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models",
+      "title": "Chameleon",
       "published": "2024-05-16",
       "url": "https://arxiv.org/abs/2405.09818",
       "categories": [
@@ -536,7 +536,7 @@
       "desc": "Early-fusion token-based mixed-modal model (Meta)"
     },
     "2408.11039": {
-      "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
+      "title": "Transfusion",
       "published": "2024-08-20",
       "url": "https://arxiv.org/abs/2408.11039",
       "categories": [
@@ -550,7 +550,7 @@
       "desc": "Predict next token and diffuse"
     },
     "2408.12528": {
-      "title": "Show-o: One Single Transformer to Unify Multimodal Understanding and Generation",
+      "title": "Show-o",
       "published": "2024-08-22",
       "url": "https://arxiv.org/abs/2408.12528",
       "categories": [
@@ -620,7 +620,7 @@
       "desc": "Llama for text and image fusion"
     },
     "2410.13848": {
-      "title": "Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation",
+      "title": "Janus",
       "published": "2024-10-17",
       "url": "https://arxiv.org/abs/2410.13848",
       "categories": [
@@ -634,7 +634,7 @@
       "desc": "Decoupling visual encoding for unified multimodal understanding and generation"
     },
     "2501.17811": {
-      "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+      "title": "Janus-Pro",
       "published": "2025-01-29",
       "url": "https://arxiv.org/abs/2501.17811",
       "categories": [
@@ -704,7 +704,7 @@
       "desc": "Visual autoregressive GPT"
     },
     "2505.14683": {
-      "title": "Emerging Properties in Unified Multimodal Pretraining",
+      "title": "BAGEL",
       "published": "2025-05-20",
       "url": "https://arxiv.org/abs/2505.14683",
       "categories": [
@@ -718,7 +718,7 @@
       "desc": "Bootstrapped reasoning with AR+Diffusion (ByteDance)"
     },
     "2505.05422": {
-      "title": "TokLIP: Marry Visual Tokens to CLIP for Multimodal Comprehension and Generation",
+      "title": "TokLIP",
       "published": "2025-05-08",
       "url": "https://arxiv.org/abs/2505.05422",
       "categories": [
@@ -733,7 +733,7 @@
       "desc": "Tokenized CLIP features for generation"
     },
     "2505.15809": {
-      "title": "MMaDA: Multimodal Large Diffusion Language Models",
+      "title": "MMaDA",
       "published": "2025-05-21",
       "url": "https://arxiv.org/abs/2505.15809",
       "categories": [
@@ -761,7 +761,7 @@
       "desc": "BLIP3 for omni generation"
     },
     "2506.15564": {
-      "title": "Show-o2: Improved Native Unified Multimodal Models",
+      "title": "Show-o2",
       "published": "2025-06-18",
       "url": "https://arxiv.org/abs/2506.15564",
       "categories": [
@@ -803,7 +803,7 @@
       "desc": "Self-supervised tokenization for generation"
     },
     "2503.20853": {
-      "title": "Unified Multimodal Discrete Diffusion",
+      "title": "UniDisc",
       "published": "2025-03-26",
       "url": "https://arxiv.org/abs/2503.20853",
       "categories": [
@@ -845,7 +845,7 @@
       "desc": "Hermes flow-based unified generation"
     },
     "2305.11846": {
-      "title": "Any-to-Any Generation via Composable Diffusion",
+      "title": "CoDi",
       "published": "2023-05-19",
       "url": "https://arxiv.org/abs/2305.11846",
       "categories": [
@@ -859,7 +859,7 @@
       "desc": "Any-to-any generation via composable diffusion"
     },
     "2309.05519": {
-      "title": "NExT-GPT: Any-to-Any Multimodal LLM",
+      "title": "NExT-GPT",
       "published": "2023-09-11",
       "url": "https://arxiv.org/abs/2309.05519",
       "categories": [
@@ -873,7 +873,7 @@
       "desc": "Any-to-any multimodal LLM"
     },
     "2402.12226": {
-      "title": "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling",
+      "title": "AnyGPT",
       "published": "2024-02-19",
       "url": "https://arxiv.org/abs/2402.12226",
       "categories": [
@@ -887,7 +887,7 @@
       "desc": "Unified multimodal LLM with discrete sequence modeling"
     },
     "2312.17172": {
-      "title": "Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Action",
+      "title": "Unified-IO 2",
       "published": "2023-12-28",
       "url": "https://arxiv.org/abs/2312.17172",
       "categories": [
@@ -901,7 +901,7 @@
       "desc": "Unified I/O for diverse tasks"
     },
     "2311.18775": {
-      "title": "CoDi-2: In-Context, Interleaved, and Interactive Any-to-Any Generation",
+      "title": "CoDi-2",
       "published": "2023-11-30",
       "url": "https://arxiv.org/abs/2311.18775",
       "categories": [
@@ -915,7 +915,7 @@
       "desc": "Improved CoDi with in-context generation"
     },
     "2409.17692": {
-      "title": "MIO: A Foundation Model on Multimodal Tokens",
+      "title": "MIO",
       "published": "2024-09-26",
       "url": "https://arxiv.org/abs/2409.17692",
       "categories": [
@@ -929,7 +929,7 @@
       "desc": "Multimodal interleaved output model"
     },
     "2412.01169": {
-      "title": "OmniFlow: Any-to-Any Generation with Multi-Modal Rectified Flows",
+      "title": "OmniFlow",
       "published": "2024-12-02",
       "url": "https://arxiv.org/abs/2412.01169",
       "categories": [
@@ -957,7 +957,7 @@
       "desc": "Spider any-to-any model"
     },
     "2505.02471": {
-      "title": "Ming-Lite-Uni: Advancements in Unified Architecture for Natural Multimodal Interaction",
+      "title": "Ming-Omni",
       "published": "2025-05-05",
       "url": "https://arxiv.org/abs/2505.02471",
       "categories": [
@@ -972,7 +972,7 @@
       "desc": "Ming all-modal omni model"
     },
     "2509.17765": {
-      "title": "Qwen3-Omni Technical Report",
+      "title": "Qwen3-Omni",
       "published": "2025-09-22",
       "url": "https://arxiv.org/abs/2509.17765",
       "categories": [
@@ -987,7 +987,7 @@
       "desc": "Qwen3 omni model"
     },
     "2502.18778": {
-      "title": "M2-omni: Advancing Omni-MLLM for Comprehensive Modality Support with Competitive Performance",
+      "title": "M2-omni",
       "published": "2025-02-26",
       "url": "https://arxiv.org/abs/2502.18778",
       "categories": [
@@ -1002,7 +1002,7 @@
       "desc": "M2 omni multimodal model"
     },
     "2408.05211": {
-      "title": "VITA: Towards Open-Source Interactive Omni Multimodal LLM",
+      "title": "VITA",
       "published": "2024-08-09",
       "url": "https://arxiv.org/abs/2408.05211",
       "categories": [
@@ -1016,7 +1016,7 @@
       "desc": "Open-source interactive omni model"
     },
     "2409.06666": {
-      "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
+      "title": "LLaMA-Omni",
       "published": "2024-09-10",
       "url": "https://arxiv.org/abs/2409.06666",
       "categories": [
@@ -1030,7 +1030,7 @@
       "desc": "Seamless speech interaction with LLaMA"
     },
     "2503.20215": {
-      "title": "Qwen2.5-Omni Technical Report",
+      "title": "Qwen2.5-Omni",
       "published": "2025-03-26",
       "url": "https://arxiv.org/abs/2503.20215",
       "categories": [
@@ -1156,7 +1156,7 @@
       "desc": "Unified codebook for multimodal LLMs enabling joint image-text tokenization"
     },
     "2406.06525": {
-      "title": "Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation",
+      "title": "LlamaGen",
       "published": "2024-06-10",
       "url": "https://arxiv.org/abs/2406.06525",
       "categories": [
@@ -1184,7 +1184,7 @@
       "desc": "Addresses representation collapse in VQ models with a single linear layer"
     },
     "2412.10958": {
-      "title": "SoftVQ-VAE: Efficient 1-Dimensional Continuous Tokenizer",
+      "title": "SoftVQ-VAE",
       "published": "2024-12-14",
       "url": "https://arxiv.org/abs/2412.10958",
       "categories": [
@@ -1212,7 +1212,7 @@
       "desc": "Open-source reproduction of MAGVIT-v2 LFQ tokenizer for democratizing visual generation"
     },
     "2406.07548": {
-      "title": "Image and Video Tokenization with Binary Spherical Quantization",
+      "title": "BSQ-ViT",
       "published": "2024-06-11",
       "url": "https://arxiv.org/abs/2406.07548",
       "categories": [
@@ -1338,7 +1338,7 @@
       "desc": "Frozen LLM-based visual tokenizer mapping images to text token space"
     },
     "2412.06774": {
-      "title": "Visual Lexicon: Rich Image Features in Language Space",
+      "title": "ViLex",
       "published": "2024-12-09",
       "url": "https://arxiv.org/abs/2412.06774",
       "categories": [
@@ -1395,7 +1395,7 @@
       "desc": "Synergistic multimodal comprehension and creation via interleaved text-image generation"
     },
     "2405.19335": {
-      "title": "X-VILA: Cross-Modality Alignment for Large Language Model",
+      "title": "X-VILA",
       "published": "2024-05-29",
       "url": "https://arxiv.org/abs/2405.19335",
       "categories": [
@@ -1409,7 +1409,7 @@
       "desc": "Cross-modality alignment extending VILA to any-to-any multimodal generation"
     },
     "2510.13747": {
-      "title": "InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue",
+      "title": "InteractiveOmni-A2A",
       "published": "2025-10-15",
       "url": "https://arxiv.org/abs/2510.13747",
       "categories": [
@@ -1424,7 +1424,7 @@
       "desc": "Unified omni-modal model for audio-visual multi-turn any-to-any dialogue"
     },
     "2412.01762": {
-      "title": "XQ-GAN: An Open-source Image Tokenization Framework for Autoregressive Generation",
+      "title": "XQ-GAN",
       "published": "2024-12-02",
       "url": "https://arxiv.org/abs/2412.01762",
       "categories": [
@@ -23934,6 +23934,50 @@
       "score": 3.0,
       "primary_category": "",
       "first_seen": "2026-10-23"
+    },
+    "2611.12426": {
+      "title": "dNaViT: Discrete Codes are General-Purpose Visual Representations",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12426",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-09"
+    },
+    "2611.11913": {
+      "title": "CHORD: Multi-resolution Compression for Multimodal Time Series",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.11913",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-11-09"
+    },
+    "2611.12524": {
+      "title": "EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12524",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-09"
+    },
+    "2611.11573": {
+      "title": "Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models",
+      "published": "2026-11-08",
+      "url": "https://arxiv.org/abs/2611.11573",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-08"
     }
   }
 }
