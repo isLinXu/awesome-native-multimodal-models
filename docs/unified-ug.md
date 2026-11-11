@@ -57,6 +57,8 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-10 | **UniWeaver: Harnessing Unified Multimodal Models for Interleaved Text-Image Generation** | Hongxu Chen, Zixuan Zhong et al. | Unified multimodal models (UMMs) have opened up new possibilities for generating rich interleav… | [📄 2611.13530](https://arxiv.org/abs/2611.13530) `cs.CV` |
+| 2026-11-09 | **Multimodal Road Closure Mapping via Cross-Modal Graph Attention** | Izzeddin Teeti, Vaibhav Kango et al. | Accurate and timely identification of road closures is critical for large-scale navigation and… | [📄 2611.13192](https://arxiv.org/abs/2611.13192) `cs.CV` |
 | 2026-11-06 | **UniMore: Fine-Grained Supervision for Unified Understanding and Generation** | Haoyue Bai, Yinyi Luo et al. | Unified multimodal models combine image understanding and generation within one system… | [📄 2611.08996](https://arxiv.org/abs/2611.08996) `cs.MM` |
 | 2026-11-06 | **Grounding-Aware Judge Reward Reinforcement Learning for Out-of-Domain Face Anti-Spoofing** | Xiaoyong Yu, Xinge Yu | Face Anti-Spoofing (FAS) must distinguish genuine faces from presentation attacks… | [📄 2611.09047](https://arxiv.org/abs/2611.09047) `cs.CV` |
 | 2026-11-05 | **Multimodal Hierarchical Mixture-of-Experts for 3D Medical Vision-Language Modeling** | Gizem Mert, Szymon Płotka et al. | Medical 3D scans and reports are inherently hierarchical… | [📄 2611.08185](https://arxiv.org/abs/2611.08185) `cs.CV` |

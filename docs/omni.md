@@ -41,6 +41,10 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-10 | **Omni-JEV: Text and Dual-Stream Speech Decisions** | Shengzhou Kong | A user utterance does not uniquely determine the next action in full-duplex dialogue: its conse… | [📄 2611.13777](https://arxiv.org/abs/2611.13777) `cs.LG` |
+| 2026-11-10 | **PARLEY: Evaluating LLM Collaboration Through Cooperative Asymmetric Puzzles** | Javier Hernandez, Andrew D. Wilson | As large language models power autonomous agents… | [📄 2611.14242](https://arxiv.org/abs/2611.14242) `cs.MA` |
+| 2026-11-09 | **A Multi-Word Tokenizer for 204 Languages That Needs Fewer Tokens Than GPT-4o's, Including on English** | Johin Johny, Ankur Ghosh et al. | Languages of India need 1.6 to 14 times as many tokens as English on GPT-4o's tokenizer for the… | [📄 2611.13059](https://arxiv.org/abs/2611.13059) `cs.CL` |
+| 2026-11-09 | **The Indic Token Tax in 2026: Measuring Tokenizer. Disparity and Its Cost for the Languages of India** | Johin Johny Arimbur, Ankur Ashit Ghosh et al. | Commercial language model APIs bill per token, so a tokenizer that needs more tokens for the sa… | [📄 2611.13058](https://arxiv.org/abs/2611.13058) `cs.CL` |
 | 2026-11-09 | **EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth** | Jens Parslov, Marco Schouten et al. | Vision-language models (VLMs) are increasingly used as automated judges for image-editing bench… | [📄 2611.12524](https://arxiv.org/abs/2611.12524) `cs.CV` |
 | 2026-11-08 | **Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models** | Linkai Peng, Baorian Nuchged et al. | Audio language model benchmarks provide comprehensive evaluation across diverse tasks… | [📄 2611.11573](https://arxiv.org/abs/2611.11573) `cs.CL` |
 | 2026-11-07 | **Remembering to Reason: Structured Memory for Scene and Workflow Understanding in Robot-Assisted Surgery** | Zhiran Zhang, Hu Wang et al. | Surgical video understanding is an important foundation for intelligent assistance in robot-ass… | [📄 2611.10917](https://arxiv.org/abs/2611.10917) `cs.CV` |

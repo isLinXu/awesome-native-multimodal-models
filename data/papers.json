@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T08:37:16Z",
+  "updated": "2026-11-11T07:57:43Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -23978,6 +23978,72 @@
       "score": 4.0,
       "primary_category": "cs.CL",
       "first_seen": "2026-11-08"
+    },
+    "2611.13530": {
+      "title": "UniWeaver: Harnessing Unified Multimodal Models for Interleaved Text-Image Generation",
+      "published": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13530",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-10"
+    },
+    "2611.13192": {
+      "title": "Multimodal Road Closure Mapping via Cross-Modal Graph Attention",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.13192",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-09"
+    },
+    "2611.13777": {
+      "title": "Omni-JEV: Text and Dual-Stream Speech Decisions",
+      "published": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13777",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-10"
+    },
+    "2611.14242": {
+      "title": "PARLEY: Evaluating LLM Collaboration Through Cooperative Asymmetric Puzzles",
+      "published": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14242",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.MA",
+      "first_seen": "2026-11-10"
+    },
+    "2611.13059": {
+      "title": "A Multi-Word Tokenizer for 204 Languages That Needs Fewer Tokens Than GPT-4o's, Including on English",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.13059",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-09"
+    },
+    "2611.13058": {
+      "title": "The Indic Token Tax in 2026: Measuring Tokenizer. Disparity and Its Cost for the Languages of India",
+      "published": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.13058",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-09"
     }
   }
 }
