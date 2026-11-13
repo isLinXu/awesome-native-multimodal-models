@@ -57,6 +57,9 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-12 | **UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation** | Jiancheng Pan, Yuzheng Liu et al. | UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understan… | [📄 2611.16517](https://arxiv.org/abs/2611.16517) `cs.CV` |
+| 2026-11-11 | **Janus-MOPD: Tracing the Student Learning Dynamics in Multi-Teacher On-Policy Distillation** | Zongji Yu, Ming Zhang et al. | Multi-domain capabilities are critical for practically applicable Large Reasoning Models (LRMs)… | [📄 2611.15341](https://arxiv.org/abs/2611.15341) `cs.CL` |
+| 2026-11-11 | **Emergent Vision-Shaped Thinking in Text-Only Reasoning through Multimodal Training** | Qi Zhang, Bohan Wang et al. | Does multimodal training shape how a language model thinks… | [📄 2611.14942](https://arxiv.org/abs/2611.14942) `cs.AI` |
 | 2026-11-10 | **UniWeaver: Harnessing Unified Multimodal Models for Interleaved Text-Image Generation** | Hongxu Chen, Zixuan Zhong et al. | Unified multimodal models (UMMs) have opened up new possibilities for generating rich interleav… | [📄 2611.13530](https://arxiv.org/abs/2611.13530) `cs.CV` |
 | 2026-11-09 | **Multimodal Road Closure Mapping via Cross-Modal Graph Attention** | Izzeddin Teeti, Vaibhav Kango et al. | Accurate and timely identification of road closures is critical for large-scale navigation and… | [📄 2611.13192](https://arxiv.org/abs/2611.13192) `cs.CV` |
 | 2026-11-06 | **UniMore: Fine-Grained Supervision for Unified Understanding and Generation** | Haoyue Bai, Yinyi Luo et al. | Unified multimodal models combine image understanding and generation within one system… | [📄 2611.08996](https://arxiv.org/abs/2611.08996) `cs.MM` |

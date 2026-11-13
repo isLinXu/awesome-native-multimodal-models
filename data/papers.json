@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T08:36:09Z",
+  "updated": "2026-11-13T08:22:07Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24044,6 +24044,127 @@
       "score": 3.0,
       "primary_category": "cs.CL",
       "first_seen": "2026-11-09"
+    },
+    "2611.16517": {
+      "title": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
+      "published": "2026-11-12",
+      "url": "https://arxiv.org/abs/2611.16517",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-12"
+    },
+    "2611.15341": {
+      "title": "Janus-MOPD: Tracing the Student Learning Dynamics in Multi-Teacher On-Policy Distillation",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.15341",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-11"
+    },
+    "2611.14942": {
+      "title": "Emergent Vision-Shaped Thinking in Text-Only Reasoning through Multimodal Training",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.14942",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-11-11"
+    },
+    "2611.17160": {
+      "title": "XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction",
+      "published": "2026-11-12",
+      "url": "https://arxiv.org/abs/2611.17160",
+      "categories": [
+        "omni"
+      ],
+      "score": 10.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-11-12"
+    },
+    "2611.16500": {
+      "title": "EvenVLM: A Text and Multimodal Dataset for the Even Language with Vision-Language Fine-Tuning",
+      "published": "2026-11-12",
+      "url": "https://arxiv.org/abs/2611.16500",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-12"
+    },
+    "2611.16419": {
+      "title": "I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History",
+      "published": "2026-11-12",
+      "url": "https://arxiv.org/abs/2611.16419",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-11-12"
+    },
+    "2611.15131": {
+      "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.15131",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "",
+      "first_seen": "2026-11-11"
+    },
+    "2611.15161": {
+      "title": "CineMME: From Dialogue Grounding to Narrative Reasoning in Multimodal Video Understanding",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.15161",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-11"
+    },
+    "2611.14774": {
+      "title": "An LLM Is All You Need: Data-Efficient Adaptation to Full-Duplex, Word-Level Spoken Dialogue",
+      "published": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14774",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-10"
+    },
+    "2611.15047": {
+      "title": "Saying No by Asking Yes: Affirmative Decomposition and Evidence Reflection for Frozen CLIP",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.15047",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-11"
+    },
+    "2611.15216": {
+      "title": "Where is My Mug? Training-Free Framework for Personalized Image Segmentation",
+      "published": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.15216",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-11"
     }
   }
 }

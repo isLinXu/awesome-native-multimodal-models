@@ -2,9 +2,9 @@
 <title>pretraining 周度趋势</title>
 <rect width="900" height="96" fill="#0D1117"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
-<path d="M 8.0,76.0 L 8.0,45.1 L 88.4,29.7 L 168.7,60.6 L 249.1,52.9 L 329.5,37.4 L 409.8,22.0 L 490.2,29.7 L 570.5,29.7 L 650.9,37.4 L 731.3,76.0 L 811.6,37.4 L 892.0,76.0 L 892.0,76.0 Z" fill="#FAD7A0" fill-opacity="0.14"/>
-<path d="M 8.0,45.1 L 88.4,29.7 L 168.7,60.6 L 249.1,52.9 L 329.5,37.4 L 409.8,22.0 L 490.2,29.7 L 570.5,29.7 L 650.9,37.4 L 731.3,76.0 L 811.6,37.4 L 892.0,76.0" fill="none" stroke="#FAD7A0" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="892.0" cy="76.0" r="3.4" fill="#FAD7A0"/>
+<path d="M 8.0,76.0 L 8.0,45.1 L 88.4,29.7 L 168.7,60.6 L 249.1,52.9 L 329.5,37.4 L 409.8,22.0 L 490.2,29.7 L 570.5,29.7 L 650.9,37.4 L 731.3,76.0 L 811.6,37.4 L 892.0,60.6 L 892.0,76.0 Z" fill="#FAD7A0" fill-opacity="0.14"/>
+<path d="M 8.0,45.1 L 88.4,29.7 L 168.7,60.6 L 249.1,52.9 L 329.5,37.4 L 409.8,22.0 L 490.2,29.7 L 570.5,29.7 L 650.9,37.4 L 731.3,76.0 L 811.6,37.4 L 892.0,60.6" fill="none" stroke="#FAD7A0" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="892.0" cy="60.6" r="3.4" fill="#FAD7A0"/>
 <text x="8" y="14" font-size="11" fill="#8B949E">近 12 周本赛道论文发布 · 峰值 7 篇/周</text>
 <text x="892" y="14" font-size="11" text-anchor="end" fill="#8B949E">08/24 → 11/09</text>
 </g>
