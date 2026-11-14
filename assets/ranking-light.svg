@@ -4,53 +4,53 @@
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Roboto, sans-serif">
 <text x="24" y="30" font-size="16" font-weight="600" fill="#0F172A">项目 star 增速 Top 12</text>
 <text x="24" y="50" font-size="12" fill="#64748B">快照满 7 天后为实测增量；不足 7 天按日均速度折算（与项目雷达表格同口径）</text>
-<text x="24" y="79" font-size="12" fill="#0F172A">OpenBMB/MiniCPM-OCR</text>
+<text x="24" y="79" font-size="12" fill="#0F172A">vllm-project/vllm-omni</text>
 <rect x="264" y="68" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
 <rect x="264" y="68" width="806.0" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="79" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+376</text>
-<text x="24" y="109" font-size="12" fill="#0F172A">vllm-project/vllm-omni</text>
+<text x="1176" y="79" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+153</text>
+<text x="24" y="109" font-size="12" fill="#0F172A">OpenBMB/MiniCPM-OCR</text>
 <rect x="264" y="98" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="98" width="270.1" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="109" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+126</text>
-<text x="24" y="139" font-size="12" fill="#0F172A">jingyaogong/minimind-o</text>
+<rect x="264" y="98" width="447.8" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="109" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+85</text>
+<text x="24" y="139" font-size="12" fill="#0F172A">OpenBMB/MiniCPM-V</text>
 <rect x="264" y="128" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="128" width="207.9" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="139" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+97</text>
+<rect x="264" y="128" width="337.2" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="139" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+64</text>
 <text x="24" y="169" font-size="12" fill="#0F172A">modelscope/ms-swift</text>
 <rect x="264" y="158" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="158" width="201.5" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="169" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+94</text>
-<text x="24" y="199" font-size="12" fill="#0F172A">jd-opensource/JoyAI-Image</text>
+<rect x="264" y="158" width="242.3" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="169" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+46</text>
+<text x="24" y="199" font-size="12" fill="#0F172A">NVlabs/Eagle</text>
 <rect x="264" y="188" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="188" width="147.9" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="199" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+69</text>
-<text x="24" y="229" font-size="12" fill="#0F172A">OpenBMB/MiniCPM-V</text>
+<rect x="264" y="188" width="242.3" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="199" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+46</text>
+<text x="24" y="229" font-size="12" fill="#0F172A">verl-project/verl-omni</text>
 <rect x="264" y="218" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="218" width="137.2" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="229" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+64</text>
-<text x="24" y="259" font-size="12" fill="#0F172A">bytedance/Lance</text>
+<rect x="264" y="218" width="205.5" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="229" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+39</text>
+<text x="24" y="259" font-size="12" fill="#0F172A">QwenLM/Qwen3-VL</text>
 <rect x="264" y="248" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="248" width="113.6" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="259" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+53</text>
-<text x="24" y="289" font-size="12" fill="#0F172A">verl-project/verl-omni</text>
+<rect x="264" y="248" width="189.6" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="259" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+36</text>
+<text x="24" y="289" font-size="12" fill="#0F172A">openai/CLIP</text>
 <rect x="264" y="278" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="278" width="109.3" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="289" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+51</text>
-<text x="24" y="319" font-size="12" fill="#0F172A">Tencent-Hunyuan/UniRL</text>
+<rect x="264" y="278" width="163.3" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="289" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+31</text>
+<text x="24" y="319" font-size="12" fill="#0F172A">jingyaogong/minimind-o</text>
 <rect x="264" y="308" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="308" width="98.6" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="319" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+46</text>
-<text x="24" y="349" font-size="12" fill="#0F172A">QwenLM/Qwen3-VL</text>
+<rect x="264" y="308" width="68.5" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="319" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+13</text>
+<text x="24" y="349" font-size="12" fill="#0F172A">AIFrontierLab/TorchUMM</text>
 <rect x="264" y="338" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="338" width="83.6" height="16" rx="5" fill="#FAD7A0"/>
-<text x="1176" y="349" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+39</text>
-<text x="24" y="379" font-size="12" fill="#0F172A">appletea233/OneSearch-VL</text>
+<rect x="264" y="338" width="68.5" height="16" rx="5" fill="#FF6B6B"/>
+<text x="1176" y="349" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+13</text>
+<text x="24" y="379" font-size="12" fill="#0F172A">QwenLM/Qwen3-Omni</text>
 <rect x="264" y="368" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="368" width="81.5" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="379" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+38</text>
-<text x="24" y="409" font-size="12" fill="#0F172A">OpenSenseNova/SenseNova-Vision</text>
+<rect x="264" y="368" width="63.2" height="16" rx="5" fill="#A8E6CF"/>
+<text x="1176" y="379" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+12</text>
+<text x="24" y="409" font-size="12" fill="#0F172A">gokayfem/awesome-vlm-architectures</text>
 <rect x="264" y="398" width="806" height="16" rx="5" fill="#E2E8F0" fill-opacity="0.5"/>
-<rect x="264" y="398" width="79.3" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="409" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+37</text>
+<rect x="264" y="398" width="42.1" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="409" font-size="12" font-weight="600" text-anchor="end" fill="#0F172A">+8</text>
 </g>
 </svg>
