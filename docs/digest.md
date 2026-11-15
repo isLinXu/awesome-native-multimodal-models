@@ -1,6 +1,6 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-14**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-15**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
@@ -9,9 +9,9 @@
 | :-- | --: |
 | 收录论文（全量库） | 2,168 |
 | 文档内可浏览条目 | 2,176 |
-| 近 7 天新发布 | 22 |
+| 近 7 天新发布 | 21 |
 | 跟踪仓库 | 82 |
-| 跟踪仓库总 star | 232,040 |
+| 跟踪仓库总 star | 232,109 |
 
 ## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
 
@@ -30,7 +30,7 @@
 
 _本周没有新发布的命中论文，赛道可能进入平台期，或关键词需要补充。_
 
-## 🎙️ Omni Models · 近 7 天新发布 13 篇
+## 🎙️ Omni Models · 近 7 天新发布 12 篇
 
 - [XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction](https://arxiv.org/abs/2611.17160) · `2026-11-12` · score 10.0
 - [EvenVLM: A Text and Multimodal Dataset for the Even Language with Vision-Language Fine-Tuning](https://arxiv.org/abs/2611.16500) · `2026-11-12` · score 3.0
@@ -44,7 +44,6 @@ _本周没有新发布的命中论文，赛道可能进入平台期，或关键�
 - [EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth](https://arxiv.org/abs/2611.12524) · `2026-11-09` · score 3.0
 - [The Indic Token Tax in 2026: Measuring Tokenizer. Disparity and Its Cost for the Languages of India](https://arxiv.org/abs/2611.13058) · `2026-11-09` · score 3.0
 - [Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models](https://arxiv.org/abs/2611.11573) · `2026-11-08` · score 4.0
-- …… 另有 1 篇，见 [docs/omni.md](omni.md)
 
 ## 🧠 Pretraining Foundations · 近 7 天新发布 2 篇
 
@@ -55,13 +54,13 @@ _本周没有新发布的命中论文，赛道可能进入平台期，或关键�
 
 | 项目 | ⭐ | 7 日 Δ | 30 日 Δ | 赛道 |
 | :-- | --: | --: | --: | :-- |
-| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,750 | +153 | — | omni |
-| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 927 | +85 | — | omni |
-| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,147 | +64 | — | omni |
-| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,103 | +46 | — | omni |
-| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,850 | +46 | — | pretraining |
-| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,509 | +39 | — | omni |
-| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,211 | +36 | — | pretraining |
-| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,608 | +31 | — | pretraining |
-| [**AIFrontierLab/TorchUMM**](https://github.com/AIFrontierLab/TorchUMM) | 584 | +13 | — | unified-ug |
-| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,721 | +13 | — | omni |
+| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,764 | +148 | — | omni |
+| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 937 | +91 | — | omni |
+| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,151 | +64 | — | omni |
+| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,104 | +46 | — | omni |
+| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,516 | +44 | — | omni |
+| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,853 | +41 | — | pretraining |
+| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,211 | +35 | — | pretraining |
+| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,611 | +31 | — | pretraining |
+| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,724 | +15 | — | omni |
+| [**QwenLM/Qwen3-Omni**](https://github.com/QwenLM/Qwen3-Omni) | 4,109 | +14 | — | any-to-any |
