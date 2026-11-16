@@ -57,6 +57,7 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-13 | **Structural Self-Teaching for Compositional Generation in Unified Multimodal Models** | Jaeyoo Park, Bohyung Han | Structural Self-Teaching (SST), a novel framework that enhances compositional image generation… | [📄 2611.18261](https://arxiv.org/abs/2611.18261) `cs.CV` |
 | 2026-11-12 | **UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation** | Jiancheng Pan, Yuzheng Liu et al. | UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understan… | [📄 2611.16517](https://arxiv.org/abs/2611.16517) `cs.CV` |
 | 2026-11-11 | **Janus-MOPD: Tracing the Student Learning Dynamics in Multi-Teacher On-Policy Distillation** | Zongji Yu, Ming Zhang et al. | Multi-domain capabilities are critical for practically applicable Large Reasoning Models (LRMs)… | [📄 2611.15341](https://arxiv.org/abs/2611.15341) `cs.CL` |
 | 2026-11-11 | **Emergent Vision-Shaped Thinking in Text-Only Reasoning through Multimodal Training** | Qi Zhang, Bohan Wang et al. | Does multimodal training shape how a language model thinks… | [📄 2611.14942](https://arxiv.org/abs/2611.14942) `cs.AI` |

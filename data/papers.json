@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T08:04:38Z",
+  "updated": "2026-11-16T08:14:00Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24165,6 +24165,39 @@
       "score": 3.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-11"
+    },
+    "2611.18261": {
+      "title": "Structural Self-Teaching for Compositional Generation in Unified Multimodal Models",
+      "published": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.18261",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-13"
+    },
+    "2611.17802": {
+      "title": "Multimodal Person Concept Model for Person Identification under Varying Observation Conditions",
+      "published": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.17802",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-11-13"
+    },
+    "2611.17831": {
+      "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+      "published": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.17831",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-13"
     }
   }
 }

@@ -48,6 +48,8 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-13 | **Multimodal Person Concept Model for Person Identification under Varying Observation Conditions** | Mizuho Okitani, Yoshinobu Hagiwara | Service robots in domestic and office environments must identify users to provide personalized… | [📄 2611.17802](https://arxiv.org/abs/2611.17802) `cs.RO` |
+| 2026-11-13 | **V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations** | Keuntae Kim, Dongjun Kim et al. | World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order… | [📄 2611.17831](https://arxiv.org/abs/2611.17831) `cs.CV` |
 | 2026-11-11 | **Saying No by Asking Yes: Affirmative Decomposition and Evidence Reflection for Frozen CLIP** | Aashish Pokhrel, Tejas Anvekar et al. | Frozen vision-language models often match concepts mentioned in a caption without respecting th… | [📄 2611.15047](https://arxiv.org/abs/2611.15047) `cs.CV` |
 | 2026-11-11 | **Where is My Mug? Training-Free Framework for Personalized Image Segmentation** | Quang Qui-Vinh Nguyen, Hung Nguyen et al. | \textbf{Personalized Image Segmentation (PIS)} aims to segment the specific object in a target… | [📄 2611.15216](https://arxiv.org/abs/2611.15216) `cs.CV` |
 | 2026-11-05 | **Describe Your Facial Expressions by Linking Image Encoders and Large Language Models** | Yujian Yuan, Jiabei Zeng et al. | A novel task of describing human facial expressions of a facial image in natural language… | [📄 2611.08138](https://arxiv.org/abs/2611.08138) `cs.CV` |
