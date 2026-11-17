@@ -41,6 +41,9 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-16 | **Joint Antenna Positioning and Dynamic Beam Tracking for MA-Enabled Full-Duplex Secure ISAC Systems: A Flow Matching DRL Approach** | Zhendong Li, Yujie Zhao et al. | Integrated sensing and communication (ISAC) improves spectral efficiency but faces significant… | [📄 2611.20439](https://arxiv.org/abs/2611.20439) `eess.SP` |
+| 2026-11-16 | **Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next** | Javier Aguilar Martín | A popular ideation recipe treats an embedding map of existing work as a guide: pick points far… | [📄 2611.21408](https://arxiv.org/abs/2611.21408) `cs.LG` |
+| 2026-11-14 | **Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks** | Yuhao Wang, Yucheng Zhao et al. | Omni-modal agents are expected to move beyond multimodal understanding toward completing comple… | [📄 2611.19202](https://arxiv.org/abs/2611.19202) `cs.CL` |
 | 2026-11-12 | **XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction** | Kerui Gu, Xing Fu et al. | Embodied interaction requires an agent to integrate multimodal perception with verbal and nonve… | [📄 2611.17160](https://arxiv.org/abs/2611.17160) `cs.RO` |
 | 2026-11-12 | **EvenVLM: A Text and Multimodal Dataset for the Even Language with Vision-Language Fine-Tuning** | Daniil Makovetskii, Ivan Bondarenko | EvenVLM, the first text and multimodal (VQA) dataset for Even (Lamut)… | [📄 2611.16500](https://arxiv.org/abs/2611.16500) `cs.CL` |
 | 2026-11-12 | **I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History** | Xiangyi Jia, Kaixian Qu et al. | Vision-language models (VLMs) have become a powerful foundation for robotic scene understanding… | [📄 2611.16419](https://arxiv.org/abs/2611.16419) `cs.RO` |

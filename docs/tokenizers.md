@@ -53,6 +53,7 @@ Native multimodal 的定义里有一条是 **unified tokenization**。如果图�
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-16 | **CARE: Contrastive-Anchored Residual Encoding with Listwise Reconstruction for Retrieval-Oriented Semantic IDs** | Yuan Xu, Dawei Chen et al. | Generative retrieval replaces nearest-neighbor search with the generation of a document's seman… | [📄 2611.20721](https://arxiv.org/abs/2611.20721) `cs.IR` |
 | 2026-11-09 | **dNaViT: Discrete Codes are General-Purpose Visual Representations** | Xiaotong Li, Zhengrong Yue et al. | Discrete autoregressive modeling, notably through next-token prediction… | [📄 2611.12426](https://arxiv.org/abs/2611.12426) `cs.CV` |
 | 2026-11-09 | **CHORD: Multi-resolution Compression for Multimodal Time Series** | Bibhus Luitel, Payal Mohapatra et al. | Wearables, mobile devices, and IoT platforms generate multimodal time-series data continuously… | [📄 2611.11913](https://arxiv.org/abs/2611.11913) `cs.AI` |
 | 2026-11-05 | **Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling** | Jiancheng Zhao, Jixiang Luo et al. | Video compression at ultra-low bitrates remains challenging due to the loss of perceptually imp… | [📄 2611.08099](https://arxiv.org/abs/2611.08099) `cs.CV` |

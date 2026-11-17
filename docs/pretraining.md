@@ -48,6 +48,8 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-16 | **Vision-Language Model-Based Phase-OTDR Event Classification** | Ahmet Bestami Kose, Mehmet Sergen Catal et al. | Phase-sensitive optical time-domain reflectometry (Phase-OTDR) enables distributed vibration se… | [📄 2611.20841](https://arxiv.org/abs/2611.20841) `cs.CV` |
+| 2026-11-16 | **SmoothShift: Disrupting Visual Adversarial Attacks on LVLMs at Test Time** | Xiaoqing Chen, Jiayi Ouyang et al. | Visual adversarial perturbations can substantially impair large vision-language models (LVLMs)… | [📄 2611.20537](https://arxiv.org/abs/2611.20537) `cs.CV` |
 | 2026-11-13 | **Multimodal Person Concept Model for Person Identification under Varying Observation Conditions** | Mizuho Okitani, Yoshinobu Hagiwara | Service robots in domestic and office environments must identify users to provide personalized… | [📄 2611.17802](https://arxiv.org/abs/2611.17802) `cs.RO` |
 | 2026-11-13 | **V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations** | Keuntae Kim, Dongjun Kim et al. | World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order… | [📄 2611.17831](https://arxiv.org/abs/2611.17831) `cs.CV` |
 | 2026-11-11 | **Saying No by Asking Yes: Affirmative Decomposition and Evidence Reflection for Frozen CLIP** | Aashish Pokhrel, Tejas Anvekar et al. | Frozen vision-language models often match concepts mentioned in a caption without respecting th… | [📄 2611.15047](https://arxiv.org/abs/2611.15047) `cs.CV` |

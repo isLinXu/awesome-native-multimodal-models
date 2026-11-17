@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T08:14:00Z",
+  "updated": "2026-11-17T09:28:23Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24198,6 +24198,94 @@
       "score": 3.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-13"
+    },
+    "2611.20721": {
+      "title": "CARE: Contrastive-Anchored Residual Encoding with Listwise Reconstruction for Retrieval-Oriented Semantic IDs",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.20721",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.IR",
+      "first_seen": "2026-11-16"
+    },
+    "2611.20765": {
+      "title": "STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.20765",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CR",
+      "first_seen": "2026-11-16"
+    },
+    "2611.18668": {
+      "title": "UMM-JEPA: Generative Pretraining via Masked Next-Scale Representation Prediction for Unified Multimodal Models",
+      "published": "2026-10-26",
+      "url": "https://arxiv.org/abs/2611.18668",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-10-26"
+    },
+    "2611.20439": {
+      "title": "Joint Antenna Positioning and Dynamic Beam Tracking for MA-Enabled Full-Duplex Secure ISAC Systems: A Flow Matching DRL Approach",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.20439",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "eess.SP",
+      "first_seen": "2026-11-16"
+    },
+    "2611.21408": {
+      "title": "Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.21408",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-16"
+    },
+    "2611.19202": {
+      "title": "Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks",
+      "published": "2026-11-14",
+      "url": "https://arxiv.org/abs/2611.19202",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-14"
+    },
+    "2611.20841": {
+      "title": "Vision-Language Model-Based Phase-OTDR Event Classification",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.20841",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-16"
+    },
+    "2611.20537": {
+      "title": "SmoothShift: Disrupting Visual Adversarial Attacks on LVLMs at Test Time",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.20537",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-16"
     }
   }
 }
