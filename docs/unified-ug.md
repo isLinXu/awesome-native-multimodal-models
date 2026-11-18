@@ -57,6 +57,7 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-17 | **LOCUS: Causal Support Windows for Attribute Control in Autoregressive Image Generation** | Zijun Huang | Unified autoregressive (AR) image generators struggle to satisfy multiple attribute constraints… | [📄 2611.22867](https://arxiv.org/abs/2611.22867) `cs.CV` |
 | 2026-11-16 | **STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies** | Shenghao Xiong, Xiaolin Chang | Multimodal reinforcement learning (MRL) offers a promising paradigm for autonomous driving by j… | [📄 2611.20765](https://arxiv.org/abs/2611.20765) `cs.CR` |
 | 2026-11-13 | **Structural Self-Teaching for Compositional Generation in Unified Multimodal Models** | Jaeyoo Park, Bohyung Han | Structural Self-Teaching (SST), a novel framework that enhances compositional image generation… | [📄 2611.18261](https://arxiv.org/abs/2611.18261) `cs.CV` |
 | 2026-11-12 | **UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation** | Jiancheng Pan, Yuzheng Liu et al. | UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understan… | [📄 2611.16517](https://arxiv.org/abs/2611.16517) `cs.CV` |

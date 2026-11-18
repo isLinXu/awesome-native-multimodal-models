@@ -41,6 +41,8 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-17 | **Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models** | Seonghyeon Cho, Chanjun Park | Omni Models process audio, vision, and text within a unified language backbone… | [📄 2611.22619](https://arxiv.org/abs/2611.22619) `cs.CL` |
+| 2026-11-17 | **Beyond Attribute-Centric Fairness: Modelling and Mitigating Unified Bias Representation in Omni-modal Large Language Models** | Runqi Lin, Suqin Yuan et al. | Omni-modal large language models (OLLMs) provide joint multimodal understanding and generation… | [📄 2611.22889](https://arxiv.org/abs/2611.22889) `cs.LG` |
 | 2026-11-16 | **Joint Antenna Positioning and Dynamic Beam Tracking for MA-Enabled Full-Duplex Secure ISAC Systems: A Flow Matching DRL Approach** | Zhendong Li, Yujie Zhao et al. | Integrated sensing and communication (ISAC) improves spectral efficiency but faces significant… | [📄 2611.20439](https://arxiv.org/abs/2611.20439) `eess.SP` |
 | 2026-11-16 | **Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next** | Javier Aguilar Martín | A popular ideation recipe treats an embedding map of existing work as a guide: pick points far… | [📄 2611.21408](https://arxiv.org/abs/2611.21408) `cs.LG` |
 | 2026-11-14 | **Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks** | Yuhao Wang, Yucheng Zhao et al. | Omni-modal agents are expected to move beyond multimodal understanding toward completing comple… | [📄 2611.19202](https://arxiv.org/abs/2611.19202) `cs.CL` |

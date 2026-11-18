@@ -48,6 +48,7 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-16 | **DEFTS: Data-Efficient, Training-Free Few-Shot Learning for CLIP in the Text Subspace** | Yijin Zeng | Contrastive Language-Image Pre-training (CLIP) achieves impressive zero-shot image classificati… | [📄 2611.21993](https://arxiv.org/abs/2611.21993) `cs.CV` |
 | 2026-11-16 | **Vision-Language Model-Based Phase-OTDR Event Classification** | Ahmet Bestami Kose, Mehmet Sergen Catal et al. | Phase-sensitive optical time-domain reflectometry (Phase-OTDR) enables distributed vibration se… | [📄 2611.20841](https://arxiv.org/abs/2611.20841) `cs.CV` |
 | 2026-11-16 | **SmoothShift: Disrupting Visual Adversarial Attacks on LVLMs at Test Time** | Xiaoqing Chen, Jiayi Ouyang et al. | Visual adversarial perturbations can substantially impair large vision-language models (LVLMs)… | [📄 2611.20537](https://arxiv.org/abs/2611.20537) `cs.CV` |
 | 2026-11-13 | **Multimodal Person Concept Model for Person Identification under Varying Observation Conditions** | Mizuho Okitani, Yoshinobu Hagiwara | Service robots in domestic and office environments must identify users to provide personalized… | [📄 2611.17802](https://arxiv.org/abs/2611.17802) `cs.RO` |

@@ -40,6 +40,7 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-17 | **Every Measurement, Every Direction, All at Once: Multimodal Flow Matching for Molecules and Spectra** | Thorben Prein, Elton Pan et al. | Generative modeling in science is often data-limited, where experiments are expensive… | [📄 2611.22098](https://arxiv.org/abs/2611.22098) `cs.LG` |
 | 2026-11-03 | **DreamX: Video Diffusion Model is a Universal Latent Action Learner** | Jisoo Kim, Chaehyun Kim et al. | Learning a universal action representation from video requires modeling dynamics that are consi… | [📄 2611.05377](https://arxiv.org/abs/2611.05377) `cs.CV` |
 | 2026-10-30 | **scAnyOmics: Foundation-Model Distillation for Any-to-Any Completion of Multi-omics Virtual Cells** | Zhaoqi Song, Ye Du et al. | Recent advances in single-cell technologies have enabled the profiling of multiple molecular mo… | [📄 2610.41399](https://arxiv.org/abs/2610.41399) `cs.AI` |
 | 2026-10-18 | **Modaliff: A Unified Token Diffusion Model for Any-to-Any Generation** | Duc Kieu, Kien Do et al. | Any-to-any generation seeks a single model that translates flexibly among text, image… | [📄 2610.25533](https://arxiv.org/abs/2610.25533) `cs.CV` |

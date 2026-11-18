@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T09:28:23Z",
+  "updated": "2026-11-18T08:46:16Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24284,6 +24284,72 @@
         "pretraining"
       ],
       "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-16"
+    },
+    "2611.22669": {
+      "title": "Beyond the Camera: A Tri-Modal Driving World Model for Future RGB, Thermal, and LiDAR Forecasting in Adverse Weather",
+      "published": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22669",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-17"
+    },
+    "2611.22867": {
+      "title": "LOCUS: Causal Support Windows for Attribute Control in Autoregressive Image Generation",
+      "published": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22867",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-17"
+    },
+    "2611.22098": {
+      "title": "Every Measurement, Every Direction, All at Once: Multimodal Flow Matching for Molecules and Spectra",
+      "published": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22098",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-17"
+    },
+    "2611.22619": {
+      "title": "Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models",
+      "published": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22619",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-17"
+    },
+    "2611.22889": {
+      "title": "Beyond Attribute-Centric Fairness: Modelling and Mitigating Unified Bias Representation in Omni-modal Large Language Models",
+      "published": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22889",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-17"
+    },
+    "2611.21993": {
+      "title": "DEFTS: Data-Efficient, Training-Free Few-Shot Learning for CLIP in the Text Subspace",
+      "published": "2026-11-16",
+      "url": "https://arxiv.org/abs/2611.21993",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-16"
     }
