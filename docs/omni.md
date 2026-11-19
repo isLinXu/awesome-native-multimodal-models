@@ -41,6 +41,7 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-18 | **Can Omni-modal LLMs Understand Spoken Intentions?** | Zijie Xin, Tianyi Wang et al. | Omni-modal large language models (omni-modal LLMs) can respond to spoken requests directly thro… | [📄 2611.24706](https://arxiv.org/abs/2611.24706) `cs.CV` |
 | 2026-11-17 | **Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models** | Seonghyeon Cho, Chanjun Park | Omni Models process audio, vision, and text within a unified language backbone… | [📄 2611.22619](https://arxiv.org/abs/2611.22619) `cs.CL` |
 | 2026-11-17 | **Beyond Attribute-Centric Fairness: Modelling and Mitigating Unified Bias Representation in Omni-modal Large Language Models** | Runqi Lin, Suqin Yuan et al. | Omni-modal large language models (OLLMs) provide joint multimodal understanding and generation… | [📄 2611.22889](https://arxiv.org/abs/2611.22889) `cs.LG` |
 | 2026-11-16 | **Joint Antenna Positioning and Dynamic Beam Tracking for MA-Enabled Full-Duplex Secure ISAC Systems: A Flow Matching DRL Approach** | Zhendong Li, Yujie Zhao et al. | Integrated sensing and communication (ISAC) improves spectral efficiency but faces significant… | [📄 2611.20439](https://arxiv.org/abs/2611.20439) `eess.SP` |

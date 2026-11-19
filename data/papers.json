@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T08:46:16Z",
+  "updated": "2026-11-19T09:01:59Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -1452,13 +1452,13 @@
       "desc": "Integrative and composable multimodal learning framework for text, speech, and image"
     },
     "2611.08099": {
-      "title": "Towards Practical 20 kbps Generative Video Compression via Adaptive Tokenization and Entropy Modeling",
+      "title": "GenRA: Ultra-Low-Bitrate Generative Video Compression via Representation Adaptation",
       "published": "2026-11-05",
       "url": "https://arxiv.org/abs/2611.08099",
       "categories": [
         "tokenizers"
       ],
-      "score": 3.0,
+      "score": 4.5,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-05"
     },
@@ -13058,13 +13058,13 @@
     },
     "2607.21179": {
       "title": "Out of Sight, Still in Mind: Token Compression for Omni-LLMs",
-      "published": "2026-07-23",
+      "published": "2026-11-17",
       "url": "https://arxiv.org/abs/2607.21179",
       "categories": [
         "omni"
       ],
       "score": 6.5,
-      "primary_category": "cs.CV",
+      "primary_category": "",
       "first_seen": "2026-07-23"
     },
     "2607.20918": {
@@ -24352,6 +24352,61 @@
       "score": 3.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-16"
+    },
+    "2611.24793": {
+      "title": "The Elephant in the Question: Unified Models Picture the Concepts Behind Their Answers",
+      "published": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24793",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-18"
+    },
+    "2611.24433": {
+      "title": "MLIE-CoT: Chain-of-Thought Reasoning via Multi-Level Image Editing",
+      "published": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24433",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-18"
+    },
+    "2611.23724": {
+      "title": "Towards Environment-Aware 6G Network Planning: An Any-to-Any Channel Knowledge Map Approach",
+      "published": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.23724",
+      "categories": [
+        "any-to-any"
+      ],
+      "score": 6.0,
+      "primary_category": "eess.SP",
+      "first_seen": "2026-11-18"
+    },
+    "2611.24706": {
+      "title": "Can Omni-modal LLMs Understand Spoken Intentions?",
+      "published": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24706",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-18"
+    },
+    "2611.24795": {
+      "title": "Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction Data",
+      "published": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24795",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-18"
     }
   }
 }
