@@ -1,17 +1,17 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-19**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-20**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
 
 | 指标 | 数值 |
 | :-- | --: |
-| 收录论文（全量库） | 2,190 |
-| 文档内可浏览条目 | 2,198 |
-| 近 7 天新发布 | 25 |
+| 收录论文（全量库） | 2,192 |
+| 文档内可浏览条目 | 2,200 |
+| 近 7 天新发布 | 23 |
 | 跟踪仓库 | 83 |
-| 跟踪仓库总 star | 232,692 |
+| 跟踪仓库总 star | 232,728 |
 
 ## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
 
@@ -20,29 +20,27 @@
 
 ## 🖼️ Unified Understanding + Generation · 近 7 天新发布 6 篇
 
+- [HiUni: Harmonizing Understanding and Generation in Shared Visual Space](https://arxiv.org/abs/2611.26107) · `2026-11-19` · score 3.5
 - [The Elephant in the Question: Unified Models Picture the Concepts Behind Their Answers](https://arxiv.org/abs/2611.24793) · `2026-11-18` · score 6.0
 - [MLIE-CoT: Chain-of-Thought Reasoning via Multi-Level Image Editing](https://arxiv.org/abs/2611.24433) · `2026-11-18` · score 4.0
 - [LOCUS: Causal Support Windows for Attribute Control in Autoregressive Image Generation](https://arxiv.org/abs/2611.22867) · `2026-11-17` · score 7.0
 - [STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies](https://arxiv.org/abs/2611.20765) · `2026-11-16` · score 3.0
 - [Structural Self-Teaching for Compositional Generation in Unified Multimodal Models](https://arxiv.org/abs/2611.18261) · `2026-11-13` · score 6.5
-- [UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation](https://arxiv.org/abs/2611.16517) · `2026-11-12` · score 4.0
 
 ## 🌐 Any-to-Any Multimodal · 近 7 天新发布 2 篇
 
 - [Towards Environment-Aware 6G Network Planning: An Any-to-Any Channel Knowledge Map Approach](https://arxiv.org/abs/2611.23724) · `2026-11-18` · score 6.0
 - [Every Measurement, Every Direction, All at Once: Multimodal Flow Matching for Molecules and Spectra](https://arxiv.org/abs/2611.22098) · `2026-11-17` · score 3.0
 
-## 🎙️ Omni Models · 近 7 天新发布 9 篇
+## 🎙️ Omni Models · 近 7 天新发布 7 篇
 
+- [WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding](https://arxiv.org/abs/2611.26409) · `2026-11-19` · score 9.5
 - [Can Omni-modal LLMs Understand Spoken Intentions?](https://arxiv.org/abs/2611.24706) · `2026-11-18` · score 7.0
 - [Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models](https://arxiv.org/abs/2611.22619) · `2026-11-17` · score 6.5
 - [Beyond Attribute-Centric Fairness: Modelling and Mitigating Unified Bias Representation in Omni-modal Large Language Models](https://arxiv.org/abs/2611.22889) · `2026-11-17` · score 6.0
 - [Joint Antenna Positioning and Dynamic Beam Tracking for MA-Enabled Full-Duplex Secure ISAC Systems: A Flow Matching DRL Approach](https://arxiv.org/abs/2611.20439) · `2026-11-16` · score 6.0
 - [Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next](https://arxiv.org/abs/2611.21408) · `2026-11-16` · score 3.0
 - [Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks](https://arxiv.org/abs/2611.19202) · `2026-11-14` · score 6.0
-- [XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction](https://arxiv.org/abs/2611.17160) · `2026-11-12` · score 10.0
-- [EvenVLM: A Text and Multimodal Dataset for the Even Language with Vision-Language Fine-Tuning](https://arxiv.org/abs/2611.16500) · `2026-11-12` · score 3.0
-- [I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History](https://arxiv.org/abs/2611.16419) · `2026-11-12` · score 3.0
 
 ## 🧠 Pretraining Foundations · 近 7 天新发布 6 篇
 
@@ -57,13 +55,13 @@
 
 | 项目 | ⭐ | 7 日 Δ | 30 日 Δ | 赛道 |
 | :-- | --: | --: | --: | :-- |
-| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,844 | +132 | — | omni |
-| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 983 | +80 | — | omni |
-| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,550 | +55 | — | omni |
-| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,240 | +40 | — | pretraining |
-| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,124 | +33 | — | omni |
-| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,631 | +32 | — | pretraining |
-| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,166 | +30 | — | omni |
-| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,742 | +28 | — | omni |
-| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,859 | +26 | — | pretraining |
-| [**QwenLM/Qwen3-Omni**](https://github.com/QwenLM/Qwen3-Omni) | 4,120 | +21 | — | any-to-any |
+| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,863 | +131 | — | omni |
+| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 990 | +78 | — | omni |
+| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,552 | +51 | — | omni |
+| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,135 | +36 | — | omni |
+| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,752 | +35 | — | omni |
+| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,239 | +31 | — | pretraining |
+| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,634 | +31 | — | pretraining |
+| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,169 | +29 | — | omni |
+| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,860 | +18 | — | pretraining |
+| [**QwenLM/Qwen3-Omni**](https://github.com/QwenLM/Qwen3-Omni) | 4,120 | +15 | — | any-to-any |

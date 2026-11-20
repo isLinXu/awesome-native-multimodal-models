@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T09:01:59Z",
+  "updated": "2026-11-20T08:49:01Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24407,6 +24407,28 @@
       "score": 3.5,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-18"
+    },
+    "2611.26107": {
+      "title": "HiUni: Harmonizing Understanding and Generation in Shared Visual Space",
+      "published": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26107",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-19"
+    },
+    "2611.26409": {
+      "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+      "published": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26409",
+      "categories": [
+        "omni"
+      ],
+      "score": 9.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-19"
     }
   }
 }

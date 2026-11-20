@@ -41,6 +41,7 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-19 | **WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding** | Changli Tang, Jie Yang et al. | Video understanding, particularly with accompanying audio… | [📄 2611.26409](https://arxiv.org/abs/2611.26409) `cs.CV` [💻](https://github.com/Tencent/WeMM-Video) |
 | 2026-11-18 | **Can Omni-modal LLMs Understand Spoken Intentions?** | Zijie Xin, Tianyi Wang et al. | Omni-modal large language models (omni-modal LLMs) can respond to spoken requests directly thro… | [📄 2611.24706](https://arxiv.org/abs/2611.24706) `cs.CV` |
 | 2026-11-17 | **Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models** | Seonghyeon Cho, Chanjun Park | Omni Models process audio, vision, and text within a unified language backbone… | [📄 2611.22619](https://arxiv.org/abs/2611.22619) `cs.CL` |
 | 2026-11-17 | **Beyond Attribute-Centric Fairness: Modelling and Mitigating Unified Bias Representation in Omni-modal Large Language Models** | Runqi Lin, Suqin Yuan et al. | Omni-modal large language models (OLLMs) provide joint multimodal understanding and generation… | [📄 2611.22889](https://arxiv.org/abs/2611.22889) `cs.LG` |
