@@ -1,6 +1,6 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-20**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-21**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
@@ -9,23 +9,22 @@
 | :-- | --: |
 | 收录论文（全量库） | 2,192 |
 | 文档内可浏览条目 | 2,200 |
-| 近 7 天新发布 | 23 |
+| 近 7 天新发布 | 20 |
 | 跟踪仓库 | 83 |
-| 跟踪仓库总 star | 232,728 |
+| 跟踪仓库总 star | 232,791 |
 
 ## 🔢 Image & Video Tokenizers · 近 7 天新发布 2 篇
 
 - [Beyond the Camera: A Tri-Modal Driving World Model for Future RGB, Thermal, and LiDAR Forecasting in Adverse Weather](https://arxiv.org/abs/2611.22669) · `2026-11-17` · score 3.0
 - [CARE: Contrastive-Anchored Residual Encoding with Listwise Reconstruction for Retrieval-Oriented Semantic IDs](https://arxiv.org/abs/2611.20721) · `2026-11-16` · score 4.5
 
-## 🖼️ Unified Understanding + Generation · 近 7 天新发布 6 篇
+## 🖼️ Unified Understanding + Generation · 近 7 天新发布 5 篇
 
 - [HiUni: Harmonizing Understanding and Generation in Shared Visual Space](https://arxiv.org/abs/2611.26107) · `2026-11-19` · score 3.5
 - [The Elephant in the Question: Unified Models Picture the Concepts Behind Their Answers](https://arxiv.org/abs/2611.24793) · `2026-11-18` · score 6.0
 - [MLIE-CoT: Chain-of-Thought Reasoning via Multi-Level Image Editing](https://arxiv.org/abs/2611.24433) · `2026-11-18` · score 4.0
 - [LOCUS: Causal Support Windows for Attribute Control in Autoregressive Image Generation](https://arxiv.org/abs/2611.22867) · `2026-11-17` · score 7.0
 - [STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies](https://arxiv.org/abs/2611.20765) · `2026-11-16` · score 3.0
-- [Structural Self-Teaching for Compositional Generation in Unified Multimodal Models](https://arxiv.org/abs/2611.18261) · `2026-11-13` · score 6.5
 
 ## 🌐 Any-to-Any Multimodal · 近 7 天新发布 2 篇
 
@@ -42,26 +41,24 @@
 - [Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next](https://arxiv.org/abs/2611.21408) · `2026-11-16` · score 3.0
 - [Omni-Workspace: Benchmarking Omni-Modal AI Assistants on Multimodal Workspace Tasks](https://arxiv.org/abs/2611.19202) · `2026-11-14` · score 6.0
 
-## 🧠 Pretraining Foundations · 近 7 天新发布 6 篇
+## 🧠 Pretraining Foundations · 近 7 天新发布 4 篇
 
 - [Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction Data](https://arxiv.org/abs/2611.24795) · `2026-11-18` · score 3.5
 - [Vision-Language Model-Based Phase-OTDR Event Classification](https://arxiv.org/abs/2611.20841) · `2026-11-16` · score 6.0
 - [SmoothShift: Disrupting Visual Adversarial Attacks on LVLMs at Test Time](https://arxiv.org/abs/2611.20537) · `2026-11-16` · score 4.5
 - [DEFTS: Data-Efficient, Training-Free Few-Shot Learning for CLIP in the Text Subspace](https://arxiv.org/abs/2611.21993) · `2026-11-16` · score 3.0
-- [Multimodal Person Concept Model for Person Identification under Varying Observation Conditions](https://arxiv.org/abs/2611.17802) · `2026-11-13` · score 3.5
-- [V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations](https://arxiv.org/abs/2611.17831) · `2026-11-13` · score 3.0
 
 ## 🚀 仓库增速榜（近 7 天 star 增量）
 
 | 项目 | ⭐ | 7 日 Δ | 30 日 Δ | 赛道 |
 | :-- | --: | --: | --: | :-- |
-| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,863 | +131 | — | omni |
-| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 990 | +78 | — | omni |
-| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,552 | +51 | — | omni |
-| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,135 | +36 | — | omni |
-| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,752 | +35 | — | omni |
-| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,239 | +31 | — | pretraining |
-| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,634 | +31 | — | pretraining |
-| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,169 | +29 | — | omni |
-| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,860 | +18 | — | pretraining |
-| [**QwenLM/Qwen3-Omni**](https://github.com/QwenLM/Qwen3-Omni) | 4,120 | +15 | — | any-to-any |
+| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,881 | +131 | — | omni |
+| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 1,007 | +80 | — | omni |
+| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,557 | +48 | — | omni |
+| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,137 | +34 | — | omni |
+| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,755 | +34 | — | omni |
+| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,640 | +32 | — | pretraining |
+| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,239 | +28 | — | pretraining |
+| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,174 | +27 | — | omni |
+| [**AIFrontierLab/TorchUMM**](https://github.com/AIFrontierLab/TorchUMM) | 595 | +11 | — | unified-ug |
+| [**QwenLM/Qwen3-Omni**](https://github.com/QwenLM/Qwen3-Omni) | 4,118 | +10 | — | any-to-any |
