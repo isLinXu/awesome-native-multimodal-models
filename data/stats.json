@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-21T08:33:16Z",
+  "generated_at": "2026-11-22T08:25:54Z",
   "papers_total": 2192,
   "papers_in_docs": 2200,
-  "papers_new_7d": 20,
-  "papers_last_30d": 110,
+  "papers_new_7d": 19,
+  "papers_last_30d": 105,
   "repos_total": 83,
-  "repos_stars_total": 232791,
+  "repos_stars_total": 232844,
   "categories": {
     "tokenizers": {
       "name": "Image & Video Tokenizers",
@@ -31,8 +31,8 @@
     "omni": {
       "name": "Omni Models",
       "papers": 763,
-      "papers_last_30d": 49,
-      "papers_new_7d": 7,
+      "papers_last_30d": 44,
+      "papers_new_7d": 6,
       "rows_in_doc": 763
     },
     "pretraining": {
