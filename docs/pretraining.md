@@ -48,6 +48,7 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-20 | **What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining** | Zhixuan Ge, Anqi Li et al. | Recent scaling studies ask whether vision-language models still need a visual encoder by compar… | [📄 2611.26917](https://arxiv.org/abs/2611.26917) `cs.CV` |
 | 2026-11-18 | **Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction Data** | Liu He, Yizhi Song et al. | Multimodal Large Language Models (MLLMs) struggle with accurately capturing camera-object relat… | [📄 2611.24795](https://arxiv.org/abs/2611.24795) `cs.CV` |
 | 2026-11-16 | **DEFTS: Data-Efficient, Training-Free Few-Shot Learning for CLIP in the Text Subspace** | Yijin Zeng | Contrastive Language-Image Pre-training (CLIP) achieves impressive zero-shot image classificati… | [📄 2611.21993](https://arxiv.org/abs/2611.21993) `cs.CV` |
 | 2026-11-16 | **Vision-Language Model-Based Phase-OTDR Event Classification** | Ahmet Bestami Kose, Mehmet Sergen Catal et al. | Phase-sensitive optical time-domain reflectometry (Phase-OTDR) enables distributed vibration se… | [📄 2611.20841](https://arxiv.org/abs/2611.20841) `cs.CV` |

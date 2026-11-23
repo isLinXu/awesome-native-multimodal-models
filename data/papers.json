@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T08:23:18Z",
+  "updated": "2026-11-23T09:23:03Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24429,6 +24429,39 @@
       "score": 9.5,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-19"
+    },
+    "2611.27799": {
+      "title": "ChildAI-Gov: An Evidence-Linked AI System for Assessing EdTech Policies Against Children's Digital Rights",
+      "published": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.27799",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-11-20"
+    },
+    "2611.25773": {
+      "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+      "published": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25773",
+      "categories": [
+        "omni"
+      ],
+      "score": 7.0,
+      "primary_category": "",
+      "first_seen": "2026-11-19"
+    },
+    "2611.26917": {
+      "title": "What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining",
+      "published": "2026-11-20",
+      "url": "https://arxiv.org/abs/2611.26917",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-20"
     }
   }
 }

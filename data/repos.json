@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-22T08:25:54Z",
+  "updated": "2026-11-23T09:25:40Z",
   "repos": {
     "baaivision/Emu3": {
       "full_name": "baaivision/Emu3",
       "url": "https://github.com/baaivision/Emu3",
       "description": "Next-Token Prediction is All You Need",
-      "stars": 2454,
+      "stars": 2455,
       "forks": 99,
       "language": "Python",
       "topics": [],
@@ -16,7 +16,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -85,6 +85,10 @@
         {
           "date": "2026-11-22",
           "stars": 2454
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 2455
         }
       ],
       "delta_7d": 1,
@@ -96,8 +100,8 @@
       "full_name": "deepseek-ai/Janus",
       "url": "https://github.com/deepseek-ai/Janus",
       "description": "Janus-Series: Unified Multimodal Understanding and Generation Models",
-      "stars": 17775,
-      "forks": 2228,
+      "stars": 17776,
+      "forks": 2227,
       "language": "Python",
       "topics": [
         "any-to-any",
@@ -114,7 +118,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -183,11 +187,15 @@
         {
           "date": "2026-11-22",
           "stars": 17775
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 17776
         }
       ],
-      "delta_7d": 7,
+      "delta_7d": 6,
       "delta_30d": null,
-      "velocity": 23.24,
+      "velocity": 23.21,
       "is_new": false
     },
     "showlab/Show-o": {
@@ -209,7 +217,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -278,6 +286,10 @@
         {
           "date": "2026-11-22",
           "stars": 1988
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1988
         }
       ],
       "delta_7d": 2,
@@ -289,7 +301,7 @@
       "full_name": "ByteDance-Seed/Bagel",
       "url": "https://github.com/ByteDance-Seed/Bagel",
       "description": "Open-source unified multimodal model",
-      "stars": 6223,
+      "stars": 6222,
       "forks": 544,
       "language": "Python",
       "topics": [],
@@ -300,7 +312,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -369,18 +381,22 @@
         {
           "date": "2026-11-22",
           "stars": 6223
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 6222
         }
       ],
-      "delta_7d": 5,
+      "delta_7d": 4,
       "delta_30d": null,
-      "velocity": 10.66,
+      "velocity": 10.64,
       "is_new": false
     },
     "FoundationVision/Liquid": {
       "full_name": "FoundationVision/Liquid",
       "url": "https://github.com/FoundationVision/Liquid",
       "description": "(Accepted by IJCV) Liquid: Language Models are Scalable and Unified Multi-modal Generators",
-      "stars": 642,
+      "stars": 643,
       "forks": 36,
       "language": "Python",
       "topics": [
@@ -401,7 +417,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -470,9 +486,13 @@
         {
           "date": "2026-11-22",
           "stars": 642
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 643
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 2,
       "delta_30d": null,
       "velocity": 0.9,
       "is_new": false
@@ -496,7 +516,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -565,11 +585,15 @@
         {
           "date": "2026-11-22",
           "stars": 1676
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1676
         }
       ],
       "delta_7d": -1,
       "delta_30d": null,
-      "velocity": 3.05,
+      "velocity": 3.04,
       "is_new": false
     },
     "VectorSpaceLab/OmniGen2": {
@@ -587,7 +611,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -656,11 +680,15 @@
         {
           "date": "2026-11-22",
           "stars": 4121
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 4121
         }
       ],
       "delta_7d": -1,
       "delta_30d": null,
-      "velocity": 7.72,
+      "velocity": 7.7,
       "is_new": false
     },
     "bytedance/1d-tokenizer": {
@@ -680,7 +708,7 @@
         "tokenizers"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -749,6 +777,10 @@
         {
           "date": "2026-11-22",
           "stars": 1178
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1178
         }
       ],
       "delta_7d": 0,
@@ -760,7 +792,7 @@
       "full_name": "FoundationVision/VAR",
       "url": "https://github.com/FoundationVision/VAR",
       "description": "[NeurIPS 2024 Best Paper Award][GPT beats diffusion🔥] [scaling laws in visual generation📈] Official impl. of \"Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction\". An *ultra-simple, user-friendly yet state-of-the-art* codebase for autoregressive image generation!",
-      "stars": 8770,
+      "stars": 8771,
       "forks": 572,
       "language": "Jupyter Notebook",
       "topics": [
@@ -784,7 +816,7 @@
         "tokenizers"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -853,18 +885,22 @@
         {
           "date": "2026-11-22",
           "stars": 8770
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 8771
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 9.09,
+      "velocity": 9.08,
       "is_new": false
     },
     "FoundationVision/LlamaGen": {
       "full_name": "FoundationVision/LlamaGen",
       "url": "https://github.com/FoundationVision/LlamaGen",
       "description": "Autoregressive Model Beats Diffusion: 🦙 Llama for Scalable Image Generation",
-      "stars": 1972,
+      "stars": 1973,
       "forks": 94,
       "language": "Python",
       "topics": [
@@ -883,7 +919,7 @@
         "tokenizers"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -952,11 +988,15 @@
         {
           "date": "2026-11-22",
           "stars": 1972
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1973
         }
       ],
-      "delta_7d": -2,
+      "delta_7d": -1,
       "delta_30d": null,
-      "velocity": 2.19,
+      "velocity": 2.18,
       "is_new": false
     },
     "CompVis/taming-transformers": {
@@ -974,7 +1014,7 @@
         "tokenizers"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1043,11 +1083,15 @@
         {
           "date": "2026-11-22",
           "stars": 6533
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 6533
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 0,
       "delta_30d": null,
-      "velocity": 3.02,
+      "velocity": 3.01,
       "is_new": false
     },
     "NVlabs/QLIP": {
@@ -1065,7 +1109,7 @@
         "tokenizers"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1134,6 +1178,10 @@
         {
           "date": "2026-11-22",
           "stars": 97
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 97
         }
       ],
       "delta_7d": 0,
@@ -1167,7 +1215,7 @@
         "any-to-any"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1236,11 +1284,15 @@
         {
           "date": "2026-11-22",
           "stars": 3631
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 3631
         }
       ],
       "delta_7d": -2,
       "delta_30d": null,
-      "velocity": 3.08,
+      "velocity": 3.07,
       "is_new": false
     },
     "OpenMOSS/AnyGPT": {
@@ -1266,7 +1318,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1335,6 +1387,10 @@
         {
           "date": "2026-11-22",
           "stars": 889
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 889
         }
       ],
       "delta_7d": 0,
@@ -1346,7 +1402,7 @@
       "full_name": "QwenLM/Qwen3-Omni",
       "url": "https://github.com/QwenLM/Qwen3-Omni",
       "description": "Qwen3-omni is a natively end-to-end, omni-modal LLM developed by the Qwen team at Alibaba Cloud, capable of understanding text, audio, images, and video, as well as generating speech in real time.",
-      "stars": 4119,
+      "stars": 4121,
       "forks": 322,
       "language": "Jupyter Notebook",
       "topics": [],
@@ -1357,7 +1413,7 @@
         "any-to-any"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1426,18 +1482,22 @@
         {
           "date": "2026-11-22",
           "stars": 4119
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 4121
         }
       ],
-      "delta_7d": 10,
+      "delta_7d": 9,
       "delta_30d": null,
-      "velocity": 9.65,
+      "velocity": 9.63,
       "is_new": false
     },
     "QwenLM/Qwen2.5-Omni": {
       "full_name": "QwenLM/Qwen2.5-Omni",
       "url": "https://github.com/QwenLM/Qwen2.5-Omni",
       "description": "Qwen2.5-Omni is an end-to-end multimodal model by Qwen team at Alibaba Cloud, capable of understanding text, audio, vision, video, and performing real-time speech generation.",
-      "stars": 4097,
+      "stars": 4099,
       "forks": 328,
       "language": "Jupyter Notebook",
       "topics": [],
@@ -1448,7 +1508,7 @@
         "omni"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1517,18 +1577,22 @@
         {
           "date": "2026-11-22",
           "stars": 4097
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 4099
         }
       ],
-      "delta_7d": -1,
+      "delta_7d": 1,
       "delta_30d": null,
-      "velocity": 6.72,
+      "velocity": 6.71,
       "is_new": false
     },
     "OpenBMB/MiniCPM-V": {
       "full_name": "OpenBMB/MiniCPM-V",
       "url": "https://github.com/OpenBMB/MiniCPM-V",
       "description": "See, hear, and interact on your local devices.",
-      "stars": 27178,
+      "stars": 27182,
       "forks": 2130,
       "language": "Python",
       "topics": [
@@ -1544,7 +1608,7 @@
         "omni"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1613,11 +1677,15 @@
         {
           "date": "2026-11-22",
           "stars": 27178
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 27182
         }
       ],
       "delta_7d": 27,
       "delta_30d": null,
-      "velocity": 26.44,
+      "velocity": 26.42,
       "is_new": false
     },
     "VITA-MLLM/VITA": {
@@ -1641,7 +1709,7 @@
         "omni"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1710,6 +1778,10 @@
         {
           "date": "2026-11-22",
           "stars": 2539
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 2539
         }
       ],
       "delta_7d": -1,
@@ -1721,7 +1793,7 @@
       "full_name": "OpenGVLab/InternVL",
       "url": "https://github.com/OpenGVLab/InternVL",
       "description": "[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o.  接近GPT-4o表现的开源多模态对话模型",
-      "stars": 10171,
+      "stars": 10172,
       "forks": 793,
       "language": "Python",
       "topics": [
@@ -1745,7 +1817,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1814,19 +1886,23 @@
         {
           "date": "2026-11-22",
           "stars": 10171
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 10172
         }
       ],
-      "delta_7d": 3,
+      "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 9.28,
+      "velocity": 9.27,
       "is_new": false
     },
     "QwenLM/Qwen3-VL": {
       "full_name": "QwenLM/Qwen3-VL",
       "url": "https://github.com/QwenLM/Qwen3-VL",
       "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
-      "stars": 20242,
-      "forks": 1903,
+      "stars": 20245,
+      "forks": 1909,
       "language": "Jupyter Notebook",
       "topics": [],
       "pushed_at": "2026-01-30",
@@ -1836,7 +1912,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1905,19 +1981,23 @@
         {
           "date": "2026-11-22",
           "stars": 20242
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 20245
         }
       ],
-      "delta_7d": 31,
+      "delta_7d": 29,
       "delta_30d": null,
-      "velocity": 24.84,
+      "velocity": 24.81,
       "is_new": false
     },
     "openai/CLIP": {
       "full_name": "openai/CLIP",
       "url": "https://github.com/openai/CLIP",
       "description": "CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image",
-      "stars": 34641,
-      "forks": 4068,
+      "stars": 34647,
+      "forks": 4067,
       "language": "Jupyter Notebook",
       "topics": [
         "deep-learning",
@@ -1930,7 +2010,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-06",
@@ -1999,18 +2079,22 @@
         {
           "date": "2026-11-22",
           "stars": 34641
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 34647
         }
       ],
-      "delta_7d": 30,
+      "delta_7d": 32,
       "delta_30d": null,
-      "velocity": 15.99,
+      "velocity": 15.98,
       "is_new": false
     },
     "jd-opensource/JoyAI-Image": {
       "full_name": "jd-opensource/JoyAI-Image",
       "url": "https://github.com/jd-opensource/JoyAI-Image",
       "description": "JoyAI-Image is the unified multimodal foundation model for image understanding, text-to-image generation, and instruction-guided image editing.",
-      "stars": 2244,
+      "stars": 2245,
       "forks": 175,
       "language": "Python",
       "topics": [],
@@ -2021,7 +2105,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2086,11 +2170,15 @@
         {
           "date": "2026-11-22",
           "stars": 2244
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 2245
         }
       ],
-      "delta_7d": 0,
+      "delta_7d": 1,
       "delta_30d": null,
-      "velocity": 9.51,
+      "velocity": 9.47,
       "is_new": false
     },
     "bytedance/Lance": {
@@ -2115,7 +2203,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2180,18 +2268,22 @@
         {
           "date": "2026-11-22",
           "stars": 1370
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1370
         }
       ],
       "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 7.17,
+      "velocity": 7.14,
       "is_new": false
     },
     "Tencent-Hunyuan/UniRL": {
       "full_name": "Tencent-Hunyuan/UniRL",
       "url": "https://github.com/Tencent-Hunyuan/UniRL",
       "description": "UniRL is a Framework for Unified Multimodal Model Reinforcement Learning",
-      "stars": 1051,
+      "stars": 1052,
       "forks": 117,
       "language": "Python",
       "topics": [
@@ -2207,7 +2299,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2272,11 +2364,15 @@
         {
           "date": "2026-11-22",
           "stars": 1051
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1052
         }
       ],
-      "delta_7d": 5,
+      "delta_7d": 3,
       "delta_30d": null,
-      "velocity": 6.29,
+      "velocity": 6.26,
       "is_new": false
     },
     "EvolvingLMMs-Lab/lmms-engine": {
@@ -2300,7 +2396,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2365,6 +2461,10 @@
         {
           "date": "2026-11-22",
           "stars": 835
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 835
         }
       ],
       "delta_7d": 2,
@@ -2391,7 +2491,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2456,11 +2556,15 @@
         {
           "date": "2026-11-22",
           "stars": 733
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 733
         }
       ],
       "delta_7d": 3,
       "delta_30d": null,
-      "velocity": 5.02,
+      "velocity": 4.99,
       "is_new": false
     },
     "deepgenteam/deepgen": {
@@ -2478,7 +2582,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2543,6 +2647,10 @@
         {
           "date": "2026-11-22",
           "stars": 584
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 584
         }
       ],
       "delta_7d": 0,
@@ -2565,7 +2673,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2630,11 +2738,15 @@
         {
           "date": "2026-11-22",
           "stars": 596
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 596
         }
       ],
-      "delta_7d": 11,
+      "delta_7d": 9,
       "delta_30d": null,
-      "velocity": 2.56,
+      "velocity": 2.55,
       "is_new": false
     },
     "KangLiao929/Puffin": {
@@ -2652,7 +2764,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2717,6 +2829,10 @@
         {
           "date": "2026-11-22",
           "stars": 519
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 519
         }
       ],
       "delta_7d": 1,
@@ -2739,7 +2855,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2804,11 +2920,15 @@
         {
           "date": "2026-11-22",
           "stars": 263
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 263
         }
       ],
       "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 2.31,
+      "velocity": 2.29,
       "is_new": true
     },
     "houyuanchen111/UniVidX": {
@@ -2865,7 +2985,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -2930,11 +3050,15 @@
         {
           "date": "2026-11-22",
           "stars": 200
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 200
         }
       ],
       "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 4.44,
+      "velocity": 4.35,
       "is_new": true
     },
     "ForestsKing/ChatTime": {
@@ -3004,7 +3128,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3069,11 +3193,15 @@
         {
           "date": "2026-11-22",
           "stars": 164
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 164
         }
       ],
-      "delta_7d": 3,
+      "delta_7d": 2,
       "delta_30d": null,
-      "velocity": 2.08,
+      "velocity": 2.05,
       "is_new": true
     },
     "hustvl/OmniMamba": {
@@ -3091,7 +3219,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3155,6 +3283,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 126
+        },
+        {
+          "date": "2026-11-23",
           "stars": 126
         }
       ],
@@ -3178,7 +3310,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3242,6 +3374,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 102
+        },
+        {
+          "date": "2026-11-23",
           "stars": 102
         }
       ],
@@ -3265,7 +3401,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3329,6 +3465,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 80
+        },
+        {
+          "date": "2026-11-23",
           "stars": 80
         }
       ],
@@ -3352,7 +3492,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3417,11 +3557,15 @@
         {
           "date": "2026-11-22",
           "stars": 763
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 763
         }
       ],
       "delta_7d": 0,
       "delta_30d": null,
-      "velocity": 3.57,
+      "velocity": 3.55,
       "is_new": false
     },
     "neverbiasu/ComfyUI-BAGEL": {
@@ -3444,7 +3588,7 @@
         "unified-ug"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3508,6 +3652,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 187
+        },
+        {
+          "date": "2026-11-23",
           "stars": 187
         }
       ],
@@ -3520,18 +3668,18 @@
       "full_name": "IBM/terramind",
       "url": "https://github.com/IBM/terramind",
       "description": "TerraMind is the first any-to-any generative foundation model for Earth Observation, built by IBM and ESA.",
-      "stars": 334,
-      "forks": 46,
+      "stars": 335,
+      "forks": 47,
       "language": "Jupyter Notebook",
       "topics": [],
-      "pushed_at": "2026-11-16",
+      "pushed_at": "2026-11-23",
       "created_at": "2025-04-20",
       "archived": false,
       "categories": [
         "any-to-any"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3596,18 +3744,22 @@
         {
           "date": "2026-11-22",
           "stars": 334
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 335
         }
       ],
-      "delta_7d": 2,
+      "delta_7d": 3,
       "delta_30d": null,
-      "velocity": 0.57,
+      "velocity": 0.58,
       "is_new": false
     },
     "lifinance/sdk": {
       "full_name": "lifinance/sdk",
       "url": "https://github.com/lifinance/sdk",
       "description": "LI.FI - Bridge & DEX aggregation: Any-to-Any Cross-Chain-Swap SDK",
-      "stars": 265,
+      "stars": 266,
       "forks": 112,
       "language": "TypeScript",
       "topics": [
@@ -3636,7 +3788,7 @@
         "any-to-any"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3701,9 +3853,13 @@
         {
           "date": "2026-11-22",
           "stars": 265
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 266
         }
       ],
-      "delta_7d": 0,
+      "delta_7d": 1,
       "delta_30d": null,
       "velocity": 0.15,
       "is_new": false
@@ -3712,7 +3868,7 @@
       "full_name": "Fr0zenCrane/UniCoT",
       "url": "https://github.com/Fr0zenCrane/UniCoT",
       "description": "[ICLR 2026] Uni-CoT: Towards Unified Chain-of-Thought Reasoning Across Text and Vision",
-      "stars": 239,
+      "stars": 240,
       "forks": 7,
       "language": "Python",
       "topics": [
@@ -3738,7 +3894,7 @@
         "any-to-any"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3803,9 +3959,13 @@
         {
           "date": "2026-11-22",
           "stars": 239
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 240
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 2,
       "delta_30d": null,
       "velocity": 0.49,
       "is_new": false
@@ -3815,7 +3975,7 @@
       "url": "https://github.com/mstar-project/mstar",
       "description": "A high-performance, universal serving framework for any-to-any models. ",
       "stars": 117,
-      "forks": 50,
+      "forks": 51,
       "language": "Python",
       "topics": [
         "agentic-infrastructure",
@@ -3839,7 +3999,7 @@
         "any-to-any"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3904,6 +4064,10 @@
         {
           "date": "2026-11-22",
           "stars": 117
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 117
         }
       ],
       "delta_7d": 3,
@@ -3925,14 +4089,14 @@
         "omni",
         "unified"
       ],
-      "pushed_at": "2026-10-19",
+      "pushed_at": "2026-11-22",
       "created_at": "2026-04-16",
       "archived": false,
       "categories": [
         "any-to-any"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -3997,6 +4161,10 @@
         {
           "date": "2026-11-22",
           "stars": 113
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 113
         }
       ],
       "delta_7d": 0,
@@ -4008,8 +4176,8 @@
       "full_name": "modelscope/ms-swift",
       "url": "https://github.com/modelscope/ms-swift",
       "description": "Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3.5, Ovis2.5, GLM5.3, Gemma4, Llava, Phi4, ...) (AAAI 2025).",
-      "stars": 16139,
-      "forks": 1821,
+      "stars": 16147,
+      "forks": 1824,
       "language": "Python",
       "topics": [
         "deepseek",
@@ -4032,14 +4200,14 @@
         "reranker",
         "sft"
       ],
-      "pushed_at": "2026-11-22",
+      "pushed_at": "2026-11-23",
       "created_at": "2023-08-01",
       "archived": false,
       "categories": [
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4104,19 +4272,23 @@
         {
           "date": "2026-11-22",
           "stars": 16139
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 16147
         }
       ],
-      "delta_7d": 35,
+      "delta_7d": 36,
       "delta_30d": null,
-      "velocity": 13.35,
+      "velocity": 13.34,
       "is_new": false
     },
     "vllm-project/vllm-omni": {
       "full_name": "vllm-project/vllm-omni",
       "url": "https://github.com/vllm-project/vllm-omni",
       "description": "A framework for efficient model inference with omni-modality models",
-      "stars": 7895,
-      "forks": 2170,
+      "stars": 7915,
+      "forks": 2180,
       "language": "Python",
       "topics": [
         "audio-generation",
@@ -4130,14 +4302,14 @@
         "video-generation",
         "world-model"
       ],
-      "pushed_at": "2026-11-22",
+      "pushed_at": "2026-11-23",
       "created_at": "2025-09-11",
       "archived": false,
       "categories": [
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4202,6 +4374,10 @@
         {
           "date": "2026-11-22",
           "stars": 7895
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 7915
         }
       ],
       "delta_7d": 131,
@@ -4213,8 +4389,8 @@
       "full_name": "verl-project/verl-omni",
       "url": "https://github.com/verl-project/verl-omni",
       "description": "Multimodal RL training framework for diffusion & omni models",
-      "stars": 1566,
-      "forks": 339,
+      "stars": 1578,
+      "forks": 344,
       "language": "Python",
       "topics": [
         "diffusion-models",
@@ -4234,7 +4410,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4299,19 +4475,23 @@
         {
           "date": "2026-11-22",
           "stars": 1566
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1578
         }
       ],
-      "delta_7d": 50,
+      "delta_7d": 54,
       "delta_30d": null,
-      "velocity": 7.28,
+      "velocity": 7.31,
       "is_new": false
     },
     "redai-studio/Relax": {
       "full_name": "redai-studio/Relax",
       "url": "https://github.com/redai-studio/Relax",
       "description": "An Asynchronous Reinforcement Learning Engine for Omni-Modal Post-Training at Scale",
-      "stars": 678,
-      "forks": 209,
+      "stars": 679,
+      "forks": 210,
       "language": "Python",
       "topics": [
         "agentic-rl",
@@ -4324,14 +4504,14 @@
         "reinforcement-learning",
         "rlhf"
       ],
-      "pushed_at": "2026-11-22",
+      "pushed_at": "2026-11-23",
       "created_at": "2026-04-13",
       "archived": false,
       "categories": [
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4396,11 +4576,15 @@
         {
           "date": "2026-11-22",
           "stars": 678
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 679
         }
       ],
-      "delta_7d": 2,
+      "delta_7d": 3,
       "delta_30d": null,
-      "velocity": 3.04,
+      "velocity": 3.03,
       "is_new": false
     },
     "JIA-Lab-research/MGM-Omni": {
@@ -4424,7 +4608,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4489,6 +4673,10 @@
         {
           "date": "2026-11-22",
           "stars": 202
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 202
         }
       ],
       "delta_7d": 0,
@@ -4501,7 +4689,7 @@
       "url": "https://github.com/modelscope/mcore-bridge",
       "description": "MCore-Bridge: Providing Megatron-Core model definitions for state-of-the-art large models and making Megatron training as simple as Transformers — with support for 300+ large language models (Qwen3-Next, GLM-5.3, Deepseek-V4, MiniMax-2.7, ...) and 200+ multimodal large models (Qwen3.8, Qwen3-Omni, Gemma4, ...).",
       "stars": 107,
-      "forks": 56,
+      "forks": 57,
       "language": "Python",
       "topics": [
         "deepseek-r1",
@@ -4528,7 +4716,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4593,11 +4781,15 @@
         {
           "date": "2026-11-22",
           "stars": 107
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 107
         }
       ],
       "delta_7d": 0,
       "delta_30d": null,
-      "velocity": 0.43,
+      "velocity": 0.42,
       "is_new": false
     },
     "fyzhang1/FocusGUI": {
@@ -4620,7 +4812,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4685,11 +4877,15 @@
         {
           "date": "2026-11-22",
           "stars": 96
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 96
         }
       ],
       "delta_7d": 1,
       "delta_30d": null,
-      "velocity": 1.09,
+      "velocity": 1.08,
       "is_new": true
     },
     "HarryHsing/OmniAgent": {
@@ -4724,7 +4920,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4789,6 +4985,10 @@
         {
           "date": "2026-11-22",
           "stars": 90
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 90
         }
       ],
       "delta_7d": 0,
@@ -4811,7 +5011,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4876,6 +5076,10 @@
         {
           "date": "2026-11-22",
           "stars": 80
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 80
         }
       ],
       "delta_7d": 0,
@@ -4887,8 +5091,8 @@
       "full_name": "OpenBMB/MiniCPM-OCR",
       "url": "https://github.com/OpenBMB/MiniCPM-OCR",
       "description": "Fast, accurate OCR with correctness assessment.",
-      "stars": 1010,
-      "forks": 76,
+      "stars": 1021,
+      "forks": 78,
       "language": "TypeScript",
       "topics": [
         "image2text",
@@ -4902,7 +5106,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -4967,11 +5171,15 @@
         {
           "date": "2026-11-22",
           "stars": 1010
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1021
         }
       ],
-      "delta_7d": 73,
+      "delta_7d": 77,
       "delta_30d": null,
-      "velocity": 38.85,
+      "velocity": 37.81,
       "is_new": true
     },
     "OpenSQZ/MiniCPM-V-CookBook": {
@@ -4993,7 +5201,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5058,6 +5266,10 @@
         {
           "date": "2026-11-22",
           "stars": 674
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 674
         }
       ],
       "delta_7d": 3,
@@ -5069,7 +5281,7 @@
       "full_name": "lucasjinreal/Crane",
       "url": "https://github.com/lucasjinreal/Crane",
       "description": "A Pure Rust based LLM, VLM, VLA, TTS, OCR Inference Engine, powering by Candle & Rust. Alternate to your llama.cpp but much more simpler and cleaner..",
-      "stars": 534,
+      "stars": 535,
       "forks": 62,
       "language": "Rust",
       "topics": [
@@ -5098,7 +5310,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5163,9 +5375,13 @@
         {
           "date": "2026-11-22",
           "stars": 534
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 535
         }
       ],
-      "delta_7d": 6,
+      "delta_7d": 5,
       "delta_30d": null,
       "velocity": 0.87,
       "is_new": false
@@ -5174,7 +5390,7 @@
       "full_name": "OpenBMB/MiniCPM-o-Demo",
       "url": "https://github.com/OpenBMB/MiniCPM-o-Demo",
       "description": "Official PyTorch+CUDA Full-functional Web Demo for MiniCPM-o 4.5",
-      "stars": 435,
+      "stars": 437,
       "forks": 85,
       "language": "Python",
       "topics": [],
@@ -5185,7 +5401,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5250,19 +5466,23 @@
         {
           "date": "2026-11-22",
           "stars": 435
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 437
         }
       ],
-      "delta_7d": 6,
+      "delta_7d": 5,
       "delta_30d": null,
-      "velocity": 1.55,
+      "velocity": 1.56,
       "is_new": false
     },
     "jingyaogong/minimind-o": {
       "full_name": "jingyaogong/minimind-o",
       "url": "https://github.com/jingyaogong/minimind-o",
       "description": "🎙️ A 0.1B Omni model trained from scratch, capable of listening, speaking, and seeing!",
-      "stars": 2762,
-      "forks": 349,
+      "stars": 2767,
+      "forks": 352,
       "language": "Python",
       "topics": [
         "artificial-intelligence",
@@ -5276,7 +5496,7 @@
         "omni"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5341,19 +5561,23 @@
         {
           "date": "2026-11-22",
           "stars": 2762
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 2767
         }
       ],
-      "delta_7d": 38,
+      "delta_7d": 41,
       "delta_30d": null,
-      "velocity": 13.47,
+      "velocity": 13.43,
       "is_new": false
     },
     "NVlabs/Eagle": {
       "full_name": "NVlabs/Eagle",
       "url": "https://github.com/NVlabs/Eagle",
       "description": "Eagle: Frontier Vision-Language Models with Data-Centric Strategies",
-      "stars": 3861,
-      "forks": 375,
+      "stars": 3863,
+      "forks": 374,
       "language": "Python",
       "topics": [
         "demo",
@@ -5377,7 +5601,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5442,18 +5666,22 @@
         {
           "date": "2026-11-22",
           "stars": 3861
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 3863
         }
       ],
-      "delta_7d": 8,
+      "delta_7d": 6,
       "delta_30d": null,
-      "velocity": 4.4,
+      "velocity": 4.39,
       "is_new": false
     },
     "jingyi0000/VLM_survey": {
       "full_name": "jingyi0000/VLM_survey",
       "url": "https://github.com/jingyi0000/VLM_survey",
       "description": "Collection of AWESOME vision-language models for vision tasks",
-      "stars": 3132,
+      "stars": 3131,
       "forks": 238,
       "language": "",
       "topics": [
@@ -5473,7 +5701,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5538,9 +5766,13 @@
         {
           "date": "2026-11-22",
           "stars": 3132
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 3131
         }
       ],
-      "delta_7d": -1,
+      "delta_7d": -3,
       "delta_30d": null,
       "velocity": 2.35,
       "is_new": false
@@ -5560,7 +5792,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5625,9 +5857,13 @@
         {
           "date": "2026-11-22",
           "stars": 1673
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1673
         }
       ],
-      "delta_7d": 2,
+      "delta_7d": 0,
       "delta_30d": null,
       "velocity": 2.6,
       "is_new": false
@@ -5637,7 +5873,7 @@
       "url": "https://github.com/emcf/thepipe",
       "description": "Get clean data from tricky documents, powered by vision-language models ⚡",
       "stars": 1529,
-      "forks": 100,
+      "forks": 99,
       "language": "Python",
       "topics": [
         "document-ai",
@@ -5660,7 +5896,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5725,6 +5961,10 @@
         {
           "date": "2026-11-22",
           "stars": 1529
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1529
         }
       ],
       "delta_7d": -1,
@@ -5768,7 +6008,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5833,6 +6073,10 @@
         {
           "date": "2026-11-22",
           "stars": 1368
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 1368
         }
       ],
       "delta_7d": 0,
@@ -5864,7 +6108,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -5929,11 +6173,15 @@
         {
           "date": "2026-11-22",
           "stars": 931
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 931
         }
       ],
-      "delta_7d": 5,
+      "delta_7d": 4,
       "delta_30d": null,
-      "velocity": 2.32,
+      "velocity": 2.31,
       "is_new": false
     },
     "zhengli97/Awesome-Prompt-Adapter-Learning-for-VLMs-CLIP": {
@@ -5959,7 +6207,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6024,6 +6272,10 @@
         {
           "date": "2026-11-22",
           "stars": 802
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 802
         }
       ],
       "delta_7d": -1,
@@ -6035,7 +6287,7 @@
       "full_name": "zli12321/Vision-Language-Models-Overview",
       "url": "https://github.com/zli12321/Vision-Language-Models-Overview",
       "description": "A most Frontend Collection and survey of vision-language model papers, and models GitHub repository. Continuous updates.",
-      "stars": 733,
+      "stars": 734,
       "forks": 47,
       "language": "HTML",
       "topics": [
@@ -6064,7 +6316,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6129,9 +6381,13 @@
         {
           "date": "2026-11-22",
           "stars": 733
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 734
         }
       ],
-      "delta_7d": 0,
+      "delta_7d": 1,
       "delta_30d": null,
       "velocity": 1.01,
       "is_new": false
@@ -6140,7 +6396,7 @@
       "full_name": "gokayfem/ComfyUI_VLM_nodes",
       "url": "https://github.com/gokayfem/ComfyUI_VLM_nodes",
       "description": "ComfyUI nodes for vision-language models: Qwen3-VL, Moondream 3, Florence-2, SmolVLM2, InternVL, Gemma 3, MiniCPM-V. Plus open-vocabulary detection, SAM2/SAM3 segmentation, video temporal reasoning, GGUF via llama.cpp, and hosted LLM/VLM APIs.",
-      "stars": 592,
+      "stars": 593,
       "forks": 62,
       "language": "Python",
       "topics": [
@@ -6172,7 +6428,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6237,9 +6493,13 @@
         {
           "date": "2026-11-22",
           "stars": 592
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 593
         }
       ],
-      "delta_7d": -1,
+      "delta_7d": 0,
       "delta_30d": null,
       "velocity": 0.57,
       "is_new": false
@@ -6263,7 +6523,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6327,6 +6587,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 559
+        },
+        {
+          "date": "2026-11-23",
           "stars": 559
         }
       ],
@@ -6359,7 +6623,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6424,6 +6688,10 @@
         {
           "date": "2026-11-22",
           "stars": 475
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 475
         }
       ],
       "delta_7d": 0,
@@ -6446,7 +6714,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6511,9 +6779,13 @@
         {
           "date": "2026-11-22",
           "stars": 456
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 456
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 0,
       "delta_30d": null,
       "velocity": 0.84,
       "is_new": false
@@ -6522,7 +6794,7 @@
       "full_name": "jamjamjon/usls",
       "url": "https://github.com/jamjamjon/usls",
       "description": "A Rust library integrated with ONNXRuntime, providing a collection of Computer Vison and Vision-Language models such as YOLO, FastVLM, and more.",
-      "stars": 448,
+      "stars": 449,
       "forks": 46,
       "language": "Rust",
       "topics": [
@@ -6552,7 +6824,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6617,9 +6889,13 @@
         {
           "date": "2026-11-22",
           "stars": 448
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 449
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 2,
       "delta_30d": null,
       "velocity": 0.46,
       "is_new": false
@@ -6649,7 +6925,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6714,6 +6990,10 @@
         {
           "date": "2026-11-22",
           "stars": 389
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 389
         }
       ],
       "delta_7d": 2,
@@ -6736,7 +7016,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6801,6 +7081,10 @@
         {
           "date": "2026-11-22",
           "stars": 371
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 371
         }
       ],
       "delta_7d": 1,
@@ -6823,7 +7107,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6888,11 +7172,15 @@
         {
           "date": "2026-11-22",
           "stars": 249
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 249
         }
       ],
       "delta_7d": 4,
       "delta_30d": null,
-      "velocity": 1.2,
+      "velocity": 1.19,
       "is_new": false
     },
     "mala-lab/Awesome-Anomaly-Detection-Foundation-Models": {
@@ -6918,7 +7206,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -6982,6 +7270,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 227
+        },
+        {
+          "date": "2026-11-23",
           "stars": 227
         }
       ],
@@ -7019,7 +7311,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -7083,6 +7375,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 225
+        },
+        {
+          "date": "2026-11-23",
           "stars": 225
         }
       ],
@@ -7106,7 +7402,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -7170,6 +7466,10 @@
         },
         {
           "date": "2026-11-22",
+          "stars": 225
+        },
+        {
+          "date": "2026-11-23",
           "stars": 225
         }
       ],
@@ -7205,7 +7505,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -7270,6 +7570,10 @@
         {
           "date": "2026-11-22",
           "stars": 2696
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 2696
         }
       ],
       "delta_7d": 0,
@@ -7281,7 +7585,7 @@
       "full_name": "1038lab/ComfyUI-QwenVL",
       "url": "https://github.com/1038lab/ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 930,
+      "stars": 931,
       "forks": 153,
       "language": "Python",
       "topics": [
@@ -7297,7 +7601,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -7362,9 +7666,13 @@
         {
           "date": "2026-11-22",
           "stars": 930
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 931
         }
       ],
-      "delta_7d": 1,
+      "delta_7d": 2,
       "delta_30d": null,
       "velocity": 1.54,
       "is_new": false
@@ -7389,14 +7697,14 @@
         "qwen3-vl",
         "reinforcement-learning"
       ],
-      "pushed_at": "2026-11-20",
+      "pushed_at": "2026-11-23",
       "created_at": "2023-07-11",
       "archived": false,
       "categories": [
         "pretraining"
       ],
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-07",
@@ -7461,11 +7769,15 @@
         {
           "date": "2026-11-22",
           "stars": 5224
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 5224
         }
       ],
       "delta_7d": 1,
       "delta_30d": null,
-      "velocity": 4.25,
+      "velocity": 4.24,
       "is_new": false
     },
     "InternRobotics/InternVLA-A-series": {
@@ -7654,7 +7966,7 @@
       "full_name": "ydyhello/Awesome-VLM-Streaming-Video",
       "url": "https://github.com/ydyhello/Awesome-VLM-Streaming-Video",
       "description": "📚 A curated collection of papers and open-source code repositories dedicated to the application of Vision-Language Models (VLMs) for streaming video.",
-      "stars": 220,
+      "stars": 221,
       "forks": 8,
       "language": "",
       "topics": [
@@ -7670,7 +7982,7 @@
         "pretraining"
       ],
       "first_seen": "2026-11-17",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "history": [
         {
           "date": "2026-11-17",
@@ -7695,11 +8007,77 @@
         {
           "date": "2026-11-22",
           "stars": 220
+        },
+        {
+          "date": "2026-11-23",
+          "stars": 221
         }
       ],
       "delta_7d": null,
       "delta_30d": null,
       "velocity": 0.91,
+      "is_new": false
+    },
+    "Sage-PhysicalAI/InternVLA-A-series": {
+      "full_name": "Sage-PhysicalAI/InternVLA-A-series",
+      "url": "https://github.com/Sage-PhysicalAI/InternVLA-A-series",
+      "description": "InternVLA-A1: Unifying Understanding, Generation, and Action for Robotic Manipulation​",
+      "stars": 574,
+      "forks": 45,
+      "language": "Python",
+      "topics": [
+        "manipulation",
+        "robotics",
+        "vision-language-action-model"
+      ],
+      "pushed_at": "2026-09-14",
+      "created_at": "2025-09-18",
+      "archived": false,
+      "categories": [
+        "pretraining"
+      ],
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "stars": 574
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 1.33,
+      "is_new": false
+    },
+    "Sage-PhysicalAI/InternVLA-M1": {
+      "full_name": "Sage-PhysicalAI/InternVLA-M1",
+      "url": "https://github.com/Sage-PhysicalAI/InternVLA-M1",
+      "description": "InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy",
+      "stars": 438,
+      "forks": 26,
+      "language": "Python",
+      "topics": [
+        "robotics",
+        "vision-language-action-model",
+        "vision-language-model"
+      ],
+      "pushed_at": "2026-10-09",
+      "created_at": "2025-09-16",
+      "archived": false,
+      "categories": [
+        "pretraining"
+      ],
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "stars": 438
+        }
+      ],
+      "delta_7d": null,
+      "delta_30d": null,
+      "velocity": 1.01,
       "is_new": false
     }
   }

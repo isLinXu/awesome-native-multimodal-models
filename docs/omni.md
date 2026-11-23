@@ -41,6 +41,8 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-20 | **ChildAI-Gov: An Evidence-Linked AI System for Assessing EdTech Policies Against Children's Digital Rights** | Naveen Sigalapalli, Huizhi Liang et al. | ChildAI-Gov, an explainable AI system for assessing whether education-technology (EdTech) polic… | [📄 2611.27799](https://arxiv.org/abs/2611.27799) `cs.AI` |
+| 2026-11-19 | **Duopra: From Full-Duplex Conversation to Full-Duplex Agency** | Chiyu Chen, Pengzhou Cheng et al. | Full-duplex interaction models exhibit strong conversational agency, enabling natural… | [📄 2611.25773](https://arxiv.org/abs/2611.25773) [💻](https://github.com/cyChen2003/duopra) 🤗 |
 | 2026-11-19 | **WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding** | Changli Tang, Jie Yang et al. | Video understanding, particularly with accompanying audio… | [📄 2611.26409](https://arxiv.org/abs/2611.26409) `cs.CV` [💻](https://github.com/Tencent/WeMM-Video) |
 | 2026-11-18 | **Can Omni-modal LLMs Understand Spoken Intentions?** | Zijie Xin, Tianyi Wang et al. | Omni-modal large language models (omni-modal LLMs) can respond to spoken requests directly thro… | [📄 2611.24706](https://arxiv.org/abs/2611.24706) `cs.CV` |
 | 2026-11-17 | **Understanding Cross-Modal Inconsistency through Representation Subspaces in Omni Models** | Seonghyeon Cho, Chanjun Park | Omni Models process audio, vision, and text within a unified language backbone… | [📄 2611.22619](https://arxiv.org/abs/2611.22619) `cs.CL` |
