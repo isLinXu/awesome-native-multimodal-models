@@ -41,6 +41,9 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-23 | **UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction** | Ye Pan, Chenfei Liao et al. | Effective real-time, full-duplex multimodal interaction requires systems to understand not only… | [📄 2611.30157](https://arxiv.org/abs/2611.30157) `cs.CV` |
+| 2026-11-22 | **MusicListenBench: Can Audio LLMs Hear the Difference Yet?** | Abhinaba Roy, Ambuj Mehrish et al. | Audio large language models (LLMs) are typically evaluated on song genre, mood… | [📄 2611.29375](https://arxiv.org/abs/2611.29375) `cs.SD` |
+| 2026-11-22 | **How Reliable is AI-Generated Audio Description? A Multilingual Expert Evaluation** | Annette Rios, Lukas Fischer et al. | Audio description (AD) makes visual media, such as video… | [📄 2611.29658](https://arxiv.org/abs/2611.29658) `cs.CL` |
 | 2026-11-20 | **ChildAI-Gov: An Evidence-Linked AI System for Assessing EdTech Policies Against Children's Digital Rights** | Naveen Sigalapalli, Huizhi Liang et al. | ChildAI-Gov, an explainable AI system for assessing whether education-technology (EdTech) polic… | [📄 2611.27799](https://arxiv.org/abs/2611.27799) `cs.AI` |
 | 2026-11-19 | **Duopra: From Full-Duplex Conversation to Full-Duplex Agency** | Chiyu Chen, Pengzhou Cheng et al. | Full-duplex interaction models exhibit strong conversational agency, enabling natural… | [📄 2611.25773](https://arxiv.org/abs/2611.25773) [💻](https://github.com/cyChen2003/duopra) 🤗 |
 | 2026-11-19 | **WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding** | Changli Tang, Jie Yang et al. | Video understanding, particularly with accompanying audio… | [📄 2611.26409](https://arxiv.org/abs/2611.26409) `cs.CV` [💻](https://github.com/Tencent/WeMM-Video) |

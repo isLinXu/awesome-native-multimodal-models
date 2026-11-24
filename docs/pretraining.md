@@ -48,6 +48,9 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-23 | **Token Pruning Needs a Protected Sink Token: Coherent Spatial Aggregation in Vision Transformers** | Julian Wyatt, James Willoughby et al. | Vision Transformers (ViTs) are a predominant architecture for computer vision… | [📄 2611.31025](https://arxiv.org/abs/2611.31025) `cs.CV` |
+| 2026-11-23 | **Where Compositionality Hides: Shared-Content Interference in Vision-Language Retrieval** | Chimata Anudeep, Harsh Vardhan Poddar | Paired compositional benchmarks such as Winoground ask each image to prefer its matching captio… | [📄 2611.30538](https://arxiv.org/abs/2611.30538) `cs.CV` |
+| 2026-11-23 | **CLIP-FMoE: Scalable CLIP via Fused Mixture-of-Experts with Enforced Specialization** | Luong Tran, Lan-Cuong Nguyen et al. | Mixture-of-Experts (MoE) architectures have emerged as a promising approach for scaling deep le… | [📄 2611.30233](https://arxiv.org/abs/2611.30233) `cs.AI` |
 | 2026-11-20 | **What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining** | Zhixuan Ge, Anqi Li et al. | Recent scaling studies ask whether vision-language models still need a visual encoder by compar… | [📄 2611.26917](https://arxiv.org/abs/2611.26917) `cs.CV` |
 | 2026-11-18 | **Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction Data** | Liu He, Yizhi Song et al. | Multimodal Large Language Models (MLLMs) struggle with accurately capturing camera-object relat… | [📄 2611.24795](https://arxiv.org/abs/2611.24795) `cs.CV` |
 | 2026-11-16 | **DEFTS: Data-Efficient, Training-Free Few-Shot Learning for CLIP in the Text Subspace** | Yijin Zeng | Contrastive Language-Image Pre-training (CLIP) achieves impressive zero-shot image classificati… | [📄 2611.21993](https://arxiv.org/abs/2611.21993) `cs.CV` |

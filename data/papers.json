@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T09:23:03Z",
+  "updated": "2026-11-24T11:18:27Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24462,6 +24462,171 @@
       "score": 7.0,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-20"
+    },
+    "2611.29395": {
+      "title": "BQDNA: Multi-Head Binary Spherical Quantization for Genomic Sequence Modeling",
+      "published": "2026-11-22",
+      "url": "https://arxiv.org/abs/2611.29395",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 9.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-22"
+    },
+    "2611.29311": {
+      "title": "PrimiTok: Learning to Diversify and Allocate Primitives for Visual Tokenization",
+      "published": "2026-11-22",
+      "url": "https://arxiv.org/abs/2611.29311",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 4.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-22"
+    },
+    "2611.28775": {
+      "title": "AdapToC: A Unified Framework for Multi-Task Visual Token Communication",
+      "published": "2026-11-21",
+      "url": "https://arxiv.org/abs/2611.28775",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-21"
+    },
+    "2611.28078": {
+      "title": "Adversarial Attacks Expose Path-Dependent Failures in Discrete Medical Image Tokenizers",
+      "published": "2026-11-15",
+      "url": "https://arxiv.org/abs/2611.28078",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 7.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-15"
+    },
+    "2611.30909": {
+      "title": "Replay Before You Reply: Second-Look Prompting for Unified Multimodal Encoding",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30909",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.30069": {
+      "title": "Pixel as the Common Language: Unified Multimodal Embedding via Visual Rendering",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30069",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 6.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.30617": {
+      "title": "Auxiliary Clues Aware's Geometry Problem Solving",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30617",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.31237": {
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31237",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.31068": {
+      "title": "UMAMI: A Multimodal Benchmark Dataset for Evidence-Grounded Dietary Decisions",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31068",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.30157": {
+      "title": "UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30157",
+      "categories": [
+        "omni"
+      ],
+      "score": 6.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.29375": {
+      "title": "MusicListenBench: Can Audio LLMs Hear the Difference Yet?",
+      "published": "2026-11-22",
+      "url": "https://arxiv.org/abs/2611.29375",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.SD",
+      "first_seen": "2026-11-22"
+    },
+    "2611.29658": {
+      "title": "How Reliable is AI-Generated Audio Description? A Multilingual Expert Evaluation",
+      "published": "2026-11-22",
+      "url": "https://arxiv.org/abs/2611.29658",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CL",
+      "first_seen": "2026-11-22"
+    },
+    "2611.31025": {
+      "title": "Token Pruning Needs a Protected Sink Token: Coherent Spatial Aggregation in Vision Transformers",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31025",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.30538": {
+      "title": "Where Compositionality Hides: Shared-Content Interference in Vision-Language Retrieval",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30538",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-23"
+    },
+    "2611.30233": {
+      "title": "CLIP-FMoE: Scalable CLIP via Fused Mixture-of-Experts with Enforced Specialization",
+      "published": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30233",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.AI",
+      "first_seen": "2026-11-23"
     }
   }
 }
