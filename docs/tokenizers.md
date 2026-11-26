@@ -53,6 +53,8 @@ Native multimodal 的定义里有一条是 **unified tokenization**。如果图�
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-25 | **DeltaRAE: Derivative Tokenization for Long Video Generation** | Mingzhuo Yu, Shengcao Cao et al. | Latent video generators are trained on clips of a few seconds… | [📄 2611.33886](https://arxiv.org/abs/2611.33886) `cs.CV` |
+| 2026-11-25 | **HoloBrain-0.5 Technical Report** | Xuewu Lin, Jiahao Wang et al. | HoloBrain-0.5, a family of vision-language-action (VLA) models for manipulation across robot em… | [📄 2611.34449](https://arxiv.org/abs/2611.34449) `cs.RO` |
 | 2026-11-22 | **BQDNA: Multi-Head Binary Spherical Quantization for Genomic Sequence Modeling** | Xudong Wang, Siwei Cheng et al. | Decoding biological information from long, repetitive DNA remains challenging… | [📄 2611.29395](https://arxiv.org/abs/2611.29395) `cs.LG` |
 | 2026-11-22 | **PrimiTok: Learning to Diversify and Allocate Primitives for Visual Tokenization** | Yizhu Chen, Chen Ju et al. | Unifying visual understanding and generation requires representations that preserve both semant… | [📄 2611.29311](https://arxiv.org/abs/2611.29311) `cs.CV` |
 | 2026-11-21 | **AdapToC: A Unified Framework for Multi-Task Visual Token Communication** | Zhicheng Liu, Chenliang Wu et al. | Pretrained discrete visual tokenizers supply compact latents for synthesis, recognition… | [📄 2611.28775](https://arxiv.org/abs/2611.28775) `cs.CV` |

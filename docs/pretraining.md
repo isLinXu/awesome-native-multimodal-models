@@ -48,6 +48,7 @@ LLaVA 一类模块化 MLLM **不是** native，但它们是对照基线和数据
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-25 | **Carrying Feature Ablations Across Sparse Autoencoder Seeds** | Karl Li | A vision encoder turns an image into one vector per patch, refined layer by layer… | [📄 2611.34637](https://arxiv.org/abs/2611.34637) `cs.CV` |
 | 2026-11-24 | **VenusOCR2.0: Towards Efficient and Effective Document Parsing** | Lei Li, Zheng Wei et al. | VenusOCR2.0, a compact 1B-parameter vision-language recognizer designed for both high-accuracy… | [📄 2611.32617](https://arxiv.org/abs/2611.32617) `cs.CV` [💻](https://github.com/flow3rdown/VenusOCR) |
 | 2026-11-23 | **Token Pruning Needs a Protected Sink Token: Coherent Spatial Aggregation in Vision Transformers** | Julian Wyatt, James Willoughby et al. | Vision Transformers (ViTs) are a predominant architecture for computer vision… | [📄 2611.31025](https://arxiv.org/abs/2611.31025) `cs.CV` |
 | 2026-11-23 | **Where Compositionality Hides: Shared-Content Interference in Vision-Language Retrieval** | Chimata Anudeep, Harsh Vardhan Poddar | Paired compositional benchmarks such as Winoground ask each image to prefer its matching captio… | [📄 2611.30538](https://arxiv.org/abs/2611.30538) `cs.CV` |

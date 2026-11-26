@@ -57,6 +57,8 @@ AR + Diffusion   Transfusion / Show-o / BAGEL / Show-o2
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-25 | **Can image generation help visual reasoning? An empirical study** | Xueyang Yu, Yifan Jing et al. | Language models think in words; then multimodal models might think in images… | [📄 2611.34935](https://arxiv.org/abs/2611.34935) `cs.LG` |
+| 2026-11-25 | **ScanAR: Parallel Row-Scan Decoding for Efficient Image Generation in Unified Autoregressive Models** | Jingen Qu, Xi Chen et al. | Unified multimodal autoregressive (AR) models represent text and images in one token sequence a… | [📄 2611.33761](https://arxiv.org/abs/2611.33761) `cs.CV` |
 | 2026-11-23 | **Replay Before You Reply: Second-Look Prompting for Unified Multimodal Encoding** | Yicheng Zhang, Xun Zhang et al. | Solving multimodal tasks requires Vision-Language Models (VLMs) to form a unified understanding… | [📄 2611.30909](https://arxiv.org/abs/2611.30909) `cs.CV` |
 | 2026-11-23 | **Pixel as the Common Language: Unified Multimodal Embedding via Visual Rendering** | Xu Yuan, Pangjing Wu et al. | Multimodal embedding models map heterogeneous inputs into a shared representation space… | [📄 2611.30069](https://arxiv.org/abs/2611.30069) `cs.CV` |
 | 2026-11-23 | **Auxiliary Clues Aware's Geometry Problem Solving** | Qigong Lei, Qingsong Wang et al. | Geometry Problem Solving (GPS) serves as a rigorous test of the complex reasoning capabilities… | [📄 2611.30617](https://arxiv.org/abs/2611.30617) `cs.CV` |

@@ -41,6 +41,8 @@
 <!-- table:start papers -->
 | 日期 | 论文 | 作者 | 核心贡献 | 链接 |
 | :-- | :-- | :-- | :-- | :-- |
+| 2026-11-25 | **AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos** | Yuchen Zhou, Hongsheng Wu et al. | Embodied agents operating around people must not only recognize social cues… | [📄 2611.34347](https://arxiv.org/abs/2611.34347) `cs.CV` [💻](https://github.com/AIRIS-bench/AIRIS) |
+| 2026-11-25 | **Counting Beyond Frames: Codec Motion Tells Frozen Diffusion VLMs How Many** | Zhuoqin Li, Jiayu Ding et al. | Counting how many times something happens is among the simplest questions about a video and amo… | [📄 2611.34657](https://arxiv.org/abs/2611.34657) `cs.CV` |
 | 2026-11-24 | **Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall** | Yuxuan Chen | Qwen3-Omni speaks through a Talker predicting 16 codebooks of a 12.5 Hz audio codec… | [📄 2611.32286](https://arxiv.org/abs/2611.32286) `cs.SD` |
 | 2026-11-24 | **Open-OmniCoach: Evidence-Enhanced Trajectory Learning for Omni Video Agents** | Weisong Liu, Xiangtai Li et al. | Training capable omni video agents requires more than diverse question-answer pairs: agents mus… | [📄 2611.31891](https://arxiv.org/abs/2611.31891) `cs.CV` |
 | 2026-11-23 | **UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction** | Ye Pan, Chenfei Liao et al. | Effective real-time, full-duplex multimodal interaction requires systems to understand not only… | [📄 2611.30157](https://arxiv.org/abs/2611.30157) `cs.CV` |

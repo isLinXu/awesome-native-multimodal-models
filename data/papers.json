@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T10:02:49Z",
+  "updated": "2026-11-26T09:46:47Z",
   "papers": {
     "2103.00020": {
       "title": "CLIP",
@@ -24671,6 +24671,83 @@
       "score": 3.5,
       "primary_category": "cs.CV",
       "first_seen": "2026-11-24"
+    },
+    "2611.33886": {
+      "title": "DeltaRAE: Derivative Tokenization for Long Video Generation",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.33886",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-25"
+    },
+    "2611.34449": {
+      "title": "HoloBrain-0.5 Technical Report",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34449",
+      "categories": [
+        "tokenizers"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.RO",
+      "first_seen": "2026-11-25"
+    },
+    "2611.34935": {
+      "title": "Can image generation help visual reasoning? An empirical study",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34935",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 7.0,
+      "primary_category": "cs.LG",
+      "first_seen": "2026-11-25"
+    },
+    "2611.33761": {
+      "title": "ScanAR: Parallel Row-Scan Decoding for Efficient Image Generation in Unified Autoregressive Models",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.33761",
+      "categories": [
+        "unified-ug"
+      ],
+      "score": 5.5,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-25"
+    },
+    "2611.34347": {
+      "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34347",
+      "categories": [
+        "omni"
+      ],
+      "score": 4.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-25"
+    },
+    "2611.34657": {
+      "title": "Counting Beyond Frames: Codec Motion Tells Frozen Diffusion VLMs How Many",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34657",
+      "categories": [
+        "omni"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-25"
+    },
+    "2611.34637": {
+      "title": "Carrying Feature Ablations Across Sparse Autoencoder Seeds",
+      "published": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34637",
+      "categories": [
+        "pretraining"
+      ],
+      "score": 3.0,
+      "primary_category": "cs.CV",
+      "first_seen": "2026-11-25"
     }
   }
 }
