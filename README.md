@@ -21,9 +21,9 @@
 
 | 收录论文 | 近 7 天新论文 | 跟踪仓库 | 累计 star |
 | --: | --: | --: | --: |
-| <!--STATS:papers-->2,221<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+27<!--/STATS:papers_new--> | <!--STATS:repos-->86<!--/STATS:repos--> 个 | <!--STATS:stars-->234,583<!--/STATS:stars--> |
+| <!--STATS:papers-->2,221<!--/STATS:papers--> 篇 | <!--STATS:papers_new-->+25<!--/STATS:papers_new--> | <!--STATS:repos-->86<!--/STATS:repos--> 个 | <!--STATS:stars-->234,663<!--/STATS:stars--> |
 
-> 最后自动更新：<!--STATS:updated-->2026-11-27<!--/STATS:updated-->
+> 最后自动更新：<!--STATS:updated-->2026-11-28<!--/STATS:updated-->
 
 🔗 **相关仓库：**
 [Awesome-Unified-Multimodal-Models](https://github.com/AIDC-AI/Awesome-Unified-Multimodal-Models) ·

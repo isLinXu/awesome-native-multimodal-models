@@ -7,50 +7,50 @@
 <text x="24" y="79" font-size="12" fill="#E6EDF3">Tencent/WePocketModel</text>
 <rect x="264" y="68" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
 <rect x="264" y="68" width="806.0" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="79" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+198</text>
+<text x="1176" y="79" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+202</text>
 <text x="24" y="109" font-size="12" fill="#E6EDF3">vllm-project/vllm-omni</text>
 <rect x="264" y="98" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="98" width="504.8" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="109" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+124</text>
-<text x="24" y="139" font-size="12" fill="#E6EDF3">OpenBMB/MiniCPM-OCR</text>
+<rect x="264" y="98" width="474.8" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="109" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+119</text>
+<text x="24" y="139" font-size="12" fill="#E6EDF3">modelscope/ms-swift</text>
 <rect x="264" y="128" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="128" width="252.4" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="139" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+62</text>
+<rect x="264" y="128" width="207.5" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="139" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+52</text>
 <text x="24" y="169" font-size="12" fill="#E6EDF3">verl-project/verl-omni</text>
 <rect x="264" y="158" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="158" width="211.7" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="169" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+52</text>
-<text x="24" y="199" font-size="12" fill="#E6EDF3">modelscope/ms-swift</text>
+<rect x="264" y="158" width="191.5" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="169" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+48</text>
+<text x="24" y="199" font-size="12" fill="#E6EDF3">OpenBMB/MiniCPM-OCR</text>
 <rect x="264" y="188" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="188" width="207.6" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="199" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+51</text>
+<rect x="264" y="188" width="191.5" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="199" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+48</text>
 <text x="24" y="229" font-size="12" fill="#E6EDF3">jingyaogong/minimind-o</text>
 <rect x="264" y="218" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="218" width="166.9" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="229" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+41</text>
-<text x="24" y="259" font-size="12" fill="#E6EDF3">OpenBMB/MiniCPM-V</text>
+<rect x="264" y="218" width="159.6" height="16" rx="5" fill="#DDA0DD"/>
+<text x="1176" y="229" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+40</text>
+<text x="24" y="259" font-size="12" fill="#E6EDF3">openai/CLIP</text>
 <rect x="264" y="248" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="248" width="158.8" height="16" rx="5" fill="#DDA0DD"/>
-<text x="1176" y="259" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+39</text>
-<text x="24" y="289" font-size="12" fill="#E6EDF3">openai/CLIP</text>
+<rect x="264" y="248" width="147.6" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="259" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+37</text>
+<text x="24" y="289" font-size="12" fill="#E6EDF3">OpenBMB/MiniCPM-V</text>
 <rect x="264" y="278" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="278" width="142.5" height="16" rx="5" fill="#FAD7A0"/>
+<rect x="264" y="278" width="139.7" height="16" rx="5" fill="#DDA0DD"/>
 <text x="1176" y="289" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+35</text>
 <text x="24" y="319" font-size="12" fill="#E6EDF3">QwenLM/Qwen3-VL</text>
 <rect x="264" y="308" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="308" width="118.1" height="16" rx="5" fill="#FAD7A0"/>
-<text x="1176" y="319" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+29</text>
+<rect x="264" y="308" width="123.7" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="319" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+31</text>
 <text x="24" y="349" font-size="12" fill="#E6EDF3">NVlabs/Eagle</text>
 <rect x="264" y="338" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="338" width="44.8" height="16" rx="5" fill="#FAD7A0"/>
-<text x="1176" y="349" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+11</text>
+<rect x="264" y="338" width="51.9" height="16" rx="5" fill="#FAD7A0"/>
+<text x="1176" y="349" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+13</text>
 <text x="24" y="379" font-size="12" fill="#E6EDF3">AIFrontierLab/TorchUMM</text>
 <rect x="264" y="368" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="368" width="44.8" height="16" rx="5" fill="#FF6B6B"/>
-<text x="1176" y="379" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+11</text>
-<text x="24" y="409" font-size="12" fill="#E6EDF3">deepseek-ai/Janus</text>
+<rect x="264" y="368" width="35.9" height="16" rx="5" fill="#FF6B6B"/>
+<text x="1176" y="379" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+9</text>
+<text x="24" y="409" font-size="12" fill="#E6EDF3">Sage-PhysicalAI/InternVLA-A-series</text>
 <rect x="264" y="398" width="806" height="16" rx="5" fill="#30363D" fill-opacity="0.5"/>
-<rect x="264" y="398" width="36.6" height="16" rx="5" fill="#FF6B6B"/>
+<rect x="264" y="398" width="35.9" height="16" rx="5" fill="#FAD7A0"/>
 <text x="1176" y="409" font-size="12" font-weight="600" text-anchor="end" fill="#E6EDF3">+9</text>
 </g>
 </svg>

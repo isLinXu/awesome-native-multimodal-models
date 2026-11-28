@@ -1,6 +1,6 @@
 # 📬 自动周报 / Digest
 
-> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-27**。
+> 本文件由 `scripts/update_metadata.py` 自动生成，最后更新 **2026-11-28**。
 > 统计窗口：收录「论文发布日」落在近 7 天内的条目（不是抓取日）。
 
 ## 概览
@@ -9,9 +9,9 @@
 | :-- | --: |
 | 收录论文（全量库） | 2,221 |
 | 文档内可浏览条目 | 2,229 |
-| 近 7 天新发布 | 27 |
+| 近 7 天新发布 | 25 |
 | 跟踪仓库 | 86 |
-| 跟踪仓库总 star | 234,583 |
+| 跟踪仓库总 star | 234,663 |
 
 ## 🔢 Image & Video Tokenizers · 近 7 天新发布 5 篇
 
@@ -35,7 +35,7 @@
 
 _本周没有新发布的命中论文，赛道可能进入平台期，或关键词需要补充。_
 
-## 🎙️ Omni Models · 近 7 天新发布 9 篇
+## 🎙️ Omni Models · 近 7 天新发布 8 篇
 
 - [AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos](https://arxiv.org/abs/2611.34347) · `2026-11-25` · score 4.0
 - [Counting Beyond Frames: Codec Motion Tells Frozen Diffusion VLMs How Many](https://arxiv.org/abs/2611.34657) · `2026-11-25` · score 3.0
@@ -45,28 +45,26 @@ _本周没有新发布的命中论文，赛道可能进入平台期，或关键�
 - [MusicListenBench: Can Audio LLMs Hear the Difference Yet?](https://arxiv.org/abs/2611.29375) · `2026-11-22` · score 4.0
 - [How Reliable is AI-Generated Audio Description? A Multilingual Expert Evaluation](https://arxiv.org/abs/2611.29658) · `2026-11-22` · score 4.0
 - [MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake](https://arxiv.org/abs/2611.31301) · `2026-11-21` · score 4.5
-- [ChildAI-Gov: An Evidence-Linked AI System for Assessing EdTech Policies Against Children's Digital Rights](https://arxiv.org/abs/2611.27799) · `2026-11-20` · score 3.0
 
-## 🧠 Pretraining Foundations · 近 7 天新发布 6 篇
+## 🧠 Pretraining Foundations · 近 7 天新发布 5 篇
 
 - [Carrying Feature Ablations Across Sparse Autoencoder Seeds](https://arxiv.org/abs/2611.34637) · `2026-11-25` · score 3.0
 - [VenusOCR2.0: Towards Efficient and Effective Document Parsing](https://arxiv.org/abs/2611.32617) · `2026-11-24` · score 3.5
 - [Token Pruning Needs a Protected Sink Token: Coherent Spatial Aggregation in Vision Transformers](https://arxiv.org/abs/2611.31025) · `2026-11-23` · score 3.0
 - [Where Compositionality Hides: Shared-Content Interference in Vision-Language Retrieval](https://arxiv.org/abs/2611.30538) · `2026-11-23` · score 3.0
 - [CLIP-FMoE: Scalable CLIP via Fused Mixture-of-Experts with Enforced Specialization](https://arxiv.org/abs/2611.30233) · `2026-11-23` · score 3.0
-- [What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining](https://arxiv.org/abs/2611.26917) · `2026-11-20` · score 7.0
 
 ## 🚀 仓库增速榜（近 7 天 star 增量）
 
 | 项目 | ⭐ | 7 日 Δ | 30 日 Δ | 赛道 |
 | :-- | --: | --: | --: | :-- |
-| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 7,987 | +124 | — | omni |
-| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 1,052 | +62 | — | omni |
-| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,604 | +52 | — | omni |
-| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,186 | +51 | — | omni |
-| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,793 | +41 | — | omni |
-| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,208 | +39 | — | omni |
-| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,669 | +35 | — | pretraining |
-| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,268 | +29 | — | pretraining |
-| [**AIFrontierLab/TorchUMM**](https://github.com/AIFrontierLab/TorchUMM) | 603 | +11 | — | unified-ug |
-| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,871 | +11 | — | pretraining |
+| [**vllm-project/vllm-omni**](https://github.com/vllm-project/vllm-omni) | 8,000 | +119 | — | omni |
+| [**modelscope/ms-swift**](https://github.com/modelscope/ms-swift) | 16,189 | +52 | — | omni |
+| [**verl-project/verl-omni**](https://github.com/verl-project/verl-omni) | 1,605 | +48 | — | omni |
+| [**OpenBMB/MiniCPM-OCR**](https://github.com/OpenBMB/MiniCPM-OCR) | 1,055 | +48 | — | omni |
+| [**jingyaogong/minimind-o**](https://github.com/jingyaogong/minimind-o) | 2,795 | +40 | — | omni |
+| [**openai/CLIP**](https://github.com/openai/CLIP) | 34,677 | +37 | — | pretraining |
+| [**OpenBMB/MiniCPM-V**](https://github.com/OpenBMB/MiniCPM-V) | 27,209 | +35 | — | omni |
+| [**QwenLM/Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) | 20,270 | +31 | — | pretraining |
+| [**NVlabs/Eagle**](https://github.com/NVlabs/Eagle) | 3,873 | +13 | — | pretraining |
+| [**AIFrontierLab/TorchUMM**](https://github.com/AIFrontierLab/TorchUMM) | 604 | +9 | — | unified-ug |
